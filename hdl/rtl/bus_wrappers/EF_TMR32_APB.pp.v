@@ -146,7 +146,7 @@ module EF_TMR32_APB #(
 	wire [32-1:0]	tmr;
 	wire [1-1:0]	matchx_flag;
 	wire [1-1:0]	matchy_flag;
-	wire [1-1:0]	timeout_flag;
+	(* keep *) wire [1-1:0]	timeout_flag;
 
 
 	// Register Definitions
