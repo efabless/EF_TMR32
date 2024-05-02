@@ -9,7 +9,15 @@ from EF_UVM.ref_model.ref_model import ref_model
 from EF_UVM.bus_env.bus_item import bus_item
 from tmr32_item.tmr32_item import tmr32_pwm_item
 from EF_UVM.ip_env.ip_agent.ip_monitor import ip_monitor
-from cocotb.triggers import Timer, ClockCycles, FallingEdge, Event, RisingEdge, Combine, First
+from cocotb.triggers import (
+    Timer,
+    ClockCycles,
+    FallingEdge,
+    Event,
+    RisingEdge,
+    Combine,
+    First,
+)
 import cocotb
 
 
@@ -22,7 +30,7 @@ class tmr32_VIP(ref_model):
     def build_phase(self, phase):
         super().build_phase(phase)
         arr = []
-        if (not UVMConfigDb.get(self, "", "bus_regs", arr)):
+        if not UVMConfigDb.get(self, "", "bus_regs", arr):
             uvm_fatal(self.tag, "No json file wrapper regs")
         else:
             self.regs = arr[0]
@@ -38,7 +46,6 @@ class tmr32_VIP(ref_model):
             timer_fork.kill()
             self._timer_first_flag = False
 
-
     def write_bus(self, tr):
         uvm_info(self.tag, "Vip write: " + tr.convert2string(), UVM_HIGH)
         if tr.kind == bus_item.RESET:
@@ -51,7 +58,10 @@ class tmr32_VIP(ref_model):
             self.regs.write_reg_value(tr.addr, tr.data)
             self.bus_bus_export.write(tr)
         elif tr.kind == bus_item.READ:
-            if tr.addr == self.regs.reg_name_to_address["TMR"] and not self._timer_first_flag:
+            if (
+                tr.addr == self.regs.reg_name_to_address["TMR"]
+                and not self._timer_first_flag
+            ):
                 # calibrate the timer
                 self._timer_first_flag = True
                 self.regs.write_reg_value("TMR", tr.data, force_write=True)
@@ -75,45 +85,65 @@ class tmr32_VIP(ref_model):
     async def timer(self):
         mode = self.regs.read_reg_value("CFG") & 0b11
         PR = self.regs.read_reg_value("PR")
-        counter = 0 if self.regs.read_reg_value("CFG") & 0b10 == 0b10 else self.regs.read_reg_value("RELOAD") # 0 counting up or up/down reload count down
-        uvm_info(self.tag, f"function timer mode = {bin(mode)} and PR = {bin(PR)} counter = {counter} ", UVM_LOW)
+        counter = (
+            0
+            if self.regs.read_reg_value("CFG") & 0b10 == 0b10
+            else self.regs.read_reg_value("RELOAD")
+        )  # 0 counting up or up/down reload count down
+        uvm_info(
+            self.tag,
+            f"function timer mode = {bin(mode)} and PR = {bin(PR)} counter = {counter} ",
+            UVM_LOW,
+        )
         # await self.event_calibrate_tmr.wait()
         # self.event_calibrate_tmr.clear()
         # counter_calibration_val = self.regs.read_reg_value("TMR")
         # counter = counter_calibration_val + 1 if self.regs.read_reg_value("CFG") & 0b10 == 0b10 else counter_calibration_val - 1
         count_step = (self.regs.read_reg_value("PR") + 1) * self.clock_period
         count_type = "up" if self.regs.read_reg_value("CFG") & 0b10 == 0b10 else "down"
-        uvm_info(self.tag, f"count_step: {count_step}, count_type: {count_type}", UVM_HIGH)
+        uvm_info(
+            self.tag, f"count_step: {count_step}, count_type: {count_type}", UVM_HIGH
+        )
         # if PR >= 2:
         #     await Timer(self.clock_period * 2, 'ns')
 
-        await Timer(self.clock_period, 'ns')
+        await Timer(self.clock_period, "ns")
         self.regs.write_reg_value("TMR", counter, force_write=True)
         uvm_info(self.tag, f"counter: {hex(counter)}", UVM_HIGH)
         while True:
             if count_type == "up":
                 counter += 1
                 if counter >= self.regs.read_reg_value("RELOAD"):
-                    if self.regs.read_reg_value("CFG") & 0b11 == 0b11: # mode is up/dowm
-                            count_type = "down"
-                    elif counter == self.regs.read_reg_value("RELOAD")+1:
+                    if (
+                        self.regs.read_reg_value("CFG") & 0b11 == 0b11
+                    ):  # mode is up/dowm
+                        count_type = "down"
+                    elif counter == self.regs.read_reg_value("RELOAD") + 1:
                         counter = 0
-                        if self.regs.read_reg_value("CFG") & 0b100 == 0b0:  # oneshot mode
+                        if (
+                            self.regs.read_reg_value("CFG") & 0b100 == 0b0
+                        ):  # oneshot mode
                             return
             else:
                 counter -= 1
                 if counter <= 0:
-                    if self.regs.read_reg_value("CFG") & 0b11 == 0b11: # mode is up/dowm
-                        if self.regs.read_reg_value("CFG") & 0b100 == 0b0:  # oneshot mode
+                    if (
+                        self.regs.read_reg_value("CFG") & 0b11 == 0b11
+                    ):  # mode is up/dowm
+                        if (
+                            self.regs.read_reg_value("CFG") & 0b100 == 0b0
+                        ):  # oneshot mode
                             if counter == -1:
                                 return
                         else:
                             count_type = "up"
                     elif counter == -1:
                         counter = self.regs.read_reg_value("RELOAD")
-                        if self.regs.read_reg_value("CFG") & 0b100 == 0b0:  # oneshot mode
+                        if (
+                            self.regs.read_reg_value("CFG") & 0b100 == 0b0
+                        ):  # oneshot mode
                             return
-            await Timer(count_step, 'ns')
+            await Timer(count_step, "ns")
             self.regs.write_reg_value("TMR", counter, force_write=True)
             uvm_info(self.tag, f"counter: {hex(counter)}", UVM_HIGH)
 
@@ -126,13 +156,21 @@ class tmr32_VIP(ref_model):
         #     await self.bus_write_event.wait()
 
     async def wait_for_stop_counting(self):
-        while self.regs.read_reg_value("CTRL") & 0b1 != 0b0:  # wait until timer restarted
+        while (
+            self.regs.read_reg_value("CTRL") & 0b1 != 0b0
+        ):  # wait until timer restarted
             await self.bus_write_event.wait()
         uvm_info("vip", f"stop counting from vip", UVM_LOW)
 
     def calculate_timeout_cycles(self):
-        num_cycles = self.regs.read_reg_value("RELOAD") * (self.regs.read_reg_value("PR") + 1)
-        uvm_info(self.tag, f"[calculate_timeout_cycles] reload = {self.regs.read_reg_value('RELOAD')} and pr = {self.regs.read_reg_value('PR')}", UVM_MEDIUM)
+        num_cycles = self.regs.read_reg_value("RELOAD") * (
+            self.regs.read_reg_value("PR") + 1
+        )
+        uvm_info(
+            self.tag,
+            f"[calculate_timeout_cycles] reload = {self.regs.read_reg_value('RELOAD')} and pr = {self.regs.read_reg_value('PR')}",
+            UVM_MEDIUM,
+        )
         return num_cycles
 
     def generate_patterns(self, source):
@@ -152,7 +190,9 @@ class tmr32_VIP(ref_model):
             for i in range(len(actions)):
                 if actions[i][1] == 0:
                     to_remove.append(i)
-                    if actions[i][0] == "no change": # no change should not affect the next action
+                    if (
+                        actions[i][0] == "no change"
+                    ):  # no change should not affect the next action
                         continue
                     elif actions[i + 1][0] == "no change":
                         actions[i + 1] = (actions[i][0], actions[i + 1][1])
@@ -194,8 +234,10 @@ class tmr32_VIP(ref_model):
             if actions[0][0] in ["high", "low"]:
                 initial_values = [0]  # initial doesn't matter
             elif actions[0][0] in ["inverted"]:
-                if try_initial(actions, 0) == 0 and try_initial(actions, 1) == 1:  # loop the same value
-                    initial_values = [0] # assume 0 is initial value after reset
+                if (
+                    try_initial(actions, 0) == 0 and try_initial(actions, 1) == 1
+                ):  # loop the same value
+                    initial_values = [0]  # assume 0 is initial value after reset
                 elif try_initial(actions, 0) == try_initial(actions, 1):
                     initial_values = [try_initial(actions, 0)]
                 else:
@@ -244,28 +286,52 @@ class tmr32_VIP(ref_model):
             return pattern
 
         def process_action(actions, is_inverted, name="pwm0"):
-            compare_vals = {"CMPX": self.regs.read_reg_value("CMPX"), "CMPY": self.regs.read_reg_value("CMPY"), "RELOAD": self.regs.read_reg_value("RELOAD")}
+            compare_vals = {
+                "CMPX": self.regs.read_reg_value("CMPX"),
+                "CMPY": self.regs.read_reg_value("CMPY"),
+                "RELOAD": self.regs.read_reg_value("RELOAD"),
+            }
             actions_types = ["no change", "low", "high", "inverted"]
             clk_div = self.regs.read_reg_value("PR") + 1
             dir = self.regs.read_reg_value("CFG") & 0b11
             mode = self.regs.read_reg_value("CFG") >> 2  # 1 periodic and 0 oneshot
-            if mode == 0:  # when oneshot mode the pwm would be generted if the last action is inverted rather than that there would not be a pattern
+            if (
+                mode == 0
+            ):  # when oneshot mode the pwm would be generted if the last action is inverted rather than that there would not be a pattern
                 return [(1, clk_div), (0, clk_div)]
-            action_length = [compare_vals["CMPX"], compare_vals["CMPY"] - compare_vals["CMPX"], compare_vals["RELOAD"] - compare_vals["CMPY"] ]
+            action_length = [
+                compare_vals["CMPX"],
+                compare_vals["CMPY"] - compare_vals["CMPX"],
+                compare_vals["RELOAD"] - compare_vals["CMPY"],
+            ]
             uvm_info(self.tag, f"actions values {name}: {actions}", UVM_MEDIUM)
-            if dir == 0b11:  # periodic 
-                action_length += action_length[::-1] # add the other direction            
+            if dir == 0b11:  # periodic
+                action_length += action_length[::-1]  # add the other direction
             elif dir == 0b10:  # up
-                action_length = action_length + [1] # this 1 is the cycles needed to go from top value to 0
+                action_length = action_length + [
+                    1
+                ]  # this 1 is the cycles needed to go from top value to 0
                 actions = actions[:4]
-            else: # down
-                action_length = action_length[::-1] + [1] # this 1 is the cycles needed to go from 0 to top value 
-                actions = [actions[3], actions[4], actions[5], actions[0]]  #E3, E4, E5,E0
+            else:  # down
+                action_length = action_length[::-1] + [
+                    1
+                ]  # this 1 is the cycles needed to go from 0 to top value
+                actions = [
+                    actions[3],
+                    actions[4],
+                    actions[5],
+                    actions[0],
+                ]  # E3, E4, E5,E0
             action_length = [val * clk_div for val in action_length]
-            actions = [(actions_types[type], action_length[index]) for index, type in enumerate(actions)]
-                # actions = actions[:3]
+            actions = [
+                (actions_types[type], action_length[index])
+                for index, type in enumerate(actions)
+            ]
+            # actions = actions[:3]
             actions = rearrange_actions(actions)
-            uvm_info(self.tag, f"actions after rearrange for {name}: {actions}", UVM_MEDIUM)
+            uvm_info(
+                self.tag, f"actions after rearrange for {name}: {actions}", UVM_MEDIUM
+            )
             pattern = pattern_from_action(actions)
             pattern = merge_similar(pattern)
             if is_inverted:
@@ -276,13 +342,19 @@ class tmr32_VIP(ref_model):
             # check if pwm0 is disabled don't send patterns
             if self.regs.read_reg_value("CTRL") & 0b100 != 0b100:
                 return None
-            actions = [(self.regs.read_reg_value("PWM0CFG") >> i) & 0b11 for i in range(0, 12, 2)]
+            actions = [
+                (self.regs.read_reg_value("PWM0CFG") >> i) & 0b11
+                for i in range(0, 12, 2)
+            ]
             is_inverted = (self.regs.read_reg_value("CTRL") >> 5) & 0b1
             return process_action(actions, is_inverted)
         elif source == tmr32_pwm_item.pwm1:
             if self.regs.read_reg_value("CTRL") & 0b1000 != 0b1000:
                 return None
-            actions = [(self.regs.read_reg_value("PWM1CFG") >> i) & 0b11 for i in range(0, 12, 2)]
+            actions = [
+                (self.regs.read_reg_value("PWM1CFG") >> i) & 0b11
+                for i in range(0, 12, 2)
+            ]
             is_inverted = (self.regs.read_reg_value("CTRL") >> 6) & 0b1
             return process_action(actions, is_inverted, name="pwm1")
 

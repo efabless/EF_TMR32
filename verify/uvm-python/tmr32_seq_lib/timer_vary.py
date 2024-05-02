@@ -35,14 +35,31 @@ class timer_vary(timer_config):
                     await self.stop_timer()
 
     def get_coverage(self):
-        detailed_coverage = coverage_db["top.tmr32.timer.read timer values"].detailed_coverage
-        cover_percentage = coverage_db["top.tmr32.timer.read timer values"].cover_percentage
-        uvm_info(self.tag, f"cover_percentage: {cover_percentage}, detailed_coverage: {detailed_coverage}", UVM_LOW)
+        detailed_coverage = coverage_db[
+            "top.tmr32.timer.read timer values"
+        ].detailed_coverage
+        cover_percentage = coverage_db[
+            "top.tmr32.timer.read timer values"
+        ].cover_percentage
+        uvm_info(
+            self.tag,
+            f"cover_percentage: {cover_percentage}, detailed_coverage: {detailed_coverage}",
+            UVM_LOW,
+        )
         return detailed_coverage, cover_percentage
 
-    async def config_timer_with_cond(self, is_periodic=True, dir="up counting", is_low_speed=True):
+    async def config_timer_with_cond(
+        self, is_periodic=True, dir="up counting", is_low_speed=True
+    ):
         await self.set_timer_pr((1, 0x6) if not is_low_speed else (0x7, 0xF))
-        await self.set_timer_mode(is_periodic, dir = 0b10 if dir == "up counting" else 0b01 if dir == "down counting" else 0b11)
+        await self.set_timer_mode(
+            is_periodic,
+            dir=(
+                0b10
+                if dir == "up counting"
+                else 0b01 if dir == "down counting" else 0b11
+            ),
+        )
         await self.config_timer_regs()
         await self.start_timer()
 

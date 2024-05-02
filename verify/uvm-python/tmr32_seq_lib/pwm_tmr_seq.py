@@ -41,7 +41,9 @@ class pwm_tmr_seq(timer_config):
         await self.config_regs(largest_reload)
         is_inverted0 = random.randint(0, 1)
         is_inverted1 = random.randint(0, 1)
-        await self.start_timer(pwm_enable=[1, 1], pwm_inverted=[is_inverted0, is_inverted1])
+        await self.start_timer(
+            pwm_enable=[1, 1], pwm_inverted=[is_inverted0, is_inverted1]
+        )
 
     async def config_regs(self, largest_reload):
         await self.set_timer_pr()
@@ -57,9 +59,15 @@ class pwm_tmr_seq(timer_config):
         await Timer(pr * clock_period * extended_factor * largest_reload, "ns")
 
     def get_coverage(self):
-        detailed_coverage = coverage_db["top.pwm.Compare Values.Relaod"].detailed_coverage
+        detailed_coverage = coverage_db[
+            "top.pwm.Compare Values.Relaod"
+        ].detailed_coverage
         cover_percentage = coverage_db["top.pwm.Compare Values.Relaod"].cover_percentage
-        uvm_info(self.tag, f"cover_percentage: {cover_percentage}, detailed_coverage: {detailed_coverage}", UVM_LOW)
+        uvm_info(
+            self.tag,
+            f"cover_percentage: {cover_percentage}, detailed_coverage: {detailed_coverage}",
+            UVM_LOW,
+        )
         return detailed_coverage, cover_percentage
 
 
