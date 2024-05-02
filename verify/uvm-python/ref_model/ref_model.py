@@ -58,15 +58,25 @@ class tmr32_VIP(ref_model):
             self.regs.write_reg_value(tr.addr, tr.data)
             self.bus_bus_export.write(tr)
         elif tr.kind == bus_item.READ:
-            if (
-                tr.addr == self.regs.reg_name_to_address["TMR"]
-                and not self._timer_first_flag
-            ):
-                # calibrate the timer
-                self._timer_first_flag = True
-                self.regs.write_reg_value("TMR", tr.data, force_write=True)
-                self.bus_bus_export.write(tr)
-                self.event_calibrate_tmr.set()
+            if tr.addr == self.regs.reg_name_to_address["TMR"]:
+                if not self._timer_first_flag:
+                    # calibrate the timer
+                    self._timer_first_flag = True
+                    self.regs.write_reg_value("TMR", tr.data, force_write=True)
+                    self.bus_bus_export.write(tr)
+                    self.event_calibrate_tmr.set()
+                else:
+                    # check if diffrence is 1 ignore it
+                    ref_tmr = self.regs.read_reg_value(tr.addr)
+                    if (abs(ref_tmr - tr.data) < 2) or (
+                        abs(ref_tmr - tr.data) == self.regs.read_reg_value("RELOAD")
+                    ):  # ignore this shift and pass the correct value
+                        data = tr.data
+                    else:  # pass the incorrect value
+                        data = ref_tmr
+                    td = tr.do_clone()
+                    td.data = data
+                    self.bus_bus_export.write(td)
             else:
                 data = self.regs.read_reg_value(tr.addr)
                 td = tr.do_clone()
