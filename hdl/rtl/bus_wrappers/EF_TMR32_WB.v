@@ -31,9 +31,9 @@ module EF_TMR32_WB #(
 		PRW = 16
 ) (
 	`WB_SLAVE_PORTS,
-	output	[0:0]	pwm0,
-	output	[0:0]	pwm1,
-	input	[0:0]	pwm_fault
+	output	[1-1:0]	pwm0,
+	output	[1-1:0]	pwm1,
+	input	[1-1:0]	pwm_fault
 );
 
 	localparam	TMR_REG_OFFSET = `WB_AW'd0;
@@ -79,10 +79,12 @@ module EF_TMR32_WB #(
 	wire [1-1:0]	matchy_flag;
 	wire [1-1:0]	timeout_flag;
 
+
+	// Register Definitions
 	wire [32-1:0]	TMR_WIRE;
 	assign	TMR_WIRE = tmr;
 
-	reg [32-1:0]	RELOAD_REG;
+	reg [31:0]	RELOAD_REG;
 	assign	tmr_reload = RELOAD_REG;
 	`WB_REG(RELOAD_REG, 0, 32)
 
@@ -90,15 +92,15 @@ module EF_TMR32_WB #(
 	assign	prescaler = PR_REG;
 	`WB_REG(PR_REG, 'h0, PRW)
 
-	reg [32-1:0]	CMPX_REG;
+	reg [31:0]	CMPX_REG;
 	assign	cmpx = CMPX_REG;
 	`WB_REG(CMPX_REG, 0, 32)
 
-	reg [32-1:0]	CMPY_REG;
+	reg [31:0]	CMPY_REG;
 	assign	cmpy = CMPY_REG;
 	`WB_REG(CMPY_REG, 0, 32)
 
-	reg [7-1:0]	CTRL_REG;
+	reg [6:0]	CTRL_REG;
 	assign	tmr_en	=	CTRL_REG[0 : 0];
 	assign	tmr_start	=	CTRL_REG[1 : 1];
 	assign	pwm0_en	=	CTRL_REG[2 : 2];
@@ -108,23 +110,23 @@ module EF_TMR32_WB #(
 	assign	pwm1_inv	=	CTRL_REG[6 : 6];
 	`WB_REG(CTRL_REG, 0, 7)
 
-	reg [3-1:0]	CFG_REG;
+	reg [2:0]	CFG_REG;
 	assign	tmr_cfg = CFG_REG;
 	`WB_REG(CFG_REG, 0, 3)
 
-	reg [12-1:0]	PWM0CFG_REG;
+	reg [11:0]	PWM0CFG_REG;
 	assign	pwm0_cfg = PWM0CFG_REG;
 	`WB_REG(PWM0CFG_REG, 0, 12)
 
-	reg [16-1:0]	PWM1CFG_REG;
+	reg [15:0]	PWM1CFG_REG;
 	assign	pwm1_cfg = PWM1CFG_REG;
 	`WB_REG(PWM1CFG_REG, 0, 16)
 
-	reg [8-1:0]	PWMDT_REG;
+	reg [7:0]	PWMDT_REG;
 	assign	pwm_dt = PWMDT_REG;
 	`WB_REG(PWMDT_REG, 0, 8)
 
-	reg [16-1:0]	PWMFC_REG;
+	reg [15:0]	PWMFC_REG;
 	assign	pwm_fault_clr = PWMFC_REG;
 	`WB_REG(PWMFC_REG, 0, 16)
 

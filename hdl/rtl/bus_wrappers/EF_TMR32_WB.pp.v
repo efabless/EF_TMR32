@@ -22,6 +22,60 @@
 `timescale			1ns/1ps
 `default_nettype	none
 
+
+
+/*
+	Copyright 2020 AUCOHL
+
+    Author: Mohamed Shalan (mshalan@aucegypt.edu)
+	
+	Licensed under the Apache License, Version 2.0 (the "License"); 
+	you may not use this file except in compliance with the License. 
+	You may obtain a copy of the License at:
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software 
+	distributed under the License is distributed on an "AS IS" BASIS, 
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+	See the License for the specific language governing permissions and 
+	limitations under the License.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        
+
+
 module EF_TMR32_WB #( 
 	parameter	
 		PRW = 16
@@ -38,9 +92,9 @@ module EF_TMR32_WB #(
                                         output  reg             ack_o,
                                         input   wire            we_i,
                                         output  wire            IRQ,
-	output	[0:0]	pwm0,
-	output	[0:0]	pwm1,
-	input	[0:0]	pwm_fault
+	output	[1-1:0]	pwm0,
+	output	[1-1:0]	pwm1,
+	input	[1-1:0]	pwm_fault
 );
 
 	localparam	TMR_REG_OFFSET = 16'd0;
@@ -87,12 +141,14 @@ module EF_TMR32_WB #(
 	wire [32-1:0]	tmr;
 	wire [1-1:0]	matchx_flag;
 	wire [1-1:0]	matchy_flag;
-	(* keep *) wire [1-1:0]	timeout_flag;
+	wire [1-1:0]	timeout_flag;
 
+
+	// Register Definitions
 	wire [32-1:0]	TMR_WIRE;
 	assign	TMR_WIRE = tmr;
 
-	reg [32-1:0]	RELOAD_REG;
+	reg [31:0]	RELOAD_REG;
 	assign	tmr_reload = RELOAD_REG;
 	always @(posedge clk_i or posedge rst_i) if(rst_i) RELOAD_REG <= 0; else if(wb_we & (adr_i[16-1:0]==RELOAD_REG_OFFSET)) RELOAD_REG <= dat_i[32-1:0];
 
@@ -100,15 +156,15 @@ module EF_TMR32_WB #(
 	assign	prescaler = PR_REG;
 	always @(posedge clk_i or posedge rst_i) if(rst_i) PR_REG <= 'h0; else if(wb_we & (adr_i[16-1:0]==PR_REG_OFFSET)) PR_REG <= dat_i[PRW-1:0];
 
-	reg [32-1:0]	CMPX_REG;
+	reg [31:0]	CMPX_REG;
 	assign	cmpx = CMPX_REG;
 	always @(posedge clk_i or posedge rst_i) if(rst_i) CMPX_REG <= 0; else if(wb_we & (adr_i[16-1:0]==CMPX_REG_OFFSET)) CMPX_REG <= dat_i[32-1:0];
 
-	reg [32-1:0]	CMPY_REG;
+	reg [31:0]	CMPY_REG;
 	assign	cmpy = CMPY_REG;
 	always @(posedge clk_i or posedge rst_i) if(rst_i) CMPY_REG <= 0; else if(wb_we & (adr_i[16-1:0]==CMPY_REG_OFFSET)) CMPY_REG <= dat_i[32-1:0];
 
-	reg [7-1:0]	CTRL_REG;
+	reg [6:0]	CTRL_REG;
 	assign	tmr_en	=	CTRL_REG[0 : 0];
 	assign	tmr_start	=	CTRL_REG[1 : 1];
 	assign	pwm0_en	=	CTRL_REG[2 : 2];
@@ -118,23 +174,23 @@ module EF_TMR32_WB #(
 	assign	pwm1_inv	=	CTRL_REG[6 : 6];
 	always @(posedge clk_i or posedge rst_i) if(rst_i) CTRL_REG <= 0; else if(wb_we & (adr_i[16-1:0]==CTRL_REG_OFFSET)) CTRL_REG <= dat_i[7-1:0];
 
-	reg [3-1:0]	CFG_REG;
+	reg [2:0]	CFG_REG;
 	assign	tmr_cfg = CFG_REG;
 	always @(posedge clk_i or posedge rst_i) if(rst_i) CFG_REG <= 0; else if(wb_we & (adr_i[16-1:0]==CFG_REG_OFFSET)) CFG_REG <= dat_i[3-1:0];
 
-	reg [12-1:0]	PWM0CFG_REG;
+	reg [11:0]	PWM0CFG_REG;
 	assign	pwm0_cfg = PWM0CFG_REG;
 	always @(posedge clk_i or posedge rst_i) if(rst_i) PWM0CFG_REG <= 0; else if(wb_we & (adr_i[16-1:0]==PWM0CFG_REG_OFFSET)) PWM0CFG_REG <= dat_i[12-1:0];
 
-	reg [16-1:0]	PWM1CFG_REG;
+	reg [15:0]	PWM1CFG_REG;
 	assign	pwm1_cfg = PWM1CFG_REG;
 	always @(posedge clk_i or posedge rst_i) if(rst_i) PWM1CFG_REG <= 0; else if(wb_we & (adr_i[16-1:0]==PWM1CFG_REG_OFFSET)) PWM1CFG_REG <= dat_i[16-1:0];
 
-	reg [8-1:0]	PWMDT_REG;
+	reg [7:0]	PWMDT_REG;
 	assign	pwm_dt = PWMDT_REG;
 	always @(posedge clk_i or posedge rst_i) if(rst_i) PWMDT_REG <= 0; else if(wb_we & (adr_i[16-1:0]==PWMDT_REG_OFFSET)) PWMDT_REG <= dat_i[8-1:0];
 
-	reg [16-1:0]	PWMFC_REG;
+	reg [15:0]	PWMFC_REG;
 	assign	pwm_fault_clr = PWMFC_REG;
 	always @(posedge clk_i or posedge rst_i) if(rst_i) PWMFC_REG <= 0; else if(wb_we & (adr_i[16-1:0]==PWMFC_REG_OFFSET)) PWMFC_REG <= dat_i[16-1:0];
 
