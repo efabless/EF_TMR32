@@ -18,14 +18,16 @@ class pwm_actions_seq(timer_config):
         # get register names/address conversion dict
         await super().body()
         await self.pwm0_seq()
-        await self.pwm_delay()
+        await self.wait_pwm0_deteced()
         await self.send_reset()
         await self.pwm1_seq()
+        await self.wait_pwm1_deteced()
         await self.pwm_delay()
         for _ in range(10):
             await self.send_reset()
             await self.pwm_seq()
-            await self.pwm_delay()
+            await self.wait_pwm_deteced()
+            # await self.pwm_delay()
 
     async def pwm0_seq(self):
         await self.config_regs()
@@ -46,6 +48,7 @@ class pwm_actions_seq(timer_config):
         )
 
     async def config_regs(self):
+        await self.send_req(is_write=True, reg="CLKGATE", data_condition=lambda data: data == 1)
         await self.set_timer_pr()
         await self.set_timer_mode(is_periodic=True)
         await self.config_timer_regs()

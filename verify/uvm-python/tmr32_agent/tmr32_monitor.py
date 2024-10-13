@@ -22,6 +22,10 @@ from EF_UVM.ip_env.ip_agent.ip_monitor import ip_monitor
 class tmr32_monitor(ip_monitor):
     def __init__(self, name="tmr32_monitor", parent=None):
         super().__init__(name, parent)
+        self.tr_received0_event = Event("tr_received0")
+        self.tr_start0_event = Event("tr_start0")
+        self.tr_received1_event = Event("tr_received1")
+        self.tr_start1_event = Event("tr_start1")
 
     async def run_phase(self, phase):
         while True:
@@ -36,9 +40,14 @@ class tmr32_monitor(ip_monitor):
             sample_pwm1.kill()
 
     async def sample_pwm(self, signal, source):
-        for _ in range(3):
-            await Edge(signal)
         while True:
+            if source == tmr32_pwm_item.pwm0:
+                await self.tr_start0_event.wait()
+                self.tr_start0_event.clear()
+            else:
+                await self.tr_start1_event.wait()
+                self.tr_start1_event.clear()
+            uvm_info(self.tag, f"sample_pwm {source} started", UVM_LOW)
             await Edge(signal)
             old_val = signal.value
             count = 0
@@ -89,6 +98,10 @@ class tmr32_monitor(ip_monitor):
             tr.source = source
             tr.pattern = extracted_pattern
             self.monitor_port.write(tr)
+            if source == tmr32_pwm_item.pwm0:
+                self.tr_received0_event.set()
+            else:
+                self.tr_received1_event.set()
             uvm_info(
                 self.tag,
                 f"sampled {source} transaction: " + tr.convert2string(),
