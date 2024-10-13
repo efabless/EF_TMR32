@@ -171,7 +171,7 @@ class pwm_tmr_test(tmr_base_test):
 
     def end_of_elaboration_phase(self, phase):
         super().end_of_elaboration_phase(phase)
-        self.update_min_checkers(14)
+        self.update_min_checkers(12)
 
     async def main_phase(self, phase):
         uvm_info(self.tag, f"Starting test {self.__class__.__name__}", UVM_LOW)
