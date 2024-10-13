@@ -28,7 +28,7 @@ class pwm_pr_seq(timer_config):
             for pr_range in pr_ranges:
                 await self.send_reset()
                 await self.pwm_seq(pr_range)
-                await self.pwm_delay(largest_pr=pr_range[1])
+                await self.wait_pwm_deteced()
             counter += 1
             if counter == 7:
                 break 
@@ -51,6 +51,7 @@ class pwm_pr_seq(timer_config):
         )
 
     async def config_regs(self, pr_range):
+        await self.send_req(is_write=True, reg="CLKGATE", data_condition=lambda data: data == 1)
         await self.set_timer_pr(pr_range)
         await self.set_timer_mode(is_periodic=True)
         await self.config_timer_regs()

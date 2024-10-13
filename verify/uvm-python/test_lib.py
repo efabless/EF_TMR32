@@ -145,10 +145,18 @@ class pwm_pr_test(tmr_base_test):
         super().__init__(name, parent)
         self.tag = name
 
+    def end_of_elaboration_phase(self, phase):
+        super().end_of_elaboration_phase(phase)
+        self.update_min_checkers(14)
+
     async def main_phase(self, phase):
         uvm_info(self.tag, f"Starting test {self.__class__.__name__}", UVM_LOW)
         phase.raise_objection(self, f"{self.__class__.__name__} OBJECTED")
         bus_seq = pwm_pr_seq("pwm_pr_seq")
+        bus_seq.tr_received0_event = self.top_env.ip_env.ip_agent.monitor.tr_received0_event
+        bus_seq.tr_start0_event = self.top_env.ip_env.ip_agent.monitor.tr_start0_event
+        bus_seq.tr_received1_event = self.top_env.ip_env.ip_agent.monitor.tr_received1_event
+        bus_seq.tr_start1_event = self.top_env.ip_env.ip_agent.monitor.tr_start1_event
         await bus_seq.start(self.bus_sqr)
         phase.drop_objection(self, f"{self.__class__.__name__} drop objection")
 
@@ -161,10 +169,18 @@ class pwm_tmr_test(tmr_base_test):
         super().__init__(name, parent)
         self.tag = name
 
+    def end_of_elaboration_phase(self, phase):
+        super().end_of_elaboration_phase(phase)
+        self.update_min_checkers(14)
+
     async def main_phase(self, phase):
         uvm_info(self.tag, f"Starting test {self.__class__.__name__}", UVM_LOW)
         phase.raise_objection(self, f"{self.__class__.__name__} OBJECTED")
         bus_seq = pwm_tmr_seq("pwm_tmr_seq")
+        bus_seq.tr_received0_event = self.top_env.ip_env.ip_agent.monitor.tr_received0_event
+        bus_seq.tr_start0_event = self.top_env.ip_env.ip_agent.monitor.tr_start0_event
+        bus_seq.tr_received1_event = self.top_env.ip_env.ip_agent.monitor.tr_received1_event
+        bus_seq.tr_start1_event = self.top_env.ip_env.ip_agent.monitor.tr_start1_event
         await bus_seq.start(self.bus_sqr)
         phase.drop_objection(self, f"{self.__class__.__name__} drop objection")
 

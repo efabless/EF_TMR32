@@ -27,7 +27,7 @@ class pwm_tmr_seq(timer_config):
             for reload_val in reload_vals:
                 await self.send_reset()
                 await self.pwm_seq(reload_val)
-                await self.pwm_delay(relaod_large_val=reload_val)
+                await self.wait_pwm_deteced()
             counter += 1
             if counter == 7:
                 break
@@ -50,6 +50,7 @@ class pwm_tmr_seq(timer_config):
         )
 
     async def config_regs(self, largest_reload):
+        await self.send_req(is_write=True, reg="CLKGATE", data_condition=lambda data: data == 1)
         await self.set_timer_pr()
         await self.set_timer_mode(is_periodic=True)
         await self.config_timer_regs(largest_reload)
