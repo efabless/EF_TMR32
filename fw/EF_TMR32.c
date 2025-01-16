@@ -5,32 +5,27 @@
 
 #ifndef EF_TMR32_C
 #define EF_TMR32_C
-#include <EF_TMR32.h>
+#include "EF_TMR32.h"
 
-void EF_TMR32_setGclkEnable (uint32_t tmr32_base, int value){
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+
+EF_DRIVER_STATUS EF_TMR32_setGclkEnable (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
+
     tmr32->GCLK = value;
 }
 
-void EF_TMR32_enable(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_enable(EF_TMR32_TYPE_PTR tmr32){
 
     // set the enable bit to 1 at the specified offset
     tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_TE_BIT);
 }
 
-void EF_TMR32_disable(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_disable(EF_TMR32_TYPE_PTR tmr32){
 
     // set the enable bit to 1 at the specified offset
     tmr32->CTRL &= ~(1 << EF_TMR32_CTRL_REG_TE_BIT);
 }
 
-void EF_TMR32_restart(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_restart(EF_TMR32_TYPE_PTR tmr32){
 
     // set the enable bit to 1 at the specified offset
     tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_TS_BIT);
@@ -38,49 +33,37 @@ void EF_TMR32_restart(uint32_t tmr32_base){
 
 }
 
-void EF_TMR32_PWM0Enable(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_PWM0Enable(EF_TMR32_TYPE_PTR tmr32){
 
     // set the enable bit to 1 at the specified offset
     tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_P0E_BIT);
 }
 
-void EF_TMR32_PWM1Enable(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_PWM1Enable(EF_TMR32_TYPE_PTR tmr32){
 
     // set the enable bit to 1 at the specified offset
     tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_P1E_BIT);
 }
 
-void EF_TMR32_deadtimeEnable(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_deadtimeEnable(EF_TMR32_TYPE_PTR tmr32){
 
     // set the enable bit to 1 at the specified offset
     tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_DTE_BIT);
 }
 
-void EF_TMR32_PWM0Invert(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_PWM0Invert(EF_TMR32_TYPE_PTR tmr32){
 
     // set the enable bit to 1 at the specified offset
     tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_PI0_BIT);
 }
 
-void EF_TMR32_PWM1Invert(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_PWM1Invert(EF_TMR32_TYPE_PTR tmr32){
 
     // set the enable bit to 1 at the specified offset
     tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_PI1_BIT);
 }
 
-void EF_TMR32_setUpCount(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setUpCount(EF_TMR32_TYPE_PTR tmr32){
 
     // Clear the field bits in the register using the defined mask
     tmr32->CFG &= ~EF_TMR32_CFG_REG_DIR_MASK;
@@ -89,9 +72,7 @@ void EF_TMR32_setUpCount(uint32_t tmr32_base){
     tmr32->CFG |= ((0b10 << EF_TMR32_CFG_REG_DIR_BIT) & EF_TMR32_CFG_REG_DIR_MASK);
 }
 
-void EF_TMR32_setDownCount(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setDownCount(EF_TMR32_TYPE_PTR tmr32){
 
     // Clear the field bits in the register using the defined mask
     tmr32->CFG &= ~EF_TMR32_CFG_REG_DIR_MASK;
@@ -100,9 +81,7 @@ void EF_TMR32_setDownCount(uint32_t tmr32_base){
     tmr32->CFG |= ((0b01 << EF_TMR32_CFG_REG_DIR_BIT) & EF_TMR32_CFG_REG_DIR_MASK);
 }
 
-void EF_TMR32_setUpDownCount(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setUpDownCount(EF_TMR32_TYPE_PTR tmr32){
 
     // Clear the field bits in the register using the defined mask
     tmr32->CFG &= ~EF_TMR32_CFG_REG_DIR_MASK;
@@ -111,25 +90,19 @@ void EF_TMR32_setUpDownCount(uint32_t tmr32_base){
     tmr32->CFG |= ((0b11 << EF_TMR32_CFG_REG_DIR_BIT) & EF_TMR32_CFG_REG_DIR_MASK);
 }
 
-void EF_TMR32_setPeriodic(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPeriodic(EF_TMR32_TYPE_PTR tmr32){
 
     // set the enable bit to 1 at the specified offset
     tmr32->CFG |= (1 << EF_TMR32_CFG_REG_P_BIT);
 }
 
-void EF_TMR32_setOneShot(uint32_t tmr32_base){
-
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setOneShot(EF_TMR32_TYPE_PTR tmr32){
 
     // Clear the enable bit using the specified  mask
     tmr32->CFG &= ~EF_TMR32_CFG_REG_P_BIT;
 }
 
-void EF_TMR32_setPWM0MatchingZeroAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingZeroAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM0CFG &= ~EF_TMR32_PWM0CFG_REG_E0_MASK;
@@ -139,9 +112,7 @@ void EF_TMR32_setPWM0MatchingZeroAction(uint32_t tmr32_base, enum actions action
 
 }
 
-void EF_TMR32_setPWM0MatchingCMPXAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPXAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM0CFG &= ~EF_TMR32_PWM0CFG_REG_E1_MASK;
@@ -151,9 +122,7 @@ void EF_TMR32_setPWM0MatchingCMPXAction(uint32_t tmr32_base, enum actions action
 
 }
 
-void EF_TMR32_setPWM0MatchingCMPYAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM0CFG &= ~EF_TMR32_PWM0CFG_REG_E2_MASK;
@@ -163,9 +132,7 @@ void EF_TMR32_setPWM0MatchingCMPYAction(uint32_t tmr32_base, enum actions action
 
 }
 
-void EF_TMR32_setPWM0MatchingRELOADAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingRELOADAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM0CFG &= ~EF_TMR32_PWM0CFG_REG_E3_MASK;
@@ -175,9 +142,7 @@ void EF_TMR32_setPWM0MatchingRELOADAction(uint32_t tmr32_base, enum actions acti
 
 }
 
-void EF_TMR32_setPWM0MatchingCMPYDownCountAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYDownCountAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM0CFG &= ~EF_TMR32_PWM0CFG_REG_E4_MASK;
@@ -187,9 +152,7 @@ void EF_TMR32_setPWM0MatchingCMPYDownCountAction(uint32_t tmr32_base, enum actio
 
 }
 
-void EF_TMR32_setPWM0MatchingCMPXDownCountAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPXDownCountAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM0CFG &= ~EF_TMR32_PWM0CFG_REG_E5_MASK;
@@ -199,9 +162,7 @@ void EF_TMR32_setPWM0MatchingCMPXDownCountAction(uint32_t tmr32_base, enum actio
 
 }
 
-void EF_TMR32_setPWM1MatchingZeroAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingZeroAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM1CFG &= ~EF_TMR32_PWM1CFG_REG_E0_MASK;
@@ -211,9 +172,7 @@ void EF_TMR32_setPWM1MatchingZeroAction(uint32_t tmr32_base, enum actions action
 
 }
 
-void EF_TMR32_setPWM1MatchingCMPXAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPXAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM1CFG &= ~EF_TMR32_PWM1CFG_REG_E1_MASK;
@@ -223,9 +182,7 @@ void EF_TMR32_setPWM1MatchingCMPXAction(uint32_t tmr32_base, enum actions action
 
 }
 
-void EF_TMR32_setPWM1MatchingCMPYAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPYAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM1CFG &= ~EF_TMR32_PWM1CFG_REG_E2_MASK;
@@ -235,9 +192,7 @@ void EF_TMR32_setPWM1MatchingCMPYAction(uint32_t tmr32_base, enum actions action
 
 }
 
-void EF_TMR32_setPWM1MatchingRELOADAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingRELOADAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM1CFG &= ~EF_TMR32_PWM1CFG_REG_E3_MASK;
@@ -247,9 +202,7 @@ void EF_TMR32_setPWM1MatchingRELOADAction(uint32_t tmr32_base, enum actions acti
 
 }
 
-void EF_TMR32_setPWM1MatchingCMPYDownCountAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPYDownCountAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM1CFG &= ~EF_TMR32_PWM1CFG_REG_E4_MASK;
@@ -259,9 +212,7 @@ void EF_TMR32_setPWM1MatchingCMPYDownCountAction(uint32_t tmr32_base, enum actio
 
 }
 
-void EF_TMR32_setPWM1MatchingCMPXDownCountAction(uint32_t tmr32_base, enum actions action){
-
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPXDownCountAction(EF_TMR32_TYPE_PTR tmr32, enum actions action){
 
     // Clear the field bits in the register using the defined mask
     tmr32->PWM1CFG &= ~EF_TMR32_PWM1CFG_REG_E5_MASK;
@@ -271,91 +222,71 @@ void EF_TMR32_setPWM1MatchingCMPXDownCountAction(uint32_t tmr32_base, enum actio
 
 }
 
-void EF_TMR32_setRELOAD (uint32_t tmr32_base, int value){
+EF_DRIVER_STATUS EF_TMR32_setRELOAD (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
-
-     tmr32->RELOAD = value;
+    tmr32->RELOAD = value;
 
 }
 
-int EF_TMR32_getRELOAD (uint32_t tmr32_base){
+EF_DRIVER_STATUS EF_TMR32_getRELOAD (EF_TMR32_TYPE_PTR tmr32, uint32_t* reload_value){
 
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
-
-     return (tmr32->RELOAD);
+    *reload_value = tmr32->RELOAD;
 
 }
 
-void EF_TMR32_setCMPX (uint32_t tmr32_base, int value){
+EF_DRIVER_STATUS EF_TMR32_setCMPX (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
-
-     tmr32->CMPX = value;
+    tmr32->CMPX = value;
 
 }
 
-int EF_TMR32_getCMPX (uint32_t tmr32_base){
+EF_DRIVER_STATUS EF_TMR32_getCMPX (EF_TMR32_TYPE_PTR tmr32, uint32_t* cmpx_value){
 
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
-
-     return (tmr32->CMPX);
+    * cmpx_value = tmr32->CMPX;
 
 }
 
-void EF_TMR32_setCMPY (uint32_t tmr32_base, int value){
+EF_DRIVER_STATUS EF_TMR32_setCMPY (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
-
-     tmr32->CMPY = value;
+    tmr32->CMPY = value;
 
 }
 
-int EF_TMR32_getCMPY (uint32_t tmr32_base){
+EF_DRIVER_STATUS EF_TMR32_getCMPY (EF_TMR32_TYPE_PTR tmr32, uint32_t* cmpy_value){
 
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
-
-     return (tmr32->CMPY);
+    *cmpy_value = tmr32->CMPY;
 
 }
 
-int EF_TMR32_getTMR (uint32_t tmr32_base){
+EF_DRIVER_STATUS EF_TMR32_getTMR (EF_TMR32_TYPE_PTR tmr32, uint32_t* tmr_value){
 
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
-
-     return (tmr32->TMR);
+    *tmr_value = tmr32->TMR;
 
 }
 
-void EF_TMR32_setDeadtime (uint32_t tmr32_base, int value){
+EF_DRIVER_STATUS EF_TMR32_setDeadtime (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
-
-     tmr32->PWMDT = value;
+    tmr32->PWMDT = value;
 
 }
 
-int EF_TMR32_getDeadtime (uint32_t tmr32_base){
+EF_DRIVER_STATUS EF_TMR32_getDeadtime (EF_TMR32_TYPE_PTR tmr32, uint32_t* deadtime_value){
 
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
-
-     return (tmr32->PWMDT);
+    *deadtime_value = tmr32->PWMDT;
 
 }
 
-void EF_TMR32_setPR(uint32_t tmr32_base, int value){
-     EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
-     tmr32->PR = value;
+EF_DRIVER_STATUS EF_TMR32_setPR(EF_TMR32_TYPE_PTR tmr32, uint32_t value){
+ 
+    tmr32->PR = value;
 }
 
 
-void EF_TMR32_setInterruptMask(uint32_t tmr32_base, int mask){
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_setInterruptMask(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
+
     tmr32->IM = mask;
 }
-void EF_TMR32_clearIrq(uint32_t tmr32_base, int mask){
-    
-    EF_TMR32_TYPE* tmr32 = (EF_TMR32_TYPE*)tmr32_base;
+EF_DRIVER_STATUS EF_TMR32_clearIrq(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
 
     tmr32->IC = mask;
 }
