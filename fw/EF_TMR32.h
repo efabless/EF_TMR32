@@ -4,7 +4,18 @@
 #include "EF_TMR32_regs.h"
 #include "EF_Driver_Common.h"
 
-enum actions {NONE = 0b00, LOW = 0b01, HIGH = 0b10, INVERT = 0b11};
+
+#define EF_TMR32_ACTION_NONE    ((uint32_t)0)
+#define EF_TMR32_ACTION_LOW     ((uint32_t)1)
+#define EF_TMR32_ACTION_HIGH    ((uint32_t)2)
+#define EF_TMR32_ACTION_INVERT  ((uint32_t)3)
+
+#define EF_TMR32_ACTION_MAX_VALUE  ((uint32_t)3)
+
+#define EF_TMR32_PWMDT_MAX_VALUE    ((uint32_t)0x000000FF)
+#define EF_TMR32_PR_MAX_VALUE       ((uint32_t)0x0000FFFF)
+#define EF_TMR32_IM_MAX_VALUE       ((uint32_t)2)
+#define EF_TMR32_ICR_MAX_VALUE      ((uint32_t)2)
 
 EF_DRIVER_STATUS EF_TMR32_setGclkEnable (EF_TMR32_TYPE_PTR tmr32, uint32_t value);
 
@@ -91,86 +102,86 @@ EF_DRIVER_STATUS EF_TMR32_setOneShot(EF_TMR32_TYPE_PTR tmr32);
 //! set the action of TMR0 when the timer matches Zero value
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingZeroAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingZeroAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR0 when the timer matches CMPX value while up counting 
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPXAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPXAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR0 when the timer matches CMPY value while up counting 
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR0 when the timer matches Reload value
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingRELOADAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingRELOADAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR0 when the timer matches CMPX value while down counting 
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYDownCountAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYDownCountAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR0 when the timer matches CMPY value while down counting 
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPXDownCountAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPXDownCountAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR1 when the timer matches Zero value
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingZeroAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingZeroAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR1 when the timer matches CMPX value while up counting 
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPXAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPXAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR1 when the timer matches CMPY value while up counting 
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPYAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPYAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR1 when the timer matches Reload value
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingRELOADAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingRELOADAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR1 when the timer matches CMPX value while down counting 
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPYDownCountAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPYDownCountAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the action of TMR1 when the timer matches CMPY value while down counting 
     /*!
       \param tmr32_base The base memory address of TMR32 registers.
-      \param action enum actions could be NONE, LOW, HIGH, or INVERT
+      \param action uint32_t could be NONE, LOW, HIGH, or INVERT
     */
-EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPXDownCountAction(EF_TMR32_TYPE_PTR tmr32, enum actions action);
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPXDownCountAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action);
 
 //! set the timer reload value
     /*!
