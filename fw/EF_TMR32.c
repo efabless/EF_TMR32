@@ -73,7 +73,7 @@ EF_DRIVER_STATUS EF_TMR32_enable(EF_TMR32_TYPE_PTR tmr32) {
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
-        tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_TE_BIT); // Set the enable bit to 1
+        tmr32->CTRL |= ((uint32_t)1 << EF_TMR32_CTRL_REG_TE_BIT); // Set the enable bit to 1
     }
 
     return status;
@@ -86,7 +86,7 @@ EF_DRIVER_STATUS EF_TMR32_disable(EF_TMR32_TYPE_PTR tmr32) {
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
-        tmr32->CTRL &= ~(1 << EF_TMR32_CTRL_REG_TE_BIT); // Clear the enable bit
+        tmr32->CTRL &= ~((uint32_t)1 << EF_TMR32_CTRL_REG_TE_BIT); // Clear the enable bit
     }
 
     return status;
@@ -99,8 +99,8 @@ EF_DRIVER_STATUS EF_TMR32_restart(EF_TMR32_TYPE_PTR tmr32) {
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
-        tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_TS_BIT);  // Set the restart bit
-        tmr32->CTRL &= ~(1 << EF_TMR32_CTRL_REG_TS_BIT); // Clear the restart bit
+        tmr32->CTRL |= ((uint32_t)1 << EF_TMR32_CTRL_REG_TS_BIT);  // Set the restart bit
+        tmr32->CTRL &= ~((uint32_t)1 << EF_TMR32_CTRL_REG_TS_BIT); // Clear the restart bit
     }
 
     return status;
@@ -113,7 +113,7 @@ EF_DRIVER_STATUS EF_TMR32_PWM0Enable(EF_TMR32_TYPE_PTR tmr32) {
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
-        tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_P0E_BIT); // Enable PWM0
+        tmr32->CTRL |= ((uint32_t)1 << EF_TMR32_CTRL_REG_P0E_BIT); // Enable PWM0
     }
 
     return status;
@@ -126,7 +126,7 @@ EF_DRIVER_STATUS EF_TMR32_PWM1Enable(EF_TMR32_TYPE_PTR tmr32) {
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
-        tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_P1E_BIT); // Enable PWM1
+        tmr32->CTRL |= ((uint32_t)1 << EF_TMR32_CTRL_REG_P1E_BIT); // Enable PWM1
     }
 
     return status;
@@ -139,7 +139,7 @@ EF_DRIVER_STATUS EF_TMR32_PWMDeadtimeEnable(EF_TMR32_TYPE_PTR tmr32) {
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
-        tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_DTE_BIT); // Enable dead-time
+        tmr32->CTRL |= ((uint32_t)1 << EF_TMR32_CTRL_REG_DTE_BIT); // Enable dead-time
     }
 
     return status;
@@ -152,7 +152,7 @@ EF_DRIVER_STATUS EF_TMR32_PWM0Invert(EF_TMR32_TYPE_PTR tmr32){
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
-        tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_PI0_BIT); // Invert PWM0 output
+        tmr32->CTRL |= ((uint32_t)1 << EF_TMR32_CTRL_REG_PI0_BIT); // Invert PWM0 output
     }
 
     return status;
@@ -165,7 +165,7 @@ EF_DRIVER_STATUS EF_TMR32_PWM1Invert(EF_TMR32_TYPE_PTR tmr32) {
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
-        tmr32->CTRL |= (1 << EF_TMR32_CTRL_REG_PI1_BIT); // Invert PWM1 output
+        tmr32->CTRL |= ((uint32_t)1 << EF_TMR32_CTRL_REG_PI1_BIT); // Invert PWM1 output
     }
 
     return status;
@@ -180,7 +180,7 @@ EF_DRIVER_STATUS EF_TMR32_setUpCount(EF_TMR32_TYPE_PTR tmr32) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
         tmr32->CFG &= ~EF_TMR32_CFG_REG_DIR_MASK; // Clear the direction field
-        tmr32->CFG |= ((0b10 << EF_TMR32_CFG_REG_DIR_BIT) & EF_TMR32_CFG_REG_DIR_MASK); // Set up-count direction
+        tmr32->CFG |= (((uint32_t)0b10 << EF_TMR32_CFG_REG_DIR_BIT) & EF_TMR32_CFG_REG_DIR_MASK); // Set up-count direction
     }
 
     return status;
@@ -194,7 +194,7 @@ EF_DRIVER_STATUS EF_TMR32_setDownCount(EF_TMR32_TYPE_PTR tmr32) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
         tmr32->CFG &= ~EF_TMR32_CFG_REG_DIR_MASK; // Clear the direction field
-        tmr32->CFG |= ((0b01 << EF_TMR32_CFG_REG_DIR_BIT) & EF_TMR32_CFG_REG_DIR_MASK); // Set down-count mode
+        tmr32->CFG |= (((uint32_t)0b01 << EF_TMR32_CFG_REG_DIR_BIT) & EF_TMR32_CFG_REG_DIR_MASK); // Set down-count mode
     }
 
     return status;
@@ -208,7 +208,7 @@ EF_DRIVER_STATUS EF_TMR32_setUpDownCount(EF_TMR32_TYPE_PTR tmr32) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
         tmr32->CFG &= ~EF_TMR32_CFG_REG_DIR_MASK; // Clear the direction field
-        tmr32->CFG |= ((0b11 << EF_TMR32_CFG_REG_DIR_BIT) & EF_TMR32_CFG_REG_DIR_MASK); // Set up-down-count mode
+        tmr32->CFG |= (((uint32_t)0b11 << EF_TMR32_CFG_REG_DIR_BIT) & EF_TMR32_CFG_REG_DIR_MASK); // Set up-down-count mode
     }
 
     return status;
@@ -221,7 +221,7 @@ EF_DRIVER_STATUS EF_TMR32_setPeriodic(EF_TMR32_TYPE_PTR tmr32) {
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
     } else {
-        tmr32->CFG |= (1 << EF_TMR32_CFG_REG_P_BIT); // Enable periodic mode
+        tmr32->CFG |= ((uint32_t)1 << EF_TMR32_CFG_REG_P_BIT); // Enable periodic mode
     }
 
     return status;
@@ -257,6 +257,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingZeroAction(EF_TMR32_TYPE_PTR tmr32, uin
         // Set the bits with the given value at the defined offset
         tmr32->PWM0CFG |= ((action << EF_TMR32_PWM0CFG_REG_E0_BIT) & EF_TMR32_PWM0CFG_REG_E0_MASK);
     }
+    return status;
 }
 
 
@@ -536,7 +537,8 @@ EF_DRIVER_STATUS EF_TMR32_getTMR (EF_TMR32_TYPE_PTR tmr32, uint32_t* tmr_value){
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL    
     } else if (tmr_value == NULL) {
-        
+        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer value pointer is NULL
+    }else{
         *tmr_value = tmr32->TMR;
     }
     return status;
@@ -552,7 +554,10 @@ EF_DRIVER_STATUS EF_TMR32_setPWMDeadtime (EF_TMR32_TYPE_PTR tmr32, uint32_t valu
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL    
     } else if (value > EF_TMR32_PWMDT_MAX_VALUE) {
 
-        tmr32->PWMDT = value;
+        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL   
+
+    }else {
+                tmr32->PWMDT = value;
     }
     return status;
 }
@@ -566,6 +571,9 @@ EF_DRIVER_STATUS EF_TMR32_setPR(EF_TMR32_TYPE_PTR tmr32, uint32_t value){
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL    
     } else if (value > EF_TMR32_PR_MAX_VALUE) {
 
+        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
+        
+    }else{
         tmr32->PR = value;
     }
  
@@ -580,7 +588,8 @@ EF_DRIVER_STATUS EF_TMR32_setIM(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL    
     } else if (mask > EF_TMR32_IM_MAX_VALUE) {
-
+        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL   
+    }else{
         tmr32->IM = mask;
     }
     return status;
@@ -595,6 +604,9 @@ EF_DRIVER_STATUS EF_TMR32_setICR(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
         status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL    
     } else if (mask > EF_TMR32_ICR_MAX_VALUE) {
 
+        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL
+        
+    }else{
         tmr32->IC = mask;
     }
     return status;

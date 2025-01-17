@@ -457,7 +457,7 @@ EF_DRIVER_STATUS EF_TMR32_setPR(EF_TMR32_TYPE_PTR tmr32, uint32_t value);
     
     \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
 */
-EF_DRIVER_STATUS EF_TMR32_setInterruptMask(uint32_t spi_base, uint32_t mask);
+EF_DRIVER_STATUS EF_TMR32_setIM(EF_TMR32_TYPE_PTR tmr32, uint32_t mask);
 
 
 //! Sets the interrupt clear register of the timer by writing to the ICR register.
@@ -469,7 +469,7 @@ EF_DRIVER_STATUS EF_TMR32_setInterruptMask(uint32_t spi_base, uint32_t mask);
     
     \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
 */
-EF_DRIVER_STATUS EF_TMR32_clearIrq(EF_TMR32_TYPE_PTR tmr32, uint32_t mask);
+EF_DRIVER_STATUS EF_TMR32_setICR(EF_TMR32_TYPE_PTR tmr32, uint32_t mask);
 
 
 /******************************************************************************
