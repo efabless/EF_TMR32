@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct___e_f___t_m_r32___t_y_p_e__" kind="struct" language="C++" prot="public">
+    <compoundname>_EF_TMR32_TYPE_</compoundname>
+    <includes refid="_e_f___t_m_r32__regs_8h" local="no">EF_TMR32_regs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1a4bf7305297d5a1b4d41265a94d5bc872" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _EF_TMR32_TYPE_::TMR</definition>
+        <argsstring></argsstring>
+        <name>TMR</name>
+        <qualifiedname>_EF_TMR32_TYPE_::TMR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="93" column="5" bodyfile="EF_TMR32_regs.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1aa3ae792c2ebe1da3297110ebeb3466ad" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::RELOAD</definition>
+        <argsstring></argsstring>
+        <name>RELOAD</name>
+        <qualifiedname>_EF_TMR32_TYPE_::RELOAD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="94" column="5" bodyfile="EF_TMR32_regs.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1a633ee055130fe09a100217016896b176" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::PR</definition>
+        <argsstring></argsstring>
+        <name>PR</name>
+        <qualifiedname>_EF_TMR32_TYPE_::PR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="95" column="5" bodyfile="EF_TMR32_regs.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1ae43e19e8088a1fefc2dc18440543e33f" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::CMPX</definition>
+        <argsstring></argsstring>
+        <name>CMPX</name>
+        <qualifiedname>_EF_TMR32_TYPE_::CMPX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="96" column="5" bodyfile="EF_TMR32_regs.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1a595ddce5ae660e566f43e8c15585a138" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::CMPY</definition>
+        <argsstring></argsstring>
+        <name>CMPY</name>
+        <qualifiedname>_EF_TMR32_TYPE_::CMPY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="97" column="5" bodyfile="EF_TMR32_regs.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1ac5efd0912e6932652209129716a59140" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::CTRL</definition>
+        <argsstring></argsstring>
+        <name>CTRL</name>
+        <qualifiedname>_EF_TMR32_TYPE_::CTRL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="98" column="5" bodyfile="EF_TMR32_regs.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1a147cc6d93ea18c5b8aa6fd7a6a343d22" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::CFG</definition>
+        <argsstring></argsstring>
+        <name>CFG</name>
+        <qualifiedname>_EF_TMR32_TYPE_::CFG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="99" column="5" bodyfile="EF_TMR32_regs.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1a13319bf36918fad02652cf9636e0f3bd" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::PWM0CFG</definition>
+        <argsstring></argsstring>
+        <name>PWM0CFG</name>
+        <qualifiedname>_EF_TMR32_TYPE_::PWM0CFG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="100" column="5" bodyfile="EF_TMR32_regs.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1ad2c30253ccd1145f45e2b5cf59df8355" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::PWM1CFG</definition>
+        <argsstring></argsstring>
+        <name>PWM1CFG</name>
+        <qualifiedname>_EF_TMR32_TYPE_::PWM1CFG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="101" column="5" bodyfile="EF_TMR32_regs.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1aaf7ab19ccb2ec1d0352cbadb0e75024b" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::PWMDT</definition>
+        <argsstring></argsstring>
+        <name>PWMDT</name>
+        <qualifiedname>_EF_TMR32_TYPE_::PWMDT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="102" column="5" bodyfile="EF_TMR32_regs.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1a334a222fd44fb0c3a484a9f18fd72d5f" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::PWMFC</definition>
+        <argsstring></argsstring>
+        <name>PWMFC</name>
+        <qualifiedname>_EF_TMR32_TYPE_::PWMFC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="103" column="5" bodyfile="EF_TMR32_regs.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1aaf4fef241849c75bdf61c5fc48c11f80" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _EF_TMR32_TYPE_::reserved_0[16309]</definition>
+        <argsstring>[16309]</argsstring>
+        <name>reserved_0</name>
+        <qualifiedname>_EF_TMR32_TYPE_::reserved_0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="104" column="5" bodyfile="EF_TMR32_regs.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1ab8e68cbb0d3978264d78ca4b05dee32c" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1a81f369079976a46554fd9798ab035697" kindref="member">__RW</ref></type>
+        <definition>__RW _EF_TMR32_TYPE_::IM</definition>
+        <argsstring></argsstring>
+        <name>IM</name>
+        <qualifiedname>_EF_TMR32_TYPE_::IM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="105" column="5" bodyfile="EF_TMR32_regs.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1a453fb17b3f5640ef52dc1e25f144806c" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _EF_TMR32_TYPE_::MIS</definition>
+        <argsstring></argsstring>
+        <name>MIS</name>
+        <qualifiedname>_EF_TMR32_TYPE_::MIS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="106" column="5" bodyfile="EF_TMR32_regs.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1a358646f54d7e25c962704d875e0aa5ad" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _EF_TMR32_TYPE_::RIS</definition>
+        <argsstring></argsstring>
+        <name>RIS</name>
+        <qualifiedname>_EF_TMR32_TYPE_::RIS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="107" column="5" bodyfile="EF_TMR32_regs.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1abe014aa02ae9ac4f089400338ea67eef" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::IC</definition>
+        <argsstring></argsstring>
+        <name>IC</name>
+        <qualifiedname>_EF_TMR32_TYPE_::IC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="108" column="5" bodyfile="EF_TMR32_regs.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct___e_f___t_m_r32___t_y_p_e___1ab07ead12ff34dc4c0ac9bb660bc2bdb1" prot="public" static="no" mutable="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _EF_TMR32_TYPE_::GCLK</definition>
+        <argsstring></argsstring>
+        <name>GCLK</name>
+        <qualifiedname>_EF_TMR32_TYPE_::GCLK</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="109" column="5" bodyfile="EF_TMR32_regs.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="EF_TMR32_regs.h" line="92" column="1" bodyfile="EF_TMR32_regs.h" bodystart="92" bodyend="110"/>
+    <listofallmembers>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1a147cc6d93ea18c5b8aa6fd7a6a343d22" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>CFG</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1ae43e19e8088a1fefc2dc18440543e33f" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>CMPX</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1a595ddce5ae660e566f43e8c15585a138" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>CMPY</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1ac5efd0912e6932652209129716a59140" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>CTRL</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1ab07ead12ff34dc4c0ac9bb660bc2bdb1" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>GCLK</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1abe014aa02ae9ac4f089400338ea67eef" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>IC</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1ab8e68cbb0d3978264d78ca4b05dee32c" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>IM</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1a453fb17b3f5640ef52dc1e25f144806c" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>MIS</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1a633ee055130fe09a100217016896b176" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>PR</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1a13319bf36918fad02652cf9636e0f3bd" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>PWM0CFG</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1ad2c30253ccd1145f45e2b5cf59df8355" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>PWM1CFG</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1aaf7ab19ccb2ec1d0352cbadb0e75024b" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>PWMDT</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1a334a222fd44fb0c3a484a9f18fd72d5f" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>PWMFC</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1aa3ae792c2ebe1da3297110ebeb3466ad" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>RELOAD</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1aaf4fef241849c75bdf61c5fc48c11f80" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>reserved_0</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1a358646f54d7e25c962704d875e0aa5ad" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>RIS</name></member>
+      <member refid="struct___e_f___t_m_r32___t_y_p_e___1a4bf7305297d5a1b4d41265a94d5bc872" prot="public" virt="non-virtual"><scope>_EF_TMR32_TYPE_</scope><name>TMR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1483 @@
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Header files}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item EF\+\_\+\+Driver\+\_\+\+Common.h
+\item EF\+\_\+\+TMR32.h
+\item EF\+\_\+\+TMR32\+\_\+regs.h
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{File EF\+\_\+\+Driver\+\_\+\+Common.\+h}\label{md__r_e_a_d_m_e_autotoc_md2}
+{\itshape C header file for common driver definitions and types.}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Structures and Types}\label{md__r_e_a_d_m_e_autotoc_md3}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft typedef uint32\+\_\+t   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ ~\newline
+{\itshape A type that is used to return the status of the driver functions.}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Macros}\label{md__r_e_a_d_m_e_autotoc_md4}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR$\ast$$\ast$ ((uint32\+\_\+t)1)~\newline
+{\itshape Unspecified error.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR\textbackslash{}\+\_\+\+BUSY$\ast$$\ast$ ((uint32\+\_\+t)2)~\newline
+{\itshape Driver is busy.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR\textbackslash{}\+\_\+\+PARAMETER$\ast$$\ast$ ((uint32\+\_\+t)5)~\newline
+{\itshape Parameter error.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR\textbackslash{}\+\_\+\+SPECIFIC$\ast$$\ast$ ((uint32\+\_\+t)6)~\newline
+{\itshape Start of driver specific errors.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR\textbackslash{}\+\_\+\+TIMEOUT$\ast$$\ast$ ((uint32\+\_\+t)3)~\newline
+{\itshape Timeout occurred.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+ERROR\textbackslash{}\+\_\+\+UNSUPPORTED$\ast$$\ast$ ((uint32\+\_\+t)4)~\newline
+{\itshape Operation not supported.}    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+OK$\ast$$\ast$ ((uint32\+\_\+t)0)~\newline
+{\itshape Operation succeeded.}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Structures and Types Documentation}\label{md__r_e_a_d_m_e_autotoc_md5}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{typedef $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+STATUS$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md6}
+{\itshape A type that is used to return the status of the driver functions.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ uint32\_t\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}};}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{Macros Documentation}\label{md__r_e_a_d_m_e_autotoc_md7}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md8}
+{\itshape Unspecified error.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\ ((uint32\_t)1)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+BUSY$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md9}
+{\itshape Driver is busy.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\_BUSY\ ((uint32\_t)2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+PARAMETER$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md10}
+{\itshape Parameter error.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\_PARAMETER\ ((uint32\_t)5)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+SPECIFIC$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md11}
+{\itshape Start of driver specific errors.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\_SPECIFIC\ ((uint32\_t)6)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+TIMEOUT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md12}
+{\itshape Timeout occurred.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\_TIMEOUT\ ((uint32\_t)3)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+UNSUPPORTED$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md13}
+{\itshape Operation not supported.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_ERROR\_UNSUPPORTED\ ((uint32\_t)4)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+DRIVER\+\_\+\+OK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md14}
+{\itshape Operation succeeded.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_DRIVER\_OK\ ((uint32\_t)0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysection{File EF\+\_\+\+TMR32.\+h}\label{md__r_e_a_d_m_e_autotoc_md15}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysection{Functions}\label{md__r_e_a_d_m_e_autotoc_md16}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+Enable$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape enables TMR0 by setting \char`\"{}\+P0\+E\char`\"{} bit in the CTRL register to 1}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+Invert$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape invert TMR0 by setting \char`\"{}\+P0\+I\char`\"{} bit in the CTRL register to 1}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+Enable$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape enables TMR1 by setting \char`\"{}\+P1\+E\char`\"{} bit in the CTRL register to 1}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+Invert$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape invert TMR1 by setting \char`\"{}\+P1\+I\char`\"{} bit in the CTRL register to 1}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+clear\+Irq$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t mask) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+deadtime\+Enable$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape enables deadtime by setting \char`\"{}\+DTE\char`\"{} bit in the CTRL register to 1}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+disable$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape disables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 0}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+enable$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape enables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 1}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+get\+CMPX$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t $\ast$cmpx\+\_\+value) ~\newline
+{\itshape get the CMPX register value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+get\+CMPY$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t $\ast$cmpy\+\_\+value) ~\newline
+{\itshape get the CMPY register value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+get\+Deadtime$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t $\ast$deadtime\+\_\+value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+get\+RELOAD$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t $\ast$reload\+\_\+value) ~\newline
+{\itshape get the timer reload value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+get\+TMR$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t $\ast$tmr\+\_\+value) ~\newline
+{\itshape get the current value of the timer}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+restart$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape enables timer re-\/start; used in the one-\/shot mode to restart the timer.}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+CMPX$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t value) ~\newline
+{\itshape set the CMPX register value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+CMPY$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t value) ~\newline
+{\itshape set the CMPY register value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+Deadtime$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t value) ~\newline
+{\itshape set the timer deadtime register value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+Down\+Count$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape set the timer direction to be down counting}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+Gclk\+Enable$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t value) ~\newline
+{\itshape Sets the GCLK enable bit in the UART register to a certain value.}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+Interrupt\+Mask$\ast$$\ast$ (uint32\+\_\+t spi\+\_\+base, uint32\+\_\+t mask) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+One\+Shot$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape set the timer to be one shot}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PR$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t value) ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM0\+Matching\+CMPXAction$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR0 when the timer matches CMPX value while up counting}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM0\+Matching\+CMPXDown\+Count\+Action$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR0 when the timer matches CMPY value while down counting}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM0\+Matching\+CMPYAction$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR0 when the timer matches CMPY value while up counting}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM0\+Matching\+CMPYDown\+Count\+Action$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR0 when the timer matches CMPX value while down counting}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM0\+Matching\+RELOADAction$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR0 when the timer matches Reload value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM0\+Matching\+Zero\+Action$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR0 when the timer matches Zero value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM1\+Matching\+CMPXAction$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR1 when the timer matches CMPX value while up counting}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM1\+Matching\+CMPXDown\+Count\+Action$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR1 when the timer matches CMPY value while down counting}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM1\+Matching\+CMPYAction$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR1 when the timer matches CMPY value while up counting}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM1\+Matching\+CMPYDown\+Count\+Action$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR1 when the timer matches CMPX value while down counting}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM1\+Matching\+RELOADAction$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR1 when the timer matches Reload value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM1\+Matching\+Zero\+Action$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
+{\itshape set the action of TMR1 when the timer matches Zero value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+Periodic$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape set the timer to be periodic}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+RELOAD$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t value) ~\newline
+{\itshape set the timer reload value}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+Up\+Count$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape set the timer direction to be up counting}    \\\cline{1-2}
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+Up\+Down\+Count$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32) ~\newline
+{\itshape set the timer direction to be up/down counting}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysection{Macros}\label{md__r_e_a_d_m_e_autotoc_md17}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+ACTION\textbackslash{}\+\_\+\+HIGH$\ast$$\ast$ ((uint32\+\_\+t)2)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+ACTION\textbackslash{}\+\_\+\+INVERT$\ast$$\ast$ ((uint32\+\_\+t)3)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+ACTION\textbackslash{}\+\_\+\+LOW$\ast$$\ast$ ((uint32\+\_\+t)1)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+ACTION\textbackslash{}\+\_\+\+MAX\textbackslash{}\+\_\+\+VALUE$\ast$$\ast$ ((uint32\+\_\+t)3)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+ACTION\textbackslash{}\+\_\+\+NONE$\ast$$\ast$ ((uint32\+\_\+t)0)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+ICR\textbackslash{}\+\_\+\+MAX\textbackslash{}\+\_\+\+VALUE$\ast$$\ast$ ((uint32\+\_\+t)2)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+IM\textbackslash{}\+\_\+\+MAX\textbackslash{}\+\_\+\+VALUE$\ast$$\ast$ ((uint32\+\_\+t)2)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PR\textbackslash{}\+\_\+\+MAX\textbackslash{}\+\_\+\+VALUE$\ast$$\ast$ ((uint32\+\_\+t)0x0000\+FFFF)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWMDT\textbackslash{}\+\_\+\+MAX\textbackslash{}\+\_\+\+VALUE$\ast$$\ast$ ((uint32\+\_\+t)0x000000\+FF)~\newline
+   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysection{Functions Documentation}\label{md__r_e_a_d_m_e_autotoc_md18}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+Enable$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md19}
+{\itshape enables TMR0 by setting \char`\"{}\+P0\+E\char`\"{} bit in the CTRL register to 1} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a34eb34d261146ff2dbb5b1765309fb10}{EF\_TMR32\_PWM0Enable}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+enables TMR0 by setting \char`\"{}\+P0\+E\char`\"{} bit in the CTRL register to 1
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md20}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+Invert$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md20}
+{\itshape invert TMR0 by setting \char`\"{}\+P0\+I\char`\"{} bit in the CTRL register to 1} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_aa6d78069423fc1b6c251f8ec9df10c48}{EF\_TMR32\_PWM0Invert}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+invert TMR0 by setting \char`\"{}\+P0\+I\char`\"{} bit in the CTRL register to 1
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+Enable$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md21}
+{\itshape enables TMR1 by setting \char`\"{}\+P1\+E\char`\"{} bit in the CTRL register to 1} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_acbae8bfd22ccc3ada22d403e22274850}{EF\_TMR32\_PWM1Enable}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+enables TMR1 by setting \char`\"{}\+P1\+E\char`\"{} bit in the CTRL register to 1
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+Invert$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md22}
+{\itshape invert TMR1 by setting \char`\"{}\+P1\+I\char`\"{} bit in the CTRL register to 1} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a53a9f7c2610d376d309cd29de1c317ce}{EF\_TMR32\_PWM1Invert}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+invert TMR1 by setting \char`\"{}\+P1\+I\char`\"{} bit in the CTRL register to 1
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md23}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+clear\+Irq$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md23}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_aa262d941a123ac51624098e04c94d627}{EF\_TMR32\_clearIrq}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ mask}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md24}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+deadtime\+Enable$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md24}
+{\itshape enables deadtime by setting \char`\"{}\+DTE\char`\"{} bit in the CTRL register to 1} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ EF\_TMR32\_deadtimeEnable\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers. 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md25}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+disable$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md25}
+{\itshape disables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 0} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a55e09ad517a12af2d293982a1e0f2d0d}{EF\_TMR32\_disable}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+disables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 0
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md26}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+enable$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md26}
+{\itshape enables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 1} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a03bb5b7b456bda2803eb6e0bc907d2b4}{EF\_TMR32\_enable}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+enables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 1
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md27}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+get\+CMPX$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md27}
+{\itshape get the CMPX register value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ EF\_TMR32\_getCMPX\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *cmpx\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+CMPX register value \hypertarget{md__r_e_a_d_m_e_autotoc_md28}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+get\+CMPY$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md28}
+{\itshape get the CMPY register value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ EF\_TMR32\_getCMPY\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *cmpy\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+CMPY register value \hypertarget{md__r_e_a_d_m_e_autotoc_md29}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+get\+Deadtime$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md29}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ EF\_TMR32\_getDeadtime\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *deadtime\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md30}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+get\+RELOAD$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md30}
+{\itshape get the timer reload value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ EF\_TMR32\_getRELOAD\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *reload\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+reload register value \hypertarget{md__r_e_a_d_m_e_autotoc_md31}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+get\+TMR$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md31}
+{\itshape get the current value of the timer} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a6c0942ecf91efd6f92a22f9881f9b67f}{EF\_TMR32\_getTMR}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ *tmr\_value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+current timer value \hypertarget{md__r_e_a_d_m_e_autotoc_md32}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+restart$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md32}
+{\itshape enables timer re-\/start; used in the one-\/shot mode to restart the timer.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a5eefc74b17c0183939742ab664fe84db}{EF\_TMR32\_restart}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+enables timer re-\/start; used in the one-\/shot mode to restart the timer.
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md33}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+CMPX$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md33}
+{\itshape set the CMPX register value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a7ccde6a4fe0321b995105032abce58a6}{EF\_TMR32\_setCMPX}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily value} CMPX value 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md34}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+CMPY$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md34}
+{\itshape set the CMPY register value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a025b4b548381e4d01e729cb69b5dff3b}{EF\_TMR32\_setCMPY}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily value} CMPY value 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md35}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+Deadtime$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md35}
+{\itshape set the timer deadtime register value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ EF\_TMR32\_setDeadtime\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily value} deadtime register value 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md36}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+Down\+Count$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md36}
+{\itshape set the timer direction to be down counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a731ce7ebd98193b110862471c45e6d40}{EF\_TMR32\_setDownCount}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+set the timer direction to be down counting
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md37}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+Gclk\+Enable$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md37}
+{\itshape Sets the GCLK enable bit in the UART register to a certain value.} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a48fee3ba105edc1dcee550925ac90f6d}{EF\_TMR32\_setGclkEnable}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\item {\ttfamily value} The value of the GCLK enable bit
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md38}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+Interrupt\+Mask$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md38}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a4ff74f9561301db5707228da86f8bd53}{EF\_TMR32\_setInterruptMask}}\ (}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ spi\_base,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ mask}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md39}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+One\+Shot$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md39}
+{\itshape set the timer to be one shot} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_ab013c8ef6cdc697401cadb1351d42379}{EF\_TMR32\_setOneShot}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers. 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md40}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PR$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md40}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a08fe49ae5e93539f493d0640328b043a}{EF\_TMR32\_setPR}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md41}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPXAction$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md41}
+{\itshape set the action of TMR0 when the timer matches CMPX value while up counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ EF\_TMR32\_setPWM0MatchingCMPXAction\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md42}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPXDown\+Count\+Action$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md42}
+{\itshape set the action of TMR0 when the timer matches CMPY value while down counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a9e7ceb938a22a090ae7907e013d026dd}{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md43}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPYAction$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md43}
+{\itshape set the action of TMR0 when the timer matches CMPY value while up counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ EF\_TMR32\_setPWM0MatchingCMPYAction\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md44}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPYDown\+Count\+Action$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md44}
+{\itshape set the action of TMR0 when the timer matches CMPX value while down counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_ad800e1b9441665d57d2c11f57232778c}{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md45}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+RELOADAction$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md45}
+{\itshape set the action of TMR0 when the timer matches Reload value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_ab80c062a5bd682ba94d93a563c58a08b}{EF\_TMR32\_setPWM0MatchingRELOADAction}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md46}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+Zero\+Action$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md46}
+{\itshape set the action of TMR0 when the timer matches Zero value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a6f73741bff7231eb72696b642dd5344e}{EF\_TMR32\_setPWM0MatchingZeroAction}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md47}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPXAction$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md47}
+{\itshape set the action of TMR1 when the timer matches CMPX value while up counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ EF\_TMR32\_setPWM1MatchingCMPXAction\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md48}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPXDown\+Count\+Action$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md48}
+{\itshape set the action of TMR1 when the timer matches CMPY value while down counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_ad579dc1e3910c7b4a78cde1e6e14bf8d}{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md49}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPYAction$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md49}
+{\itshape set the action of TMR1 when the timer matches CMPY value while up counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ EF\_TMR32\_setPWM1MatchingCMPYAction\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md50}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPYDown\+Count\+Action$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md50}
+{\itshape set the action of TMR1 when the timer matches CMPX value while down counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a3dd40d43dac4fee39dbe7717ee848ecd}{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md51}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+RELOADAction$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md51}
+{\itshape set the action of TMR1 when the timer matches Reload value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a401ddd8eb0f58c2e154b0e4bed3bc4a2}{EF\_TMR32\_setPWM1MatchingRELOADAction}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md52}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+Zero\+Action$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md52}
+{\itshape set the action of TMR1 when the timer matches Zero value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a2e80ed5c92214b2858766e0d8b233008}{EF\_TMR32\_setPWM1MatchingZeroAction}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ action}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily action} uint32\+\_\+t could be NONE, LOW, HIGH, or INVERT 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md53}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+Periodic$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md53}
+{\itshape set the timer to be periodic} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_ae1b99e7a248aa01794677de568a89c12}{EF\_TMR32\_setPeriodic}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers. 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md54}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+RELOAD$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md54}
+{\itshape set the timer reload value} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a5dd014cbe453c7e9ad161bb95c1a5478}{EF\_TMR32\_setRELOAD}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ value}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\item {\ttfamily value} timer reload value 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md55}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+Up\+Count$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md55}
+{\itshape set the timer direction to be up counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_aadb3f68daef94e6e3668a88eea378fd2}{EF\_TMR32\_setUpCount}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+set the timer direction to be up counting
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code \hypertarget{md__r_e_a_d_m_e_autotoc_md56}{}\doxysubsection{function $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+set\+Up\+Down\+Count$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md56}
+{\itshape set the timer direction to be up/down counting} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a2fd6766483cd71135ff6ba22f0af2e81}{EF\_TMR32\_setUpDownCount}}\ (}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32}
+\DoxyCodeLine{)\ }
+
+\end{DoxyCode}
+
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32\+\_\+base} The base memory address of TMR32 registers.
+\end{DoxyItemize}
+
+set the timer direction to be up/down counting
+
+{\bfseries{Parameters\+:}}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ , which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
+\end{DoxyItemize}
+
+{\bfseries{Returns\+:}}
+
+status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$ \+: returns a success or error code\hypertarget{md__r_e_a_d_m_e_autotoc_md57}{}\doxysection{Macros Documentation}\label{md__r_e_a_d_m_e_autotoc_md57}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md58}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md58}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_ACTION\_HIGH\ ((uint32\_t)2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md59}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md59}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_ACTION\_INVERT\ ((uint32\_t)3)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md60}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md60}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_ACTION\_LOW\ ((uint32\_t)1)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md61}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+MAX\+\_\+\+VALUE$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md61}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_ACTION\_MAX\_VALUE\ ((uint32\_t)3)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md62}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md62}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_ACTION\_NONE\ ((uint32\_t)0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md63}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+ICR\+\_\+\+MAX\+\_\+\+VALUE$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md63}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_ICR\_MAX\_VALUE\ ((uint32\_t)2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md64}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+IM\+\_\+\+MAX\+\_\+\+VALUE$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md64}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_IM\_MAX\_VALUE\ ((uint32\_t)2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md65}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PR\+\_\+\+MAX\+\_\+\+VALUE$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md65}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PR\_MAX\_VALUE\ ((uint32\_t)0x0000FFFF)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md66}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWMDT\+\_\+\+MAX\+\_\+\+VALUE$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md66}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWMDT\_MAX\_VALUE\ ((uint32\_t)0x000000FF)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md67}{}\doxysection{File EF\+\_\+\+TMR32\+\_\+regs.\+h}\label{md__r_e_a_d_m_e_autotoc_md67}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md68}{}\doxysection{Structures and Types}\label{md__r_e_a_d_m_e_autotoc_md68}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft typedef struct $\ast$$\ast$\textbackslash{}\+\_\+\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft typedef $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ $\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft struct   &$\ast$$\ast$\textbackslash{}\+\_\+\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+$\ast$$\ast$ ~\newline
+   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md69}{}\doxysection{Macros}\label{md__r_e_a_d_m_e_autotoc_md69}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Name    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+DIR\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(0)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+DIR\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x3)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+P\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(2)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+P\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x4)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+DTE\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(4)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+DTE\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x10)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+P0E\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(2)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+P0E\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x4)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+P1E\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(3)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+P1E\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x8)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+PI0\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(5)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+PI0\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x20)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+PI1\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(6)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+PI1\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x40)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+TE\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(0)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+TE\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x1)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+TS\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(1)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+CTRL\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+TS\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x2)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+MX\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x2)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+MY\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x4)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E0\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(0)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E0\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x3)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E1\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(2)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E1\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0xc)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E2\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(4)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E2\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x30)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E3\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(6)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E3\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0xc0)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E4\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(8)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E4\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x300)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E5\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(10)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM0\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E5\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0xc00)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E0\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(0)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E0\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x3)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E1\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(2)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E1\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0xc)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E2\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(4)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E2\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x30)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E3\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(6)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E3\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0xc0)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E4\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(8)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E4\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0x300)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E5\textbackslash{}\+\_\+\+BIT$\ast$$\ast$ (uint32\+\_\+t)(10)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+PWM1\+CFG\textbackslash{}\+\_\+\+REG\textbackslash{}\+\_\+\+E5\textbackslash{}\+\_\+\+MASK$\ast$$\ast$ (uint32\+\_\+t)(0xc00)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TO\textbackslash{}\+\_\+\+FLAG$\ast$$\ast$ ((uint32\+\_\+t)0x1)~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\+IO\textbackslash{}\+\_\+\+TYPES$\ast$$\ast$ ~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ volatile const uint32\+\_\+t~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+\+RW$\ast$$\ast$ volatile uint32\+\_\+t~\newline
+    \\\cline{1-2}
+\PBS\raggedleft define   &$\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ volatile uint32\+\_\+t~\newline
+   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md70}{}\doxysection{Structures and Types Documentation}\label{md__r_e_a_d_m_e_autotoc_md70}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md71}{}\doxysubsection{typedef $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+TYPE$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md71}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{\_EF\_TMR32\_TYPE\_}}\ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE}};}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md72}{}\doxysubsection{typedef $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md72}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE}}*\ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\_TMR32\_TYPE\_PTR}};}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md73}{}\doxysubsection{struct $<$tt$>$\+\_\+\+EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md73}
+Variables\+:
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ CFG ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ CMPX ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ CMPY ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ CTRL ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ GCLK ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ IC ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+\+RW$\ast$$\ast$ IM ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ MIS ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ PR ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ PWM0\+CFG ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ PWM1\+CFG ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ PWMDT ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ PWMFC ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+W$\ast$$\ast$ RELOAD ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ RIS ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ TMR ~\newline
+
+\item $\ast$$\ast$\textbackslash{}\+\_\+\textbackslash{}\+\_\+R$\ast$$\ast$ reserved\+\_\+0 ~\newline
+
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md74}{}\doxysection{Macros Documentation}\label{md__r_e_a_d_m_e_autotoc_md74}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md75}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CFG\+\_\+\+REG\+\_\+\+DIR\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md75}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_DIR\_BIT\ (uint32\_t)(0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md76}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CFG\+\_\+\+REG\+\_\+\+DIR\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md76}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_DIR\_MASK\ (uint32\_t)(0x3)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md77}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CFG\+\_\+\+REG\+\_\+\+P\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md77}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_P\_BIT\ (uint32\_t)(2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md78}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CFG\+\_\+\+REG\+\_\+\+P\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md78}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_P\_MASK\ (uint32\_t)(0x4)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md79}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+DTE\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md79}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_DTE\_BIT\ (uint32\_t)(4)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md80}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+DTE\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md80}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_DTE\_MASK\ (uint32\_t)(0x10)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md81}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+P0\+E\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md81}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P0E\_BIT\ (uint32\_t)(2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md82}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+P0\+E\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md82}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P0E\_MASK\ (uint32\_t)(0x4)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md83}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+P1\+E\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md83}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P1E\_BIT\ (uint32\_t)(3)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md84}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+P1\+E\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md84}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P1E\_MASK\ (uint32\_t)(0x8)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md85}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+PI0\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md85}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI0\_BIT\ (uint32\_t)(5)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md86}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+PI0\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md86}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI0\_MASK\ (uint32\_t)(0x20)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md87}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+PI1\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md87}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI1\_BIT\ (uint32\_t)(6)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md88}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+PI1\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md88}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI1\_MASK\ (uint32\_t)(0x40)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md89}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+TE\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md89}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TE\_BIT\ (uint32\_t)(0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md90}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+TE\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md90}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TE\_MASK\ (uint32\_t)(0x1)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md91}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+TS\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md91}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TS\_BIT\ (uint32\_t)(1)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md92}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+CTRL\+\_\+\+REG\+\_\+\+TS\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md92}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TS\_MASK\ (uint32\_t)(0x2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md93}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+MX\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md93}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_MX\_FLAG\ ((uint32\_t)0x2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md94}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+MY\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md94}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_MY\_FLAG\ ((uint32\_t)0x4)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md95}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E0\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md95}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E0\_BIT\ (uint32\_t)(0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md96}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E0\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md96}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E0\_MASK\ (uint32\_t)(0x3)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md97}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E1\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md97}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E1\_BIT\ (uint32\_t)(2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md98}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E1\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md98}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E1\_MASK\ (uint32\_t)(0xc)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md99}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E2\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md99}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E2\_BIT\ (uint32\_t)(4)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md100}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E2\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md100}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E2\_MASK\ (uint32\_t)(0x30)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md101}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E3\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md101}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E3\_BIT\ (uint32\_t)(6)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md102}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E3\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md102}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E3\_MASK\ (uint32\_t)(0xc0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md103}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E4\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md103}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E4\_BIT\ (uint32\_t)(8)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md104}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E4\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md104}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E4\_MASK\ (uint32\_t)(0x300)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md105}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E5\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md105}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E5\_BIT\ (uint32\_t)(10)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md106}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E5\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md106}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E5\_MASK\ (uint32\_t)(0xc00)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md107}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E0\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md107}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E0\_BIT\ (uint32\_t)(0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md108}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E0\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md108}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E0\_MASK\ (uint32\_t)(0x3)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md109}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E1\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md109}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E1\_BIT\ (uint32\_t)(2)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md110}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E1\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md110}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E1\_MASK\ (uint32\_t)(0xc)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md111}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E2\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md111}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E2\_BIT\ (uint32\_t)(4)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md112}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E2\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md112}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E2\_MASK\ (uint32\_t)(0x30)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md113}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E3\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md113}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E3\_BIT\ (uint32\_t)(6)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md114}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E3\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md114}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E3\_MASK\ (uint32\_t)(0xc0)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md115}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E4\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md115}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E4\_BIT\ (uint32\_t)(8)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md116}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E4\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md116}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E4\_MASK\ (uint32\_t)(0x300)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md117}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E5\+\_\+\+BIT$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md117}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E5\_BIT\ (uint32\_t)(10)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md118}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E5\+\_\+\+MASK$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md118}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E5\_MASK\ (uint32\_t)(0xc00)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md119}{}\doxysubsection{define $<$tt$>$\+EF\+\_\+\+TMR32\+\_\+\+TO\+\_\+\+FLAG$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md119}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EF\_TMR32\_TO\_FLAG\ ((uint32\_t)0x1)}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md120}{}\doxysubsection{define $<$tt$>$\+IO\+\_\+\+TYPES$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md120}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ IO\_TYPES\ }}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md121}{}\doxysubsection{define $<$tt$>$\+\_\+\+\_\+\+R$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md121}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ \_\_R\ volatile\ const\ uint32\_t}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md122}{}\doxysubsection{define $<$tt$>$\+\_\+\+\_\+\+RW$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md122}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ \_\_RW\ volatile\ \ \ \ \ \ \ uint32\_t}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md123}{}\doxysubsection{define $<$tt$>$\+\_\+\+\_\+\+W$<$/tt$>$}\label{md__r_e_a_d_m_e_autotoc_md123}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ \_\_W\ volatile\ \ \ \ \ \ \ uint32\_t}}
+
+\end{DoxyCode}
+ 

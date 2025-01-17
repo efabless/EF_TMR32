@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['icr_0',['icr',['../struct__EF__TMR32__TYPE__.html#a1f93e0a26343a96ee47812a8591d97e7',1,'_EF_TMR32_TYPE_']]],
-  ['im_1',['im',['../struct__EF__TMR32__TYPE__.html#a6b4ec960b5cb32cd892b210477fbc7c9',1,'_EF_TMR32_TYPE_']]]
+  ['gclk_0',['GCLK',['../struct___e_f___t_m_r32___t_y_p_e__.html#ab07ead12ff34dc4c0ac9bb660bc2bdb1',1,'_EF_TMR32_TYPE_']]]
 ];

@@ -1,11 +1,56 @@
-/*! \file EF_UART.c
-    \brief C file for UART APIs which contains the function implmentations 
+/*
+	Copyright 2025 Efabless Corp.
+
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	    www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+*/
+
+
+/*! \file EF_TMR32.c
+    \brief C file for TMR32 APIs which contains the function implmentations 
     
 */
 
 #ifndef EF_TMR32_C
 #define EF_TMR32_C
+
+/******************************************************************************
+* Includes
+******************************************************************************/
 #include "EF_TMR32.h"
+
+/******************************************************************************
+* File-Specific Macros and Constants
+******************************************************************************/
+
+
+
+/******************************************************************************
+* Static Variables
+******************************************************************************/
+
+
+
+/******************************************************************************
+* Static Function Prototypes
+******************************************************************************/
+
+
+
+/******************************************************************************
+* Function Definitions
+******************************************************************************/
 
 EF_DRIVER_STATUS EF_TMR32_setGclkEnable(EF_TMR32_TYPE_PTR tmr32, uint32_t value) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -21,6 +66,7 @@ EF_DRIVER_STATUS EF_TMR32_setGclkEnable(EF_TMR32_TYPE_PTR tmr32, uint32_t value)
     return status;
 }
 
+
 EF_DRIVER_STATUS EF_TMR32_enable(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -33,6 +79,7 @@ EF_DRIVER_STATUS EF_TMR32_enable(EF_TMR32_TYPE_PTR tmr32) {
     return status;
 }
 
+
 EF_DRIVER_STATUS EF_TMR32_disable(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -44,6 +91,7 @@ EF_DRIVER_STATUS EF_TMR32_disable(EF_TMR32_TYPE_PTR tmr32) {
 
     return status;
 }
+
 
 EF_DRIVER_STATUS EF_TMR32_restart(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -58,6 +106,7 @@ EF_DRIVER_STATUS EF_TMR32_restart(EF_TMR32_TYPE_PTR tmr32) {
     return status;
 }
 
+
 EF_DRIVER_STATUS EF_TMR32_PWM0Enable(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -69,6 +118,7 @@ EF_DRIVER_STATUS EF_TMR32_PWM0Enable(EF_TMR32_TYPE_PTR tmr32) {
 
     return status;
 }
+
 
 EF_DRIVER_STATUS EF_TMR32_PWM1Enable(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -82,7 +132,8 @@ EF_DRIVER_STATUS EF_TMR32_PWM1Enable(EF_TMR32_TYPE_PTR tmr32) {
     return status;
 }
 
-EF_DRIVER_STATUS EF_TMR32_deadtimeEnable(EF_TMR32_TYPE_PTR tmr32) {
+
+EF_DRIVER_STATUS EF_TMR32_PWMDeadtimeEnable(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
     if (tmr32 == NULL) {
@@ -94,7 +145,8 @@ EF_DRIVER_STATUS EF_TMR32_deadtimeEnable(EF_TMR32_TYPE_PTR tmr32) {
     return status;
 }
 
-EF_DRIVER_STATUS EF_TMR32_PWM0Invert(EF_TMR32_TYPE_PTR tmr32) {
+
+EF_DRIVER_STATUS EF_TMR32_PWM0Invert(EF_TMR32_TYPE_PTR tmr32){
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
     if (tmr32 == NULL) {
@@ -105,6 +157,7 @@ EF_DRIVER_STATUS EF_TMR32_PWM0Invert(EF_TMR32_TYPE_PTR tmr32) {
 
     return status;
 }
+
 
 EF_DRIVER_STATUS EF_TMR32_PWM1Invert(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -117,6 +170,8 @@ EF_DRIVER_STATUS EF_TMR32_PWM1Invert(EF_TMR32_TYPE_PTR tmr32) {
 
     return status;
 }
+
+
 
 EF_DRIVER_STATUS EF_TMR32_setUpCount(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -145,6 +200,7 @@ EF_DRIVER_STATUS EF_TMR32_setDownCount(EF_TMR32_TYPE_PTR tmr32) {
     return status;
 }
 
+
 EF_DRIVER_STATUS EF_TMR32_setUpDownCount(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -158,6 +214,7 @@ EF_DRIVER_STATUS EF_TMR32_setUpDownCount(EF_TMR32_TYPE_PTR tmr32) {
     return status;
 }
 
+
 EF_DRIVER_STATUS EF_TMR32_setPeriodic(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -169,6 +226,7 @@ EF_DRIVER_STATUS EF_TMR32_setPeriodic(EF_TMR32_TYPE_PTR tmr32) {
 
     return status;
 }
+
 
 EF_DRIVER_STATUS EF_TMR32_setOneShot(EF_TMR32_TYPE_PTR tmr32) {
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -201,7 +259,8 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingZeroAction(EF_TMR32_TYPE_PTR tmr32, uin
     }
 }
 
-EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPXAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
+
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPXUpCountAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -220,7 +279,8 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPXAction(EF_TMR32_TYPE_PTR tmr32, uin
     return status;
 }
 
-EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
+
+EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYUpCountAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -238,6 +298,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYAction(EF_TMR32_TYPE_PTR tmr32, uin
 
     return status;
 }
+
 
 EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingRELOADAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
 
@@ -258,6 +319,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingRELOADAction(EF_TMR32_TYPE_PTR tmr32, u
     return status;
 }
 
+
 EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYDownCountAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -276,6 +338,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPYDownCountAction(EF_TMR32_TYPE_PTR t
 
     return status;
 }
+
 
 EF_DRIVER_STATUS EF_TMR32_setPWM0MatchingCMPXDownCountAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
 
@@ -317,7 +380,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingZeroAction(EF_TMR32_TYPE_PTR tmr32, uin
 }
 
 
-EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPXAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPXUpCountingAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -336,7 +399,9 @@ EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPXAction(EF_TMR32_TYPE_PTR tmr32, uin
     return status;
 }
 
-EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPYAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
+
+
+EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPYUpCountingAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -354,7 +419,6 @@ EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPYAction(EF_TMR32_TYPE_PTR tmr32, uin
 
     return status;
 }
-
 
 
 EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingRELOADAction(EF_TMR32_TYPE_PTR tmr32, uint32_t action) {
@@ -417,7 +481,6 @@ EF_DRIVER_STATUS EF_TMR32_setPWM1MatchingCMPXDownCountAction(EF_TMR32_TYPE_PTR t
 }
 
 
-
 EF_DRIVER_STATUS EF_TMR32_setRELOAD (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -432,20 +495,7 @@ EF_DRIVER_STATUS EF_TMR32_setRELOAD (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 
 }
 
-EF_DRIVER_STATUS EF_TMR32_getRELOAD (EF_TMR32_TYPE_PTR tmr32, uint32_t* reload_value){
 
-    EF_DRIVER_STATUS status = EF_DRIVER_OK;
-
-    if (tmr32 == NULL) {
-        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL    
-    } else if (reload_value == NULL) {
-        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the reload_value pointer is NULL
-    } else {
-        *reload_value = tmr32->RELOAD;
-    }
-    return status;
-
-}
 
 EF_DRIVER_STATUS EF_TMR32_setCMPX (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 
@@ -461,20 +511,7 @@ EF_DRIVER_STATUS EF_TMR32_setCMPX (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
     return status;
 }
 
-EF_DRIVER_STATUS EF_TMR32_getCMPX (EF_TMR32_TYPE_PTR tmr32, uint32_t* cmpx_value){
 
-    EF_DRIVER_STATUS status = EF_DRIVER_OK;
-
-    if (tmr32 == NULL) {
-        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL    
-    } else if (cmpx_value == NULL) {
-        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the cmpx_value pointer is NULL
-    } else {
-        *cmpx_value = tmr32->CMPX;
-    }
-
-    return status;
-}
 
 EF_DRIVER_STATUS EF_TMR32_setCMPY (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 
@@ -490,20 +527,7 @@ EF_DRIVER_STATUS EF_TMR32_setCMPY (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
     return status;
 }
 
-EF_DRIVER_STATUS EF_TMR32_getCMPY (EF_TMR32_TYPE_PTR tmr32, uint32_t* cmpy_value){
 
-    EF_DRIVER_STATUS status = EF_DRIVER_OK;
-
-    if (tmr32 == NULL) {
-        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL    
-    } else if (cmpy_value == NULL) {
-        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the cmpy_value pointer is NULL
-    } else {
-        *cmpy_value = tmr32->CMPY;
-    }
-
-    return status;
-}
 
 EF_DRIVER_STATUS EF_TMR32_getTMR (EF_TMR32_TYPE_PTR tmr32, uint32_t* tmr_value){
 
@@ -519,7 +543,8 @@ EF_DRIVER_STATUS EF_TMR32_getTMR (EF_TMR32_TYPE_PTR tmr32, uint32_t* tmr_value){
 
 }
 
-EF_DRIVER_STATUS EF_TMR32_setDeadtime (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
+
+EF_DRIVER_STATUS EF_TMR32_setPWMDeadtime (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -532,19 +557,6 @@ EF_DRIVER_STATUS EF_TMR32_setDeadtime (EF_TMR32_TYPE_PTR tmr32, uint32_t value){
     return status;
 }
 
-EF_DRIVER_STATUS EF_TMR32_getDeadtime (EF_TMR32_TYPE_PTR tmr32, uint32_t* deadtime_value){
-
-    EF_DRIVER_STATUS status = EF_DRIVER_OK;
-
-    if (tmr32 == NULL) {
-        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the timer pointer is NULL    
-    } else if (deadtime_value == NULL) {
-        status = EF_DRIVER_ERROR_PARAMETER; // Return error if the deadtime_value pointer is NULL
-    } else {
-        *deadtime_value = tmr32->PWMDT;
-    }
-    return status;
-}
 
 EF_DRIVER_STATUS EF_TMR32_setPR(EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 
@@ -559,8 +571,6 @@ EF_DRIVER_STATUS EF_TMR32_setPR(EF_TMR32_TYPE_PTR tmr32, uint32_t value){
  
     return status;
 }
-
-
 
 
 EF_DRIVER_STATUS EF_TMR32_setIM(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
@@ -590,4 +600,14 @@ EF_DRIVER_STATUS EF_TMR32_setICR(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
     return status;
 }
 
-#endif
+
+/******************************************************************************
+* Static Function Definitions
+******************************************************************************/
+
+
+#endif // EF_TMR32_C
+
+/******************************************************************************
+* End of File
+******************************************************************************/

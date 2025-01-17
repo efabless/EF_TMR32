@@ -1,0 +1,135 @@
+\hypertarget{_e_f___t_m_r32__regs_8h_source}{}\doxysection{EF\+\_\+\+TMR32\+\_\+regs.\+h}
+\mbox{\hyperlink{_e_f___t_m_r32__regs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ Copyright\ 2024\ Efabless\ Corp.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ Author:\ Efabless\ Corp.\ (ip\_admin@efabless.com)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00011\ \textcolor{comment}{}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ Includes}}
+\DoxyCodeLine{00024\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_e_f___driver___common_8h}{EF\_Driver\_Common.h}}"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ Macros\ and\ Constants}}
+\DoxyCodeLine{00030\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#ifndef\ EF\_TMR32REGS\_H}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ EF\_TMR32REGS\_H}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#ifndef\ IO\_TYPES}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ IO\_TYPES}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ \ \ \_\_R\ \ \ \ \ volatile\ const\ uint32\_t}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ \ \ \_\_W\ \ \ \ \ volatile\ \ \ \ \ \ \ uint32\_t}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ \ \ \_\_RW\ \ \ \ volatile\ \ \ \ \ \ \ uint32\_t}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TE\_BIT\ \ \ \ \ \ \ \ (uint32\_t)(0)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TE\_MASK\ \ \ \ \ \ \ (uint32\_t)(0x1)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TS\_BIT\ \ \ \ \ \ \ \ (uint32\_t)(1)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TS\_MASK\ \ \ \ \ \ \ (uint32\_t)(0x2)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P0E\_BIT\ \ \ \ \ \ \ (uint32\_t)(2)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P0E\_MASK\ \ \ \ \ \ (uint32\_t)(0x4)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P1E\_BIT\ \ \ \ \ \ \ (uint32\_t)(3)}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P1E\_MASK\ \ \ \ \ \ (uint32\_t)(0x8)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_DTE\_BIT\ \ \ \ \ \ \ (uint32\_t)(4)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_DTE\_MASK\ \ \ \ \ \ (uint32\_t)(0x10)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI0\_BIT\ \ \ \ \ \ \ (uint32\_t)(5)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI0\_MASK\ \ \ \ \ \ (uint32\_t)(0x20)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI1\_BIT\ \ \ \ \ \ \ (uint32\_t)(6)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI1\_MASK\ \ \ \ \ \ (uint32\_t)(0x40)}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_DIR\_BIT\ \ \ \ \ \ \ \ (uint32\_t)(0)}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_DIR\_MASK\ \ \ \ \ \ \ (uint32\_t)(0x3)}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_P\_BIT\ \ \ \ \ \ \ \ \ \ (uint32\_t)(2)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_P\_MASK\ \ \ \ \ \ \ \ \ (uint32\_t)(0x4)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E0\_BIT\ \ \ \ \ (uint32\_t)(0)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E0\_MASK\ \ \ \ (uint32\_t)(0x3)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E1\_BIT\ \ \ \ \ (uint32\_t)(2)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E1\_MASK\ \ \ \ (uint32\_t)(0xc)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E2\_BIT\ \ \ \ \ (uint32\_t)(4)}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E2\_MASK\ \ \ \ (uint32\_t)(0x30)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E3\_BIT\ \ \ \ \ (uint32\_t)(6)}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E3\_MASK\ \ \ \ (uint32\_t)(0xc0)}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E4\_BIT\ \ \ \ \ (uint32\_t)(8)}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E4\_MASK\ \ \ \ (uint32\_t)(0x300)}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E5\_BIT\ \ \ \ \ (uint32\_t)(10)}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E5\_MASK\ \ \ \ (uint32\_t)(0xc00)}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E0\_BIT\ \ \ \ \ (uint32\_t)(0)}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E0\_MASK\ \ \ \ (uint32\_t)(0x3)}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E1\_BIT\ \ \ \ \ (uint32\_t)(2)}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E1\_MASK\ \ \ \ (uint32\_t)(0xc)}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E2\_BIT\ \ \ \ \ (uint32\_t)(4)}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E2\_MASK\ \ \ \ (uint32\_t)(0x30)}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E3\_BIT\ \ \ \ \ (uint32\_t)(6)}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E3\_MASK\ \ \ \ (uint32\_t)(0xc0)}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E4\_BIT\ \ \ \ \ (uint32\_t)(8)}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E4\_MASK\ \ \ \ (uint32\_t)(0x300)}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E5\_BIT\ \ \ \ \ (uint32\_t)(10)}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E5\_MASK\ \ \ \ (uint32\_t)(0xc00)}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_TO\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x1)}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_MX\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x2)}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_MY\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)0x4)}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00090\ \textcolor{comment}{*\ Typedefs\ and\ Enums}}
+\DoxyCodeLine{00091\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00092\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{\_EF\_TMR32\_TYPE\_}}\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___a4bf7305297d5a1b4d41265a94d5bc872}{TMR}};}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___aa3ae792c2ebe1da3297110ebeb3466ad}{RELOAD}};}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___a633ee055130fe09a100217016896b176}{PR}};}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___ae43e19e8088a1fefc2dc18440543e33f}{CMPX}};}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___a595ddce5ae660e566f43e8c15585a138}{CMPY}};}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___ac5efd0912e6932652209129716a59140}{CTRL}};}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___a147cc6d93ea18c5b8aa6fd7a6a343d22}{CFG}};}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___a13319bf36918fad02652cf9636e0f3bd}{PWM0CFG}};}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___ad2c30253ccd1145f45e2b5cf59df8355}{PWM1CFG}};}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___aaf7ab19ccb2ec1d0352cbadb0e75024b}{PWMDT}};}
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___a334a222fd44fb0c3a484a9f18fd72d5f}{PWMFC}};}
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___aaf4fef241849c75bdf61c5fc48c11f80}{reserved\_0}}[16309];}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a81f369079976a46554fd9798ab035697}{\_\_RW}}\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___ab8e68cbb0d3978264d78ca4b05dee32c}{IM}};}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___a453fb17b3f5640ef52dc1e25f144806c}{MIS}};}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___a358646f54d7e25c962704d875e0aa5ad}{RIS}};}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___abe014aa02ae9ac4f089400338ea67eef}{IC}};}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e___ab07ead12ff34dc4c0ac9bb660bc2bdb1}{GCLK}};}
+\DoxyCodeLine{00110\ \}\ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\_TMR32\_TYPE}};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE}}*\ \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\_TMR32\_TYPE\_PTR}};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00117\ \textcolor{comment}{*\ Function\ Prototypes}}
+\DoxyCodeLine{00118\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00122\ \textcolor{comment}{*\ External\ Variables}}
+\DoxyCodeLine{00123\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EF\_TMR32REGS\_H}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00129\ \textcolor{comment}{*\ End\ of\ File}}
+\DoxyCodeLine{00130\ \textcolor{comment}{******************************************************************************/}}
+
+\end{DoxyCode}

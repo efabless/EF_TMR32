@@ -582,8 +582,8 @@ set the timer deadtime register value
 ## Source code
 
 ```cpp
-#ifndef EF_UART_H
-#define EF_UART_H
+#ifndef EF_TMR32_H
+#define EF_TMR32_H
 
 #include <EF_TMR32_regs.h>
 #include <stdint.h>

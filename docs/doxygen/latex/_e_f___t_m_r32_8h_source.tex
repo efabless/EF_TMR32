@@ -1,0 +1,183 @@
+\hypertarget{_e_f___t_m_r32_8h_source}{}\doxysection{EF\+\_\+\+TMR32.\+h}
+\mbox{\hyperlink{_e_f___t_m_r32_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ Copyright\ 2025\ Efabless\ Corp.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ \ \ \ \ www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{}}
+\DoxyCodeLine{00017\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#ifndef\ EF\_TMR32\_H}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_H}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ Includes}}
+\DoxyCodeLine{00029\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_e_f___t_m_r32__regs_8h}{EF\_TMR32\_regs.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_e_f___driver___common_8h}{EF\_Driver\_Common.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*\ Macros\ and\ Constants}}
+\DoxyCodeLine{00036\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_ACTION\_NONE\ \ \ \ ((uint32\_t)0)\ \ \ }}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_ACTION\_LOW\ \ \ \ \ ((uint32\_t)1)\ \ \ }}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_ACTION\_HIGH\ \ \ \ ((uint32\_t)2)\ \ \ }}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_ACTION\_INVERT\ \ ((uint32\_t)3)\ \ \ }}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_ACTION\_MAX\_VALUE\ \ ((uint32\_t)3)\ \ \ \ }}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWMDT\_MAX\_VALUE\ \ \ \ ((uint32\_t)0x000000FF)\ \ }}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PR\_MAX\_VALUE\ \ \ \ \ \ \ ((uint32\_t)0x0000FFFF)\ \ }}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_IM\_MAX\_VALUE\ \ \ \ \ \ \ ((uint32\_t)2)\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_ICR\_MAX\_VALUE\ \ \ \ \ \ ((uint32\_t)2)\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00052\ \textcolor{comment}{*\ Typedefs\ and\ Enums}}
+\DoxyCodeLine{00053\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00059\ \textcolor{comment}{*\ Function\ Prototypes}}
+\DoxyCodeLine{00060\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a48fee3ba105edc1dcee550925ac90f6d}{EF\_TMR32\_setGclkEnable}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ value);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a03bb5b7b456bda2803eb6e0bc907d2b4}{EF\_TMR32\_enable}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a55e09ad517a12af2d293982a1e0f2d0d}{EF\_TMR32\_disable}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00095\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a5eefc74b17c0183939742ab664fe84db}{EF\_TMR32\_restart}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a34eb34d261146ff2dbb5b1765309fb10}{EF\_TMR32\_PWM0Enable}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00111\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_acbae8bfd22ccc3ada22d403e22274850}{EF\_TMR32\_PWM1Enable}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00122\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_ab370a4c58f42c489a93651d180f99423}{EF\_TMR32\_PWMDeadtimeEnable}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00130\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_aa6d78069423fc1b6c251f8ec9df10c48}{EF\_TMR32\_PWM0Invert}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00138\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a53a9f7c2610d376d309cd29de1c317ce}{EF\_TMR32\_PWM1Invert}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_aadb3f68daef94e6e3668a88eea378fd2}{EF\_TMR32\_setUpCount}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a731ce7ebd98193b110862471c45e6d40}{EF\_TMR32\_setDownCount}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a2fd6766483cd71135ff6ba22f0af2e81}{EF\_TMR32\_setUpDownCount}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00170\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_ae1b99e7a248aa01794677de568a89c12}{EF\_TMR32\_setPeriodic}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00178\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_ab013c8ef6cdc697401cadb1351d42379}{EF\_TMR32\_setOneShot}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00195\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a6f73741bff7231eb72696b642dd5344e}{EF\_TMR32\_setPWM0MatchingZeroAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00212\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a5329cef22cac7e6d808f69a3c5edc851}{EF\_TMR32\_setPWM0MatchingCMPXUpCountAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00229\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a02cca84ee8407a02efa49d1ad4357cdc}{EF\_TMR32\_setPWM0MatchingCMPYUpCountAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00246\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_ab80c062a5bd682ba94d93a563c58a08b}{EF\_TMR32\_setPWM0MatchingRELOADAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00264\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_ad800e1b9441665d57d2c11f57232778c}{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00281\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a9e7ceb938a22a090ae7907e013d026dd}{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00298\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a2e80ed5c92214b2858766e0d8b233008}{EF\_TMR32\_setPWM1MatchingZeroAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00315\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a0e27b3011128b05f745f22f7f8381464}{EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00332\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_afc9656b5c30e601673caa747caeb51c1}{EF\_TMR32\_setPWM1MatchingCMPYUpCountingAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00349\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a401ddd8eb0f58c2e154b0e4bed3bc4a2}{EF\_TMR32\_setPWM1MatchingRELOADAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00366\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a3dd40d43dac4fee39dbe7717ee848ecd}{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00383\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_ad579dc1e3910c7b4a78cde1e6e14bf8d}{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ action);}
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00393\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a5dd014cbe453c7e9ad161bb95c1a5478}{EF\_TMR32\_setRELOAD}}\ (\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ value);}
+\DoxyCodeLine{00394\ }
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00404\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a7ccde6a4fe0321b995105032abce58a6}{EF\_TMR32\_setCMPX}}\ (\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ value);}
+\DoxyCodeLine{00405\ }
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00415\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a025b4b548381e4d01e729cb69b5dff3b}{EF\_TMR32\_setCMPY}}\ (\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ value);}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00426\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a6c0942ecf91efd6f92a22f9881f9b67f}{EF\_TMR32\_getTMR}}\ (\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t*\ tmr\_value);}
+\DoxyCodeLine{00427\ }
+\DoxyCodeLine{00429\ }
+\DoxyCodeLine{00437\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a09b86f3fe84a2823f619704f49df51ff}{EF\_TMR32\_setPWMDeadtime}}\ (\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ value);}
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00440\ }
+\DoxyCodeLine{00448\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a08fe49ae5e93539f493d0640328b043a}{EF\_TMR32\_setPR}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ value);}
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00450\ }
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00460\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_a4ff74f9561301db5707228da86f8bd53}{EF\_TMR32\_setInterruptMask}}(uint32\_t\ spi\_base,\ uint32\_t\ mask);}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00464\ }
+\DoxyCodeLine{00472\ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8h_aa262d941a123ac51624098e04c94d627}{EF\_TMR32\_clearIrq}}(\mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,\ uint32\_t\ mask);}
+\DoxyCodeLine{00473\ }
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00476\ \textcolor{comment}{*\ External\ Variables}}
+\DoxyCodeLine{00477\ \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00479\ }
+\DoxyCodeLine{00480\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//EF\_TMR32\_H}}
+\DoxyCodeLine{00481\ }
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00484\ \textcolor{comment}{*\ End\ of\ File}}
+\DoxyCodeLine{00485\ \textcolor{comment}{******************************************************************************/}}
+
+\end{DoxyCode}

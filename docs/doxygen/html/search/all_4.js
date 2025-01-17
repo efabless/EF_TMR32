@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['high_0',['HIGH',['../EF__TMR32_8h.html#af806efc6052edbc741683ec893bb2fe1a0c3a1dacf94061154b3ee354359c5893',1,'EF_TMR32.h']]]
+  ['gclk_0',['GCLK',['../struct___e_f___t_m_r32___t_y_p_e__.html#ab07ead12ff34dc4c0ac9bb660bc2bdb1',1,'_EF_TMR32_TYPE_']]]
 ];

@@ -1,0 +1,773 @@
+\hypertarget{_e_f___t_m_r32_8c}{}\doxysection{EF\+\_\+\+TMR32.\+c File Reference}
+\label{_e_f___t_m_r32_8c}\index{EF\_TMR32.c@{EF\_TMR32.c}}
+
+
+C file for TMR32 APIs which contains the function implmentations.  
+
+
+{\ttfamily \#include \char`\"{}EF\+\_\+\+TMR32.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_e_f___t_m_r32_8c_aaaba8eb28a93892778a99cac9505ffa7}{EF\+\_\+\+TMR32\+\_\+C}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a48fee3ba105edc1dcee550925ac90f6d}{EF\+\_\+\+TMR32\+\_\+set\+Gclk\+Enable}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the GCLK enable bit in the UART register to a certain value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a03bb5b7b456bda2803eb6e0bc907d2b4}{EF\+\_\+\+TMR32\+\_\+enable}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Enables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a55e09ad517a12af2d293982a1e0f2d0d}{EF\+\_\+\+TMR32\+\_\+disable}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Disables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a5eefc74b17c0183939742ab664fe84db}{EF\+\_\+\+TMR32\+\_\+restart}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Enables timer re-\/start; used in the one-\/shot mode to restart the timer by setting the \char`\"{}\+TS\char`\"{} bit in the CTRL register to 1 and then to 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a34eb34d261146ff2dbb5b1765309fb10}{EF\+\_\+\+TMR32\+\_\+\+PWM0\+Enable}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Enables PWM0 by setting \char`\"{}\+P0\+E\char`\"{} bit in the CTRL register to 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_acbae8bfd22ccc3ada22d403e22274850}{EF\+\_\+\+TMR32\+\_\+\+PWM1\+Enable}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Enables PWM1 by setting \char`\"{}\+P1\+E\char`\"{} bit in the CTRL register to 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_ab370a4c58f42c489a93651d180f99423}{EF\+\_\+\+TMR32\+\_\+\+PWMDeadtime\+Enable}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_aa6d78069423fc1b6c251f8ec9df10c48}{EF\+\_\+\+TMR32\+\_\+\+PWM0\+Invert}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Inverts PWM0 output by setting \char`\"{}\+P0\+I\char`\"{} bit in the CTRL register to 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a53a9f7c2610d376d309cd29de1c317ce}{EF\+\_\+\+TMR32\+\_\+\+PWM1\+Invert}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Inverts PWM1 output by setting \char`\"{}\+P1\+I\char`\"{} bit in the CTRL register to 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_aadb3f68daef94e6e3668a88eea378fd2}{EF\+\_\+\+TMR32\+\_\+set\+Up\+Count}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Sets the timer direction to be up counting by setting the \char`\"{}\+DIR\char`\"{} field in the CTRL register to 0b10. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a731ce7ebd98193b110862471c45e6d40}{EF\+\_\+\+TMR32\+\_\+set\+Down\+Count}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Sets the timer direction to be down counting by setting the \char`\"{}\+DIR\char`\"{} field in the CTRL register to 0b01. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a2fd6766483cd71135ff6ba22f0af2e81}{EF\+\_\+\+TMR32\+\_\+set\+Up\+Down\+Count}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Sets the timer direction to be up/down counting by setting the \char`\"{}\+DIR\char`\"{} field in the CTRL register to 0b11. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_ae1b99e7a248aa01794677de568a89c12}{EF\+\_\+\+TMR32\+\_\+set\+Periodic}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Sets the timer to operate in periodic mode by setting the \char`\"{}\+P\char`\"{} bit in the CFG register to 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_ab013c8ef6cdc697401cadb1351d42379}{EF\+\_\+\+TMR32\+\_\+set\+One\+Shot}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Sets the timer to operate in one-\/shot mode by clearing the \char`\"{}\+P\char`\"{} bit in the CFG register to 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a6f73741bff7231eb72696b642dd5344e}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+Zero\+Action}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a5329cef22cac7e6d808f69a3c5edc851}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPXUp\+Count\+Action}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a02cca84ee8407a02efa49d1ad4357cdc}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPYUp\+Count\+Action}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_ab80c062a5bd682ba94d93a563c58a08b}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+RELOADAction}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_ad800e1b9441665d57d2c11f57232778c}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPYDown\+Count\+Action}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a9e7ceb938a22a090ae7907e013d026dd}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPXDown\+Count\+Action}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a2e80ed5c92214b2858766e0d8b233008}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+Zero\+Action}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a0e27b3011128b05f745f22f7f8381464}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPXUp\+Counting\+Action}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_afc9656b5c30e601673caa747caeb51c1}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPYUp\+Counting\+Action}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a401ddd8eb0f58c2e154b0e4bed3bc4a2}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+RELOADAction}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a3dd40d43dac4fee39dbe7717ee848ecd}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPYDown\+Count\+Action}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_ad579dc1e3910c7b4a78cde1e6e14bf8d}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPXDown\+Count\+Action}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t action)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a5dd014cbe453c7e9ad161bb95c1a5478}{EF\+\_\+\+TMR32\+\_\+set\+RELOAD}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the reload value of a 32-\/bit timer by writing to the RELOAD register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a7ccde6a4fe0321b995105032abce58a6}{EF\+\_\+\+TMR32\+\_\+set\+CMPX}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the compare value of a 32-\/bit timer by writing to the CMPX register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a025b4b548381e4d01e729cb69b5dff3b}{EF\+\_\+\+TMR32\+\_\+set\+CMPY}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the compare value Y of a 32-\/bit timer by writing to the CMPY register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a6c0942ecf91efd6f92a22f9881f9b67f}{EF\+\_\+\+TMR32\+\_\+get\+TMR}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t $\ast$tmr\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Retrieves the current timer value by reading the TMR register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a09b86f3fe84a2823f619704f49df51ff}{EF\+\_\+\+TMR32\+\_\+set\+PWMDeadtime}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the PWM dead time value of the PWM by writing to the PWMDT register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a08fe49ae5e93539f493d0640328b043a}{EF\+\_\+\+TMR32\+\_\+set\+PR}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the prescaler value of the timer by writing to the PR register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a88702cef6eafdb625b8392d9aa58fa11}{EF\+\_\+\+TMR32\+\_\+set\+IM}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t mask)
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a8f2de51a604e7beb66db426098b7be79}{EF\+\_\+\+TMR32\+\_\+set\+ICR}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t mask)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C file for TMR32 APIs which contains the function implmentations. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_aaaba8eb28a93892778a99cac9505ffa7}\label{_e_f___t_m_r32_8c_aaaba8eb28a93892778a99cac9505ffa7}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_C@{EF\_TMR32\_C}}
+\index{EF\_TMR32\_C@{EF\_TMR32\_C}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_C}{EF\_TMR32\_C}}
+{\footnotesize\ttfamily \#define EF\+\_\+\+TMR32\+\_\+C}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a55e09ad517a12af2d293982a1e0f2d0d}\label{_e_f___t_m_r32_8c_a55e09ad517a12af2d293982a1e0f2d0d}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_disable@{EF\_TMR32\_disable}}
+\index{EF\_TMR32\_disable@{EF\_TMR32\_disable}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_disable()}{EF\_TMR32\_disable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+disable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Disables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 0. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a03bb5b7b456bda2803eb6e0bc907d2b4}\label{_e_f___t_m_r32_8c_a03bb5b7b456bda2803eb6e0bc907d2b4}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_enable@{EF\_TMR32\_enable}}
+\index{EF\_TMR32\_enable@{EF\_TMR32\_enable}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_enable()}{EF\_TMR32\_enable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Enables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a6c0942ecf91efd6f92a22f9881f9b67f}\label{_e_f___t_m_r32_8c_a6c0942ecf91efd6f92a22f9881f9b67f}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_getTMR@{EF\_TMR32\_getTMR}}
+\index{EF\_TMR32\_getTMR@{EF\_TMR32\_getTMR}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_getTMR()}{EF\_TMR32\_getTMR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+get\+TMR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t $\ast$}]{tmr\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current timer value by reading the TMR register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ out}}  & {\em tmr\+\_\+value} & A pointer to a uint32\+\_\+t where the timer value will be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a34eb34d261146ff2dbb5b1765309fb10}\label{_e_f___t_m_r32_8c_a34eb34d261146ff2dbb5b1765309fb10}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_PWM0Enable@{EF\_TMR32\_PWM0Enable}}
+\index{EF\_TMR32\_PWM0Enable@{EF\_TMR32\_PWM0Enable}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_PWM0Enable()}{EF\_TMR32\_PWM0Enable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+\+PWM0\+Enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Enables PWM0 by setting \char`\"{}\+P0\+E\char`\"{} bit in the CTRL register to 1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_aa6d78069423fc1b6c251f8ec9df10c48}\label{_e_f___t_m_r32_8c_aa6d78069423fc1b6c251f8ec9df10c48}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_PWM0Invert@{EF\_TMR32\_PWM0Invert}}
+\index{EF\_TMR32\_PWM0Invert@{EF\_TMR32\_PWM0Invert}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_PWM0Invert()}{EF\_TMR32\_PWM0Invert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+\+PWM0\+Invert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Inverts PWM0 output by setting \char`\"{}\+P0\+I\char`\"{} bit in the CTRL register to 1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_acbae8bfd22ccc3ada22d403e22274850}\label{_e_f___t_m_r32_8c_acbae8bfd22ccc3ada22d403e22274850}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_PWM1Enable@{EF\_TMR32\_PWM1Enable}}
+\index{EF\_TMR32\_PWM1Enable@{EF\_TMR32\_PWM1Enable}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_PWM1Enable()}{EF\_TMR32\_PWM1Enable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+\+PWM1\+Enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Enables PWM1 by setting \char`\"{}\+P1\+E\char`\"{} bit in the CTRL register to 1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a53a9f7c2610d376d309cd29de1c317ce}\label{_e_f___t_m_r32_8c_a53a9f7c2610d376d309cd29de1c317ce}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_PWM1Invert@{EF\_TMR32\_PWM1Invert}}
+\index{EF\_TMR32\_PWM1Invert@{EF\_TMR32\_PWM1Invert}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_PWM1Invert()}{EF\_TMR32\_PWM1Invert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+\+PWM1\+Invert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Inverts PWM1 output by setting \char`\"{}\+P1\+I\char`\"{} bit in the CTRL register to 1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_ab370a4c58f42c489a93651d180f99423}\label{_e_f___t_m_r32_8c_ab370a4c58f42c489a93651d180f99423}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_PWMDeadtimeEnable@{EF\_TMR32\_PWMDeadtimeEnable}}
+\index{EF\_TMR32\_PWMDeadtimeEnable@{EF\_TMR32\_PWMDeadtimeEnable}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_PWMDeadtimeEnable()}{EF\_TMR32\_PWMDeadtimeEnable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+\+PWMDeadtime\+Enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+Enables PWM dead-\/time by setting the \char`\"{}\+DTE\char`\"{} (Dead-\/\+Time Enable) bit in the CTRL register to 1. Dead-\/time is a critical feature in PWM signal generation used to ensure a safe period between switching the high and low states, preventing short circuits or other issues in systems with complementary outputs, such as H-\/bridge drivers. When enabled, the \char`\"{}\+DTE\char`\"{} bit introduces a fixed delay between the switching of PWM channels to allow for this safety margin.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a5eefc74b17c0183939742ab664fe84db}\label{_e_f___t_m_r32_8c_a5eefc74b17c0183939742ab664fe84db}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_restart@{EF\_TMR32\_restart}}
+\index{EF\_TMR32\_restart@{EF\_TMR32\_restart}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_restart()}{EF\_TMR32\_restart()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+restart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Enables timer re-\/start; used in the one-\/shot mode to restart the timer by setting the \char`\"{}\+TS\char`\"{} bit in the CTRL register to 1 and then to 0. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a7ccde6a4fe0321b995105032abce58a6}\label{_e_f___t_m_r32_8c_a7ccde6a4fe0321b995105032abce58a6}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setCMPX@{EF\_TMR32\_setCMPX}}
+\index{EF\_TMR32\_setCMPX@{EF\_TMR32\_setCMPX}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setCMPX()}{EF\_TMR32\_setCMPX()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+CMPX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the compare value of a 32-\/bit timer by writing to the CMPX register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & The compare value to set in the CMPX register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a025b4b548381e4d01e729cb69b5dff3b}\label{_e_f___t_m_r32_8c_a025b4b548381e4d01e729cb69b5dff3b}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setCMPY@{EF\_TMR32\_setCMPY}}
+\index{EF\_TMR32\_setCMPY@{EF\_TMR32\_setCMPY}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setCMPY()}{EF\_TMR32\_setCMPY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+CMPY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the compare value Y of a 32-\/bit timer by writing to the CMPY register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & The compare value to set in the CMPY register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a731ce7ebd98193b110862471c45e6d40}\label{_e_f___t_m_r32_8c_a731ce7ebd98193b110862471c45e6d40}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setDownCount@{EF\_TMR32\_setDownCount}}
+\index{EF\_TMR32\_setDownCount@{EF\_TMR32\_setDownCount}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setDownCount()}{EF\_TMR32\_setDownCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+Down\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Sets the timer direction to be down counting by setting the \char`\"{}\+DIR\char`\"{} field in the CTRL register to 0b01. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a48fee3ba105edc1dcee550925ac90f6d}\label{_e_f___t_m_r32_8c_a48fee3ba105edc1dcee550925ac90f6d}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setGclkEnable@{EF\_TMR32\_setGclkEnable}}
+\index{EF\_TMR32\_setGclkEnable@{EF\_TMR32\_setGclkEnable}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setGclkEnable()}{EF\_TMR32\_setGclkEnable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+Gclk\+Enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the GCLK enable bit in the UART register to a certain value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & The value of the GCLK enable bit\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a8f2de51a604e7beb66db426098b7be79}\label{_e_f___t_m_r32_8c_a8f2de51a604e7beb66db426098b7be79}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setICR@{EF\_TMR32\_setICR}}
+\index{EF\_TMR32\_setICR@{EF\_TMR32\_setICR}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setICR()}{EF\_TMR32\_setICR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+ICR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a88702cef6eafdb625b8392d9aa58fa11}\label{_e_f___t_m_r32_8c_a88702cef6eafdb625b8392d9aa58fa11}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setIM@{EF\_TMR32\_setIM}}
+\index{EF\_TMR32\_setIM@{EF\_TMR32\_setIM}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setIM()}{EF\_TMR32\_setIM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+IM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_ab013c8ef6cdc697401cadb1351d42379}\label{_e_f___t_m_r32_8c_ab013c8ef6cdc697401cadb1351d42379}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setOneShot@{EF\_TMR32\_setOneShot}}
+\index{EF\_TMR32\_setOneShot@{EF\_TMR32\_setOneShot}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setOneShot()}{EF\_TMR32\_setOneShot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+One\+Shot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Sets the timer to operate in one-\/shot mode by clearing the \char`\"{}\+P\char`\"{} bit in the CFG register to 0. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_ae1b99e7a248aa01794677de568a89c12}\label{_e_f___t_m_r32_8c_ae1b99e7a248aa01794677de568a89c12}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPeriodic@{EF\_TMR32\_setPeriodic}}
+\index{EF\_TMR32\_setPeriodic@{EF\_TMR32\_setPeriodic}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPeriodic()}{EF\_TMR32\_setPeriodic()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+Periodic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Sets the timer to operate in periodic mode by setting the \char`\"{}\+P\char`\"{} bit in the CFG register to 1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a08fe49ae5e93539f493d0640328b043a}\label{_e_f___t_m_r32_8c_a08fe49ae5e93539f493d0640328b043a}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPR@{EF\_TMR32\_setPR}}
+\index{EF\_TMR32\_setPR@{EF\_TMR32\_setPR}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPR()}{EF\_TMR32\_setPR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the prescaler value of the timer by writing to the PR register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & The prescaler value to set in the PR register. Must not exceed \mbox{\hyperlink{_e_f___t_m_r32_8h_a86db56e37fbb384e261a39f05208baa3}{EF\+\_\+\+TMR32\+\_\+\+PR\+\_\+\+MAX\+\_\+\+VALUE}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a9e7ceb938a22a090ae7907e013d026dd}\label{_e_f___t_m_r32_8c_a9e7ceb938a22a090ae7907e013d026dd}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM0MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction}}
+\index{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction()}{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPXDown\+Count\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR0 PWM when the timer matches the CMPX value while down counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPX value while counting down. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E5\+\_\+\+BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the CMPX value while counting down. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a5329cef22cac7e6d808f69a3c5edc851}\label{_e_f___t_m_r32_8c_a5329cef22cac7e6d808f69a3c5edc851}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM0MatchingCMPXUpCountAction@{EF\_TMR32\_setPWM0MatchingCMPXUpCountAction}}
+\index{EF\_TMR32\_setPWM0MatchingCMPXUpCountAction@{EF\_TMR32\_setPWM0MatchingCMPXUpCountAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingCMPXUpCountAction()}{EF\_TMR32\_setPWM0MatchingCMPXUpCountAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPXUp\+Count\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR0 PWM when the timer matches the CMPX value while up counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPX value while counting up. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E1\+\_\+\+BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the CMPX value while counting up. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_ad800e1b9441665d57d2c11f57232778c}\label{_e_f___t_m_r32_8c_ad800e1b9441665d57d2c11f57232778c}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM0MatchingCMPYDownCountAction@{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction}}
+\index{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction@{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction()}{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPYDown\+Count\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR0 PWM when the timer matches the CMPY value while down counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPY value while counting down. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E4\+\_\+\+BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the CMPY value while counting down. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a02cca84ee8407a02efa49d1ad4357cdc}\label{_e_f___t_m_r32_8c_a02cca84ee8407a02efa49d1ad4357cdc}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM0MatchingCMPYUpCountAction@{EF\_TMR32\_setPWM0MatchingCMPYUpCountAction}}
+\index{EF\_TMR32\_setPWM0MatchingCMPYUpCountAction@{EF\_TMR32\_setPWM0MatchingCMPYUpCountAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingCMPYUpCountAction()}{EF\_TMR32\_setPWM0MatchingCMPYUpCountAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPYUp\+Count\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR0 PWM when the timer matches the CMPY value while up counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPY value while counting up. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E2\+\_\+\+BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the CMPY value while counting up. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_ab80c062a5bd682ba94d93a563c58a08b}\label{_e_f___t_m_r32_8c_ab80c062a5bd682ba94d93a563c58a08b}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM0MatchingRELOADAction@{EF\_TMR32\_setPWM0MatchingRELOADAction}}
+\index{EF\_TMR32\_setPWM0MatchingRELOADAction@{EF\_TMR32\_setPWM0MatchingRELOADAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingRELOADAction()}{EF\_TMR32\_setPWM0MatchingRELOADAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+RELOADAction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR0 PWM when the timer matches the RELOAD value. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the RELOAD value. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E3\+\_\+\+BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the RELOAD value. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a6f73741bff7231eb72696b642dd5344e}\label{_e_f___t_m_r32_8c_a6f73741bff7231eb72696b642dd5344e}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM0MatchingZeroAction@{EF\_TMR32\_setPWM0MatchingZeroAction}}
+\index{EF\_TMR32\_setPWM0MatchingZeroAction@{EF\_TMR32\_setPWM0MatchingZeroAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingZeroAction()}{EF\_TMR32\_setPWM0MatchingZeroAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+Zero\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR0 PWM when the timer matches the Zero value. This function allows the user to specify what happens to the PWM output signal when the timer counter reaches zero. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a70b01f1d7aaa6ec37fec28ffe7d49b1b}{EF\+\_\+\+TMR32\+\_\+\+PWM0\+CFG\+\_\+\+REG\+\_\+\+E0\+\_\+\+BIT}}. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the Zero value. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_ad579dc1e3910c7b4a78cde1e6e14bf8d}\label{_e_f___t_m_r32_8c_ad579dc1e3910c7b4a78cde1e6e14bf8d}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM1MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction}}
+\index{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction()}{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPXDown\+Count\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR1 PWM when the timer matches the CMPX value while down counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPX value while counting down. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E5\+\_\+\+BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the CMPX value while counting down. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a0e27b3011128b05f745f22f7f8381464}\label{_e_f___t_m_r32_8c_a0e27b3011128b05f745f22f7f8381464}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction@{EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction}}
+\index{EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction@{EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction()}{EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPXUp\+Counting\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR1 PWM when the timer matches the CMPX value while up counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPX value while counting up. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E1\+\_\+\+BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the CMPX value while counting up. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a3dd40d43dac4fee39dbe7717ee848ecd}\label{_e_f___t_m_r32_8c_a3dd40d43dac4fee39dbe7717ee848ecd}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM1MatchingCMPYDownCountAction@{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction}}
+\index{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction@{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction()}{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPYDown\+Count\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR1 PWM when the timer matches the CMPY value while down counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPY value while counting down. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E4\+\_\+\+BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the CMPY value while counting down. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_afc9656b5c30e601673caa747caeb51c1}\label{_e_f___t_m_r32_8c_afc9656b5c30e601673caa747caeb51c1}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM1MatchingCMPYUpCountingAction@{EF\_TMR32\_setPWM1MatchingCMPYUpCountingAction}}
+\index{EF\_TMR32\_setPWM1MatchingCMPYUpCountingAction@{EF\_TMR32\_setPWM1MatchingCMPYUpCountingAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingCMPYUpCountingAction()}{EF\_TMR32\_setPWM1MatchingCMPYUpCountingAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPYUp\+Counting\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR1 PWM when the timer matches the CMPY value while up counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPY value while counting up. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E2\+\_\+\+BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the CMPY value while counting up. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a401ddd8eb0f58c2e154b0e4bed3bc4a2}\label{_e_f___t_m_r32_8c_a401ddd8eb0f58c2e154b0e4bed3bc4a2}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM1MatchingRELOADAction@{EF\_TMR32\_setPWM1MatchingRELOADAction}}
+\index{EF\_TMR32\_setPWM1MatchingRELOADAction@{EF\_TMR32\_setPWM1MatchingRELOADAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingRELOADAction()}{EF\_TMR32\_setPWM1MatchingRELOADAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+RELOADAction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR1 PWM when the timer matches the RELOAD value. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the RELOAD value. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E3\+\_\+\+BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the RELOAD value. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a2e80ed5c92214b2858766e0d8b233008}\label{_e_f___t_m_r32_8c_a2e80ed5c92214b2858766e0d8b233008}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM1MatchingZeroAction@{EF\_TMR32\_setPWM1MatchingZeroAction}}
+\index{EF\_TMR32\_setPWM1MatchingZeroAction@{EF\_TMR32\_setPWM1MatchingZeroAction}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingZeroAction()}{EF\_TMR32\_setPWM1MatchingZeroAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+Zero\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{action }\end{DoxyParamCaption})}
+
+Configures the action of TMR1 PWM when the timer matches the Zero value. This function allows the user to specify what happens to the PWM output signal when the timer counter reaches zero. The available actions are\+: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_ad50501bb2385f55df3c6d9b5ef78c5bf}{EF\+\_\+\+TMR32\+\_\+\+PWM1\+CFG\+\_\+\+REG\+\_\+\+E0\+\_\+\+BIT}}. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & A uint32\+\_\+t value specifying the action to take when the timer matches the Zero value. The possible values are\+:
+\begin{DoxyItemize}
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+NONE\+: No action (do nothing)
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+LOW\+: Set the PWM output to LOW
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+HIGH\+: Set the PWM output to HIGH
+\item EF\+\_\+\+TMR32\+\_\+\+ACTION\+\_\+\+INVERT\+: Invert the current output state
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a09b86f3fe84a2823f619704f49df51ff}\label{_e_f___t_m_r32_8c_a09b86f3fe84a2823f619704f49df51ff}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWMDeadtime@{EF\_TMR32\_setPWMDeadtime}}
+\index{EF\_TMR32\_setPWMDeadtime@{EF\_TMR32\_setPWMDeadtime}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWMDeadtime()}{EF\_TMR32\_setPWMDeadtime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWMDeadtime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the PWM dead time value of the PWM by writing to the PWMDT register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & The dead time value to set in the PWMDT register. Must not exceed \mbox{\hyperlink{_e_f___t_m_r32_8h_ab645d9ca5f1c71739678d22149dd0404}{EF\+\_\+\+TMR32\+\_\+\+PWMDT\+\_\+\+MAX\+\_\+\+VALUE}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a5dd014cbe453c7e9ad161bb95c1a5478}\label{_e_f___t_m_r32_8c_a5dd014cbe453c7e9ad161bb95c1a5478}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setRELOAD@{EF\_TMR32\_setRELOAD}}
+\index{EF\_TMR32\_setRELOAD@{EF\_TMR32\_setRELOAD}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setRELOAD()}{EF\_TMR32\_setRELOAD()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+RELOAD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the reload value of a 32-\/bit timer by writing to the RELOAD register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & The reload value to set in the RELOAD register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_aadb3f68daef94e6e3668a88eea378fd2}\label{_e_f___t_m_r32_8c_aadb3f68daef94e6e3668a88eea378fd2}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setUpCount@{EF\_TMR32\_setUpCount}}
+\index{EF\_TMR32\_setUpCount@{EF\_TMR32\_setUpCount}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setUpCount()}{EF\_TMR32\_setUpCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+Up\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Sets the timer direction to be up counting by setting the \char`\"{}\+DIR\char`\"{} field in the CTRL register to 0b10. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a2fd6766483cd71135ff6ba22f0af2e81}\label{_e_f___t_m_r32_8c_a2fd6766483cd71135ff6ba22f0af2e81}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setUpDownCount@{EF\_TMR32\_setUpDownCount}}
+\index{EF\_TMR32\_setUpDownCount@{EF\_TMR32\_setUpDownCount}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setUpDownCount()}{EF\_TMR32\_setUpDownCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+Up\+Down\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Sets the timer direction to be up/down counting by setting the \char`\"{}\+DIR\char`\"{} field in the CTRL register to 0b11. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} , which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}

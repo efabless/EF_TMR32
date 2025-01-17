@@ -1,0 +1,759 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_e_f___t_m_r32__regs_8h" kind="file" language="C++">
+    <compoundname>EF_TMR32_regs.h</compoundname>
+    <includes refid="_e_f___driver___common_8h" local="yes">EF_Driver_Common.h</includes>
+    <includedby refid="_e_f___t_m_r32_8h" local="yes">EF_TMR32.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>EF_Driver_Common.h</label>
+        <link refid="_e_f___driver___common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EF_TMR32_regs.h</label>
+        <link refid="_e_f___t_m_r32__regs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>EF_TMR32.c</label>
+        <link refid="_e_f___t_m_r32_8c"/>
+      </node>
+      <node id="2">
+        <label>EF_TMR32.h</label>
+        <link refid="_e_f___t_m_r32_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EF_TMR32_regs.h</label>
+        <link refid="_e_f___t_m_r32__regs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct___e_f___t_m_r32___t_y_p_e__" prot="public">_EF_TMR32_TYPE_</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a470cd5845bed94d8b8b358933e4a3442" prot="public" static="no">
+        <name>IO_TYPES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="35" column="9" bodyfile="EF_TMR32_regs.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" prot="public" static="no">
+        <name>__R</name>
+        <initializer>volatile const uint32_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="36" column="11" bodyfile="EF_TMR32_regs.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" prot="public" static="no">
+        <name>__W</name>
+        <initializer>volatile       uint32_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="37" column="11" bodyfile="EF_TMR32_regs.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a81f369079976a46554fd9798ab035697" prot="public" static="no">
+        <name>__RW</name>
+        <initializer>volatile       uint32_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="38" column="11" bodyfile="EF_TMR32_regs.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a8a61f271d2a3622f6e8fa62e7006e3fd" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_TE_BIT</name>
+        <initializer>(uint32_t)(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="41" column="9" bodyfile="EF_TMR32_regs.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a18005f88ecf5e7fc420ddc290cb80c96" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_TE_MASK</name>
+        <initializer>(uint32_t)(0x1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="42" column="9" bodyfile="EF_TMR32_regs.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ac4382558d6b66fa07908ff7c161587ba" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_TS_BIT</name>
+        <initializer>(uint32_t)(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="43" column="9" bodyfile="EF_TMR32_regs.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a09933222ce03bfc3bc3a5d730d96d10c" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_TS_MASK</name>
+        <initializer>(uint32_t)(0x2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="44" column="9" bodyfile="EF_TMR32_regs.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ae8ddbc3cb210812358d7e57fb0dba958" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_P0E_BIT</name>
+        <initializer>(uint32_t)(2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="45" column="9" bodyfile="EF_TMR32_regs.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a9709b366c0671953f7b7f7b1858b8af0" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_P0E_MASK</name>
+        <initializer>(uint32_t)(0x4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="46" column="9" bodyfile="EF_TMR32_regs.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ab987c15d464b166484e77573816bc2dc" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_P1E_BIT</name>
+        <initializer>(uint32_t)(3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="47" column="9" bodyfile="EF_TMR32_regs.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ad30a37b7f4f3cb767ed49cbcc8ddced5" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_P1E_MASK</name>
+        <initializer>(uint32_t)(0x8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="48" column="9" bodyfile="EF_TMR32_regs.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1aa5c3cd2af8288638c7d995b87d7d3a73" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_DTE_BIT</name>
+        <initializer>(uint32_t)(4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="49" column="9" bodyfile="EF_TMR32_regs.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a8c2512036ee14c1440aa451e8bf5a68f" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_DTE_MASK</name>
+        <initializer>(uint32_t)(0x10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="50" column="9" bodyfile="EF_TMR32_regs.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a7957a0e0fa4562b16ab214bbb9b90a51" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_PI0_BIT</name>
+        <initializer>(uint32_t)(5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="51" column="9" bodyfile="EF_TMR32_regs.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a187954cbf5bca51c17d6ee010320496f" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_PI0_MASK</name>
+        <initializer>(uint32_t)(0x20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="52" column="9" bodyfile="EF_TMR32_regs.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a38181264521325aa7b76f3b9f2d2d538" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_PI1_BIT</name>
+        <initializer>(uint32_t)(6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="53" column="9" bodyfile="EF_TMR32_regs.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ac1888a820a009871939c2713536262f2" prot="public" static="no">
+        <name>EF_TMR32_CTRL_REG_PI1_MASK</name>
+        <initializer>(uint32_t)(0x40)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="54" column="9" bodyfile="EF_TMR32_regs.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a67fc12a82dc5c18837c124677450ec42" prot="public" static="no">
+        <name>EF_TMR32_CFG_REG_DIR_BIT</name>
+        <initializer>(uint32_t)(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="55" column="9" bodyfile="EF_TMR32_regs.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a2eb6fdee86a19ed2741841b3aeb20190" prot="public" static="no">
+        <name>EF_TMR32_CFG_REG_DIR_MASK</name>
+        <initializer>(uint32_t)(0x3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="56" column="9" bodyfile="EF_TMR32_regs.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ac18d10835a40d4cede7aac865359e616" prot="public" static="no">
+        <name>EF_TMR32_CFG_REG_P_BIT</name>
+        <initializer>(uint32_t)(2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="57" column="9" bodyfile="EF_TMR32_regs.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1addd4f92d40bee03bb18472e97f65f575" prot="public" static="no">
+        <name>EF_TMR32_CFG_REG_P_MASK</name>
+        <initializer>(uint32_t)(0x4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="58" column="9" bodyfile="EF_TMR32_regs.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a70b01f1d7aaa6ec37fec28ffe7d49b1b" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E0_BIT</name>
+        <initializer>(uint32_t)(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="59" column="9" bodyfile="EF_TMR32_regs.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a3768e7c0ecd54b880b961fd61ea25b54" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E0_MASK</name>
+        <initializer>(uint32_t)(0x3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="60" column="9" bodyfile="EF_TMR32_regs.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a9efa1187d55b12622af966b65dde6406" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E1_BIT</name>
+        <initializer>(uint32_t)(2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="61" column="9" bodyfile="EF_TMR32_regs.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ad17004ea36383e41d59b3645f119d6ee" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E1_MASK</name>
+        <initializer>(uint32_t)(0xc)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="62" column="9" bodyfile="EF_TMR32_regs.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a37caffe2875fd64dcd7f157a4acbc24f" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E2_BIT</name>
+        <initializer>(uint32_t)(4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="63" column="9" bodyfile="EF_TMR32_regs.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a0963671f2d64b6a8d44cb53bd172b9f6" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E2_MASK</name>
+        <initializer>(uint32_t)(0x30)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="64" column="9" bodyfile="EF_TMR32_regs.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a842281bd48fd9663d6b6dfccad7dd13c" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E3_BIT</name>
+        <initializer>(uint32_t)(6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="65" column="9" bodyfile="EF_TMR32_regs.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a167772b4b88bf0d45a7fe767e9b400ab" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E3_MASK</name>
+        <initializer>(uint32_t)(0xc0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="66" column="9" bodyfile="EF_TMR32_regs.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1aa2266ca94b25cb878b7ddc8272899a87" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E4_BIT</name>
+        <initializer>(uint32_t)(8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="67" column="9" bodyfile="EF_TMR32_regs.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ae48dbb0d2622aa39b8c0ad818d3e65bf" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E4_MASK</name>
+        <initializer>(uint32_t)(0x300)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="68" column="9" bodyfile="EF_TMR32_regs.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a57abb4bded0aadcfe612efd462d72361" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E5_BIT</name>
+        <initializer>(uint32_t)(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="69" column="9" bodyfile="EF_TMR32_regs.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ae2a5aeaa91252fa8b4356e820ce64aeb" prot="public" static="no">
+        <name>EF_TMR32_PWM0CFG_REG_E5_MASK</name>
+        <initializer>(uint32_t)(0xc00)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="70" column="9" bodyfile="EF_TMR32_regs.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ad50501bb2385f55df3c6d9b5ef78c5bf" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E0_BIT</name>
+        <initializer>(uint32_t)(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="71" column="9" bodyfile="EF_TMR32_regs.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1aa56b6cd1ab68c2df511c56afc4af8ef2" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E0_MASK</name>
+        <initializer>(uint32_t)(0x3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="72" column="9" bodyfile="EF_TMR32_regs.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a1d7f9741a38207677956aa34bef1b694" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E1_BIT</name>
+        <initializer>(uint32_t)(2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="73" column="9" bodyfile="EF_TMR32_regs.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a5c82d8bdf4bf317da8db5a63a618a10e" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E1_MASK</name>
+        <initializer>(uint32_t)(0xc)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="74" column="9" bodyfile="EF_TMR32_regs.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a6d3d5ecb2fcfd7a56bd1735807b0c9d6" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E2_BIT</name>
+        <initializer>(uint32_t)(4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="75" column="9" bodyfile="EF_TMR32_regs.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a50e0462c7485c437c3da98cb8a0a4b4e" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E2_MASK</name>
+        <initializer>(uint32_t)(0x30)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="76" column="9" bodyfile="EF_TMR32_regs.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a63a36d6cefea911169aaa319a7495917" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E3_BIT</name>
+        <initializer>(uint32_t)(6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="77" column="9" bodyfile="EF_TMR32_regs.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a7adadee6794981e340d240376a3dab09" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E3_MASK</name>
+        <initializer>(uint32_t)(0xc0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="78" column="9" bodyfile="EF_TMR32_regs.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a85e5a9e45f39b701da242f805e12fb09" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E4_BIT</name>
+        <initializer>(uint32_t)(8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="79" column="9" bodyfile="EF_TMR32_regs.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a6c15c32ec4373135afb784bbd6f45bf6" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E4_MASK</name>
+        <initializer>(uint32_t)(0x300)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="80" column="9" bodyfile="EF_TMR32_regs.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a5ac881719f60aef3c1bc22115ecdcded" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E5_BIT</name>
+        <initializer>(uint32_t)(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="81" column="9" bodyfile="EF_TMR32_regs.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a51dfc83d58f14bf54c6ad56e063d8b44" prot="public" static="no">
+        <name>EF_TMR32_PWM1CFG_REG_E5_MASK</name>
+        <initializer>(uint32_t)(0xc00)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="82" column="9" bodyfile="EF_TMR32_regs.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1a9c67d639a50fbec4689aaea448612a85" prot="public" static="no">
+        <name>EF_TMR32_TO_FLAG</name>
+        <initializer>((uint32_t)0x1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="84" column="9" bodyfile="EF_TMR32_regs.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1ae4d846684c64c7b3a3a692af73067cf3" prot="public" static="no">
+        <name>EF_TMR32_MX_FLAG</name>
+        <initializer>((uint32_t)0x2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="85" column="9" bodyfile="EF_TMR32_regs.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_f___t_m_r32__regs_8h_1afc2875bb29bbbcc3b24fe8b9648ec7ae" prot="public" static="no">
+        <name>EF_TMR32_MY_FLAG</name>
+        <initializer>((uint32_t)0x4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="86" column="9" bodyfile="EF_TMR32_regs.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" prot="public" static="no">
+        <type>struct <ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">_EF_TMR32_TYPE_</ref></type>
+        <definition>typedef struct _EF_TMR32_TYPE_ EF_TMR32_TYPE</definition>
+        <argsstring></argsstring>
+        <name>EF_TMR32_TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="110" column="15"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" prot="public" static="no">
+        <type><ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> *</type>
+        <definition>typedef EF_TMR32_TYPE* EF_TMR32_TYPE_PTR</definition>
+        <argsstring></argsstring>
+        <name>EF_TMR32_TYPE_PTR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_regs.h" line="113" column="23" bodyfile="EF_TMR32_regs.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>2024<sp/>Efabless<sp/>Corp.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/>Author:<sp/>Efabless<sp/>Corp.<sp/>(ip_admin@efabless.com)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>Includes</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_e_f___driver___common_8h" kindref="compound">EF_Driver_Common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>Macros<sp/>and<sp/>Constants</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EF_TMR32REGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32REGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IO_TYPES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="_e_f___t_m_r32__regs_8h_1a470cd5845bed94d8b8b358933e4a3442" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_TYPES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="_e_f___t_m_r32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>__R<sp/><sp/><sp/><sp/><sp/>volatile<sp/>const<sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>__W<sp/><sp/><sp/><sp/><sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="_e_f___t_m_r32__regs_8h_1a81f369079976a46554fd9798ab035697" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>__RW<sp/><sp/><sp/><sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_e_f___t_m_r32__regs_8h_1a8a61f271d2a3622f6e8fa62e7006e3fd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_TE_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="_e_f___t_m_r32__regs_8h_1a18005f88ecf5e7fc420ddc290cb80c96" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_TE_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0x1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="_e_f___t_m_r32__regs_8h_1ac4382558d6b66fa07908ff7c161587ba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_TS_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_e_f___t_m_r32__regs_8h_1a09933222ce03bfc3bc3a5d730d96d10c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_TS_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0x2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_e_f___t_m_r32__regs_8h_1ae8ddbc3cb210812358d7e57fb0dba958" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_P0E_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="_e_f___t_m_r32__regs_8h_1a9709b366c0671953f7b7f7b1858b8af0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_P0E_MASK<sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0x4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="_e_f___t_m_r32__regs_8h_1ab987c15d464b166484e77573816bc2dc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_P1E_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="_e_f___t_m_r32__regs_8h_1ad30a37b7f4f3cb767ed49cbcc8ddced5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_P1E_MASK<sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0x8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_e_f___t_m_r32__regs_8h_1aa5c3cd2af8288638c7d995b87d7d3a73" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_DTE_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="_e_f___t_m_r32__regs_8h_1a8c2512036ee14c1440aa451e8bf5a68f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_DTE_MASK<sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0x10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="_e_f___t_m_r32__regs_8h_1a7957a0e0fa4562b16ab214bbb9b90a51" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_PI0_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="_e_f___t_m_r32__regs_8h_1a187954cbf5bca51c17d6ee010320496f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_PI0_MASK<sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0x20)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="_e_f___t_m_r32__regs_8h_1a38181264521325aa7b76f3b9f2d2d538" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_PI1_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="_e_f___t_m_r32__regs_8h_1ac1888a820a009871939c2713536262f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_PI1_MASK<sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0x40)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="_e_f___t_m_r32__regs_8h_1a67fc12a82dc5c18837c124677450ec42" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CFG_REG_DIR_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="_e_f___t_m_r32__regs_8h_1a2eb6fdee86a19ed2741841b3aeb20190" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CFG_REG_DIR_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0x3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="_e_f___t_m_r32__regs_8h_1ac18d10835a40d4cede7aac865359e616" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CFG_REG_P_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="_e_f___t_m_r32__regs_8h_1addd4f92d40bee03bb18472e97f65f575" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_CFG_REG_P_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)(0x4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="_e_f___t_m_r32__regs_8h_1a70b01f1d7aaa6ec37fec28ffe7d49b1b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E0_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_e_f___t_m_r32__regs_8h_1a3768e7c0ecd54b880b961fd61ea25b54" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E0_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0x3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="_e_f___t_m_r32__regs_8h_1a9efa1187d55b12622af966b65dde6406" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E1_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_e_f___t_m_r32__regs_8h_1ad17004ea36383e41d59b3645f119d6ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E1_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0xc)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_e_f___t_m_r32__regs_8h_1a37caffe2875fd64dcd7f157a4acbc24f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E2_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="_e_f___t_m_r32__regs_8h_1a0963671f2d64b6a8d44cb53bd172b9f6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E2_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0x30)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_e_f___t_m_r32__regs_8h_1a842281bd48fd9663d6b6dfccad7dd13c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E3_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="_e_f___t_m_r32__regs_8h_1a167772b4b88bf0d45a7fe767e9b400ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E3_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0xc0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="_e_f___t_m_r32__regs_8h_1aa2266ca94b25cb878b7ddc8272899a87" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E4_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="_e_f___t_m_r32__regs_8h_1ae48dbb0d2622aa39b8c0ad818d3e65bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E4_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0x300)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="_e_f___t_m_r32__regs_8h_1a57abb4bded0aadcfe612efd462d72361" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E5_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="_e_f___t_m_r32__regs_8h_1ae2a5aeaa91252fa8b4356e820ce64aeb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E5_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0xc00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="_e_f___t_m_r32__regs_8h_1ad50501bb2385f55df3c6d9b5ef78c5bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E0_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="_e_f___t_m_r32__regs_8h_1aa56b6cd1ab68c2df511c56afc4af8ef2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E0_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0x3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="_e_f___t_m_r32__regs_8h_1a1d7f9741a38207677956aa34bef1b694" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E1_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="_e_f___t_m_r32__regs_8h_1a5c82d8bdf4bf317da8db5a63a618a10e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E1_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0xc)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="_e_f___t_m_r32__regs_8h_1a6d3d5ecb2fcfd7a56bd1735807b0c9d6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E2_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="_e_f___t_m_r32__regs_8h_1a50e0462c7485c437c3da98cb8a0a4b4e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E2_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0x30)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="_e_f___t_m_r32__regs_8h_1a63a36d6cefea911169aaa319a7495917" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E3_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="_e_f___t_m_r32__regs_8h_1a7adadee6794981e340d240376a3dab09" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E3_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0xc0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="_e_f___t_m_r32__regs_8h_1a85e5a9e45f39b701da242f805e12fb09" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E4_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="_e_f___t_m_r32__regs_8h_1a6c15c32ec4373135afb784bbd6f45bf6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E4_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0x300)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="_e_f___t_m_r32__regs_8h_1a5ac881719f60aef3c1bc22115ecdcded" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E5_BIT<sp/><sp/><sp/><sp/><sp/>(uint32_t)(10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="_e_f___t_m_r32__regs_8h_1a51dfc83d58f14bf54c6ad56e063d8b44" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E5_MASK<sp/><sp/><sp/><sp/>(uint32_t)(0xc00)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="_e_f___t_m_r32__regs_8h_1a9c67d639a50fbec4689aaea448612a85" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_TO_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_e_f___t_m_r32__regs_8h_1ae4d846684c64c7b3a3a692af73067cf3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_MX_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="_e_f___t_m_r32__regs_8h_1afc2875bb29bbbcc3b24fe8b9648ec7ae" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_MY_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)0x4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">*<sp/>Typedefs<sp/>and<sp/>Enums</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="struct___e_f___t_m_r32___t_y_p_e__" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">_EF_TMR32_TYPE_</ref><sp/>{</highlight></codeline>
+<codeline lineno="93" refid="struct___e_f___t_m_r32___t_y_p_e___1a4bf7305297d5a1b4d41265a94d5bc872" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1a4bf7305297d5a1b4d41265a94d5bc872" kindref="member">TMR</ref>;</highlight></codeline>
+<codeline lineno="94" refid="struct___e_f___t_m_r32___t_y_p_e___1aa3ae792c2ebe1da3297110ebeb3466ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1aa3ae792c2ebe1da3297110ebeb3466ad" kindref="member">RELOAD</ref>;</highlight></codeline>
+<codeline lineno="95" refid="struct___e_f___t_m_r32___t_y_p_e___1a633ee055130fe09a100217016896b176" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1a633ee055130fe09a100217016896b176" kindref="member">PR</ref>;</highlight></codeline>
+<codeline lineno="96" refid="struct___e_f___t_m_r32___t_y_p_e___1ae43e19e8088a1fefc2dc18440543e33f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1ae43e19e8088a1fefc2dc18440543e33f" kindref="member">CMPX</ref>;</highlight></codeline>
+<codeline lineno="97" refid="struct___e_f___t_m_r32___t_y_p_e___1a595ddce5ae660e566f43e8c15585a138" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1a595ddce5ae660e566f43e8c15585a138" kindref="member">CMPY</ref>;</highlight></codeline>
+<codeline lineno="98" refid="struct___e_f___t_m_r32___t_y_p_e___1ac5efd0912e6932652209129716a59140" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref>;</highlight></codeline>
+<codeline lineno="99" refid="struct___e_f___t_m_r32___t_y_p_e___1a147cc6d93ea18c5b8aa6fd7a6a343d22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1a147cc6d93ea18c5b8aa6fd7a6a343d22" kindref="member">CFG</ref>;</highlight></codeline>
+<codeline lineno="100" refid="struct___e_f___t_m_r32___t_y_p_e___1a13319bf36918fad02652cf9636e0f3bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref>;</highlight></codeline>
+<codeline lineno="101" refid="struct___e_f___t_m_r32___t_y_p_e___1ad2c30253ccd1145f45e2b5cf59df8355" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref>;</highlight></codeline>
+<codeline lineno="102" refid="struct___e_f___t_m_r32___t_y_p_e___1aaf7ab19ccb2ec1d0352cbadb0e75024b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1aaf7ab19ccb2ec1d0352cbadb0e75024b" kindref="member">PWMDT</ref>;</highlight></codeline>
+<codeline lineno="103" refid="struct___e_f___t_m_r32___t_y_p_e___1a334a222fd44fb0c3a484a9f18fd72d5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1a334a222fd44fb0c3a484a9f18fd72d5f" kindref="member">PWMFC</ref>;</highlight></codeline>
+<codeline lineno="104" refid="struct___e_f___t_m_r32___t_y_p_e___1aaf4fef241849c75bdf61c5fc48c11f80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1aaf4fef241849c75bdf61c5fc48c11f80" kindref="member">reserved_0</ref>[16309];</highlight></codeline>
+<codeline lineno="105" refid="struct___e_f___t_m_r32___t_y_p_e___1ab8e68cbb0d3978264d78ca4b05dee32c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1a81f369079976a46554fd9798ab035697" kindref="member">__RW</ref><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1ab8e68cbb0d3978264d78ca4b05dee32c" kindref="member">IM</ref>;</highlight></codeline>
+<codeline lineno="106" refid="struct___e_f___t_m_r32___t_y_p_e___1a453fb17b3f5640ef52dc1e25f144806c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1a453fb17b3f5640ef52dc1e25f144806c" kindref="member">MIS</ref>;</highlight></codeline>
+<codeline lineno="107" refid="struct___e_f___t_m_r32___t_y_p_e___1a358646f54d7e25c962704d875e0aa5ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1a358646f54d7e25c962704d875e0aa5ad" kindref="member">RIS</ref>;</highlight></codeline>
+<codeline lineno="108" refid="struct___e_f___t_m_r32___t_y_p_e___1abe014aa02ae9ac4f089400338ea67eef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1abe014aa02ae9ac4f089400338ea67eef" kindref="member">IC</ref>;</highlight></codeline>
+<codeline lineno="109" refid="struct___e_f___t_m_r32___t_y_p_e___1ab07ead12ff34dc4c0ac9bb660bc2bdb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___t_m_r32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e___1ab07ead12ff34dc4c0ac9bb660bc2bdb1" kindref="member">GCLK</ref>;</highlight></codeline>
+<codeline lineno="110" refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" refkind="member"><highlight class="normal">}<sp/><ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE</ref>*<sp/><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="117"><highlight class="comment">*<sp/>Function<sp/>Prototypes</highlight></codeline>
+<codeline lineno="118"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="122"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>
+<codeline lineno="123"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EF_TMR32REGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="129"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
+<codeline lineno="130"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="EF_TMR32_regs.h"/>
+  </compounddef>
+</doxygen>
