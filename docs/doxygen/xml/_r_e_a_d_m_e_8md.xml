@@ -119,24 +119,31 @@
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_PWM1Enable**](#function-ef_tmr32_pwm1enable)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32)<sp/>&lt;br&gt;_Enables<sp/>PWM1<sp/>by<sp/>setting<sp/>&quot;P1E&quot;<sp/>bit<sp/>in<sp/>the<sp/>CTRL<sp/>register<sp/>to<sp/>1._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_PWM1Invert**](#function-ef_tmr32_pwm1invert)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32)<sp/>&lt;br&gt;_Inverts<sp/>PWM1<sp/>output<sp/>by<sp/>setting<sp/>&quot;P1I&quot;<sp/>bit<sp/>in<sp/>the<sp/>CTRL<sp/>register<sp/>to<sp/>1._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_PWMDeadtimeEnable**](#function-ef_tmr32_pwmdeadtimeenable)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_clearIrq**](#function-ef_tmr32_clearirq)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>mask)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>interrupt<sp/>clear<sp/>register<sp/>of<sp/>the<sp/>timer<sp/>by<sp/>writing<sp/>to<sp/>the<sp/>ICR<sp/>register._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_disable**](#function-ef_tmr32_disable)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32)<sp/>&lt;br&gt;_Disables<sp/>timer<sp/>by<sp/>setting<sp/>&quot;TE&quot;<sp/>bit<sp/>in<sp/>the<sp/>CTRL<sp/>register<sp/>to<sp/>0._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_enable**](#function-ef_tmr32_enable)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32)<sp/>&lt;br&gt;_Enables<sp/>timer<sp/>by<sp/>setting<sp/>&quot;TE&quot;<sp/>bit<sp/>in<sp/>the<sp/>CTRL<sp/>register<sp/>to<sp/>1._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_getIM**](#function-ef_tmr32_getim)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>\*IM\_value)<sp/>&lt;br&gt;_Retrieves<sp/>the<sp/>interrupt<sp/>clear<sp/>register<sp/>by<sp/>reading<sp/>the<sp/>ICR<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_getMIS**](#function-ef_tmr32_getmis)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>\*MIS\_value)<sp/>&lt;br&gt;_Retrieves<sp/>the<sp/>masked<sp/>interrupt<sp/>status<sp/>by<sp/>reading<sp/>the<sp/>MIS<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_getRIS**](#function-ef_tmr32_getris)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>\*RIS\_value)<sp/>&lt;br&gt;_Retrieves<sp/>the<sp/>raw<sp/>interrupt<sp/>status<sp/>by<sp/>reading<sp/>the<sp/>RIS<sp/>register._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_getTMR**](#function-ef_tmr32_gettmr)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>\*tmr\_value)<sp/>&lt;br&gt;_Retrieves<sp/>the<sp/>current<sp/>timer<sp/>value<sp/>by<sp/>reading<sp/>the<sp/>TMR<sp/>register._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_restart**](#function-ef_tmr32_restart)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32)<sp/>&lt;br&gt;_Enables<sp/>timer<sp/>re-start;<sp/>used<sp/>in<sp/>the<sp/>one-shot<sp/>mode<sp/>to<sp/>restart<sp/>the<sp/>timer<sp/>by<sp/>setting<sp/>the<sp/>&quot;TS&quot;<sp/>bit<sp/>in<sp/>the<sp/>CTRL<sp/>register<sp/>to<sp/>1<sp/>and<sp/>then<sp/>to<sp/>0._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setCMPX**](#function-ef_tmr32_setcmpx)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>compare<sp/>value<sp/>of<sp/>a<sp/>32-bit<sp/>timer<sp/>by<sp/>writing<sp/>to<sp/>the<sp/>CMPX<sp/>register._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setCMPY**](#function-ef_tmr32_setcmpy)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>compare<sp/>value<sp/>Y<sp/>of<sp/>a<sp/>32-bit<sp/>timer<sp/>by<sp/>writing<sp/>to<sp/>the<sp/>CMPY<sp/>register._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setDownCount**](#function-ef_tmr32_setdowncount)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>timer<sp/>direction<sp/>to<sp/>be<sp/>down<sp/>counting<sp/>by<sp/>setting<sp/>the<sp/>&quot;DIR&quot;<sp/>field<sp/>in<sp/>the<sp/>CTRL<sp/>register<sp/>to<sp/>0b01._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setGclkEnable**](#function-ef_tmr32_setgclkenable)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>GCLK<sp/>enable<sp/>bit<sp/>in<sp/>the<sp/>UART<sp/>register<sp/>to<sp/>a<sp/>certain<sp/>value._<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setInterruptMask**](#function-ef_tmr32_setinterruptmask)<sp/>(uint32\_t<sp/>spi\_base,<sp/>uint32\_t<sp/>mask)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>interrupt<sp/>mask<sp/>of<sp/>the<sp/>timer<sp/>by<sp/>writing<sp/>to<sp/>the<sp/>IM<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setICR**](#function-ef_tmr32_seticr)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>mask)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>interrupt<sp/>clear<sp/>register<sp/>of<sp/>the<sp/>timer<sp/>by<sp/>writing<sp/>to<sp/>the<sp/>ICR<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setIM**](#function-ef_tmr32_setim)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>mask)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>interrupt<sp/>mask<sp/>of<sp/>the<sp/>timer<sp/>by<sp/>writing<sp/>to<sp/>the<sp/>IM<sp/>register._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setOneShot**](#function-ef_tmr32_setoneshot)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>timer<sp/>to<sp/>operate<sp/>in<sp/>one-shot<sp/>mode<sp/>by<sp/>clearing<sp/>the<sp/>&quot;P&quot;<sp/>bit<sp/>in<sp/>the<sp/>CFG<sp/>register<sp/>to<sp/>0._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPR**](#function-ef_tmr32_setpr)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>prescaler<sp/>value<sp/>of<sp/>the<sp/>timer<sp/>by<sp/>writing<sp/>to<sp/>the<sp/>PR<sp/>register._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0CenterAlignedMode**](#function-ef_tmr32_setpwm0centeralignedmode)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>reload\_value,<sp/>uint32\_t<sp/>cmpX\_value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>PWM0<sp/>center-aligned<sp/>mode._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0EdgeAlignmentMode**](#function-ef_tmr32_setpwm0edgealignmentmode)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>reload\_value,<sp/>uint32\_t<sp/>duty\_cycle)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>PWM0<sp/>edge<sp/>alignment<sp/>mode._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0MatchingCMPXDownCountAction**](#function-ef_tmr32_setpwm0matchingcmpxdowncountaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0MatchingCMPXUpCountAction**](#function-ef_tmr32_setpwm0matchingcmpxupcountaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0MatchingCMPYDownCountAction**](#function-ef_tmr32_setpwm0matchingcmpydowncountaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0MatchingCMPYUpCountAction**](#function-ef_tmr32_setpwm0matchingcmpyupcountaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0MatchingRELOADAction**](#function-ef_tmr32_setpwm0matchingreloadaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0MatchingZeroAction**](#function-ef_tmr32_setpwm0matchingzeroaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM1CenterAlignedMode**](#function-ef_tmr32_setpwm1centeralignedmode)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>reload\_value,<sp/>uint32\_t<sp/>cmpX\_value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>PWM1<sp/>center-aligned<sp/>mode._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM1EdgeAlignmentMode**](#function-ef_tmr32_setpwm1edgealignmentmode)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>reload\_value,<sp/>uint32\_t<sp/>duty\_cycle)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>PWM1<sp/>edge<sp/>alignment<sp/>mode._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM1MatchingCMPXDownCountAction**](#function-ef_tmr32_setpwm1matchingcmpxdowncountaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction**](#function-ef_tmr32_setpwm1matchingcmpxupcountingaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM1MatchingCMPYDownCountAction**](#function-ef_tmr32_setpwm1matchingcmpydowncountaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
@@ -264,27 +271,6 @@
 <codeline><highlight class="normal">**Returns:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
-<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_clearIrq`</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">_Sets<sp/>the<sp/>interrupt<sp/>clear<sp/>register<sp/>of<sp/>the<sp/>timer<sp/>by<sp/>writing<sp/>to<sp/>the<sp/>ICR<sp/>register._</highlight></codeline>
-<codeline><highlight class="normal">```c</highlight></codeline>
-<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_clearIrq<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mask</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">*<sp/>`tmr32`<sp/>An<sp/>[**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>TMR32<sp/>registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>TMR32<sp/>registers.</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>`mask`<sp/>The<sp/>interrupt<sp/>clear<sp/>mask<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>ICR<sp/>register.<sp/>Must<sp/>not<sp/>exceed<sp/>[**EF\_TMR32\_ICR\_MAX\_VALUE**](#define-ef_tmr32_icr_max_value).</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">**Returns:**</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>EF\_DRIVER\_STATUS:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code.</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_disable`</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">_Disables<sp/>timer<sp/>by<sp/>setting<sp/>&quot;TE&quot;<sp/>bit<sp/>in<sp/>the<sp/>CTRL<sp/>register<sp/>to<sp/>0._</highlight></codeline>
@@ -323,6 +309,69 @@
 <codeline><highlight class="normal">**Returns:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_getIM`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Retrieves<sp/>the<sp/>interrupt<sp/>clear<sp/>register<sp/>by<sp/>reading<sp/>the<sp/>ICR<sp/>register._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_getIM<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*IM_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`tmr32`<sp/>An<sp/>[**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>TMR32<sp/>registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>TMR32<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`IM_value`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>uint32\_t<sp/>where<sp/>the<sp/>interrupt<sp/>clear<sp/>value<sp/>will<sp/>be<sp/>stored.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>EF\_DRIVER\_STATUS:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_getMIS`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Retrieves<sp/>the<sp/>masked<sp/>interrupt<sp/>status<sp/>by<sp/>reading<sp/>the<sp/>MIS<sp/>register._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_getMIS<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*MIS_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`tmr32`<sp/>An<sp/>[**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>TMR32<sp/>registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>TMR32<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`MIS_value`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>uint32\_t<sp/>where<sp/>the<sp/>masked<sp/>interrupt<sp/>status<sp/>value<sp/>will<sp/>be<sp/>stored.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>EF\_DRIVER\_STATUS:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_getRIS`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Retrieves<sp/>the<sp/>raw<sp/>interrupt<sp/>status<sp/>by<sp/>reading<sp/>the<sp/>RIS<sp/>register._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_getRIS<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*RIS_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`tmr32`<sp/>An<sp/>[**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>TMR32<sp/>registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>TMR32<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`RIS_value`<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>uint32\_t<sp/>where<sp/>the<sp/>raw<sp/>interrupt<sp/>status<sp/>value<sp/>will<sp/>be<sp/>stored.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>EF\_DRIVER\_STATUS:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code.</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_getTMR`</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">_Retrieves<sp/>the<sp/>current<sp/>timer<sp/>value<sp/>by<sp/>reading<sp/>the<sp/>TMR<sp/>register._</highlight></codeline>
@@ -445,12 +494,33 @@
 <codeline><highlight class="normal">**Returns:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
-<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setInterruptMask`</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setICR`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>interrupt<sp/>clear<sp/>register<sp/>of<sp/>the<sp/>timer<sp/>by<sp/>writing<sp/>to<sp/>the<sp/>ICR<sp/>register._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_setICR<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mask</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`tmr32`<sp/>An<sp/>[**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>TMR32<sp/>registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>TMR32<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`mask`<sp/>The<sp/>interrupt<sp/>clear<sp/>mask<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>ICR<sp/>register.<sp/>Must<sp/>not<sp/>exceed<sp/>[**EF\_TMR32\_ICR\_MAX\_VALUE**](#define-ef_tmr32_icr_max_value).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>EF\_DRIVER\_STATUS:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setIM`</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">_Sets<sp/>the<sp/>interrupt<sp/>mask<sp/>of<sp/>the<sp/>timer<sp/>by<sp/>writing<sp/>to<sp/>the<sp/>IM<sp/>register._</highlight></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
-<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_setInterruptMask<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>spi_base,</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_setIM<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mask</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
@@ -506,6 +576,130 @@
 <codeline><highlight class="normal">**Returns:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>EF\_DRIVER\_STATUS:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setPWM0CenterAlignedMode`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>PWM0<sp/>center-aligned<sp/>mode._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_setPWM0CenterAlignedMode<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload_value,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cmpX_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`tmr32`<sp/>An<sp/>[**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>TMR32<sp/>registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>TMR32<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`reload_value`<sp/>The<sp/>reload<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>PWM0CFG<sp/>register.<sp/>This<sp/>determines<sp/>the<sp/>period<sp/>of<sp/>the<sp/>PWM<sp/>signal.<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`cmpX_value`<sp/>The<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>CMPX<sp/>register.<sp/>This<sp/>value<sp/>controls<sp/>the<sp/>point<sp/>at<sp/>which<sp/>the<sp/>PWM<sp/>signal<sp/>transitions<sp/>from<sp/>high<sp/>to<sp/>low<sp/>(or<sp/>vice<sp/>versa)<sp/>in<sp/>the<sp/>center-aligned<sp/>mode.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>EF\_DRIVER\_STATUS:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>EF\_DRIVER\_OK:<sp/>Configuration<sp/>was<sp/>successful.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>EF\_DRIVER\_ERROR\_PARAMETER:<sp/>Invalid<sp/>input<sp/>parameters,<sp/>such<sp/>as<sp/>`tmr32`<sp/>being<sp/>NULL.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>configures<sp/>the<sp/>specified<sp/>32-bit<sp/>timer<sp/>(`tmr32`)<sp/>to<sp/>generate<sp/>a<sp/>PWM<sp/>signal<sp/>with<sp/>center-alignment<sp/>on<sp/>PWM0.<sp/>It<sp/>sets<sp/>the<sp/>timer<sp/>to<sp/>up-down<sp/>counting<sp/>mode<sp/>and<sp/>periodic<sp/>mode,<sp/>configures<sp/>the<sp/>zero<sp/>and<sp/>compare<sp/>actions,<sp/>and<sp/>sets<sp/>the<sp/>reload<sp/>and<sp/>compare<sp/>values<sp/>as<sp/>specified.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Internal<sp/>configurations<sp/>performed<sp/>by<sp/>the<sp/>function:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>timer<sp/>to<sp/>up-down<sp/>counting<sp/>mode.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>timer<sp/>for<sp/>periodic<sp/>operation.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>drive<sp/>the<sp/>PWM<sp/>output<sp/>high.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>X<sp/>compare<sp/>register<sp/>to<sp/>drive<sp/>the<sp/>PWM<sp/>output<sp/>low<sp/>on<sp/>up-count.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>X<sp/>compare<sp/>register<sp/>to<sp/>drive<sp/>the<sp/>PWM<sp/>output<sp/>high<sp/>on<sp/>down-count.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>Y<sp/>compare<sp/>register<sp/>to<sp/>maintain<sp/>the<sp/>current<sp/>output<sp/>state<sp/>on<sp/>both<sp/>up<sp/>and<sp/>down<sp/>counts.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>reload<sp/>value<sp/>to<sp/>define<sp/>the<sp/>PWM<sp/>signal<sp/>period.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>X<sp/>compare<sp/>register<sp/>value<sp/>to<sp/>define<sp/>the<sp/>transition<sp/>point.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example<sp/>PWM<sp/>waveform:<sp/></highlight></codeline>
+<codeline><highlight class="normal">````cpp</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|\</highlight></codeline>
+<codeline><highlight class="normal">|_____/__|__\</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>|<sp/>\</highlight></codeline>
+<codeline><highlight class="normal">|_/___|__|__|___\__</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/>V</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>____<sp/><sp/><sp/><sp/><sp/><sp/><sp/>____</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|_____|<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">````</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Ensure<sp/>the<sp/>timer<sp/>instance<sp/>(`tmr32`)<sp/>is<sp/>correctly<sp/>initialized<sp/>before<sp/>calling<sp/>this<sp/>function.<sp/>The<sp/>reload<sp/>value<sp/>and<sp/>compare<sp/>value<sp/>must<sp/>align<sp/>with<sp/>the<sp/>timer&apos;s<sp/>capabilities<sp/>and<sp/>clock<sp/>settings.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setPWM0EdgeAlignmentMode`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>PWM0<sp/>edge<sp/>alignment<sp/>mode._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_setPWM0EdgeAlignmentMode<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload_value,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>duty_cycle</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`tmr32`<sp/>An<sp/>[**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>TMR32<sp/>registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>TMR32<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`reload_value`<sp/>The<sp/>reload<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>PWM0CFG<sp/>register.<sp/>This<sp/>determines<sp/>the<sp/>period<sp/>of<sp/>the<sp/>PWM<sp/>signal.<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`duty_cycle`<sp/>The<sp/>duty<sp/>cycle<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>PWM0CFG<sp/>register,<sp/>representing<sp/>the<sp/>high<sp/>time<sp/>as<sp/>a<sp/>percentage<sp/>of<sp/>the<sp/>period<sp/>(0<sp/>to<sp/>100).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>EF\_DRIVER\_STATUS:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>EF\_DRIVER\_OK:<sp/>Configuration<sp/>was<sp/>successful.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>EF\_DRIVER\_ERROR\_PARAMETER:<sp/>Invalid<sp/>input<sp/>parameters,<sp/>such<sp/>as<sp/>`tmr32`<sp/>being<sp/>NULL<sp/>or`duty_cycle`<sp/>&amp;gt;<sp/>100.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>configures<sp/>the<sp/>specified<sp/>32-bit<sp/>timer<sp/>(`tmr32`)<sp/>to<sp/>generate<sp/>a<sp/>PWM<sp/>signal<sp/>with<sp/>edge<sp/>alignment.<sp/>It<sp/>sets<sp/>the<sp/>timer<sp/>to<sp/>up-count<sp/>and<sp/>periodic<sp/>modes,<sp/>configures<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>high,<sp/>and<sp/>uses<sp/>the<sp/>X<sp/>compare<sp/>register<sp/>to<sp/>control<sp/>the<sp/>output<sp/>signal.<sp/>The<sp/>duty<sp/>cycle<sp/>and<sp/>reload<sp/>values<sp/>are<sp/>used<sp/>to<sp/>compute<sp/>the<sp/>compare<sp/>register<sp/>value.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Internal<sp/>configurations<sp/>performed<sp/>by<sp/>the<sp/>function:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>timer<sp/>to<sp/>up-count<sp/>mode.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>timer<sp/>for<sp/>periodic<sp/>operation.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>drive<sp/>the<sp/>PWM<sp/>output<sp/>high.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>X<sp/>compare<sp/>register<sp/>to<sp/>drive<sp/>the<sp/>PWM<sp/>output<sp/>low<sp/>on<sp/>up-count.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>Y<sp/>compare<sp/>register<sp/>to<sp/>maintain<sp/>the<sp/>current<sp/>output<sp/>state.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Calculates<sp/>the<sp/>X<sp/>compare<sp/>value<sp/>based<sp/>on<sp/>the<sp/>duty<sp/>cycle<sp/>and<sp/>reload<sp/>value.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>reload<sp/>value<sp/>and<sp/>compare<sp/>register.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Ensures<sp/>no<sp/>change<sp/>in<sp/>output<sp/>on<sp/>the<sp/>top<sp/>action.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example<sp/>PWM<sp/>waveform:<sp/></highlight></codeline>
+<codeline><highlight class="normal">````cpp</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|<sp/><sp/><sp/><sp/><sp/><sp/>/|</highlight></codeline>
+<codeline><highlight class="normal">|_____/__|____/<sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>/<sp/>|<sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|_/___|__|/___|__|____</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/><sp/><sp/>V</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>____<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/>___<sp/><sp/><sp/>___</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/>|__|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>duty<sp/><sp/><sp/><sp/>duty</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>cycle<sp/><sp/><sp/>cycle</highlight></codeline>
+<codeline><highlight class="normal">````</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Ensure<sp/>the<sp/>timer<sp/>instance<sp/>(`tmr32`)<sp/>is<sp/>correctly<sp/>initialized<sp/>before<sp/>calling<sp/>this<sp/>function.<sp/>The<sp/>reload<sp/>value<sp/>and<sp/>compare<sp/>value<sp/>must<sp/>align<sp/>with<sp/>the<sp/>timer&apos;s<sp/>capabilities<sp/>and<sp/>clock<sp/>settings.</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setPWM0MatchingCMPXDownCountAction`</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
@@ -680,6 +874,130 @@
 <codeline><highlight class="normal">**Returns:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setPWM1CenterAlignedMode`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>PWM1<sp/>center-aligned<sp/>mode._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_setPWM1CenterAlignedMode<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload_value,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cmpX_value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`tmr32`<sp/>An<sp/>[**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>TMR32<sp/>registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>TMR32<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`reload_value`<sp/>The<sp/>reload<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>PWM1CFG<sp/>register.<sp/>This<sp/>determines<sp/>the<sp/>period<sp/>of<sp/>the<sp/>PWM<sp/>signal.<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`cmpX_value`<sp/>The<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>CMPX<sp/>register.<sp/>This<sp/>value<sp/>controls<sp/>the<sp/>point<sp/>at<sp/>which<sp/>the<sp/>PWM<sp/>signal<sp/>transitions<sp/>from<sp/>high<sp/>to<sp/>low<sp/>(or<sp/>vice<sp/>versa)<sp/>in<sp/>the<sp/>center-aligned<sp/>mode.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>EF\_DRIVER\_STATUS:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>EF\_DRIVER\_OK:<sp/>Configuration<sp/>was<sp/>successful.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>EF\_DRIVER\_ERROR\_PARAMETER:<sp/>Invalid<sp/>input<sp/>parameters,<sp/>such<sp/>as<sp/>`tmr32`<sp/>being<sp/>NULL.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>configures<sp/>the<sp/>specified<sp/>32-bit<sp/>timer<sp/>(`tmr32`)<sp/>to<sp/>generate<sp/>a<sp/>PWM<sp/>signal<sp/>with<sp/>center-alignment<sp/>on<sp/>PWM1.<sp/>It<sp/>sets<sp/>the<sp/>timer<sp/>to<sp/>up-down<sp/>counting<sp/>mode<sp/>and<sp/>periodic<sp/>mode,<sp/>configures<sp/>the<sp/>zero<sp/>and<sp/>compare<sp/>actions,<sp/>and<sp/>sets<sp/>the<sp/>reload<sp/>and<sp/>compare<sp/>values<sp/>as<sp/>specified.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Internal<sp/>configurations<sp/>performed<sp/>by<sp/>the<sp/>function:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>timer<sp/>to<sp/>up-down<sp/>counting<sp/>mode.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>timer<sp/>for<sp/>periodic<sp/>operation.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>drive<sp/>the<sp/>PWM<sp/>output<sp/>high.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>Y<sp/>compare<sp/>register<sp/>to<sp/>drive<sp/>the<sp/>PWM<sp/>output<sp/>low<sp/>on<sp/>up-count.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>Y<sp/>compare<sp/>register<sp/>to<sp/>drive<sp/>the<sp/>PWM<sp/>output<sp/>high<sp/>on<sp/>down-count.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>X<sp/>compare<sp/>register<sp/>to<sp/>maintain<sp/>the<sp/>current<sp/>output<sp/>state<sp/>on<sp/>both<sp/>up<sp/>and<sp/>down<sp/>counts.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>reload<sp/>value<sp/>to<sp/>define<sp/>the<sp/>PWM<sp/>signal<sp/>period.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>X<sp/>compare<sp/>register<sp/>value<sp/>to<sp/>define<sp/>the<sp/>transition<sp/>point.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example<sp/>PWM<sp/>waveform:<sp/></highlight></codeline>
+<codeline><highlight class="normal">````cpp</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|\</highlight></codeline>
+<codeline><highlight class="normal">|_____/__|__\</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>|<sp/>\</highlight></codeline>
+<codeline><highlight class="normal">|_/___|__|__|___\__</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/>V</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>____<sp/><sp/><sp/><sp/><sp/><sp/><sp/>____<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|_____|<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">````</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Ensure<sp/>the<sp/>timer<sp/>instance<sp/>(`tmr32`)<sp/>is<sp/>correctly<sp/>initialized<sp/>before<sp/>calling<sp/>this<sp/>function.<sp/>The<sp/>reload<sp/>value<sp/>and<sp/>compare<sp/>value<sp/>must<sp/>align<sp/>with<sp/>the<sp/>timer&apos;s<sp/>capabilities<sp/>and<sp/>clock<sp/>settings.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setPWM1EdgeAlignmentMode`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Sets<sp/>the<sp/>PWM1<sp/>edge<sp/>alignment<sp/>mode._</highlight></codeline>
+<codeline><highlight class="normal">```c</highlight></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_setPWM1EdgeAlignmentMode<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload_value,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>duty_cycle</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Parameters:**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`tmr32`<sp/>An<sp/>[**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>TMR32<sp/>registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>TMR32<sp/>registers.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`reload_value`<sp/>The<sp/>reload<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>PWM1CFG<sp/>register.<sp/>This<sp/>determines<sp/>the<sp/>period<sp/>of<sp/>the<sp/>PWM<sp/>signal.<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`duty_cycle`<sp/>The<sp/>duty<sp/>cycle<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>PWM1CFG<sp/>register,<sp/>representing<sp/>the<sp/>high<sp/>time<sp/>as<sp/>a<sp/>percentage<sp/>of<sp/>the<sp/>period<sp/>(0<sp/>to<sp/>100).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Returns:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">status<sp/>A<sp/>value<sp/>of<sp/>type<sp/>EF\_DRIVER\_STATUS:<sp/>returns<sp/>a<sp/>success<sp/>or<sp/>error<sp/>code.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>EF\_DRIVER\_OK:<sp/>Configuration<sp/>was<sp/>successful.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>EF\_DRIVER\_ERROR\_PARAMETER:<sp/>Invalid<sp/>input<sp/>parameters,<sp/>such<sp/>as<sp/>`tmr32`<sp/>being<sp/>NULL<sp/>or`duty_cycle`<sp/>&amp;gt;<sp/>100.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>function<sp/>configures<sp/>the<sp/>specified<sp/>32-bit<sp/>timer<sp/>(`tmr32`)<sp/>to<sp/>generate<sp/>a<sp/>PWM<sp/>signal<sp/>with<sp/>edge<sp/>alignment<sp/>on<sp/>PWM1.<sp/>It<sp/>sets<sp/>the<sp/>timer<sp/>to<sp/>up-count<sp/>and<sp/>periodic<sp/>modes,<sp/>configures<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>high,<sp/>and<sp/>uses<sp/>the<sp/>Y<sp/>compare<sp/>register<sp/>to<sp/>control<sp/>the<sp/>output<sp/>signal.<sp/>The<sp/>duty<sp/>cycle<sp/>and<sp/>reload<sp/>values<sp/>are<sp/>used<sp/>to<sp/>compute<sp/>the<sp/>compare<sp/>register<sp/>value.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Internal<sp/>configurations<sp/>performed<sp/>by<sp/>the<sp/>function:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>timer<sp/>to<sp/>up-count<sp/>mode.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>timer<sp/>for<sp/>periodic<sp/>operation.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>drive<sp/>the<sp/>PWM<sp/>output<sp/>high.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>Y<sp/>compare<sp/>register<sp/>to<sp/>drive<sp/>the<sp/>PWM<sp/>output<sp/>low<sp/>on<sp/>up-count.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configures<sp/>the<sp/>X<sp/>compare<sp/>register<sp/>to<sp/>maintain<sp/>the<sp/>current<sp/>output<sp/>state.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Calculates<sp/>the<sp/>Y<sp/>compare<sp/>value<sp/>based<sp/>on<sp/>the<sp/>duty<sp/>cycle<sp/>and<sp/>reload<sp/>value.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Sets<sp/>the<sp/>reload<sp/>value<sp/>and<sp/>compare<sp/>register.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Ensures<sp/>no<sp/>change<sp/>in<sp/>output<sp/>on<sp/>the<sp/>top<sp/>action.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example<sp/>PWM<sp/>waveform:<sp/></highlight></codeline>
+<codeline><highlight class="normal">````cpp</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|<sp/><sp/><sp/><sp/><sp/><sp/>/|</highlight></codeline>
+<codeline><highlight class="normal">|_____/__|____/<sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>/<sp/>|<sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|_/___|__|/___|__|____</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/><sp/><sp/>V</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>____<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/>___<sp/><sp/><sp/>___</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/>|__|</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>duty<sp/><sp/><sp/><sp/>duty</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>cycle<sp/><sp/><sp/>cycle</highlight></codeline>
+<codeline><highlight class="normal">````</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Ensure<sp/>the<sp/>timer<sp/>instance<sp/>(`tmr32`)<sp/>is<sp/>correctly<sp/>initialized<sp/>before<sp/>calling<sp/>this<sp/>function.<sp/>The<sp/>reload<sp/>value<sp/>and<sp/>compare<sp/>value<sp/>must<sp/>align<sp/>with<sp/>the<sp/>timer&apos;s<sp/>capabilities<sp/>and<sp/>clock<sp/>settings.</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setPWM1MatchingCMPXDownCountAction`</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>

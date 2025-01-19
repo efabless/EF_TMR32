@@ -222,9 +222,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0a42492b716fb008dd6980193e039a17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#a0a42492b716fb008dd6980193e039a17">EF_TMR32_setPWM0CenterAlignedMode</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32, uint32_t reload_value, uint32_t cmpX_value)</td></tr>
 <tr class="memdesc:a0a42492b716fb008dd6980193e039a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the PWM0 center-aligned mode.  <br /></td></tr>
 <tr class="separator:a0a42492b716fb008dd6980193e039a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90643eece576624d6bfc7e2f2d939228"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#a90643eece576624d6bfc7e2f2d939228">EF_TMR32_setPWM1CenterAlignedMode</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32, uint32_t reload_value, uint32_t cmpX_value)</td></tr>
-<tr class="memdesc:a90643eece576624d6bfc7e2f2d939228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the PWM1 center-aligned mode.  <br /></td></tr>
-<tr class="separator:a90643eece576624d6bfc7e2f2d939228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5142ccf9f3a4ecd336c6e9364712dffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#a5142ccf9f3a4ecd336c6e9364712dffd">EF_TMR32_setPWM1CenterAlignedMode</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32, uint32_t reload_value, uint32_t cmpY_value)</td></tr>
+<tr class="memdesc:a5142ccf9f3a4ecd336c6e9364712dffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the PWM1 center-aligned mode.  <br /></td></tr>
+<tr class="separator:a5142ccf9f3a4ecd336c6e9364712dffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>C header file for TMR32 APIs which contains the function prototypes. </p>
@@ -1448,8 +1448,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a90643eece576624d6bfc7e2f2d939228" name="a90643eece576624d6bfc7e2f2d939228"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90643eece576624d6bfc7e2f2d939228">&#9670;&#160;</a></span>EF_TMR32_setPWM1CenterAlignedMode()</h2>
+<a id="a5142ccf9f3a4ecd336c6e9364712dffd" name="a5142ccf9f3a4ecd336c6e9364712dffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5142ccf9f3a4ecd336c6e9364712dffd">&#9670;&#160;</a></span>EF_TMR32_setPWM1CenterAlignedMode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1470,7 +1470,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>cmpX_value</em>&#160;</td>
+          <td class="paramname"><em>cmpY_value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1485,7 +1485,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">tmr32</td><td>An <a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>, which points to the base memory address of TMR32 registers. <a class="el" href="_e_f___t_m_r32__regs_8h.html#a5ab4e3f4232149b200ef8d43a25c9082">EF_TMR32_TYPE</a> is a structure that contains the TMR32 registers. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">reload_value</td><td>The reload value to set in the PWM1CFG register. This determines the period of the PWM signal. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cmpX_value</td><td>The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmpY_value</td><td>The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.</td></tr>
   </table>
   </dd>
 </dl>

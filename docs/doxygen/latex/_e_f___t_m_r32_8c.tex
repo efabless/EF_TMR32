@@ -94,7 +94,7 @@ C file for TMR32 APIs which contains the function implmentations.
 \begin{DoxyCompactList}\small\item\em Sets the PWM1 edge alignment mode. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a0a42492b716fb008dd6980193e039a17}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Center\+Aligned\+Mode}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t cmp\+X\+\_\+value)
 \begin{DoxyCompactList}\small\item\em Sets the PWM0 center-\/aligned mode. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a90643eece576624d6bfc7e2f2d939228}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Center\+Aligned\+Mode}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t cmp\+X\+\_\+value)
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a5142ccf9f3a4ecd336c6e9364712dffd}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Center\+Aligned\+Mode}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t cmp\+Y\+\_\+value)
 \begin{DoxyCompactList}\small\item\em Sets the PWM1 center-\/aligned mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -769,11 +769,11 @@ Configures the action of TMR0 PWM when the timer matches the Zero value. This fu
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
-\mbox{\Hypertarget{_e_f___t_m_r32_8c_a90643eece576624d6bfc7e2f2d939228}\label{_e_f___t_m_r32_8c_a90643eece576624d6bfc7e2f2d939228}} 
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a5142ccf9f3a4ecd336c6e9364712dffd}\label{_e_f___t_m_r32_8c_a5142ccf9f3a4ecd336c6e9364712dffd}} 
 \index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM1CenterAlignedMode@{EF\_TMR32\_setPWM1CenterAlignedMode}}
 \index{EF\_TMR32\_setPWM1CenterAlignedMode@{EF\_TMR32\_setPWM1CenterAlignedMode}!EF\_TMR32.c@{EF\_TMR32.c}}
 \doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1CenterAlignedMode()}{EF\_TMR32\_setPWM1CenterAlignedMode()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Center\+Aligned\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{reload\+\_\+value,  }\item[{uint32\+\_\+t}]{cmp\+X\+\_\+value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Center\+Aligned\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{reload\+\_\+value,  }\item[{uint32\+\_\+t}]{cmp\+Y\+\_\+value }\end{DoxyParamCaption})}
 
 
 
@@ -785,7 +785,7 @@ Sets the PWM1 center-\/aligned mode.
 \hline
 \mbox{\texttt{ in}}  & {\em reload\+\_\+value} & The reload value to set in the PWM1\+CFG register. This determines the period of the PWM signal. \\
 \hline
-\mbox{\texttt{ in}}  & {\em cmp\+X\+\_\+value} & The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-\/aligned mode.\\
+\mbox{\texttt{ in}}  & {\em cmp\+Y\+\_\+value} & The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-\/aligned mode.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

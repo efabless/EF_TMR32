@@ -102,7 +102,7 @@ EF_DRIVER_STATUS EF_TMR32_restart(EF_TMR32_TYPE_PTR tmr32) {
         tmr32->CTRL |= ((uint32_t)1 << EF_TMR32_CTRL_REG_TS_BIT);  // Set the restart bit
         tmr32->CTRL &= ~((uint32_t)1 << EF_TMR32_CTRL_REG_TS_BIT); // Clear the restart bit
     }
-
+    
     return status;
 }
 
@@ -770,12 +770,13 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint
 
     if (tmr32 == NULL) {
         status = EF_DRIVER_ERROR_PARAMETER;
+    }else if (reload_value < cmpX_value){
+        status = EF_DRIVER_ERROR_PARAMETER;
     } else {
 
         // set the timer to up-down-count mode
         // set the timer to periodic mode
         // set the zero action to high
-        // use two compare registers
         // set the action of the X Compare register up count to low
         // set the action of the Y Compare register up count to no change
         // set the action of the X Compare register down count to high
@@ -795,8 +796,6 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint
         //    ____       ____ 
         //        |_____|    
 
-
-
         status = EF_TMR32_setUpDownCount(tmr32);
         if (status == EF_DRIVER_OK){ status = EF_TMR32_setPeriodic(tmr32);}else{}
         if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingZeroAction(tmr32, EF_TMR32_ACTION_HIGH);}else{}
@@ -814,7 +813,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint
 }
 
 
-EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpX_value){
+EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpY_value){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
 
@@ -824,7 +823,6 @@ EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint
         // set the timer to up-down-count mode
         // set the timer to periodic mode
         // set the zero action to high
-        // use two compare registers
         // set the action of the Y Compare register up count to low
         // set the action of the X Compare register up count to no change
         // set the action of the Y Compare register down count to high
@@ -852,7 +850,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint
         if (status == EF_DRIVER_OK) {status = EF_TMR32_setPWM1MatchingCMPXDownCountAction(tmr32, EF_TMR32_ACTION_NONE);}else{}
         if (status == EF_DRIVER_OK) {status = EF_TMR32_setPWM1MatchingRELOADAction(tmr32, EF_TMR32_ACTION_NONE);}else{}
         if (status == EF_DRIVER_OK) {status = EF_TMR32_setRELOAD(tmr32, reload_value);}else{}
-        if (status == EF_DRIVER_OK) {status = EF_TMR32_setCMPX(tmr32, cmpX_value);}else{}
+        if (status == EF_DRIVER_OK) {status = EF_TMR32_setCMPX(tmr32, cmpY_value);}else{}
     }
     return status;
 }

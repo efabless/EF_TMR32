@@ -653,7 +653,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint
     \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
                       \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
     \param [in] reload_value The reload value to set in the PWM1CFG register. This determines the period of the PWM signal.
-    \param [in] cmpX_value The value to set in the CMPX register. This value controls the point at which the PWM signal transitions 
+    \param [in] cmpY_value The value to set in the CMPX register. This value controls the point at which the PWM signal transitions 
                            from high to low (or vice versa) in the center-aligned mode.
 
     \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
@@ -689,7 +689,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint
     \note Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. 
           The reload value and compare value must align with the timer's capabilities and clock settings.
 */
-EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpX_value);
+EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpY_value);
 
 /******************************************************************************
 * External Variables

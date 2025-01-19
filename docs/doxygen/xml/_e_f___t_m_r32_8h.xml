@@ -1878,12 +1878,12 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.h" line="645" column="18" bodyfile="EF_TMR32.c" bodystart="767" bodyend="814" declfile="EF_TMR32.h" declline="645" declcolumn="18"/>
+        <location file="EF_TMR32.h" line="645" column="18" bodyfile="EF_TMR32.c" bodystart="767" bodyend="813" declfile="EF_TMR32.h" declline="645" declcolumn="18"/>
       </memberdef>
-      <memberdef kind="function" id="_e_f___t_m_r32_8h_1a90643eece576624d6bfc7e2f2d939228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_e_f___t_m_r32_8h_1a5142ccf9f3a4ecd336c6e9364712dffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode</definition>
-        <argsstring>(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpX_value)</argsstring>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpY_value)</argsstring>
         <name>EF_TMR32_setPWM1CenterAlignedMode</name>
         <param>
           <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
@@ -1895,7 +1895,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </param>
         <param>
           <type>uint32_t</type>
-          <declname>cmpX_value</declname>
+          <declname>cmpY_value</declname>
         </param>
         <briefdescription>
 <para>Sets the PWM1 center-aligned mode. </para>
@@ -1919,7 +1919,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername direction="in">cmpX_value</parametername>
+<parametername direction="in">cmpY_value</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.</para>
@@ -1959,7 +1959,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.h" line="692" column="18" bodyfile="EF_TMR32.c" bodystart="817" bodyend="858" declfile="EF_TMR32.h" declline="692" declcolumn="18"/>
+        <location file="EF_TMR32.h" line="692" column="18" bodyfile="EF_TMR32.c" bodystart="816" bodyend="856" declfile="EF_TMR32.h" declline="692" declcolumn="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -2167,7 +2167,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 <codeline lineno="649"><highlight class="normal"></highlight></codeline>
 <codeline lineno="650"><highlight class="normal"></highlight></codeline>
 <codeline lineno="652"><highlight class="normal"></highlight></codeline>
-<codeline lineno="692"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a90643eece576624d6bfc7e2f2d939228" kindref="member">EF_TMR32_setPWM1CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpX_value);</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a5142ccf9f3a4ecd336c6e9364712dffd" kindref="member">EF_TMR32_setPWM1CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpY_value);</highlight></codeline>
 <codeline lineno="693"><highlight class="normal"></highlight></codeline>
 <codeline lineno="694"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
 <codeline lineno="695"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>

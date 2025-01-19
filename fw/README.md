@@ -133,7 +133,7 @@ _C header file for TMR32 APIs which contains the function prototypes._
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0MatchingCMPYUpCountAction**](#function-ef_tmr32_setpwm0matchingcmpyupcountaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0MatchingRELOADAction**](#function-ef_tmr32_setpwm0matchingreloadaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0MatchingZeroAction**](#function-ef_tmr32_setpwm0matchingzeroaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM1CenterAlignedMode**](#function-ef_tmr32_setpwm1centeralignedmode) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t reload\_value, uint32\_t cmpX\_value) <br>_Sets the PWM1 center-aligned mode._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM1CenterAlignedMode**](#function-ef_tmr32_setpwm1centeralignedmode) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t reload\_value, uint32\_t cmpY\_value) <br>_Sets the PWM1 center-aligned mode._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM1EdgeAlignmentMode**](#function-ef_tmr32_setpwm1edgealignmentmode) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t reload\_value, uint32\_t duty\_cycle) <br>_Sets the PWM1 edge alignment mode._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM1MatchingCMPXDownCountAction**](#function-ef_tmr32_setpwm1matchingcmpxdowncountaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction**](#function-ef_tmr32_setpwm1matchingcmpxupcountingaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
@@ -872,7 +872,7 @@ _Sets the PWM1 center-aligned mode._
 EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode (
     EF_TMR32_TYPE_PTR tmr32,
     uint32_t reload_value,
-    uint32_t cmpX_value
+    uint32_t cmpY_value
 ) 
 ```
 
@@ -882,7 +882,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode (
 
 * `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
 * `reload_value` The reload value to set in the PWM1CFG register. This determines the period of the PWM signal. 
-* `cmpX_value` The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.
+* `cmpY_value` The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.
 
 
 **Returns:**

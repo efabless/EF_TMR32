@@ -71,7 +71,7 @@
     <member refid="_e_f___t_m_r32_8c_1a8d4d907e326c073a96a28e8317fc26bd" kind="function"><name>EF_TMR32_setPWM0EdgeAlignmentMode</name></member>
     <member refid="_e_f___t_m_r32_8c_1a56341d8e521f6b5001cddf60b93fe6f1" kind="function"><name>EF_TMR32_setPWM1EdgeAlignmentMode</name></member>
     <member refid="_e_f___t_m_r32_8c_1a0a42492b716fb008dd6980193e039a17" kind="function"><name>EF_TMR32_setPWM0CenterAlignedMode</name></member>
-    <member refid="_e_f___t_m_r32_8c_1a90643eece576624d6bfc7e2f2d939228" kind="function"><name>EF_TMR32_setPWM1CenterAlignedMode</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a5142ccf9f3a4ecd336c6e9364712dffd" kind="function"><name>EF_TMR32_setPWM1CenterAlignedMode</name></member>
   </compound>
   <compound refid="_e_f___t_m_r32_8h" kind="file"><name>EF_TMR32.h</name>
     <member refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kind="define"><name>EF_TMR32_ACTION_NONE</name></member>
@@ -123,7 +123,7 @@
     <member refid="_e_f___t_m_r32_8h_1a8d4d907e326c073a96a28e8317fc26bd" kind="function"><name>EF_TMR32_setPWM0EdgeAlignmentMode</name></member>
     <member refid="_e_f___t_m_r32_8h_1a56341d8e521f6b5001cddf60b93fe6f1" kind="function"><name>EF_TMR32_setPWM1EdgeAlignmentMode</name></member>
     <member refid="_e_f___t_m_r32_8h_1a0a42492b716fb008dd6980193e039a17" kind="function"><name>EF_TMR32_setPWM0CenterAlignedMode</name></member>
-    <member refid="_e_f___t_m_r32_8h_1a90643eece576624d6bfc7e2f2d939228" kind="function"><name>EF_TMR32_setPWM1CenterAlignedMode</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a5142ccf9f3a4ecd336c6e9364712dffd" kind="function"><name>EF_TMR32_setPWM1CenterAlignedMode</name></member>
   </compound>
   <compound refid="_e_f___t_m_r32__regs_8h" kind="file"><name>EF_TMR32_regs.h</name>
     <member refid="_e_f___t_m_r32__regs_8h_1a470cd5845bed94d8b8b358933e4a3442" kind="define"><name>IO_TYPES</name></member>
