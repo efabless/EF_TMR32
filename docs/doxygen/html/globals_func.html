@@ -72,9 +72,11 @@ $(function() {
 &#160;
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
-<li>EF_TMR32_clearIrq()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8h.html#aa262d941a123ac51624098e04c94d627">EF_TMR32.h</a></li>
 <li>EF_TMR32_disable()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a55e09ad517a12af2d293982a1e0f2d0d">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a55e09ad517a12af2d293982a1e0f2d0d">EF_TMR32.h</a></li>
 <li>EF_TMR32_enable()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a03bb5b7b456bda2803eb6e0bc907d2b4">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a03bb5b7b456bda2803eb6e0bc907d2b4">EF_TMR32.h</a></li>
+<li>EF_TMR32_getIM()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a44163e96761725c077d3ea36ec17207d">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a44163e96761725c077d3ea36ec17207d">EF_TMR32.h</a></li>
+<li>EF_TMR32_getMIS()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a7eb8df82868dfa705cd0ee26679045e7">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a7eb8df82868dfa705cd0ee26679045e7">EF_TMR32.h</a></li>
+<li>EF_TMR32_getRIS()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a4376fe59b65a50ea12ebfcafd94009d5">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a4376fe59b65a50ea12ebfcafd94009d5">EF_TMR32.h</a></li>
 <li>EF_TMR32_getTMR()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a6c0942ecf91efd6f92a22f9881f9b67f">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a6c0942ecf91efd6f92a22f9881f9b67f">EF_TMR32.h</a></li>
 <li>EF_TMR32_PWM0Enable()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a34eb34d261146ff2dbb5b1765309fb10">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a34eb34d261146ff2dbb5b1765309fb10">EF_TMR32.h</a></li>
 <li>EF_TMR32_PWM0Invert()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#aa6d78069423fc1b6c251f8ec9df10c48">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#aa6d78069423fc1b6c251f8ec9df10c48">EF_TMR32.h</a></li>
@@ -86,18 +88,21 @@ $(function() {
 <li>EF_TMR32_setCMPY()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a025b4b548381e4d01e729cb69b5dff3b">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a025b4b548381e4d01e729cb69b5dff3b">EF_TMR32.h</a></li>
 <li>EF_TMR32_setDownCount()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a731ce7ebd98193b110862471c45e6d40">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a731ce7ebd98193b110862471c45e6d40">EF_TMR32.h</a></li>
 <li>EF_TMR32_setGclkEnable()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a48fee3ba105edc1dcee550925ac90f6d">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a48fee3ba105edc1dcee550925ac90f6d">EF_TMR32.h</a></li>
-<li>EF_TMR32_setICR()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a8f2de51a604e7beb66db426098b7be79">EF_TMR32.c</a></li>
-<li>EF_TMR32_setIM()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a88702cef6eafdb625b8392d9aa58fa11">EF_TMR32.c</a></li>
-<li>EF_TMR32_setInterruptMask()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8h.html#a4ff74f9561301db5707228da86f8bd53">EF_TMR32.h</a></li>
+<li>EF_TMR32_setICR()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a8f2de51a604e7beb66db426098b7be79">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a8f2de51a604e7beb66db426098b7be79">EF_TMR32.h</a></li>
+<li>EF_TMR32_setIM()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a88702cef6eafdb625b8392d9aa58fa11">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a88702cef6eafdb625b8392d9aa58fa11">EF_TMR32.h</a></li>
 <li>EF_TMR32_setOneShot()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#ab013c8ef6cdc697401cadb1351d42379">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#ab013c8ef6cdc697401cadb1351d42379">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPeriodic()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#ae1b99e7a248aa01794677de568a89c12">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#ae1b99e7a248aa01794677de568a89c12">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPR()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a08fe49ae5e93539f493d0640328b043a">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a08fe49ae5e93539f493d0640328b043a">EF_TMR32.h</a></li>
+<li>EF_TMR32_setPWM0CenterAlignedMode()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a0a42492b716fb008dd6980193e039a17">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a0a42492b716fb008dd6980193e039a17">EF_TMR32.h</a></li>
+<li>EF_TMR32_setPWM0EdgeAlignmentMode()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a8d4d907e326c073a96a28e8317fc26bd">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a8d4d907e326c073a96a28e8317fc26bd">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPWM0MatchingCMPXDownCountAction()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a9e7ceb938a22a090ae7907e013d026dd">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a9e7ceb938a22a090ae7907e013d026dd">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPWM0MatchingCMPXUpCountAction()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a5329cef22cac7e6d808f69a3c5edc851">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a5329cef22cac7e6d808f69a3c5edc851">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPWM0MatchingCMPYDownCountAction()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#ad800e1b9441665d57d2c11f57232778c">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#ad800e1b9441665d57d2c11f57232778c">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPWM0MatchingCMPYUpCountAction()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a02cca84ee8407a02efa49d1ad4357cdc">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a02cca84ee8407a02efa49d1ad4357cdc">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPWM0MatchingRELOADAction()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#ab80c062a5bd682ba94d93a563c58a08b">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#ab80c062a5bd682ba94d93a563c58a08b">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPWM0MatchingZeroAction()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a6f73741bff7231eb72696b642dd5344e">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a6f73741bff7231eb72696b642dd5344e">EF_TMR32.h</a></li>
+<li>EF_TMR32_setPWM1CenterAlignedMode()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a90643eece576624d6bfc7e2f2d939228">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a90643eece576624d6bfc7e2f2d939228">EF_TMR32.h</a></li>
+<li>EF_TMR32_setPWM1EdgeAlignmentMode()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a56341d8e521f6b5001cddf60b93fe6f1">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a56341d8e521f6b5001cddf60b93fe6f1">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPWM1MatchingCMPXDownCountAction()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#ad579dc1e3910c7b4a78cde1e6e14bf8d">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#ad579dc1e3910c7b4a78cde1e6e14bf8d">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPWM1MatchingCMPXUpCountingAction()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a0e27b3011128b05f745f22f7f8381464">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a0e27b3011128b05f745f22f7f8381464">EF_TMR32.h</a></li>
 <li>EF_TMR32_setPWM1MatchingCMPYDownCountAction()&#160;:&#160;<a class="el" href="_e_f___t_m_r32_8c.html#a3dd40d43dac4fee39dbe7717ee848ecd">EF_TMR32.c</a>, <a class="el" href="_e_f___t_m_r32_8h.html#a3dd40d43dac4fee39dbe7717ee848ecd">EF_TMR32.h</a></li>

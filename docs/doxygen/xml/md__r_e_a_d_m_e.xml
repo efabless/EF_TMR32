@@ -125,102 +125,78 @@
 </sect1>
 <sect1 id="md__r_e_a_d_m_e_1autotoc_md15">
 <title>File EF_TMR32.h</title>
+<para><emphasis>C header file for TMR32 APIs which contains the function prototypes.</emphasis></para>
 </sect1>
 <sect1 id="md__r_e_a_d_m_e_1autotoc_md16">
 <title>Functions</title>
-<para><table rows="39" cols="2"><row>
+<para><table rows="35" cols="2"><row>
 <entry thead="yes" align='right'><para>Type   </para>
 </entry><entry thead="yes" align='left'><para>Name    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_PWM0Enable** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>enables TMR0 by setting &quot;P0E&quot; bit in the CTRL register to 1</emphasis>    </para>
+<emphasis>Enables PWM0 by setting &quot;P0E&quot; bit in the CTRL register to 1.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_PWM0Invert** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>invert TMR0 by setting &quot;P0I&quot; bit in the CTRL register to 1</emphasis>    </para>
+<emphasis>Inverts PWM0 output by setting &quot;P0I&quot; bit in the CTRL register to 1.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_PWM1Enable** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>enables TMR1 by setting &quot;P1E&quot; bit in the CTRL register to 1</emphasis>    </para>
+<emphasis>Enables PWM1 by setting &quot;P1E&quot; bit in the CTRL register to 1.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_PWM1Invert** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>invert TMR1 by setting &quot;P1I&quot; bit in the CTRL register to 1</emphasis>    </para>
+<emphasis>Inverts PWM1 output by setting &quot;P1I&quot; bit in the CTRL register to 1.</emphasis>    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_TMR32\_PWMDeadtimeEnable** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
+    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_clearIrq** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t mask) <linebreak/>
-    </para>
-</entry></row>
-<row>
-<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_deadtimeEnable** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>enables deadtime by setting &quot;DTE&quot; bit in the CTRL register to 1</emphasis>    </para>
+<emphasis>Sets the interrupt clear register of the timer by writing to the ICR register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_disable** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>disables timer by setting &quot;TE&quot; bit in the CTRL register to 0</emphasis>    </para>
+<emphasis>Disables timer by setting &quot;TE&quot; bit in the CTRL register to 0.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_enable** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>enables timer by setting &quot;TE&quot; bit in the CTRL register to 1</emphasis>    </para>
-</entry></row>
-<row>
-<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_getCMPX** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t *cmpx_value) <linebreak/>
-<emphasis>get the CMPX register value</emphasis>    </para>
-</entry></row>
-<row>
-<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_getCMPY** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t *cmpy_value) <linebreak/>
-<emphasis>get the CMPY register value</emphasis>    </para>
-</entry></row>
-<row>
-<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_getDeadtime** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t *deadtime_value) <linebreak/>
-    </para>
-</entry></row>
-<row>
-<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_getRELOAD** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t *reload_value) <linebreak/>
-<emphasis>get the timer reload value</emphasis>    </para>
+<emphasis>Enables timer by setting &quot;TE&quot; bit in the CTRL register to 1.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_getTMR** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t *tmr_value) <linebreak/>
-<emphasis>get the current value of the timer</emphasis>    </para>
+<emphasis>Retrieves the current timer value by reading the TMR register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_restart** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>enables timer re-start; used in the one-shot mode to restart the timer.</emphasis>    </para>
+<emphasis>Enables timer re-start; used in the one-shot mode to restart the timer by setting the &quot;TS&quot; bit in the CTRL register to 1 and then to 0.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setCMPX** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t value) <linebreak/>
-<emphasis>set the CMPX register value</emphasis>    </para>
+<emphasis>Sets the compare value of a 32-bit timer by writing to the CMPX register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setCMPY** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t value) <linebreak/>
-<emphasis>set the CMPY register value</emphasis>    </para>
-</entry></row>
-<row>
-<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setDeadtime** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t value) <linebreak/>
-<emphasis>set the timer deadtime register value</emphasis>    </para>
+<emphasis>Sets the compare value Y of a 32-bit timer by writing to the CMPY register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setDownCount** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>set the timer direction to be down counting</emphasis>    </para>
+<emphasis>Sets the timer direction to be down counting by setting the &quot;DIR&quot; field in the CTRL register to 0b01.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
@@ -230,97 +206,102 @@
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setInterruptMask** (uint32_t spi_base, uint32_t mask) <linebreak/>
-    </para>
+<emphasis>Sets the interrupt mask of the timer by writing to the IM register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setOneShot** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>set the timer to be one shot</emphasis>    </para>
+<emphasis>Sets the timer to operate in one-shot mode by clearing the &quot;P&quot; bit in the CFG register to 0.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPR** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t value) <linebreak/>
-    </para>
-</entry></row>
-<row>
-<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM0MatchingCMPXAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR0 when the timer matches CMPX value while up counting</emphasis>    </para>
+<emphasis>Sets the prescaler value of the timer by writing to the PR register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM0MatchingCMPXDownCountAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR0 when the timer matches CMPY value while down counting</emphasis>    </para>
+    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM0MatchingCMPYAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR0 when the timer matches CMPY value while up counting</emphasis>    </para>
+</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM0MatchingCMPXUpCountAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
+    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM0MatchingCMPYDownCountAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR0 when the timer matches CMPX value while down counting</emphasis>    </para>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM0MatchingCMPYUpCountAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
+    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM0MatchingRELOADAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR0 when the timer matches Reload value</emphasis>    </para>
+    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM0MatchingZeroAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR0 when the timer matches Zero value</emphasis>    </para>
-</entry></row>
-<row>
-<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM1MatchingCMPXAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR1 when the timer matches CMPX value while up counting</emphasis>    </para>
+    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM1MatchingCMPXDownCountAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR1 when the timer matches CMPY value while down counting</emphasis>    </para>
+    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM1MatchingCMPYAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR1 when the timer matches CMPY value while up counting</emphasis>    </para>
+</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
+    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM1MatchingCMPYDownCountAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR1 when the timer matches CMPX value while down counting</emphasis>    </para>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM1MatchingCMPYUpCountingAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
+    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM1MatchingRELOADAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR1 when the timer matches Reload value</emphasis>    </para>
+    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM1MatchingZeroAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <linebreak/>
-<emphasis>set the action of TMR1 when the timer matches Zero value</emphasis>    </para>
+    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
+</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWMDeadtime** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t value) <linebreak/>
+<emphasis>Sets the PWM dead time value of the PWM by writing to the PWMDT register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPeriodic** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>set the timer to be periodic</emphasis>    </para>
+<emphasis>Sets the timer to operate in periodic mode by setting the &quot;P&quot; bit in the CFG register to 1.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setRELOAD** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t value) <linebreak/>
-<emphasis>set the timer reload value</emphasis>    </para>
+<emphasis>Sets the reload value of a 32-bit timer by writing to the RELOAD register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setUpCount** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>set the timer direction to be up counting</emphasis>    </para>
+<emphasis>Sets the timer direction to be up counting by setting the &quot;DIR&quot; field in the CTRL register to 0b10.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_setUpDownCount** (**EF\_TMR32\_TYPE\_PTR** tmr32) <linebreak/>
-<emphasis>set the timer direction to be up/down counting</emphasis>   </para>
+<emphasis>Sets the timer direction to be up/down counting by setting the &quot;DIR&quot; field in the CTRL register to 0b11.</emphasis>   </para>
 </entry></row>
 </table>
 </para>
@@ -334,47 +315,47 @@
 <row>
 <entry thead="no" align='right'><para>define   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_ACTION\_HIGH** ((uint32_t)2)<linebreak/>
-    </para>
+<emphasis>Set output to HIGH when match occurs.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>define   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_ACTION\_INVERT** ((uint32_t)3)<linebreak/>
-    </para>
+<emphasis>Invert the output when match occurs.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>define   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_ACTION\_LOW** ((uint32_t)1)<linebreak/>
-    </para>
+<emphasis>Set output to LOW when match occurs.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>define   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_ACTION\_MAX\_VALUE** ((uint32_t)3)<linebreak/>
-    </para>
+<emphasis>Maximum value for the action field.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>define   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_ACTION\_NONE** ((uint32_t)0)<linebreak/>
-    </para>
+<emphasis>No action on match (do nothing)</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>define   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_ICR\_MAX\_VALUE** ((uint32_t)2)<linebreak/>
-    </para>
+<emphasis>Maximum value for the ICR register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>define   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_IM\_MAX\_VALUE** ((uint32_t)2)<linebreak/>
-    </para>
+<emphasis>Maximum value for the IM register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>define   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_PR\_MAX\_VALUE** ((uint32_t)0x0000FFFF)<linebreak/>
-    </para>
+<emphasis>Maximum value for the PR register.</emphasis>    </para>
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>define   </para>
 </entry><entry thead="no" align='left'><para>**EF\_TMR32\_PWMDT\_MAX\_VALUE** ((uint32_t)0x000000FF)<linebreak/>
-   </para>
+<emphasis>Maximum value for the deadtime register.</emphasis>   </para>
 </entry></row>
 </table>
 </para>
@@ -383,16 +364,10 @@
 <title>Functions Documentation</title>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md19">
 <title>function &lt;tt&gt;EF_TMR32_PWM0Enable&lt;/tt&gt;</title>
-<para><emphasis>enables TMR0 by setting &quot;P0E&quot; bit in the CTRL register to 1</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a34eb34d261146ff2dbb5b1765309fb10" kindref="member">EF_TMR32_PWM0Enable</ref><sp/>(</highlight></codeline>
+<para><emphasis>Enables PWM0 by setting &quot;P0E&quot; bit in the CTRL register to 1.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a34eb34d261146ff2dbb5b1765309fb10" kindref="member">EF_TMR32_PWM0Enable</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para>enables TMR0 by setting &quot;P0E&quot; bit in the CTRL register to 1</para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
 <listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
@@ -403,16 +378,10 @@
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md20">
 <title>function &lt;tt&gt;EF_TMR32_PWM0Invert&lt;/tt&gt;</title>
-<para><emphasis>invert TMR0 by setting &quot;P0I&quot; bit in the CTRL register to 1</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1aa6d78069423fc1b6c251f8ec9df10c48" kindref="member">EF_TMR32_PWM0Invert</ref><sp/>(</highlight></codeline>
+<para><emphasis>Inverts PWM0 output by setting &quot;P0I&quot; bit in the CTRL register to 1.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1aa6d78069423fc1b6c251f8ec9df10c48" kindref="member">EF_TMR32_PWM0Invert</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para>invert TMR0 by setting &quot;P0I&quot; bit in the CTRL register to 1</para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
 <listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
@@ -423,16 +392,10 @@
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md21">
 <title>function &lt;tt&gt;EF_TMR32_PWM1Enable&lt;/tt&gt;</title>
-<para><emphasis>enables TMR1 by setting &quot;P1E&quot; bit in the CTRL register to 1</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1acbae8bfd22ccc3ada22d403e22274850" kindref="member">EF_TMR32_PWM1Enable</ref><sp/>(</highlight></codeline>
+<para><emphasis>Enables PWM1 by setting &quot;P1E&quot; bit in the CTRL register to 1.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1acbae8bfd22ccc3ada22d403e22274850" kindref="member">EF_TMR32_PWM1Enable</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para>enables TMR1 by setting &quot;P1E&quot; bit in the CTRL register to 1</para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
 <listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
@@ -443,16 +406,10 @@
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md22">
 <title>function &lt;tt&gt;EF_TMR32_PWM1Invert&lt;/tt&gt;</title>
-<para><emphasis>invert TMR1 by setting &quot;P1I&quot; bit in the CTRL register to 1</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a53a9f7c2610d376d309cd29de1c317ce" kindref="member">EF_TMR32_PWM1Invert</ref><sp/>(</highlight></codeline>
+<para><emphasis>Inverts PWM1 output by setting &quot;P1I&quot; bit in the CTRL register to 1.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a53a9f7c2610d376d309cd29de1c317ce" kindref="member">EF_TMR32_PWM1Invert</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para>invert TMR1 by setting &quot;P1I&quot; bit in the CTRL register to 1</para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
 <listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
@@ -462,37 +419,42 @@
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md23">
+<title>function &lt;tt&gt;EF_TMR32_PWMDeadtimeEnable&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ab370a4c58f42c489a93651d180f99423" kindref="member">EF_TMR32_PWMDeadtimeEnable</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Enables PWM dead-time by setting the &quot;DTE&quot; (Dead-Time Enable) bit in the CTRL register to 1. Dead-time is a critical feature in PWM signal generation used to ensure a safe period between switching the high and low states, preventing short circuits or other issues in systems with complementary outputs, such as H-bridge drivers. When enabled, the &quot;DTE&quot; bit introduces a fixed delay between the switching of PWM channels to allow for this safety margin.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md24">
 <title>function &lt;tt&gt;EF_TMR32_clearIrq&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1aa262d941a123ac51624098e04c94d627" kindref="member">EF_TMR32_clearIrq</ref><sp/>(</highlight></codeline>
+<para><emphasis>Sets the interrupt clear register of the timer by writing to the ICR register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_clearIrq<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mask</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md24">
-<title>function &lt;tt&gt;EF_TMR32_deadtimeEnable&lt;/tt&gt;</title>
-<para><emphasis>enables deadtime by setting &quot;DTE&quot; bit in the CTRL register to 1</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_deadtimeEnable<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers. </para>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>mask</computeroutput> The interrupt clear mask value to set in the ICR register. Must not exceed **EF\_TMR32\_ICR\_MAX\_VALUE**.</para>
 </listitem></itemizedlist>
 </para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md25">
 <title>function &lt;tt&gt;EF_TMR32_disable&lt;/tt&gt;</title>
-<para><emphasis>disables timer by setting &quot;TE&quot; bit in the CTRL register to 0</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a55e09ad517a12af2d293982a1e0f2d0d" kindref="member">EF_TMR32_disable</ref><sp/>(</highlight></codeline>
+<para><emphasis>Disables timer by setting &quot;TE&quot; bit in the CTRL register to 0.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a55e09ad517a12af2d293982a1e0f2d0d" kindref="member">EF_TMR32_disable</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para>disables timer by setting &quot;TE&quot; bit in the CTRL register to 0</para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
 <listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
@@ -503,16 +465,10 @@
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md26">
 <title>function &lt;tt&gt;EF_TMR32_enable&lt;/tt&gt;</title>
-<para><emphasis>enables timer by setting &quot;TE&quot; bit in the CTRL register to 1</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a03bb5b7b456bda2803eb6e0bc907d2b4" kindref="member">EF_TMR32_enable</ref><sp/>(</highlight></codeline>
+<para><emphasis>Enables timer by setting &quot;TE&quot; bit in the CTRL register to 1.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a03bb5b7b456bda2803eb6e0bc907d2b4" kindref="member">EF_TMR32_enable</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para>enables timer by setting &quot;TE&quot; bit in the CTRL register to 1</para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
 <listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
@@ -522,156 +478,82 @@
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md27">
-<title>function &lt;tt&gt;EF_TMR32_getCMPX&lt;/tt&gt;</title>
-<para><emphasis>get the CMPX register value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_getCMPX<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*cmpx_value</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para><bold>Returns:</bold></para>
-<para>CMPX register value </para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md28">
-<title>function &lt;tt&gt;EF_TMR32_getCMPY&lt;/tt&gt;</title>
-<para><emphasis>get the CMPY register value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_getCMPY<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*cmpy_value</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para><bold>Returns:</bold></para>
-<para>CMPY register value </para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md29">
-<title>function &lt;tt&gt;EF_TMR32_getDeadtime&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_getDeadtime<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*deadtime_value</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md30">
-<title>function &lt;tt&gt;EF_TMR32_getRELOAD&lt;/tt&gt;</title>
-<para><emphasis>get the timer reload value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_getRELOAD<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*reload_value</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para><bold>Returns:</bold></para>
-<para>reload register value </para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md31">
 <title>function &lt;tt&gt;EF_TMR32_getTMR&lt;/tt&gt;</title>
-<para><emphasis>get the current value of the timer</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a6c0942ecf91efd6f92a22f9881f9b67f" kindref="member">EF_TMR32_getTMR</ref><sp/>(</highlight></codeline>
+<para><emphasis>Retrieves the current timer value by reading the TMR register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a6c0942ecf91efd6f92a22f9881f9b67f" kindref="member">EF_TMR32_getTMR</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*tmr_value</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>tmr_value</computeroutput> A pointer to a uint32_t where the timer value will be stored.</para>
 </listitem></itemizedlist>
 </para>
 <para><bold>Returns:</bold></para>
-<para>current timer value </para>
+<para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md28">
+<title>function &lt;tt&gt;EF_TMR32_restart&lt;/tt&gt;</title>
+<para><emphasis>Enables timer re-start; used in the one-shot mode to restart the timer by setting the &quot;TS&quot; bit in the CTRL register to 1 and then to 0.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a5eefc74b17c0183939742ab664fe84db" kindref="member">EF_TMR32_restart</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md29">
+<title>function &lt;tt&gt;EF_TMR32_setCMPX&lt;/tt&gt;</title>
+<para><emphasis>Sets the compare value of a 32-bit timer by writing to the CMPX register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a7ccde6a4fe0321b995105032abce58a6" kindref="member">EF_TMR32_setCMPX</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>value</computeroutput> The compare value to set in the CMPX register.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md30">
+<title>function &lt;tt&gt;EF_TMR32_setCMPY&lt;/tt&gt;</title>
+<para><emphasis>Sets the compare value Y of a 32-bit timer by writing to the CMPY register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a025b4b548381e4d01e729cb69b5dff3b" kindref="member">EF_TMR32_setCMPY</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>value</computeroutput> The compare value to set in the CMPY register.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md31">
+<title>function &lt;tt&gt;EF_TMR32_setDownCount&lt;/tt&gt;</title>
+<para><emphasis>Sets the timer direction to be down counting by setting the &quot;DIR&quot; field in the CTRL register to 0b01.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a731ce7ebd98193b110862471c45e6d40" kindref="member">EF_TMR32_setDownCount</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md32">
-<title>function &lt;tt&gt;EF_TMR32_restart&lt;/tt&gt;</title>
-<para><emphasis>enables timer re-start; used in the one-shot mode to restart the timer.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a5eefc74b17c0183939742ab664fe84db" kindref="member">EF_TMR32_restart</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para>enables timer re-start; used in the one-shot mode to restart the timer.</para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para><bold>Returns:</bold></para>
-<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md33">
-<title>function &lt;tt&gt;EF_TMR32_setCMPX&lt;/tt&gt;</title>
-<para><emphasis>set the CMPX register value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a7ccde6a4fe0321b995105032abce58a6" kindref="member">EF_TMR32_setCMPX</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>value</computeroutput> CMPX value </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md34">
-<title>function &lt;tt&gt;EF_TMR32_setCMPY&lt;/tt&gt;</title>
-<para><emphasis>set the CMPY register value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a025b4b548381e4d01e729cb69b5dff3b" kindref="member">EF_TMR32_setCMPY</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>value</computeroutput> CMPY value </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md35">
-<title>function &lt;tt&gt;EF_TMR32_setDeadtime&lt;/tt&gt;</title>
-<para><emphasis>set the timer deadtime register value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_setDeadtime<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>value</computeroutput> deadtime register value </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md36">
-<title>function &lt;tt&gt;EF_TMR32_setDownCount&lt;/tt&gt;</title>
-<para><emphasis>set the timer direction to be down counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a731ce7ebd98193b110862471c45e6d40" kindref="member">EF_TMR32_setDownCount</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para>set the timer direction to be down counting</para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para><bold>Returns:</bold></para>
-<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md37">
 <title>function &lt;tt&gt;EF_TMR32_setGclkEnable&lt;/tt&gt;</title>
 <para><emphasis>Sets the GCLK enable bit in the UART register to a certain value.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a48fee3ba105edc1dcee550925ac90f6d" kindref="member">EF_TMR32_setGclkEnable</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
@@ -687,240 +569,28 @@
 <para><bold>Returns:</bold></para>
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md38">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md33">
 <title>function &lt;tt&gt;EF_TMR32_setInterruptMask&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a4ff74f9561301db5707228da86f8bd53" kindref="member">EF_TMR32_setInterruptMask</ref><sp/>(</highlight></codeline>
+<para><emphasis>Sets the interrupt mask of the timer by writing to the IM register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_setInterruptMask<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>spi_base,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mask</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>mask</computeroutput> The interrupt mask value to set in the IM register. Must not exceed **EF\_TMR32\_IM\_MAX\_VALUE**.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md39">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md34">
 <title>function &lt;tt&gt;EF_TMR32_setOneShot&lt;/tt&gt;</title>
-<para><emphasis>set the timer to be one shot</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ab013c8ef6cdc697401cadb1351d42379" kindref="member">EF_TMR32_setOneShot</ref><sp/>(</highlight></codeline>
+<para><emphasis>Sets the timer to operate in one-shot mode by clearing the &quot;P&quot; bit in the CFG register to 0.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ab013c8ef6cdc697401cadb1351d42379" kindref="member">EF_TMR32_setOneShot</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers. </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md40">
-<title>function &lt;tt&gt;EF_TMR32_setPR&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a08fe49ae5e93539f493d0640328b043a" kindref="member">EF_TMR32_setPR</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md41">
-<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingCMPXAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR0 when the timer matches CMPX value while up counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_setPWM0MatchingCMPXAction<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md42">
-<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingCMPXDownCountAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR0 when the timer matches CMPY value while down counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a9e7ceb938a22a090ae7907e013d026dd" kindref="member">EF_TMR32_setPWM0MatchingCMPXDownCountAction</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md43">
-<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingCMPYAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR0 when the timer matches CMPY value while up counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_setPWM0MatchingCMPYAction<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md44">
-<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingCMPYDownCountAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR0 when the timer matches CMPX value while down counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ad800e1b9441665d57d2c11f57232778c" kindref="member">EF_TMR32_setPWM0MatchingCMPYDownCountAction</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md45">
-<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingRELOADAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR0 when the timer matches Reload value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ab80c062a5bd682ba94d93a563c58a08b" kindref="member">EF_TMR32_setPWM0MatchingRELOADAction</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md46">
-<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingZeroAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR0 when the timer matches Zero value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a6f73741bff7231eb72696b642dd5344e" kindref="member">EF_TMR32_setPWM0MatchingZeroAction</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md47">
-<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingCMPXAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR1 when the timer matches CMPX value while up counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_setPWM1MatchingCMPXAction<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md48">
-<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingCMPXDownCountAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR1 when the timer matches CMPY value while down counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ad579dc1e3910c7b4a78cde1e6e14bf8d" kindref="member">EF_TMR32_setPWM1MatchingCMPXDownCountAction</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md49">
-<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingCMPYAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR1 when the timer matches CMPY value while up counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>EF_TMR32_setPWM1MatchingCMPYAction<sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md50">
-<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingCMPYDownCountAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR1 when the timer matches CMPX value while down counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a3dd40d43dac4fee39dbe7717ee848ecd" kindref="member">EF_TMR32_setPWM1MatchingCMPYDownCountAction</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md51">
-<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingRELOADAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR1 when the timer matches Reload value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a401ddd8eb0f58c2e154b0e4bed3bc4a2" kindref="member">EF_TMR32_setPWM1MatchingRELOADAction</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md52">
-<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingZeroAction&lt;/tt&gt;</title>
-<para><emphasis>set the action of TMR1 when the timer matches Zero value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a2e80ed5c92214b2858766e0d8b233008" kindref="member">EF_TMR32_setPWM1MatchingZeroAction</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>action</computeroutput> uint32_t could be NONE, LOW, HIGH, or INVERT </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md53">
-<title>function &lt;tt&gt;EF_TMR32_setPeriodic&lt;/tt&gt;</title>
-<para><emphasis>set the timer to be periodic</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ae1b99e7a248aa01794677de568a89c12" kindref="member">EF_TMR32_setPeriodic</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers. </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md54">
-<title>function &lt;tt&gt;EF_TMR32_setRELOAD&lt;/tt&gt;</title>
-<para><emphasis>set the timer reload value</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a5dd014cbe453c7e9ad161bb95c1a5478" kindref="member">EF_TMR32_setRELOAD</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem><listitem><para><computeroutput>value</computeroutput> timer reload value </para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md55">
-<title>function &lt;tt&gt;EF_TMR32_setUpCount&lt;/tt&gt;</title>
-<para><emphasis>set the timer direction to be up counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1aadb3f68daef94e6e3668a88eea378fd2" kindref="member">EF_TMR32_setUpCount</ref><sp/>(</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
-<codeline><highlight class="normal">)<sp/></highlight></codeline>
-</programlisting></para>
-<para><bold>Parameters:</bold></para>
-<para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
-</listitem></itemizedlist>
-</para>
-<para>set the timer direction to be up counting</para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
 <listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
@@ -929,18 +599,364 @@
 <para><bold>Returns:</bold></para>
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md56">
-<title>function &lt;tt&gt;EF_TMR32_setUpDownCount&lt;/tt&gt;</title>
-<para><emphasis>set the timer direction to be up/down counting</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a2fd6766483cd71135ff6ba22f0af2e81" kindref="member">EF_TMR32_setUpDownCount</ref><sp/>(</highlight></codeline>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md35">
+<title>function &lt;tt&gt;EF_TMR32_setPR&lt;/tt&gt;</title>
+<para><emphasis>Sets the prescaler value of the timer by writing to the PR register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a08fe49ae5e93539f493d0640328b043a" kindref="member">EF_TMR32_setPR</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>value</computeroutput> The prescaler value to set in the PR register. Must not exceed **EF\_TMR32\_PR\_MAX\_VALUE**.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md36">
+<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingCMPXDownCountAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a9e7ceb938a22a090ae7907e013d026dd" kindref="member">EF_TMR32_setPWM0MatchingCMPXDownCountAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR0 PWM when the timer matches the CMPX value while down counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPX value while counting down. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying EF_TMR32_PWM0CFG_REG_E5_BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the CMPX value while counting down. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md37">
+<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingCMPXUpCountAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a5329cef22cac7e6d808f69a3c5edc851" kindref="member">EF_TMR32_setPWM0MatchingCMPXUpCountAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR0 PWM when the timer matches the CMPX value while up counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPX value while counting up. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying EF_TMR32_PWM0CFG_REG_E1_BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the CMPX value while counting up. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md38">
+<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingCMPYDownCountAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ad800e1b9441665d57d2c11f57232778c" kindref="member">EF_TMR32_setPWM0MatchingCMPYDownCountAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR0 PWM when the timer matches the CMPY value while down counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPY value while counting down. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying EF_TMR32_PWM0CFG_REG_E4_BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the CMPY value while counting down. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md39">
+<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingCMPYUpCountAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a02cca84ee8407a02efa49d1ad4357cdc" kindref="member">EF_TMR32_setPWM0MatchingCMPYUpCountAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR0 PWM when the timer matches the CMPY value while up counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPY value while counting up. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying EF_TMR32_PWM0CFG_REG_E2_BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the CMPY value while counting up. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md40">
+<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingRELOADAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ab80c062a5bd682ba94d93a563c58a08b" kindref="member">EF_TMR32_setPWM0MatchingRELOADAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR0 PWM when the timer matches the RELOAD value. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the RELOAD value. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying EF_TMR32_PWM0CFG_REG_E3_BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the RELOAD value. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md41">
+<title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingZeroAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a6f73741bff7231eb72696b642dd5344e" kindref="member">EF_TMR32_setPWM0MatchingZeroAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR0 PWM when the timer matches the Zero value. This function allows the user to specify what happens to the PWM output signal when the timer counter reaches zero. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM0 configuration register by modifying **EF\_TMR32\_PWM0CFG\_REG\_E0\_BIT**. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the Zero value. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md42">
+<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingCMPXDownCountAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ad579dc1e3910c7b4a78cde1e6e14bf8d" kindref="member">EF_TMR32_setPWM1MatchingCMPXDownCountAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR1 PWM when the timer matches the CMPX value while down counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPX value while counting down. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying EF_TMR32_PWM1CFG_REG_E5_BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the CMPX value while counting down. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md43">
+<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingCMPXUpCountingAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a0e27b3011128b05f745f22f7f8381464" kindref="member">EF_TMR32_setPWM1MatchingCMPXUpCountingAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR1 PWM when the timer matches the CMPX value while up counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPX value while counting up. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying EF_TMR32_PWM1CFG_REG_E1_BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the CMPX value while counting up. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md44">
+<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingCMPYDownCountAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a3dd40d43dac4fee39dbe7717ee848ecd" kindref="member">EF_TMR32_setPWM1MatchingCMPYDownCountAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR1 PWM when the timer matches the CMPY value while down counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPY value while counting down. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying EF_TMR32_PWM1CFG_REG_E4_BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the CMPY value while counting down. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md45">
+<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingCMPYUpCountingAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1afc9656b5c30e601673caa747caeb51c1" kindref="member">EF_TMR32_setPWM1MatchingCMPYUpCountingAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR1 PWM when the timer matches the CMPY value while up counting. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the CMPY value while counting up. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying EF_TMR32_PWM1CFG_REG_E2_BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the CMPY value while counting up. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md46">
+<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingRELOADAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a401ddd8eb0f58c2e154b0e4bed3bc4a2" kindref="member">EF_TMR32_setPWM1MatchingRELOADAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR1 PWM when the timer matches the RELOAD value. This function allows the user to specify what happens to the PWM output signal when the timer counter matches the RELOAD value. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying EF_TMR32_PWM1CFG_REG_E3_BI. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the RELOAD value. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md47">
+<title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingZeroAction&lt;/tt&gt;</title>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a2e80ed5c92214b2858766e0d8b233008" kindref="member">EF_TMR32_setPWM1MatchingZeroAction</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para>Configures the action of TMR1 PWM when the timer matches the Zero value. This function allows the user to specify what happens to the PWM output signal when the timer counter reaches zero. The available actions are: no action, set the output to LOW, set the output to HIGH, or invert the current state of the output. The action is configured in the PWM1 configuration register by modifying **EF\_TMR32\_PWM1CFG\_REG\_E0\_BIT**. This is commonly used in PWM applications to define the output response when the counter reaches a particular value.</para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>action</computeroutput> A uint32_t value specifying the action to take when the timer matches the Zero value. The possible values are:<itemizedlist>
+<listitem><para>EF_TMR32_ACTION_NONE: No action (do nothing)</para>
+</listitem><listitem><para>EF_TMR32_ACTION_LOW: Set the PWM output to LOW</para>
+</listitem><listitem><para>EF_TMR32_ACTION_HIGH: Set the PWM output to HIGH</para>
+</listitem><listitem><para>EF_TMR32_ACTION_INVERT: Invert the current output state</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md48">
+<title>function &lt;tt&gt;EF_TMR32_setPWMDeadtime&lt;/tt&gt;</title>
+<para><emphasis>Sets the PWM dead time value of the PWM by writing to the PWMDT register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a09b86f3fe84a2823f619704f49df51ff" kindref="member">EF_TMR32_setPWMDeadtime</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>value</computeroutput> The dead time value to set in the PWMDT register. Must not exceed **EF\_TMR32\_PWMDT\_MAX\_VALUE**.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md49">
+<title>function &lt;tt&gt;EF_TMR32_setPeriodic&lt;/tt&gt;</title>
+<para><emphasis>Sets the timer to operate in periodic mode by setting the &quot;P&quot; bit in the CFG register to 1.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ae1b99e7a248aa01794677de568a89c12" kindref="member">EF_TMR32_setPeriodic</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
-<listitem><para><computeroutput>tmr32_base</computeroutput> The base memory address of TMR32 registers.</para>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
 </listitem></itemizedlist>
 </para>
-<para>set the timer direction to be up/down counting</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md50">
+<title>function &lt;tt&gt;EF_TMR32_setRELOAD&lt;/tt&gt;</title>
+<para><emphasis>Sets the reload value of a 32-bit timer by writing to the RELOAD register.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a5dd014cbe453c7e9ad161bb95c1a5478" kindref="member">EF_TMR32_setRELOAD</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem><listitem><para><computeroutput>value</computeroutput> The reload value to set in the RELOAD register.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md51">
+<title>function &lt;tt&gt;EF_TMR32_setUpCount&lt;/tt&gt;</title>
+<para><emphasis>Sets the timer direction to be up counting by setting the &quot;DIR&quot; field in the CTRL register to 0b10.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1aadb3f68daef94e6e3668a88eea378fd2" kindref="member">EF_TMR32_setUpCount</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
+<para><bold>Parameters:</bold></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Returns:</bold></para>
+<para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code </para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md52">
+<title>function &lt;tt&gt;EF_TMR32_setUpDownCount&lt;/tt&gt;</title>
+<para><emphasis>Sets the timer direction to be up/down counting by setting the &quot;DIR&quot; field in the CTRL register to 0b11.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a2fd6766483cd71135ff6ba22f0af2e81" kindref="member">EF_TMR32_setUpDownCount</ref><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32</highlight></codeline>
+<codeline><highlight class="normal">)<sp/></highlight></codeline>
+</programlisting></para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
 <listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR** , which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
@@ -950,58 +966,58 @@
 <para>status A value of type **EF\_DRIVER\_STATUS** : returns a success or error code</para>
 </sect2>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md57">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md53">
 <title>Macros Documentation</title>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md58">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md54">
 <title>define &lt;tt&gt;EF_TMR32_ACTION_HIGH&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ACTION_HIGH<sp/>((uint32_t)2)</highlight></codeline>
+<para><emphasis>Set output to HIGH when match occurs.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ACTION_HIGH<sp/>((uint32_t)2)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md55">
+<title>define &lt;tt&gt;EF_TMR32_ACTION_INVERT&lt;/tt&gt;</title>
+<para><emphasis>Invert the output when match occurs.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ACTION_INVERT<sp/>((uint32_t)3)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md56">
+<title>define &lt;tt&gt;EF_TMR32_ACTION_LOW&lt;/tt&gt;</title>
+<para><emphasis>Set output to LOW when match occurs.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ACTION_LOW<sp/>((uint32_t)1)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md57">
+<title>define &lt;tt&gt;EF_TMR32_ACTION_MAX_VALUE&lt;/tt&gt;</title>
+<para><emphasis>Maximum value for the action field.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ACTION_MAX_VALUE<sp/>((uint32_t)3)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md58">
+<title>define &lt;tt&gt;EF_TMR32_ACTION_NONE&lt;/tt&gt;</title>
+<para><emphasis>No action on match (do nothing)</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ACTION_NONE<sp/>((uint32_t)0)</highlight></codeline>
 </programlisting></para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md59">
-<title>define &lt;tt&gt;EF_TMR32_ACTION_INVERT&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ACTION_INVERT<sp/>((uint32_t)3)</highlight></codeline>
+<title>define &lt;tt&gt;EF_TMR32_ICR_MAX_VALUE&lt;/tt&gt;</title>
+<para><emphasis>Maximum value for the ICR register.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ICR_MAX_VALUE<sp/>((uint32_t)2)</highlight></codeline>
 </programlisting></para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md60">
-<title>define &lt;tt&gt;EF_TMR32_ACTION_LOW&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ACTION_LOW<sp/>((uint32_t)1)</highlight></codeline>
+<title>define &lt;tt&gt;EF_TMR32_IM_MAX_VALUE&lt;/tt&gt;</title>
+<para><emphasis>Maximum value for the IM register.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_IM_MAX_VALUE<sp/>((uint32_t)2)</highlight></codeline>
 </programlisting></para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md61">
-<title>define &lt;tt&gt;EF_TMR32_ACTION_MAX_VALUE&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ACTION_MAX_VALUE<sp/>((uint32_t)3)</highlight></codeline>
+<title>define &lt;tt&gt;EF_TMR32_PR_MAX_VALUE&lt;/tt&gt;</title>
+<para><emphasis>Maximum value for the PR register.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PR_MAX_VALUE<sp/>((uint32_t)0x0000FFFF)</highlight></codeline>
 </programlisting></para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md62">
-<title>define &lt;tt&gt;EF_TMR32_ACTION_NONE&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ACTION_NONE<sp/>((uint32_t)0)</highlight></codeline>
-</programlisting></para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md63">
-<title>define &lt;tt&gt;EF_TMR32_ICR_MAX_VALUE&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_ICR_MAX_VALUE<sp/>((uint32_t)2)</highlight></codeline>
-</programlisting></para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md64">
-<title>define &lt;tt&gt;EF_TMR32_IM_MAX_VALUE&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_IM_MAX_VALUE<sp/>((uint32_t)2)</highlight></codeline>
-</programlisting></para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md65">
-<title>define &lt;tt&gt;EF_TMR32_PR_MAX_VALUE&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PR_MAX_VALUE<sp/>((uint32_t)0x0000FFFF)</highlight></codeline>
-</programlisting></para>
-</sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md66">
 <title>define &lt;tt&gt;EF_TMR32_PWMDT_MAX_VALUE&lt;/tt&gt;</title>
-<para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWMDT_MAX_VALUE<sp/>((uint32_t)0x000000FF)</highlight></codeline>
+<para><emphasis>Maximum value for the deadtime register.</emphasis> <programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWMDT_MAX_VALUE<sp/>((uint32_t)0x000000FF)</highlight></codeline>
 </programlisting></para>
 </sect2>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md67">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md63">
 <title>File EF_TMR32_regs.h</title>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md68">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md64">
 <title>Structures and Types</title>
 <para><table rows="4" cols="2"><row>
 <entry thead="yes" align='right'><para>Type   </para>
@@ -1025,7 +1041,7 @@
 </table>
 </para>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md69">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md65">
 <title>Macros</title>
 <para><table rows="50" cols="2"><row>
 <entry thead="yes" align='right'><para>Type   </para>
@@ -1279,19 +1295,19 @@
 </table>
 </para>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md70">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md66">
 <title>Structures and Types Documentation</title>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md71">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md67">
 <title>typedef &lt;tt&gt;EF_TMR32_TYPE&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">_EF_TMR32_TYPE_</ref><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE</ref>;</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md72">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md68">
 <title>typedef &lt;tt&gt;EF_TMR32_TYPE_PTR&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE</ref>*<sp/><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>;</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md73">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md69">
 <title>struct &lt;tt&gt;_EF_TMR32_TYPE_&lt;/tt&gt;</title>
 <para>Variables:</para>
 <para><itemizedlist>
@@ -1333,249 +1349,249 @@
 </para>
 </sect2>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md74">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md70">
 <title>Macros Documentation</title>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md75">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md71">
 <title>define &lt;tt&gt;EF_TMR32_CFG_REG_DIR_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CFG_REG_DIR_BIT<sp/>(uint32_t)(0)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md76">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md72">
 <title>define &lt;tt&gt;EF_TMR32_CFG_REG_DIR_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CFG_REG_DIR_MASK<sp/>(uint32_t)(0x3)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md77">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md73">
 <title>define &lt;tt&gt;EF_TMR32_CFG_REG_P_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CFG_REG_P_BIT<sp/>(uint32_t)(2)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md78">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md74">
 <title>define &lt;tt&gt;EF_TMR32_CFG_REG_P_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CFG_REG_P_MASK<sp/>(uint32_t)(0x4)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md79">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md75">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_DTE_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_DTE_BIT<sp/>(uint32_t)(4)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md80">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md76">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_DTE_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_DTE_MASK<sp/>(uint32_t)(0x10)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md81">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md77">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_P0E_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_P0E_BIT<sp/>(uint32_t)(2)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md82">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md78">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_P0E_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_P0E_MASK<sp/>(uint32_t)(0x4)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md83">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md79">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_P1E_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_P1E_BIT<sp/>(uint32_t)(3)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md84">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md80">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_P1E_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_P1E_MASK<sp/>(uint32_t)(0x8)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md85">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md81">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_PI0_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_PI0_BIT<sp/>(uint32_t)(5)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md86">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md82">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_PI0_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_PI0_MASK<sp/>(uint32_t)(0x20)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md87">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md83">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_PI1_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_PI1_BIT<sp/>(uint32_t)(6)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md88">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md84">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_PI1_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_PI1_MASK<sp/>(uint32_t)(0x40)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md89">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md85">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_TE_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_TE_BIT<sp/>(uint32_t)(0)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md90">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md86">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_TE_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_TE_MASK<sp/>(uint32_t)(0x1)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md91">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md87">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_TS_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_TS_BIT<sp/>(uint32_t)(1)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md92">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md88">
 <title>define &lt;tt&gt;EF_TMR32_CTRL_REG_TS_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_CTRL_REG_TS_MASK<sp/>(uint32_t)(0x2)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md93">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md89">
 <title>define &lt;tt&gt;EF_TMR32_MX_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_MX_FLAG<sp/>((uint32_t)0x2)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md94">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md90">
 <title>define &lt;tt&gt;EF_TMR32_MY_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_MY_FLAG<sp/>((uint32_t)0x4)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md95">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md91">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E0_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E0_BIT<sp/>(uint32_t)(0)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md96">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md92">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E0_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E0_MASK<sp/>(uint32_t)(0x3)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md97">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md93">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E1_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E1_BIT<sp/>(uint32_t)(2)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md98">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md94">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E1_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E1_MASK<sp/>(uint32_t)(0xc)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md99">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md95">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E2_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E2_BIT<sp/>(uint32_t)(4)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md100">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md96">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E2_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E2_MASK<sp/>(uint32_t)(0x30)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md101">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md97">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E3_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E3_BIT<sp/>(uint32_t)(6)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md102">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md98">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E3_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E3_MASK<sp/>(uint32_t)(0xc0)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md103">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md99">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E4_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E4_BIT<sp/>(uint32_t)(8)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md104">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md100">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E4_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E4_MASK<sp/>(uint32_t)(0x300)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md105">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md101">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E5_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E5_BIT<sp/>(uint32_t)(10)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md106">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md102">
 <title>define &lt;tt&gt;EF_TMR32_PWM0CFG_REG_E5_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM0CFG_REG_E5_MASK<sp/>(uint32_t)(0xc00)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md107">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md103">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E0_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E0_BIT<sp/>(uint32_t)(0)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md108">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md104">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E0_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E0_MASK<sp/>(uint32_t)(0x3)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md109">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md105">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E1_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E1_BIT<sp/>(uint32_t)(2)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md110">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md106">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E1_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E1_MASK<sp/>(uint32_t)(0xc)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md111">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md107">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E2_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E2_BIT<sp/>(uint32_t)(4)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md112">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md108">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E2_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E2_MASK<sp/>(uint32_t)(0x30)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md113">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md109">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E3_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E3_BIT<sp/>(uint32_t)(6)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md114">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md110">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E3_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E3_MASK<sp/>(uint32_t)(0xc0)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md115">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md111">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E4_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E4_BIT<sp/>(uint32_t)(8)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md116">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md112">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E4_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E4_MASK<sp/>(uint32_t)(0x300)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md117">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md113">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E5_BIT&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E5_BIT<sp/>(uint32_t)(10)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md118">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md114">
 <title>define &lt;tt&gt;EF_TMR32_PWM1CFG_REG_E5_MASK&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_PWM1CFG_REG_E5_MASK<sp/>(uint32_t)(0xc00)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md119">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md115">
 <title>define &lt;tt&gt;EF_TMR32_TO_FLAG&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>EF_TMR32_TO_FLAG<sp/>((uint32_t)0x1)</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md120">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md116">
 <title>define &lt;tt&gt;IO_TYPES&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>IO_TYPES<sp/></highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md121">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md117">
 <title>define &lt;tt&gt;__R&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>__R<sp/>volatile<sp/>const<sp/>uint32_t</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md122">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md118">
 <title>define &lt;tt&gt;__RW&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>__RW<sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__r_e_a_d_m_e_1autotoc_md123">
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md119">
 <title>define &lt;tt&gt;__W&lt;/tt&gt;</title>
 <para><programlisting filename=".c"><codeline><highlight class="preprocessor">#define<sp/>__W<sp/>volatile<sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
 </programlisting> </para>

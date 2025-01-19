@@ -63,8 +63,15 @@
     <member refid="_e_f___t_m_r32_8c_1a6c0942ecf91efd6f92a22f9881f9b67f" kind="function"><name>EF_TMR32_getTMR</name></member>
     <member refid="_e_f___t_m_r32_8c_1a09b86f3fe84a2823f619704f49df51ff" kind="function"><name>EF_TMR32_setPWMDeadtime</name></member>
     <member refid="_e_f___t_m_r32_8c_1a08fe49ae5e93539f493d0640328b043a" kind="function"><name>EF_TMR32_setPR</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a4376fe59b65a50ea12ebfcafd94009d5" kind="function"><name>EF_TMR32_getRIS</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a7eb8df82868dfa705cd0ee26679045e7" kind="function"><name>EF_TMR32_getMIS</name></member>
     <member refid="_e_f___t_m_r32_8c_1a88702cef6eafdb625b8392d9aa58fa11" kind="function"><name>EF_TMR32_setIM</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a44163e96761725c077d3ea36ec17207d" kind="function"><name>EF_TMR32_getIM</name></member>
     <member refid="_e_f___t_m_r32_8c_1a8f2de51a604e7beb66db426098b7be79" kind="function"><name>EF_TMR32_setICR</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a8d4d907e326c073a96a28e8317fc26bd" kind="function"><name>EF_TMR32_setPWM0EdgeAlignmentMode</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a56341d8e521f6b5001cddf60b93fe6f1" kind="function"><name>EF_TMR32_setPWM1EdgeAlignmentMode</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a0a42492b716fb008dd6980193e039a17" kind="function"><name>EF_TMR32_setPWM0CenterAlignedMode</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a90643eece576624d6bfc7e2f2d939228" kind="function"><name>EF_TMR32_setPWM1CenterAlignedMode</name></member>
   </compound>
   <compound refid="_e_f___t_m_r32_8h" kind="file"><name>EF_TMR32.h</name>
     <member refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kind="define"><name>EF_TMR32_ACTION_NONE</name></member>
@@ -108,8 +115,15 @@
     <member refid="_e_f___t_m_r32_8h_1a6c0942ecf91efd6f92a22f9881f9b67f" kind="function"><name>EF_TMR32_getTMR</name></member>
     <member refid="_e_f___t_m_r32_8h_1a09b86f3fe84a2823f619704f49df51ff" kind="function"><name>EF_TMR32_setPWMDeadtime</name></member>
     <member refid="_e_f___t_m_r32_8h_1a08fe49ae5e93539f493d0640328b043a" kind="function"><name>EF_TMR32_setPR</name></member>
-    <member refid="_e_f___t_m_r32_8h_1a4ff74f9561301db5707228da86f8bd53" kind="function"><name>EF_TMR32_setInterruptMask</name></member>
-    <member refid="_e_f___t_m_r32_8h_1aa262d941a123ac51624098e04c94d627" kind="function"><name>EF_TMR32_clearIrq</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a4376fe59b65a50ea12ebfcafd94009d5" kind="function"><name>EF_TMR32_getRIS</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a7eb8df82868dfa705cd0ee26679045e7" kind="function"><name>EF_TMR32_getMIS</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a88702cef6eafdb625b8392d9aa58fa11" kind="function"><name>EF_TMR32_setIM</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a44163e96761725c077d3ea36ec17207d" kind="function"><name>EF_TMR32_getIM</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a8f2de51a604e7beb66db426098b7be79" kind="function"><name>EF_TMR32_setICR</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a8d4d907e326c073a96a28e8317fc26bd" kind="function"><name>EF_TMR32_setPWM0EdgeAlignmentMode</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a56341d8e521f6b5001cddf60b93fe6f1" kind="function"><name>EF_TMR32_setPWM1EdgeAlignmentMode</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a0a42492b716fb008dd6980193e039a17" kind="function"><name>EF_TMR32_setPWM0CenterAlignedMode</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a90643eece576624d6bfc7e2f2d939228" kind="function"><name>EF_TMR32_setPWM1CenterAlignedMode</name></member>
   </compound>
   <compound refid="_e_f___t_m_r32__regs_8h" kind="file"><name>EF_TMR32_regs.h</name>
     <member refid="_e_f___t_m_r32__regs_8h_1a470cd5845bed94d8b8b358933e4a3442" kind="define"><name>IO_TYPES</name></member>

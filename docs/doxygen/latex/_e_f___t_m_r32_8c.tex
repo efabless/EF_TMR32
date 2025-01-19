@@ -78,10 +78,24 @@ C file for TMR32 APIs which contains the function implmentations.
 \begin{DoxyCompactList}\small\item\em Sets the PWM dead time value of the PWM by writing to the PWMDT register. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a08fe49ae5e93539f493d0640328b043a}{EF\+\_\+\+TMR32\+\_\+set\+PR}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t value)
 \begin{DoxyCompactList}\small\item\em Sets the prescaler value of the timer by writing to the PR register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a4376fe59b65a50ea12ebfcafd94009d5}{EF\+\_\+\+TMR32\+\_\+get\+RIS}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t $\ast$RIS\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Retrieves the raw interrupt status by reading the RIS register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a7eb8df82868dfa705cd0ee26679045e7}{EF\+\_\+\+TMR32\+\_\+get\+MIS}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t $\ast$MIS\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Retrieves the masked interrupt status by reading the MIS register. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a88702cef6eafdb625b8392d9aa58fa11}{EF\+\_\+\+TMR32\+\_\+set\+IM}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t mask)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the interrupt mask of the timer by writing to the IM register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a44163e96761725c077d3ea36ec17207d}{EF\+\_\+\+TMR32\+\_\+get\+IM}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t $\ast$IM\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Retrieves the interrupt clear register by reading the ICR register. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a8f2de51a604e7beb66db426098b7be79}{EF\+\_\+\+TMR32\+\_\+set\+ICR}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t mask)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the interrupt clear register of the timer by writing to the ICR register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a8d4d907e326c073a96a28e8317fc26bd}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Edge\+Alignment\+Mode}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t duty\+\_\+cycle)
+\begin{DoxyCompactList}\small\item\em Sets the PWM0 edge alignment mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a56341d8e521f6b5001cddf60b93fe6f1}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Edge\+Alignment\+Mode}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t duty\+\_\+cycle)
+\begin{DoxyCompactList}\small\item\em Sets the PWM1 edge alignment mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a0a42492b716fb008dd6980193e039a17}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Center\+Aligned\+Mode}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t cmp\+X\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the PWM0 center-\/aligned mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a90643eece576624d6bfc7e2f2d939228}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Center\+Aligned\+Mode}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t cmp\+X\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the PWM1 center-\/aligned mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -134,6 +148,66 @@ Enables timer by setting \char`\"{}\+TE\char`\"{} bit in the CTRL register to 1.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a44163e96761725c077d3ea36ec17207d}\label{_e_f___t_m_r32_8c_a44163e96761725c077d3ea36ec17207d}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_getIM@{EF\_TMR32\_getIM}}
+\index{EF\_TMR32\_getIM@{EF\_TMR32\_getIM}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_getIM()}{EF\_TMR32\_getIM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+get\+IM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t $\ast$}]{IM\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Retrieves the interrupt clear register by reading the ICR register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ out}}  & {\em IM\+\_\+value} & A pointer to a uint32\+\_\+t where the interrupt clear value will be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a7eb8df82868dfa705cd0ee26679045e7}\label{_e_f___t_m_r32_8c_a7eb8df82868dfa705cd0ee26679045e7}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_getMIS@{EF\_TMR32\_getMIS}}
+\index{EF\_TMR32\_getMIS@{EF\_TMR32\_getMIS}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_getMIS()}{EF\_TMR32\_getMIS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+get\+MIS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t $\ast$}]{MIS\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Retrieves the masked interrupt status by reading the MIS register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ out}}  & {\em MIS\+\_\+value} & A pointer to a uint32\+\_\+t where the masked interrupt status value will be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a4376fe59b65a50ea12ebfcafd94009d5}\label{_e_f___t_m_r32_8c_a4376fe59b65a50ea12ebfcafd94009d5}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_getRIS@{EF\_TMR32\_getRIS}}
+\index{EF\_TMR32\_getRIS@{EF\_TMR32\_getRIS}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_getRIS()}{EF\_TMR32\_getRIS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+get\+RIS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t $\ast$}]{RIS\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Retrieves the raw interrupt status by reading the RIS register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ out}}  & {\em RIS\+\_\+value} & A pointer to a uint32\+\_\+t where the raw interrupt status value will be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_e_f___t_m_r32_8c_a6c0942ecf91efd6f92a22f9881f9b67f}\label{_e_f___t_m_r32_8c_a6c0942ecf91efd6f92a22f9881f9b67f}} 
 \index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_getTMR@{EF\_TMR32\_getTMR}}
@@ -345,12 +419,40 @@ status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edf
 \doxysubsubsection{\texorpdfstring{EF\_TMR32\_setICR()}{EF\_TMR32\_setICR()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+ICR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
 
+
+
+Sets the interrupt clear register of the timer by writing to the ICR register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mask} & The interrupt clear mask value to set in the ICR register. Must not exceed \mbox{\hyperlink{_e_f___t_m_r32_8h_ad36eec137696cf3d46efd03cf50103b4}{EF\+\_\+\+TMR32\+\_\+\+ICR\+\_\+\+MAX\+\_\+\+VALUE}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{_e_f___t_m_r32_8c_a88702cef6eafdb625b8392d9aa58fa11}\label{_e_f___t_m_r32_8c_a88702cef6eafdb625b8392d9aa58fa11}} 
 \index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setIM@{EF\_TMR32\_setIM}}
 \index{EF\_TMR32\_setIM@{EF\_TMR32\_setIM}!EF\_TMR32.c@{EF\_TMR32.c}}
 \doxysubsubsection{\texorpdfstring{EF\_TMR32\_setIM()}{EF\_TMR32\_setIM()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+IM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{mask }\end{DoxyParamCaption})}
 
+
+
+Sets the interrupt mask of the timer by writing to the IM register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mask} & The interrupt mask value to set in the IM register. Must not exceed \mbox{\hyperlink{_e_f___t_m_r32_8h_a8be953bc2d144836bc6f331f716e980a}{EF\+\_\+\+TMR32\+\_\+\+IM\+\_\+\+MAX\+\_\+\+VALUE}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{_e_f___t_m_r32_8c_ab013c8ef6cdc697401cadb1351d42379}\label{_e_f___t_m_r32_8c_ab013c8ef6cdc697401cadb1351d42379}} 
 \index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setOneShot@{EF\_TMR32\_setOneShot}}
 \index{EF\_TMR32\_setOneShot@{EF\_TMR32\_setOneShot}!EF\_TMR32.c@{EF\_TMR32.c}}
@@ -407,6 +509,122 @@ Sets the prescaler value of the timer by writing to the PR register.
 \begin{DoxyReturn}{Returns}
 status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a0a42492b716fb008dd6980193e039a17}\label{_e_f___t_m_r32_8c_a0a42492b716fb008dd6980193e039a17}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM0CenterAlignedMode@{EF\_TMR32\_setPWM0CenterAlignedMode}}
+\index{EF\_TMR32\_setPWM0CenterAlignedMode@{EF\_TMR32\_setPWM0CenterAlignedMode}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0CenterAlignedMode()}{EF\_TMR32\_setPWM0CenterAlignedMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Center\+Aligned\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{reload\+\_\+value,  }\item[{uint32\+\_\+t}]{cmp\+X\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the PWM0 center-\/aligned mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reload\+\_\+value} & The reload value to set in the PWM0\+CFG register. This determines the period of the PWM signal. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cmp\+X\+\_\+value} & The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-\/aligned mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code.
+\begin{DoxyItemize}
+\item EF\+\_\+\+DRIVER\+\_\+\+OK\+: Configuration was successful.
+\item EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+PARAMETER\+: Invalid input parameters, such as {\ttfamily tmr32} being NULL.
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function configures the specified 32-\/bit timer ({\ttfamily tmr32}) to generate a PWM signal with center-\/alignment on PWM0. It sets the timer to up-\/down counting mode and periodic mode, configures the zero and compare actions, and sets the reload and compare values as specified.
+
+Internal configurations performed by the function\+:
+\begin{DoxyItemize}
+\item Sets the timer to up-\/down counting mode.
+\item Configures the timer for periodic operation.
+\item Sets the zero action to drive the PWM output high.
+\item Configures the X compare register to drive the PWM output low on up-\/count.
+\item Configures the X compare register to drive the PWM output high on down-\/count.
+\item Configures the Y compare register to maintain the current output state on both up and down counts.
+\item Sets the reload value to define the PWM signal period.
+\item Sets the X compare register value to define the transition point.
+\end{DoxyItemize}
+
+Example PWM waveform\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{|\ \ \ \ \ \ \ /|\(\backslash\)}
+\DoxyCodeLine{|\_\_\_\_\_/\_\_|\_\_\(\backslash\)}
+\DoxyCodeLine{|\ \ \ /\ |\ \ |\ \ |\ \(\backslash\)}
+\DoxyCodeLine{|\_/\_\_\_|\_\_|\_\_|\_\_\_\(\backslash\)\_\_}
+\DoxyCodeLine{\ \ \ \ \ \ |\ \ \ \ \ |}
+\DoxyCodeLine{\ \ \ \ \ \ V\ \ \ \ \ V}
+\DoxyCodeLine{\ \ \_\_\_\_\ \ \ \ \ \ \ \_\_\_\_}
+\DoxyCodeLine{\ \ \ \ \ \ |\_\_\_\_\_|\ \ \ \ }
+
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+Ensure the timer instance ({\ttfamily tmr32}) is correctly initialized before calling this function. The reload value and compare value must align with the timer\textquotesingle{}s capabilities and clock settings. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a8d4d907e326c073a96a28e8317fc26bd}\label{_e_f___t_m_r32_8c_a8d4d907e326c073a96a28e8317fc26bd}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM0EdgeAlignmentMode@{EF\_TMR32\_setPWM0EdgeAlignmentMode}}
+\index{EF\_TMR32\_setPWM0EdgeAlignmentMode@{EF\_TMR32\_setPWM0EdgeAlignmentMode}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0EdgeAlignmentMode()}{EF\_TMR32\_setPWM0EdgeAlignmentMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Edge\+Alignment\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{reload\+\_\+value,  }\item[{uint32\+\_\+t}]{duty\+\_\+cycle }\end{DoxyParamCaption})}
+
+
+
+Sets the PWM0 edge alignment mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reload\+\_\+value} & The reload value to set in the PWM0\+CFG register. This determines the period of the PWM signal. \\
+\hline
+\mbox{\texttt{ in}}  & {\em duty\+\_\+cycle} & The duty cycle value to set in the PWM0\+CFG register, representing the high time as a percentage of the period (0 to 100).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code.
+\begin{DoxyItemize}
+\item EF\+\_\+\+DRIVER\+\_\+\+OK\+: Configuration was successful.
+\item EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+PARAMETER\+: Invalid input parameters, such as {\ttfamily tmr32} being NULL or {\ttfamily duty\+\_\+cycle} \texorpdfstring{$>$}{>} 100.
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function configures the specified 32-\/bit timer ({\ttfamily tmr32}) to generate a PWM signal with edge alignment. It sets the timer to up-\/count and periodic modes, configures the zero action to high, and uses the X compare register to control the output signal. The duty cycle and reload values are used to compute the compare register value.
+
+Internal configurations performed by the function\+:
+\begin{DoxyItemize}
+\item Sets the timer to up-\/count mode.
+\item Configures the timer for periodic operation.
+\item Sets the zero action to drive the PWM output high.
+\item Configures the X compare register to drive the PWM output low on up-\/count.
+\item Configures the Y compare register to maintain the current output state.
+\item Calculates the X compare value based on the duty cycle and reload value.
+\item Sets the reload value and compare register.
+\item Ensures no change in output on the top action.
+\end{DoxyItemize}
+
+Example PWM waveform\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{|\ \ \ \ \ \ \ /|\ \ \ \ \ \ /|}
+\DoxyCodeLine{|\_\_\_\_\_/\_\_|\_\_\_\_/\ \ |}
+\DoxyCodeLine{|\ \ \ /\ |\ \ |\ \ /\ |\ \ |}
+\DoxyCodeLine{|\_/\_\_\_|\_\_|/\_\_\_|\_\_|\_\_\_\_}
+\DoxyCodeLine{\ \ \ \ \ \ |\ \ \ \ \ \ \ |}
+\DoxyCodeLine{\ \ \ \ \ \ V\ \ \ \ \ \ \ V}
+\DoxyCodeLine{\ \ \_\_\_\_\ \ \ \ \_\_\_\_\ \ \ \ \_\_\_\ \ \ \_\_\_}
+\DoxyCodeLine{\ \ \ \ \ \ |\_\_|\ \ \ \ |\_\_|\ \ \ |\_\_|}
+\DoxyCodeLine{\ \ duty\ \ \ \ duty}
+\DoxyCodeLine{\ \ cycle\ \ \ cycle}
+
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+Ensure the timer instance ({\ttfamily tmr32}) is correctly initialized before calling this function. The reload value and compare value must align with the timer\textquotesingle{}s capabilities and clock settings. 
+\end{DoxyNote}
 \mbox{\Hypertarget{_e_f___t_m_r32_8c_a9e7ceb938a22a090ae7907e013d026dd}\label{_e_f___t_m_r32_8c_a9e7ceb938a22a090ae7907e013d026dd}} 
 \index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM0MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction}}
 \index{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction}!EF\_TMR32.c@{EF\_TMR32.c}}
@@ -551,6 +769,122 @@ Configures the action of TMR0 PWM when the timer matches the Zero value. This fu
 \begin{DoxyReturn}{Returns}
 status A value of type \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \+: returns a success or error code 
 \end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a90643eece576624d6bfc7e2f2d939228}\label{_e_f___t_m_r32_8c_a90643eece576624d6bfc7e2f2d939228}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM1CenterAlignedMode@{EF\_TMR32\_setPWM1CenterAlignedMode}}
+\index{EF\_TMR32\_setPWM1CenterAlignedMode@{EF\_TMR32\_setPWM1CenterAlignedMode}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1CenterAlignedMode()}{EF\_TMR32\_setPWM1CenterAlignedMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Center\+Aligned\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{reload\+\_\+value,  }\item[{uint32\+\_\+t}]{cmp\+X\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the PWM1 center-\/aligned mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reload\+\_\+value} & The reload value to set in the PWM1\+CFG register. This determines the period of the PWM signal. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cmp\+X\+\_\+value} & The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-\/aligned mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code.
+\begin{DoxyItemize}
+\item EF\+\_\+\+DRIVER\+\_\+\+OK\+: Configuration was successful.
+\item EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+PARAMETER\+: Invalid input parameters, such as {\ttfamily tmr32} being NULL.
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function configures the specified 32-\/bit timer ({\ttfamily tmr32}) to generate a PWM signal with center-\/alignment on PWM1. It sets the timer to up-\/down counting mode and periodic mode, configures the zero and compare actions, and sets the reload and compare values as specified.
+
+Internal configurations performed by the function\+:
+\begin{DoxyItemize}
+\item Sets the timer to up-\/down counting mode.
+\item Configures the timer for periodic operation.
+\item Sets the zero action to drive the PWM output high.
+\item Configures the Y compare register to drive the PWM output low on up-\/count.
+\item Configures the Y compare register to drive the PWM output high on down-\/count.
+\item Configures the X compare register to maintain the current output state on both up and down counts.
+\item Sets the reload value to define the PWM signal period.
+\item Sets the X compare register value to define the transition point.
+\end{DoxyItemize}
+
+Example PWM waveform\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{|\ \ \ \ \ \ \ /|\(\backslash\)}
+\DoxyCodeLine{|\_\_\_\_\_/\_\_|\_\_\(\backslash\)}
+\DoxyCodeLine{|\ \ \ /\ |\ \ |\ \ |\ \(\backslash\)}
+\DoxyCodeLine{|\_/\_\_\_|\_\_|\_\_|\_\_\_\(\backslash\)\_\_}
+\DoxyCodeLine{\ \ \ \ \ \ |\ \ \ \ \ |}
+\DoxyCodeLine{\ \ \ \ \ \ V\ \ \ \ \ V}
+\DoxyCodeLine{\ \ \_\_\_\_\ \ \ \ \ \ \ \_\_\_\_\ }
+\DoxyCodeLine{\ \ \ \ \ \ |\_\_\_\_\_|\ \ \ \ }
+
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+Ensure the timer instance ({\ttfamily tmr32}) is correctly initialized before calling this function. The reload value and compare value must align with the timer\textquotesingle{}s capabilities and clock settings. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a56341d8e521f6b5001cddf60b93fe6f1}\label{_e_f___t_m_r32_8c_a56341d8e521f6b5001cddf60b93fe6f1}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM1EdgeAlignmentMode@{EF\_TMR32\_setPWM1EdgeAlignmentMode}}
+\index{EF\_TMR32\_setPWM1EdgeAlignmentMode@{EF\_TMR32\_setPWM1EdgeAlignmentMode}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1EdgeAlignmentMode()}{EF\_TMR32\_setPWM1EdgeAlignmentMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Edge\+Alignment\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t}]{reload\+\_\+value,  }\item[{uint32\+\_\+t}]{duty\+\_\+cycle }\end{DoxyParamCaption})}
+
+
+
+Sets the PWM1 edge alignment mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reload\+\_\+value} & The reload value to set in the PWM1\+CFG register. This determines the period of the PWM signal. \\
+\hline
+\mbox{\texttt{ in}}  & {\em duty\+\_\+cycle} & The duty cycle value to set in the PWM1\+CFG register, representing the high time as a percentage of the period (0 to 100).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code.
+\begin{DoxyItemize}
+\item EF\+\_\+\+DRIVER\+\_\+\+OK\+: Configuration was successful.
+\item EF\+\_\+\+DRIVER\+\_\+\+ERROR\+\_\+\+PARAMETER\+: Invalid input parameters, such as {\ttfamily tmr32} being NULL or {\ttfamily duty\+\_\+cycle} \texorpdfstring{$>$}{>} 100.
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function configures the specified 32-\/bit timer ({\ttfamily tmr32}) to generate a PWM signal with edge alignment on PWM1. It sets the timer to up-\/count and periodic modes, configures the zero action to high, and uses the Y compare register to control the output signal. The duty cycle and reload values are used to compute the compare register value.
+
+Internal configurations performed by the function\+:
+\begin{DoxyItemize}
+\item Sets the timer to up-\/count mode.
+\item Configures the timer for periodic operation.
+\item Sets the zero action to drive the PWM output high.
+\item Configures the Y compare register to drive the PWM output low on up-\/count.
+\item Configures the X compare register to maintain the current output state.
+\item Calculates the Y compare value based on the duty cycle and reload value.
+\item Sets the reload value and compare register.
+\item Ensures no change in output on the top action.
+\end{DoxyItemize}
+
+Example PWM waveform\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{|\ \ \ \ \ \ \ /|\ \ \ \ \ \ /|}
+\DoxyCodeLine{|\_\_\_\_\_/\_\_|\_\_\_\_/\ \ |}
+\DoxyCodeLine{|\ \ \ /\ |\ \ |\ \ /\ |\ \ |}
+\DoxyCodeLine{|\_/\_\_\_|\_\_|/\_\_\_|\_\_|\_\_\_\_}
+\DoxyCodeLine{\ \ \ \ \ \ |\ \ \ \ \ \ \ |}
+\DoxyCodeLine{\ \ \ \ \ \ V\ \ \ \ \ \ \ V}
+\DoxyCodeLine{\ \ \_\_\_\_\ \ \ \ \_\_\_\_\ \ \ \ \_\_\_\ \ \ \_\_\_}
+\DoxyCodeLine{\ \ \ \ \ \ |\_\_|\ \ \ \ |\_\_|\ \ \ |\_\_|}
+\DoxyCodeLine{\ \ duty\ \ \ \ duty}
+\DoxyCodeLine{\ \ cycle\ \ \ cycle}
+
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+Ensure the timer instance ({\ttfamily tmr32}) is correctly initialized before calling this function. The reload value and compare value must align with the timer\textquotesingle{}s capabilities and clock settings. 
+\end{DoxyNote}
 \mbox{\Hypertarget{_e_f___t_m_r32_8c_ad579dc1e3910c7b4a78cde1e6e14bf8d}\label{_e_f___t_m_r32_8c_ad579dc1e3910c7b4a78cde1e6e14bf8d}} 
 \index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_setPWM1MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction}}
 \index{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction}!EF\_TMR32.c@{EF\_TMR32.c}}

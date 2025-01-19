@@ -110,24 +110,31 @@ _C header file for TMR32 APIs which contains the function prototypes._
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_PWM1Enable**](#function-ef_tmr32_pwm1enable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Enables PWM1 by setting "P1E" bit in the CTRL register to 1._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_PWM1Invert**](#function-ef_tmr32_pwm1invert) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Inverts PWM1 output by setting "P1I" bit in the CTRL register to 1._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_PWMDeadtimeEnable**](#function-ef_tmr32_pwmdeadtimeenable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br> |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_clearIrq**](#function-ef_tmr32_clearirq) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t mask) <br>_Sets the interrupt clear register of the timer by writing to the ICR register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_disable**](#function-ef_tmr32_disable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Disables timer by setting "TE" bit in the CTRL register to 0._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_enable**](#function-ef_tmr32_enable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Enables timer by setting "TE" bit in the CTRL register to 1._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_getIM**](#function-ef_tmr32_getim) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*IM\_value) <br>_Retrieves the interrupt clear register by reading the ICR register._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_getMIS**](#function-ef_tmr32_getmis) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*MIS\_value) <br>_Retrieves the masked interrupt status by reading the MIS register._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_getRIS**](#function-ef_tmr32_getris) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*RIS\_value) <br>_Retrieves the raw interrupt status by reading the RIS register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_getTMR**](#function-ef_tmr32_gettmr) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*tmr\_value) <br>_Retrieves the current timer value by reading the TMR register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_restart**](#function-ef_tmr32_restart) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Enables timer re-start; used in the one-shot mode to restart the timer by setting the "TS" bit in the CTRL register to 1 and then to 0._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setCMPX**](#function-ef_tmr32_setcmpx) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t value) <br>_Sets the compare value of a 32-bit timer by writing to the CMPX register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setCMPY**](#function-ef_tmr32_setcmpy) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t value) <br>_Sets the compare value Y of a 32-bit timer by writing to the CMPY register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setDownCount**](#function-ef_tmr32_setdowncount) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Sets the timer direction to be down counting by setting the "DIR" field in the CTRL register to 0b01._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setGclkEnable**](#function-ef_tmr32_setgclkenable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t value) <br>_Sets the GCLK enable bit in the UART register to a certain value._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setInterruptMask**](#function-ef_tmr32_setinterruptmask) (uint32\_t spi\_base, uint32\_t mask) <br>_Sets the interrupt mask of the timer by writing to the IM register._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setICR**](#function-ef_tmr32_seticr) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t mask) <br>_Sets the interrupt clear register of the timer by writing to the ICR register._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setIM**](#function-ef_tmr32_setim) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t mask) <br>_Sets the interrupt mask of the timer by writing to the IM register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setOneShot**](#function-ef_tmr32_setoneshot) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Sets the timer to operate in one-shot mode by clearing the "P" bit in the CFG register to 0._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPR**](#function-ef_tmr32_setpr) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t value) <br>_Sets the prescaler value of the timer by writing to the PR register._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0CenterAlignedMode**](#function-ef_tmr32_setpwm0centeralignedmode) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t reload\_value, uint32\_t cmpX\_value) <br>_Sets the PWM0 center-aligned mode._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0EdgeAlignmentMode**](#function-ef_tmr32_setpwm0edgealignmentmode) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t reload\_value, uint32\_t duty\_cycle) <br>_Sets the PWM0 edge alignment mode._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0MatchingCMPXDownCountAction**](#function-ef_tmr32_setpwm0matchingcmpxdowncountaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0MatchingCMPXUpCountAction**](#function-ef_tmr32_setpwm0matchingcmpxupcountaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0MatchingCMPYDownCountAction**](#function-ef_tmr32_setpwm0matchingcmpydowncountaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0MatchingCMPYUpCountAction**](#function-ef_tmr32_setpwm0matchingcmpyupcountaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0MatchingRELOADAction**](#function-ef_tmr32_setpwm0matchingreloadaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM0MatchingZeroAction**](#function-ef_tmr32_setpwm0matchingzeroaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM1CenterAlignedMode**](#function-ef_tmr32_setpwm1centeralignedmode) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t reload\_value, uint32\_t cmpX\_value) <br>_Sets the PWM1 center-aligned mode._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM1EdgeAlignmentMode**](#function-ef_tmr32_setpwm1edgealignmentmode) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t reload\_value, uint32\_t duty\_cycle) <br>_Sets the PWM1 edge alignment mode._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM1MatchingCMPXDownCountAction**](#function-ef_tmr32_setpwm1matchingcmpxdowncountaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction**](#function-ef_tmr32_setpwm1matchingcmpxupcountingaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setPWM1MatchingCMPYDownCountAction**](#function-ef_tmr32_setpwm1matchingcmpydowncountaction) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t action) <br> |
@@ -255,27 +262,6 @@ Enables PWM dead-time by setting the "DTE" (Dead-Time Enable) bit in the CTRL re
 **Returns:**
 
 status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : returns a success or error code
-### function `EF_TMR32_clearIrq`
-
-_Sets the interrupt clear register of the timer by writing to the ICR register._
-```c
-EF_DRIVER_STATUS EF_TMR32_clearIrq (
-    EF_TMR32_TYPE_PTR tmr32,
-    uint32_t mask
-) 
-```
-
-
-**Parameters:**
-
-
-* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
-* `mask` The interrupt clear mask value to set in the ICR register. Must not exceed [**EF\_TMR32\_ICR\_MAX\_VALUE**](#define-ef_tmr32_icr_max_value).
-
-
-**Returns:**
-
-status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
 ### function `EF_TMR32_disable`
 
 _Disables timer by setting "TE" bit in the CTRL register to 0._
@@ -314,6 +300,69 @@ EF_DRIVER_STATUS EF_TMR32_enable (
 **Returns:**
 
 status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : returns a success or error code
+### function `EF_TMR32_getIM`
+
+_Retrieves the interrupt clear register by reading the ICR register._
+```c
+EF_DRIVER_STATUS EF_TMR32_getIM (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t *IM_value
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `IM_value` A pointer to a uint32\_t where the interrupt clear value will be stored.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+### function `EF_TMR32_getMIS`
+
+_Retrieves the masked interrupt status by reading the MIS register._
+```c
+EF_DRIVER_STATUS EF_TMR32_getMIS (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t *MIS_value
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `MIS_value` A pointer to a uint32\_t where the masked interrupt status value will be stored.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+### function `EF_TMR32_getRIS`
+
+_Retrieves the raw interrupt status by reading the RIS register._
+```c
+EF_DRIVER_STATUS EF_TMR32_getRIS (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t *RIS_value
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `RIS_value` A pointer to a uint32\_t where the raw interrupt status value will be stored.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
 ### function `EF_TMR32_getTMR`
 
 _Retrieves the current timer value by reading the TMR register._
@@ -436,12 +485,33 @@ EF_DRIVER_STATUS EF_TMR32_setGclkEnable (
 **Returns:**
 
 status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : returns a success or error code
-### function `EF_TMR32_setInterruptMask`
+### function `EF_TMR32_setICR`
+
+_Sets the interrupt clear register of the timer by writing to the ICR register._
+```c
+EF_DRIVER_STATUS EF_TMR32_setICR (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t mask
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `mask` The interrupt clear mask value to set in the ICR register. Must not exceed [**EF\_TMR32\_ICR\_MAX\_VALUE**](#define-ef_tmr32_icr_max_value).
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+### function `EF_TMR32_setIM`
 
 _Sets the interrupt mask of the timer by writing to the IM register._
 ```c
-EF_DRIVER_STATUS EF_TMR32_setInterruptMask (
-    uint32_t spi_base,
+EF_DRIVER_STATUS EF_TMR32_setIM (
+    EF_TMR32_TYPE_PTR tmr32,
     uint32_t mask
 ) 
 ```
@@ -497,6 +567,130 @@ EF_DRIVER_STATUS EF_TMR32_setPR (
 **Returns:**
 
 status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+### function `EF_TMR32_setPWM0CenterAlignedMode`
+
+_Sets the PWM0 center-aligned mode._
+```c
+EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t reload_value,
+    uint32_t cmpX_value
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `reload_value` The reload value to set in the PWM0CFG register. This determines the period of the PWM signal. 
+* `cmpX_value` The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+
+* EF\_DRIVER\_OK: Configuration was successful.
+* EF\_DRIVER\_ERROR\_PARAMETER: Invalid input parameters, such as `tmr32` being NULL.
+
+
+
+This function configures the specified 32-bit timer (`tmr32`) to generate a PWM signal with center-alignment on PWM0. It sets the timer to up-down counting mode and periodic mode, configures the zero and compare actions, and sets the reload and compare values as specified.
+
+Internal configurations performed by the function:
+
+* Sets the timer to up-down counting mode.
+* Configures the timer for periodic operation.
+* Sets the zero action to drive the PWM output high.
+* Configures the X compare register to drive the PWM output low on up-count.
+* Configures the X compare register to drive the PWM output high on down-count.
+* Configures the Y compare register to maintain the current output state on both up and down counts.
+* Sets the reload value to define the PWM signal period.
+* Sets the X compare register value to define the transition point.
+
+Example PWM waveform: 
+````cpp
+|       /|\
+|_____/__|__\
+|   / |  |  | \
+|_/___|__|__|___\__
+      |     |
+      V     V
+  ____       ____
+      |_____|    
+````
+
+
+
+
+
+**Note:**
+
+Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.
+### function `EF_TMR32_setPWM0EdgeAlignmentMode`
+
+_Sets the PWM0 edge alignment mode._
+```c
+EF_DRIVER_STATUS EF_TMR32_setPWM0EdgeAlignmentMode (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t reload_value,
+    uint32_t duty_cycle
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `reload_value` The reload value to set in the PWM0CFG register. This determines the period of the PWM signal. 
+* `duty_cycle` The duty cycle value to set in the PWM0CFG register, representing the high time as a percentage of the period (0 to 100).
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+
+* EF\_DRIVER\_OK: Configuration was successful.
+* EF\_DRIVER\_ERROR\_PARAMETER: Invalid input parameters, such as `tmr32` being NULL or`duty_cycle` &gt; 100.
+
+
+
+This function configures the specified 32-bit timer (`tmr32`) to generate a PWM signal with edge alignment. It sets the timer to up-count and periodic modes, configures the zero action to high, and uses the X compare register to control the output signal. The duty cycle and reload values are used to compute the compare register value.
+
+Internal configurations performed by the function:
+
+* Sets the timer to up-count mode.
+* Configures the timer for periodic operation.
+* Sets the zero action to drive the PWM output high.
+* Configures the X compare register to drive the PWM output low on up-count.
+* Configures the Y compare register to maintain the current output state.
+* Calculates the X compare value based on the duty cycle and reload value.
+* Sets the reload value and compare register.
+* Ensures no change in output on the top action.
+
+Example PWM waveform: 
+````cpp
+|       /|      /|
+|_____/__|____/  |
+|   / |  |  / |  |
+|_/___|__|/___|__|____
+      |       |
+      V       V
+  ____    ____    ___   ___
+      |__|    |__|   |__|
+  duty    duty
+  cycle   cycle
+````
+
+
+
+
+
+**Note:**
+
+Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.
 ### function `EF_TMR32_setPWM0MatchingCMPXDownCountAction`
 
 ```c
@@ -671,6 +865,130 @@ Configures the action of TMR0 PWM when the timer matches the Zero value. This fu
 **Returns:**
 
 status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : returns a success or error code
+### function `EF_TMR32_setPWM1CenterAlignedMode`
+
+_Sets the PWM1 center-aligned mode._
+```c
+EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t reload_value,
+    uint32_t cmpX_value
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `reload_value` The reload value to set in the PWM1CFG register. This determines the period of the PWM signal. 
+* `cmpX_value` The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+
+* EF\_DRIVER\_OK: Configuration was successful.
+* EF\_DRIVER\_ERROR\_PARAMETER: Invalid input parameters, such as `tmr32` being NULL.
+
+
+
+This function configures the specified 32-bit timer (`tmr32`) to generate a PWM signal with center-alignment on PWM1. It sets the timer to up-down counting mode and periodic mode, configures the zero and compare actions, and sets the reload and compare values as specified.
+
+Internal configurations performed by the function:
+
+* Sets the timer to up-down counting mode.
+* Configures the timer for periodic operation.
+* Sets the zero action to drive the PWM output high.
+* Configures the Y compare register to drive the PWM output low on up-count.
+* Configures the Y compare register to drive the PWM output high on down-count.
+* Configures the X compare register to maintain the current output state on both up and down counts.
+* Sets the reload value to define the PWM signal period.
+* Sets the X compare register value to define the transition point.
+
+Example PWM waveform: 
+````cpp
+|       /|\
+|_____/__|__\
+|   / |  |  | \
+|_/___|__|__|___\__
+      |     |
+      V     V
+  ____       ____ 
+      |_____|    
+````
+
+
+
+
+
+**Note:**
+
+Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.
+### function `EF_TMR32_setPWM1EdgeAlignmentMode`
+
+_Sets the PWM1 edge alignment mode._
+```c
+EF_DRIVER_STATUS EF_TMR32_setPWM1EdgeAlignmentMode (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t reload_value,
+    uint32_t duty_cycle
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `reload_value` The reload value to set in the PWM1CFG register. This determines the period of the PWM signal. 
+* `duty_cycle` The duty cycle value to set in the PWM1CFG register, representing the high time as a percentage of the period (0 to 100).
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+
+* EF\_DRIVER\_OK: Configuration was successful.
+* EF\_DRIVER\_ERROR\_PARAMETER: Invalid input parameters, such as `tmr32` being NULL or`duty_cycle` &gt; 100.
+
+
+
+This function configures the specified 32-bit timer (`tmr32`) to generate a PWM signal with edge alignment on PWM1. It sets the timer to up-count and periodic modes, configures the zero action to high, and uses the Y compare register to control the output signal. The duty cycle and reload values are used to compute the compare register value.
+
+Internal configurations performed by the function:
+
+* Sets the timer to up-count mode.
+* Configures the timer for periodic operation.
+* Sets the zero action to drive the PWM output high.
+* Configures the Y compare register to drive the PWM output low on up-count.
+* Configures the X compare register to maintain the current output state.
+* Calculates the Y compare value based on the duty cycle and reload value.
+* Sets the reload value and compare register.
+* Ensures no change in output on the top action.
+
+Example PWM waveform: 
+````cpp
+|       /|      /|
+|_____/__|____/  |
+|   / |  |  / |  |
+|_/___|__|/___|__|____
+      |       |
+      V       V
+  ____    ____    ___   ___
+      |__|    |__|   |__|
+  duty    duty
+  cycle   cycle
+````
+
+
+
+
+
+**Note:**
+
+Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.
 ### function `EF_TMR32_setPWM1MatchingCMPXDownCountAction`
 
 ```c
