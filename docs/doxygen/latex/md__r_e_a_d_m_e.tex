@@ -163,7 +163,7 @@
     \\\cline{1-2}
 \PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM0\+Matching\+Zero\+Action$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t action) ~\newline
     \\\cline{1-2}
-\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM1\+Center\+Aligned\+Mode$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t cmp\+X\+\_\+value) ~\newline
+\PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM1\+Center\+Aligned\+Mode$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t cmp\+Y\+\_\+value) ~\newline
 {\itshape Sets the PWM1 center-\/aligned mode.}    \\\cline{1-2}
 \PBS\raggedleft $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbackslash{}\+\_\+\+STATUS$\ast$$\ast$   &$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+set\+PWM1\+Edge\+Alignment\+Mode$\ast$$\ast$ ($\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$ tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t duty\+\_\+cycle) ~\newline
 {\itshape Sets the PWM1 edge alignment mode.}    \\\cline{1-2}
@@ -931,7 +931,7 @@ status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbacksl
 \DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a5142ccf9f3a4ecd336c6e9364712dffd}{EF\_TMR32\_setPWM1CenterAlignedMode}}\ (}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct___e_f___t_m_r32___t_y_p_e__}{EF\_TMR32\_TYPE\_PTR}}\ tmr32,}
 \DoxyCodeLine{\ \ \ \ uint32\_t\ reload\_value,}
-\DoxyCodeLine{\ \ \ \ uint32\_t\ cmpX\_value}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ cmpY\_value}
 \DoxyCodeLine{)\ }
 
 \end{DoxyCode}
@@ -943,7 +943,7 @@ status A value of type $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+DRIVER\textbacksl
 \begin{DoxyItemize}
 \item {\ttfamily tmr32} An $\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE\textbackslash{}\+\_\+\+PTR$\ast$$\ast$, which points to the base memory address of TMR32 registers.$\ast$$\ast$\+EF\textbackslash{}\+\_\+\+TMR32\textbackslash{}\+\_\+\+TYPE$\ast$$\ast$ is a structure that contains the TMR32 registers.
 \item {\ttfamily reload\+\_\+value} The reload value to set in the PWM1\+CFG register. This determines the period of the PWM signal.
-\item {\ttfamily cmp\+X\+\_\+value} The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-\/aligned mode.
+\item {\ttfamily cmp\+Y\+\_\+value} The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-\/aligned mode.
 \end{DoxyItemize}
 
 {\bfseries{Returns\+:}}

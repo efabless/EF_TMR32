@@ -240,7 +240,7 @@ Functions</h1>
 <td class="markdownTableBodyRight">**EF\_DRIVER\_STATUS**   </td><td class="markdownTableBodyLeft">**EF\_TMR32\_setPWM0MatchingZeroAction** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t action) <br  />
     </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyRight">**EF\_DRIVER\_STATUS**   </td><td class="markdownTableBodyLeft">**EF\_TMR32\_setPWM1CenterAlignedMode** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t reload_value, uint32_t cmpX_value) <br  />
+<td class="markdownTableBodyRight">**EF\_DRIVER\_STATUS**   </td><td class="markdownTableBodyLeft">**EF\_TMR32\_setPWM1CenterAlignedMode** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t reload_value, uint32_t cmpY_value) <br  />
 <em>Sets the PWM1 center-aligned mode.</em>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyRight">**EF\_DRIVER\_STATUS**   </td><td class="markdownTableBodyLeft">**EF\_TMR32\_setPWM1EdgeAlignmentMode** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t reload_value, uint32_t duty_cycle) <br  />
@@ -793,14 +793,14 @@ function &lt;tt&gt;EF_TMR32_setPWM1CenterAlignedMode&lt;/tt&gt;</h2>
 <p><em>Sets the PWM1 center-aligned mode.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___t_m_r32_8c.html#a5142ccf9f3a4ecd336c6e9364712dffd">EF_TMR32_setPWM1CenterAlignedMode</a> (</div>
 <div class="line">    <a class="code hl_struct" href="struct___e_f___t_m_r32___t_y_p_e__.html">EF_TMR32_TYPE_PTR</a> tmr32,</div>
 <div class="line">    uint32_t reload_value,</div>
-<div class="line">    uint32_t cmpX_value</div>
+<div class="line">    uint32_t cmpY_value</div>
 <div class="line">) </div>
 <div class="ttc" id="a_e_f___t_m_r32_8c_html_a5142ccf9f3a4ecd336c6e9364712dffd"><div class="ttname"><a href="_e_f___t_m_r32_8c.html#a5142ccf9f3a4ecd336c6e9364712dffd">EF_TMR32_setPWM1CenterAlignedMode</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpY_value)</div><div class="ttdoc">Sets the PWM1 center-aligned mode.</div><div class="ttdef"><b>Definition:</b> EF_TMR32.c:816</div></div>
 </div><!-- fragment --><p><b>Parameters:</b></p>
 <ul>
 <li><code>tmr32</code> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</li>
 <li><code>reload_value</code> The reload value to set in the PWM1CFG register. This determines the period of the PWM signal.</li>
-<li><code>cmpX_value</code> The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.</li>
+<li><code>cmpY_value</code> The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.</li>
 </ul>
 <p><b>Returns:</b></p>
 <p>status A value of type EF_DRIVER_STATUS: returns a success or error code.</p>

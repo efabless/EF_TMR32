@@ -548,6 +548,7 @@ EF_DRIVER_STATUS EF_TMR32_setICR(EF_TMR32_TYPE_PTR tmr32, uint32_t mask);
 
     \note Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. 
           The reload value and compare value must align with the timer's capabilities and clock settings.
+    \note for more information, check https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/
 */
 EF_DRIVER_STATUS EF_TMR32_setPWM0EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t duty_cycle);
 
@@ -594,6 +595,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint
 
     \note Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. 
           The reload value and compare value must align with the timer's capabilities and clock settings.
+    \note for more information, check https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/
 */
 EF_DRIVER_STATUS EF_TMR32_setPWM1EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t duty_cycle);
 
@@ -641,6 +643,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM1EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint
 
     \note Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. 
           The reload value and compare value must align with the timer's capabilities and clock settings.
+    \note for more information, check https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/
 */
 EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpX_value);
 
@@ -688,6 +691,7 @@ EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint
 
     \note Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. 
           The reload value and compare value must align with the timer's capabilities and clock settings.
+    \note for more information, check https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/
 */
 EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpY_value);
 

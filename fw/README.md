@@ -628,6 +628,12 @@ Example PWM waveform:
 **Note:**
 
 Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.
+
+
+
+**Note:**
+
+for more information, check [https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/](https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/)
 ### function `EF_TMR32_setPWM0EdgeAlignmentMode`
 
 _Sets the PWM0 edge alignment mode._
@@ -691,6 +697,12 @@ Example PWM waveform:
 **Note:**
 
 Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.
+
+
+
+**Note:**
+
+for more information, check [https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/](https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/)
 ### function `EF_TMR32_setPWM0MatchingCMPXDownCountAction`
 
 ```c
@@ -926,6 +938,12 @@ Example PWM waveform:
 **Note:**
 
 Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.
+
+
+
+**Note:**
+
+for more information, check [https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/](https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/)
 ### function `EF_TMR32_setPWM1EdgeAlignmentMode`
 
 _Sets the PWM1 edge alignment mode._
@@ -989,6 +1007,12 @@ Example PWM waveform:
 **Note:**
 
 Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.
+
+
+
+**Note:**
+
+for more information, check [https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/](https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/)
 ### function `EF_TMR32_setPWM1MatchingCMPXDownCountAction`
 
 ```c

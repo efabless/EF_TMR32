@@ -275,7 +275,7 @@
 </entry></row>
 <row>
 <entry thead="no" align='right'><para>**EF\_DRIVER\_STATUS**   </para>
-</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM1CenterAlignedMode** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t reload_value, uint32_t cmpX_value) <linebreak/>
+</entry><entry thead="no" align='left'><para>**EF\_TMR32\_setPWM1CenterAlignedMode** (**EF\_TMR32\_TYPE\_PTR** tmr32, uint32_t reload_value, uint32_t cmpY_value) <linebreak/>
 <emphasis>Sets the PWM1 center-aligned mode.</emphasis>    </para>
 </entry></row>
 <row>
@@ -937,14 +937,14 @@
 <para><emphasis>Sets the PWM1 center-aligned mode.</emphasis> <programlisting filename=".c"><codeline><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a5142ccf9f3a4ecd336c6e9364712dffd" kindref="member">EF_TMR32_setPWM1CenterAlignedMode</ref><sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload_value,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cmpX_value</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cmpY_value</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 </programlisting></para>
 <para><bold>Parameters:</bold></para>
 <para><itemizedlist>
 <listitem><para><computeroutput>tmr32</computeroutput> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</para>
 </listitem><listitem><para><computeroutput>reload_value</computeroutput> The reload value to set in the PWM1CFG register. This determines the period of the PWM signal.</para>
-</listitem><listitem><para><computeroutput>cmpX_value</computeroutput> The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.</para>
+</listitem><listitem><para><computeroutput>cmpY_value</computeroutput> The value to set in the CMPX register. This value controls the point at which the PWM signal transitions from high to low (or vice versa) in the center-aligned mode.</para>
 </listitem></itemizedlist>
 </para>
 <para><bold>Returns:</bold></para>

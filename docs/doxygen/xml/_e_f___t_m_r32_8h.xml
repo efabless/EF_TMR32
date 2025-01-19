@@ -1710,11 +1710,13 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 </programlisting></para>
 <para><simplesect kind="note"><para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
 </simplesect>
+<simplesect kind="note"><para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.h" line="552" column="18" bodyfile="EF_TMR32.c" bodystart="664" bodyend="713" declfile="EF_TMR32.h" declline="552" declcolumn="18"/>
+        <location file="EF_TMR32.h" line="553" column="18" bodyfile="EF_TMR32.c" bodystart="664" bodyend="713" declfile="EF_TMR32.h" declline="553" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8h_1a56341d8e521f6b5001cddf60b93fe6f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1793,11 +1795,13 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 </programlisting></para>
 <para><simplesect kind="note"><para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
 </simplesect>
+<simplesect kind="note"><para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.h" line="598" column="18" bodyfile="EF_TMR32.c" bodystart="715" bodyend="764" declfile="EF_TMR32.h" declline="598" declcolumn="18"/>
+        <location file="EF_TMR32.h" line="600" column="18" bodyfile="EF_TMR32.c" bodystart="715" bodyend="764" declfile="EF_TMR32.h" declline="600" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8h_1a0a42492b716fb008dd6980193e039a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1874,11 +1878,13 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 </programlisting></para>
 <para><simplesect kind="note"><para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
 </simplesect>
+<simplesect kind="note"><para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.h" line="645" column="18" bodyfile="EF_TMR32.c" bodystart="767" bodyend="813" declfile="EF_TMR32.h" declline="645" declcolumn="18"/>
+        <location file="EF_TMR32.h" line="648" column="18" bodyfile="EF_TMR32.c" bodystart="767" bodyend="813" declfile="EF_TMR32.h" declline="648" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8h_1a5142ccf9f3a4ecd336c6e9364712dffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1955,11 +1961,13 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 </programlisting></para>
 <para><simplesect kind="note"><para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
 </simplesect>
+<simplesect kind="note"><para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.h" line="692" column="18" bodyfile="EF_TMR32.c" bodystart="816" bodyend="856" declfile="EF_TMR32.h" declline="692" declcolumn="18"/>
+        <location file="EF_TMR32.h" line="696" column="18" bodyfile="EF_TMR32.c" bodystart="816" bodyend="856" declfile="EF_TMR32.h" declline="696" declcolumn="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -2149,37 +2157,37 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 <codeline lineno="507"><highlight class="normal"></highlight></codeline>
 <codeline lineno="508"><highlight class="normal"></highlight></codeline>
 <codeline lineno="510"><highlight class="normal"></highlight></codeline>
-<codeline lineno="552"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a8d4d907e326c073a96a28e8317fc26bd" kindref="member">EF_TMR32_setPWM0EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>duty_cycle);</highlight></codeline>
-<codeline lineno="553"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a8d4d907e326c073a96a28e8317fc26bd" kindref="member">EF_TMR32_setPWM0EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>duty_cycle);</highlight></codeline>
 <codeline lineno="554"><highlight class="normal"></highlight></codeline>
-<codeline lineno="556"><highlight class="normal"></highlight></codeline>
-<codeline lineno="598"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a56341d8e521f6b5001cddf60b93fe6f1" kindref="member">EF_TMR32_setPWM1EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>duty_cycle);</highlight></codeline>
-<codeline lineno="599"><highlight class="normal"></highlight></codeline>
-<codeline lineno="600"><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557"><highlight class="normal"></highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a56341d8e521f6b5001cddf60b93fe6f1" kindref="member">EF_TMR32_setPWM1EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>duty_cycle);</highlight></codeline>
 <codeline lineno="601"><highlight class="normal"></highlight></codeline>
 <codeline lineno="602"><highlight class="normal"></highlight></codeline>
 <codeline lineno="603"><highlight class="normal"></highlight></codeline>
+<codeline lineno="604"><highlight class="normal"></highlight></codeline>
 <codeline lineno="605"><highlight class="normal"></highlight></codeline>
-<codeline lineno="645"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a0a42492b716fb008dd6980193e039a17" kindref="member">EF_TMR32_setPWM0CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpX_value);</highlight></codeline>
-<codeline lineno="646"><highlight class="normal"></highlight></codeline>
-<codeline lineno="647"><highlight class="normal"></highlight></codeline>
-<codeline lineno="648"><highlight class="normal"></highlight></codeline>
+<codeline lineno="607"><highlight class="normal"></highlight></codeline>
+<codeline lineno="648"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a0a42492b716fb008dd6980193e039a17" kindref="member">EF_TMR32_setPWM0CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpX_value);</highlight></codeline>
 <codeline lineno="649"><highlight class="normal"></highlight></codeline>
 <codeline lineno="650"><highlight class="normal"></highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
 <codeline lineno="652"><highlight class="normal"></highlight></codeline>
-<codeline lineno="692"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a5142ccf9f3a4ecd336c6e9364712dffd" kindref="member">EF_TMR32_setPWM1CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpY_value);</highlight></codeline>
-<codeline lineno="693"><highlight class="normal"></highlight></codeline>
-<codeline lineno="694"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
-<codeline lineno="695"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>
-<codeline lineno="696"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="653"><highlight class="normal"></highlight></codeline>
+<codeline lineno="655"><highlight class="normal"></highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a5142ccf9f3a4ecd336c6e9364712dffd" kindref="member">EF_TMR32_setPWM1CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpY_value);</highlight></codeline>
 <codeline lineno="697"><highlight class="normal"></highlight></codeline>
-<codeline lineno="698"><highlight class="normal"></highlight></codeline>
-<codeline lineno="699"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//EF_TMR32_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="700"><highlight class="normal"></highlight></codeline>
+<codeline lineno="698"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="699"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>
+<codeline lineno="700"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="701"><highlight class="normal"></highlight></codeline>
-<codeline lineno="702"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
-<codeline lineno="703"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
-<codeline lineno="704"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//EF_TMR32_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"></highlight></codeline>
+<codeline lineno="706"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="707"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
+<codeline lineno="708"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="EF_TMR32.h"/>
   </compounddef>

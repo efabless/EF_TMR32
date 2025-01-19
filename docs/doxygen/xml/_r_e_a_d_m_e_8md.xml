@@ -142,7 +142,7 @@
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0MatchingCMPYUpCountAction**](#function-ef_tmr32_setpwm0matchingcmpyupcountaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0MatchingRELOADAction**](#function-ef_tmr32_setpwm0matchingreloadaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM0MatchingZeroAction**](#function-ef_tmr32_setpwm0matchingzeroaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
-<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM1CenterAlignedMode**](#function-ef_tmr32_setpwm1centeralignedmode)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>reload\_value,<sp/>uint32\_t<sp/>cmpX\_value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>PWM1<sp/>center-aligned<sp/>mode._<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM1CenterAlignedMode**](#function-ef_tmr32_setpwm1centeralignedmode)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>reload\_value,<sp/>uint32\_t<sp/>cmpY\_value)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>PWM1<sp/>center-aligned<sp/>mode._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM1EdgeAlignmentMode**](#function-ef_tmr32_setpwm1edgealignmentmode)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>reload\_value,<sp/>uint32\_t<sp/>duty\_cycle)<sp/>&lt;br&gt;_Sets<sp/>the<sp/>PWM1<sp/>edge<sp/>alignment<sp/>mode._<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM1MatchingCMPXDownCountAction**](#function-ef_tmr32_setpwm1matchingcmpxdowncountaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status)<sp/>|<sp/>[**EF\_TMR32\_setPWM1MatchingCMPXUpCountingAction**](#function-ef_tmr32_setpwm1matchingcmpxupcountingaction)<sp/>([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr)<sp/>tmr32,<sp/>uint32\_t<sp/>action)<sp/>&lt;br&gt;<sp/>|</highlight></codeline>
@@ -881,7 +881,7 @@
 <codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_setPWM1CenterAlignedMode<sp/>(</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_TMR32_TYPE_PTR<sp/>tmr32,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload_value,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cmpX_value</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cmpY_value</highlight></codeline>
 <codeline><highlight class="normal">)<sp/></highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
@@ -891,7 +891,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">*<sp/>`tmr32`<sp/>An<sp/>[**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr),<sp/>which<sp/>points<sp/>to<sp/>the<sp/>base<sp/>memory<sp/>address<sp/>of<sp/>TMR32<sp/>registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type)<sp/>is<sp/>a<sp/>structure<sp/>that<sp/>contains<sp/>the<sp/>TMR32<sp/>registers.</highlight></codeline>
 <codeline><highlight class="normal">*<sp/>`reload_value`<sp/>The<sp/>reload<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>PWM1CFG<sp/>register.<sp/>This<sp/>determines<sp/>the<sp/>period<sp/>of<sp/>the<sp/>PWM<sp/>signal.<sp/></highlight></codeline>
-<codeline><highlight class="normal">*<sp/>`cmpX_value`<sp/>The<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>CMPX<sp/>register.<sp/>This<sp/>value<sp/>controls<sp/>the<sp/>point<sp/>at<sp/>which<sp/>the<sp/>PWM<sp/>signal<sp/>transitions<sp/>from<sp/>high<sp/>to<sp/>low<sp/>(or<sp/>vice<sp/>versa)<sp/>in<sp/>the<sp/>center-aligned<sp/>mode.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`cmpY_value`<sp/>The<sp/>value<sp/>to<sp/>set<sp/>in<sp/>the<sp/>CMPX<sp/>register.<sp/>This<sp/>value<sp/>controls<sp/>the<sp/>point<sp/>at<sp/>which<sp/>the<sp/>PWM<sp/>signal<sp/>transitions<sp/>from<sp/>high<sp/>to<sp/>low<sp/>(or<sp/>vice<sp/>versa)<sp/>in<sp/>the<sp/>center-aligned<sp/>mode.</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">**Returns:**</highlight></codeline>

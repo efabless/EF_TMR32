@@ -1604,6 +1604,8 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 </programlisting></para>
 <para><simplesect kind="note"><para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
 </simplesect>
+<simplesect kind="note"><para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
@@ -1687,6 +1689,8 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 </programlisting></para>
 <para><simplesect kind="note"><para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
 </simplesect>
+<simplesect kind="note"><para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
@@ -1768,6 +1772,8 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 </programlisting></para>
 <para><simplesect kind="note"><para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
 </simplesect>
+<simplesect kind="note"><para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
@@ -1848,6 +1854,8 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|_____|<sp/><sp/><sp/><sp/></highlight></codeline>
 </programlisting></para>
 <para><simplesect kind="note"><para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
+</simplesect>
+<simplesect kind="note"><para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1961,7 +1969,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct___e_f___t_m_r32___t_y_p_e___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>|=<sp/>((uint32_t)1<sp/>&lt;&lt;<sp/><ref refid="_e_f___t_m_r32__regs_8h_1ac4382558d6b66fa07908ff7c161587ba" kindref="member">EF_TMR32_CTRL_REG_TS_BIT</ref>);<sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>restart<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct___e_f___t_m_r32___t_y_p_e___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>&amp;=<sp/>~((uint32_t)1<sp/>&lt;&lt;<sp/><ref refid="_e_f___t_m_r32__regs_8h_1ac4382558d6b66fa07908ff7c161587ba" kindref="member">EF_TMR32_CTRL_REG_TS_BIT</ref>);<sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>restart<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="107"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
