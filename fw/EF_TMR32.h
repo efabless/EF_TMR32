@@ -448,6 +448,27 @@ EF_DRIVER_STATUS EF_TMR32_setPWMDeadtime (EF_TMR32_TYPE_PTR tmr32, uint32_t valu
 EF_DRIVER_STATUS EF_TMR32_setPR(EF_TMR32_TYPE_PTR tmr32, uint32_t value);
 
 
+//! Retrieves the raw interrupt status by reading the RIS register.
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    \param [out] RIS_value A pointer to a uint32_t where the raw interrupt status value will be stored.
+    
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+*/
+EF_DRIVER_STATUS EF_TMR32_getRIS(EF_TMR32_TYPE_PTR tmr32, uint32_t* RIS_value);
+
+
+//! Retrieves the masked interrupt status by reading the MIS register.
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    \param [out] MIS_value A pointer to a uint32_t where the masked interrupt status value will be stored.
+    
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+*/
+EF_DRIVER_STATUS EF_TMR32_getMIS(EF_TMR32_TYPE_PTR tmr32, uint32_t* MIS_value);
+
 //! Sets the interrupt mask of the timer by writing to the IM register.
 /*!
     \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
@@ -458,6 +479,18 @@ EF_DRIVER_STATUS EF_TMR32_setPR(EF_TMR32_TYPE_PTR tmr32, uint32_t value);
     \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
 */
 EF_DRIVER_STATUS EF_TMR32_setIM(EF_TMR32_TYPE_PTR tmr32, uint32_t mask);
+
+
+
+//! Retrieves the interrupt clear register by reading the ICR register.
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    \param [out] IM_value A pointer to a uint32_t where the interrupt clear value will be stored.
+    
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+*/
+EF_DRIVER_STATUS EF_TMR32_getIM(EF_TMR32_TYPE_PTR tmr32, uint32_t* IM_value);
 
 
 //! Sets the interrupt clear register of the timer by writing to the ICR register.
@@ -471,6 +504,192 @@ EF_DRIVER_STATUS EF_TMR32_setIM(EF_TMR32_TYPE_PTR tmr32, uint32_t mask);
 */
 EF_DRIVER_STATUS EF_TMR32_setICR(EF_TMR32_TYPE_PTR tmr32, uint32_t mask);
 
+
+
+//! Sets the PWM0 edge alignment mode 
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    \param [in] reload_value The reload value to set in the PWM0CFG register. This determines the period of the PWM signal.
+    \param [in] duty_cycle The duty cycle value to set in the PWM0CFG register, representing the high time as a percentage 
+                           of the period (0 to 100).
+
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+                   - \ref EF_DRIVER_OK: Configuration was successful.
+                   - \ref EF_DRIVER_ERROR_PARAMETER: Invalid input parameters, such as `tmr32` being NULL or `duty_cycle` > 100.
+
+    This function configures the specified 32-bit timer (`tmr32`) to generate a PWM signal with edge alignment. 
+    It sets the timer to up-count and periodic modes, configures the zero action to high, and uses the X compare register 
+    to control the output signal. The duty cycle and reload values are used to compute the compare register value.
+
+    Internal configurations performed by the function:
+    - Sets the timer to up-count mode.
+    - Configures the timer for periodic operation.
+    - Sets the zero action to drive the PWM output high.
+    - Configures the X compare register to drive the PWM output low on up-count.
+    - Configures the Y compare register to maintain the current output state.
+    - Calculates the X compare value based on the duty cycle and reload value.
+    - Sets the reload value and compare register.
+    - Ensures no change in output on the top action.
+
+    Example PWM waveform:
+    ```
+      |       /|      /|
+      |_____/__|____/  |
+      |   / |  |  / |  |
+      |_/___|__|/___|__|____
+            |       |
+            V       V
+        ____    ____    ___   ___
+            |__|    |__|   |__|
+        duty    duty
+        cycle   cycle
+    ```
+
+    \note Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. 
+          The reload value and compare value must align with the timer's capabilities and clock settings.
+*/
+EF_DRIVER_STATUS EF_TMR32_setPWM0EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t duty_cycle);
+
+
+//! Sets the PWM1 edge alignment mode 
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    \param [in] reload_value The reload value to set in the PWM1CFG register. This determines the period of the PWM signal.
+    \param [in] duty_cycle The duty cycle value to set in the PWM1CFG register, representing the high time as a percentage 
+                           of the period (0 to 100).
+
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+                   - \ref EF_DRIVER_OK: Configuration was successful.
+                   - \ref EF_DRIVER_ERROR_PARAMETER: Invalid input parameters, such as `tmr32` being NULL or `duty_cycle` > 100.
+
+    This function configures the specified 32-bit timer (`tmr32`) to generate a PWM signal with edge alignment on PWM1. 
+    It sets the timer to up-count and periodic modes, configures the zero action to high, and uses the Y compare register 
+    to control the output signal. The duty cycle and reload values are used to compute the compare register value.
+
+    Internal configurations performed by the function:
+    - Sets the timer to up-count mode.
+    - Configures the timer for periodic operation.
+    - Sets the zero action to drive the PWM output high.
+    - Configures the Y compare register to drive the PWM output low on up-count.
+    - Configures the X compare register to maintain the current output state.
+    - Calculates the Y compare value based on the duty cycle and reload value.
+    - Sets the reload value and compare register.
+    - Ensures no change in output on the top action.
+
+    Example PWM waveform:
+    ```
+      |       /|      /|
+      |_____/__|____/  |
+      |   / |  |  / |  |
+      |_/___|__|/___|__|____
+            |       |
+            V       V
+        ____    ____    ___   ___
+            |__|    |__|   |__|
+        duty    duty
+        cycle   cycle
+    ```
+
+    \note Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. 
+          The reload value and compare value must align with the timer's capabilities and clock settings.
+*/
+EF_DRIVER_STATUS EF_TMR32_setPWM1EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t duty_cycle);
+
+
+
+
+
+//! Sets the PWM0 center-aligned mode
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    \param [in] reload_value The reload value to set in the PWM0CFG register. This determines the period of the PWM signal.
+    \param [in] cmpX_value The value to set in the CMPX register. This value controls the point at which the PWM signal transitions 
+                           from high to low (or vice versa) in the center-aligned mode.
+
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+                   - \ref EF_DRIVER_OK: Configuration was successful.
+                   - \ref EF_DRIVER_ERROR_PARAMETER: Invalid input parameters, such as `tmr32` being NULL.
+
+    This function configures the specified 32-bit timer (`tmr32`) to generate a PWM signal with center-alignment on PWM0. 
+    It sets the timer to up-down counting mode and periodic mode, configures the zero and compare actions, and sets the reload 
+    and compare values as specified.
+
+    Internal configurations performed by the function:
+    - Sets the timer to up-down counting mode.
+    - Configures the timer for periodic operation.
+    - Sets the zero action to drive the PWM output high.
+    - Configures the X compare register to drive the PWM output low on up-count.
+    - Configures the X compare register to drive the PWM output high on down-count.
+    - Configures the Y compare register to maintain the current output state on both up and down counts.
+    - Sets the reload value to define the PWM signal period.
+    - Sets the X compare register value to define the transition point.
+
+    Example PWM waveform:
+    ```
+      |       /|\
+      |_____/__|__\
+      |   / |  |  | \
+      |_/___|__|__|___\__
+            |     |
+            V     V
+        ____       ____
+            |_____|    
+    ```
+
+    \note Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. 
+          The reload value and compare value must align with the timer's capabilities and clock settings.
+*/
+EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpX_value);
+
+
+
+
+
+//! Sets the PWM1 center-aligned mode
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    \param [in] reload_value The reload value to set in the PWM1CFG register. This determines the period of the PWM signal.
+    \param [in] cmpX_value The value to set in the CMPX register. This value controls the point at which the PWM signal transitions 
+                           from high to low (or vice versa) in the center-aligned mode.
+
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+                   - \ref EF_DRIVER_OK: Configuration was successful.
+                   - \ref EF_DRIVER_ERROR_PARAMETER: Invalid input parameters, such as `tmr32` being NULL.
+
+    This function configures the specified 32-bit timer (`tmr32`) to generate a PWM signal with center-alignment on PWM1. 
+    It sets the timer to up-down counting mode and periodic mode, configures the zero and compare actions, and sets the reload 
+    and compare values as specified.
+
+    Internal configurations performed by the function:
+    - Sets the timer to up-down counting mode.
+    - Configures the timer for periodic operation.
+    - Sets the zero action to drive the PWM output high.
+    - Configures the Y compare register to drive the PWM output low on up-count.
+    - Configures the Y compare register to drive the PWM output high on down-count.
+    - Configures the X compare register to maintain the current output state on both up and down counts.
+    - Sets the reload value to define the PWM signal period.
+    - Sets the X compare register value to define the transition point.
+
+    Example PWM waveform:
+    ```
+      |       /|\
+      |_____/__|__\
+      |   / |  |  | \
+      |_/___|__|__|___\__
+            |     |
+            V     V
+        ____       ____ 
+            |_____|    
+    ```
+
+    \note Ensure the timer instance (`tmr32`) is correctly initialized before calling this function. 
+          The reload value and compare value must align with the timer's capabilities and clock settings.
+*/
+EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpX_value);
 
 /******************************************************************************
 * External Variables

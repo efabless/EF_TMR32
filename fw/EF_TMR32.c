@@ -581,6 +581,38 @@ EF_DRIVER_STATUS EF_TMR32_setPR(EF_TMR32_TYPE_PTR tmr32, uint32_t value){
 }
 
 
+EF_DRIVER_STATUS EF_TMR32_getRIS(EF_TMR32_TYPE_PTR tmr32, uint32_t* RIS_value){
+    
+    EF_DRIVER_STATUS status = EF_DRIVER_OK; 
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if tmr32 is NULL
+    } else if (RIS_value == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if RIS_value is NULL, 
+                                                        // i.e. there is no memory location to store the value
+    } else {
+        *RIS_value = tmr32->RIS;
+        
+    }
+    return status;
+}
+
+EF_DRIVER_STATUS EF_TMR32_getMIS(EF_TMR32_TYPE_PTR tmr32, uint32_t* MIS_value){
+    
+    EF_DRIVER_STATUS status = EF_DRIVER_OK; 
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if tmr32 is NULL
+    } else if (MIS_value == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if MIS_value is NULL, 
+                                                        // i.e. there is no memory location to store the value
+    } else {
+        *MIS_value = tmr32->MIS;
+        
+    }
+    return status;
+}
+
 EF_DRIVER_STATUS EF_TMR32_setIM(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
 
     EF_DRIVER_STATUS status = EF_DRIVER_OK;
@@ -595,6 +627,22 @@ EF_DRIVER_STATUS EF_TMR32_setIM(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
     return status;
 }
 
+
+EF_DRIVER_STATUS EF_TMR32_getIM(EF_TMR32_TYPE_PTR tmr32, uint32_t* IM_value){
+    
+    EF_DRIVER_STATUS status = EF_DRIVER_OK; 
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if tmr32 is NULL
+    } else if (IM_value == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if IM_value is NULL, 
+                                                        // i.e. there is no memory location to store the value
+    } else {
+        *IM_value = tmr32->IM;
+        
+    }
+    return status;
+}
 
 EF_DRIVER_STATUS EF_TMR32_setICR(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
 
@@ -611,6 +659,204 @@ EF_DRIVER_STATUS EF_TMR32_setICR(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
     }
     return status;
 }
+
+
+EF_DRIVER_STATUS EF_TMR32_setPWM0EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t duty_cycle){
+    EF_DRIVER_STATUS status = EF_DRIVER_OK;
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;
+    }else if (duty_cycle > 100) {
+        status = EF_DRIVER_ERROR_PARAMETER;
+
+    } else{
+
+        // set the timer to up-count mode
+        // set the timer to periodic mode
+        // set the zero action to high
+        // only use one compare register
+        // set the action of the X Compare register up count to low
+        // set the action of the Y Compare register up count to no change
+        // calculate the X compare register value given the duty cycle
+        // set the reload value
+        // set X compare register value
+        // set the top action to no change
+
+        //  |
+        //  |       /|      /|
+        //  |_____/__|____/  |
+        //  |   / |  |  / |  |
+        //  |_/___|__|/___|__|____
+        //        |       |
+        //        V       V
+        //    ____    ____    ___   ___
+        //        |__|    |__|   |__|
+        //    duty    duty
+        //    cycle   cycle
+
+
+        status = EF_TMR32_setUpCount(tmr32);
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPeriodic(tmr32);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingZeroAction(tmr32, EF_TMR32_ACTION_HIGH);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingCMPXUpCountAction(tmr32, EF_TMR32_ACTION_LOW);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingCMPYUpCountAction(tmr32, EF_TMR32_ACTION_NONE);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingRELOADAction(tmr32, EF_TMR32_ACTION_NONE);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setRELOAD(tmr32, reload_value);}else{}
+
+        if (status == EF_DRIVER_OK){
+            uint32_t compare_value = (duty_cycle * reload_value) / 100;
+            status = EF_TMR32_setCMPX(tmr32, compare_value);  
+        }else{}
+        
+    }
+    return status;
+}
+
+EF_DRIVER_STATUS EF_TMR32_setPWM1EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value,uint32_t duty_cycle){
+
+    EF_DRIVER_STATUS status = EF_DRIVER_OK;
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;
+    } else if (duty_cycle > 100) {
+        status = EF_DRIVER_ERROR_PARAMETER;
+
+    } else {
+
+        // set the timer to up-count mode
+        // set the timer to periodic mode
+        // set the zero action to high
+        // only use one compare register
+        // set the action of the Y Compare register up count to low
+        // set the action of the X Compare register up count to no change
+        // calculate the Y compare register value given the duty cycle
+        // set the reload value
+        // set the Y compare register value
+        // set the top action to no change
+
+        //  |
+        //  |       /|      /|
+        //  |_____/__|____/  |
+        //  |   / |  |  / |  |
+        //  |_/___|__|/___|__|____
+        //        |       |
+        //        V       V
+        //    ____    ____    ___   ___
+        //        |__|    |__|   |__|
+        //    duty    duty
+        //    cycle   cycle
+
+        status = EF_TMR32_setUpCount(tmr32);
+        status = EF_TMR32_setPeriodic(tmr32);
+        status = EF_TMR32_setPWM1MatchingZeroAction(tmr32, EF_TMR32_ACTION_HIGH);
+        status = EF_TMR32_setPWM1MatchingCMPYUpCountingAction(tmr32, EF_TMR32_ACTION_LOW);
+        status = EF_TMR32_setPWM1MatchingCMPXUpCountingAction(tmr32, EF_TMR32_ACTION_NONE);
+        status = EF_TMR32_setPWM1MatchingRELOADAction(tmr32, EF_TMR32_ACTION_NONE);
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setRELOAD(tmr32, reload_value);}else{}
+
+        if (status == EF_DRIVER_OK){
+            uint32_t compare_value = (duty_cycle * reload_value) / 100;
+            status = EF_TMR32_setCMPY(tmr32, compare_value);  
+        }else{}
+    }
+
+    return status;
+}
+
+
+EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpX_value){
+
+    EF_DRIVER_STATUS status = EF_DRIVER_OK;
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;
+    } else {
+
+        // set the timer to up-down-count mode
+        // set the timer to periodic mode
+        // set the zero action to high
+        // use two compare registers
+        // set the action of the X Compare register up count to low
+        // set the action of the Y Compare register up count to no change
+        // set the action of the X Compare register down count to high
+        // set the action of the Y Compare register down count to no change
+        // set the top action to no change
+        // set the reload value
+        // set the X compare value
+
+
+        //  |
+        //  |       /|\
+        //  |_____/__|__\
+        //  |   / |  |  | \
+        //  |_/___|__|__|___\__
+        //        |     |
+        //        V     V
+        //    ____       ____ 
+        //        |_____|    
+
+
+
+        status = EF_TMR32_setUpDownCount(tmr32);
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPeriodic(tmr32);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingZeroAction(tmr32, EF_TMR32_ACTION_HIGH);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingCMPXUpCountAction(tmr32, EF_TMR32_ACTION_LOW);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingCMPYUpCountAction(tmr32, EF_TMR32_ACTION_NONE);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingCMPXDownCountAction(tmr32, EF_TMR32_ACTION_HIGH);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingCMPYDownCountAction(tmr32, EF_TMR32_ACTION_NONE);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setPWM0MatchingRELOADAction(tmr32, EF_TMR32_ACTION_NONE);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setRELOAD(tmr32, reload_value);}else{}
+        if (status == EF_DRIVER_OK){ status = EF_TMR32_setCMPX(tmr32, cmpX_value);}else{}
+        
+    }
+
+    return status;
+}
+
+
+EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpX_value){
+
+    EF_DRIVER_STATUS status = EF_DRIVER_OK;
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;
+    } else {
+        // set the timer to up-down-count mode
+        // set the timer to periodic mode
+        // set the zero action to high
+        // use two compare registers
+        // set the action of the Y Compare register up count to low
+        // set the action of the X Compare register up count to no change
+        // set the action of the Y Compare register down count to high
+        // set the action of the X Compare register down count to no change
+        // set the top action to no change
+        // set the reload value
+        // set the Y compare value
+
+        //  |
+        //  |       /|\
+        //  |_____/__|__\
+        //  |   / |  |  | \
+        //  |_/___|__|__|___\__
+        //        |     |
+        //        V     V
+        //    ____       ____ 
+        //        |_____|
+
+        status = EF_TMR32_setUpDownCount(tmr32);
+        if (status == EF_DRIVER_OK) {status = EF_TMR32_setPeriodic(tmr32);}else{}
+        if (status == EF_DRIVER_OK) {status = EF_TMR32_setPWM1MatchingZeroAction(tmr32, EF_TMR32_ACTION_HIGH);}else{}
+        if (status == EF_DRIVER_OK) {status = EF_TMR32_setPWM1MatchingCMPYUpCountingAction(tmr32, EF_TMR32_ACTION_LOW);}else{}
+        if (status == EF_DRIVER_OK) {status = EF_TMR32_setPWM1MatchingCMPXUpCountingAction(tmr32, EF_TMR32_ACTION_NONE);}else{}
+        if (status == EF_DRIVER_OK) {status = EF_TMR32_setPWM1MatchingCMPYDownCountAction(tmr32, EF_TMR32_ACTION_HIGH);}else{}
+        if (status == EF_DRIVER_OK) {status = EF_TMR32_setPWM1MatchingCMPXDownCountAction(tmr32, EF_TMR32_ACTION_NONE);}else{}
+        if (status == EF_DRIVER_OK) {status = EF_TMR32_setPWM1MatchingRELOADAction(tmr32, EF_TMR32_ACTION_NONE);}else{}
+        if (status == EF_DRIVER_OK) {status = EF_TMR32_setRELOAD(tmr32, reload_value);}else{}
+        if (status == EF_DRIVER_OK) {status = EF_TMR32_setCMPX(tmr32, cmpX_value);}else{}
+    }
+    return status;
+}
+
 
 
 /******************************************************************************
