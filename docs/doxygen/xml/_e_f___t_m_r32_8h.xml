@@ -5,6 +5,8 @@
     <includes refid="_e_f___t_m_r32__regs_8h" local="yes">EF_TMR32_regs.h</includes>
     <includes refid="_e_f___driver___common_8h" local="yes">EF_Driver_Common.h</includes>
     <includedby refid="_e_f___t_m_r32_8c" local="yes">EF_TMR32.c</includedby>
+    <includedby refid="_e_f___t_m_r32__example_8c" local="yes">EF_TMR32_example.c</includedby>
+    <includedby refid="_e_f___t_m_r32__example_8h" local="yes">EF_TMR32_example.h</includedby>
     <incdepgraph>
       <node id="3">
         <label>EF_Driver_Common.h</label>
@@ -49,6 +51,20 @@
         <label>EF_TMR32.h</label>
         <link refid="_e_f___t_m_r32_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EF_TMR32_example.c</label>
+        <link refid="_e_f___t_m_r32__example_8c"/>
+      </node>
+      <node id="4">
+        <label>EF_TMR32_example.h</label>
+        <link refid="_e_f___t_m_r32__example_8h"/>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -1633,6 +1649,222 @@
         </inbodydescription>
         <location file="EF_TMR32.h" line="505" column="18" bodyfile="EF_TMR32.c" bodystart="647" bodyend="661" declfile="EF_TMR32.h" declline="505" declcolumn="18"/>
       </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8h_1a82460d824d3cd16a7ab024676d5d2dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_isTimout</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32, uint32_t *timeout_status)</argsstring>
+        <name>EF_TMR32_isTimout</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>timeout_status</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the timer has reached the RELOAD value if up counting or zero if down counting by reading the RIS register and checking the RT flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">timeout_status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a uint32_t where the timeout status will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.h" line="515" column="18" bodyfile="EF_TMR32.c" bodystart="663" bodyend="680" declfile="EF_TMR32.h" declline="515" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8h_1ab0aa33e92e5e3d1a1d5c2bd81b392126" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_isCMPXMatch</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32, uint32_t *match_status)</argsstring>
+        <name>EF_TMR32_isCMPXMatch</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>match_status</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the timer has reached the CMPX value by reading the RIS register and checking the MX flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">match_status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a uint32_t where the match status will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.h" line="525" column="18" bodyfile="EF_TMR32.c" bodystart="682" bodyend="699" declfile="EF_TMR32.h" declline="525" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8h_1a7d0794cbbf8270e4301fa1b3de960f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_isCMPYMatch</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32, uint32_t *match_status)</argsstring>
+        <name>EF_TMR32_isCMPYMatch</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>match_status</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the timer has reached the CMPY value by reading the RIS register and checking the MY flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">match_status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a uint32_t where the match status will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.h" line="536" column="18" bodyfile="EF_TMR32.c" bodystart="701" bodyend="718" declfile="EF_TMR32.h" declline="536" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8h_1a0e9f5f4e5f1a4b8d7805eb4dbdf70e93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_clearTimoutFlag</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32)</argsstring>
+        <name>EF_TMR32_clearTimoutFlag</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <briefdescription>
+<para>Clears the timeout flag by writing to the ICR register and setting the TO bit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.h" line="545" column="18" bodyfile="EF_TMR32.c" bodystart="721" bodyend="731" declfile="EF_TMR32.h" declline="545" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8h_1ac5c775883fbdab72773ffd7f95d5082b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_clearCMPXMatchFlag</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32)</argsstring>
+        <name>EF_TMR32_clearCMPXMatchFlag</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <briefdescription>
+<para>Clears the CMPX match flag by writing to the ICR register and setting the MX bit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.h" line="555" column="18" bodyfile="EF_TMR32.c" bodystart="733" bodyend="743" declfile="EF_TMR32.h" declline="555" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8h_1a56a7ddce686fe3bed66388193ce2f225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_clearCMPYMatchFlag</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32)</argsstring>
+        <name>EF_TMR32_clearCMPYMatchFlag</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <briefdescription>
+<para>Clears the CMPY match flag by writing to the ICR register and setting the MY bit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.h" line="564" column="18" bodyfile="EF_TMR32.c" bodystart="746" bodyend="756" declfile="EF_TMR32.h" declline="564" declcolumn="18"/>
+      </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8h_1a8d4d907e326c073a96a28e8317fc26bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_TMR32_setPWM0EdgeAlignmentMode</definition>
@@ -1716,7 +1948,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.h" line="553" column="18" bodyfile="EF_TMR32.c" bodystart="664" bodyend="713" declfile="EF_TMR32.h" declline="553" declcolumn="18"/>
+        <location file="EF_TMR32.h" line="611" column="18" bodyfile="EF_TMR32.c" bodystart="759" bodyend="808" declfile="EF_TMR32.h" declline="611" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8h_1a56341d8e521f6b5001cddf60b93fe6f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1801,7 +2033,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.h" line="600" column="18" bodyfile="EF_TMR32.c" bodystart="715" bodyend="764" declfile="EF_TMR32.h" declline="600" declcolumn="18"/>
+        <location file="EF_TMR32.h" line="658" column="18" bodyfile="EF_TMR32.c" bodystart="810" bodyend="859" declfile="EF_TMR32.h" declline="658" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8h_1a0a42492b716fb008dd6980193e039a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1884,7 +2116,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.h" line="648" column="18" bodyfile="EF_TMR32.c" bodystart="767" bodyend="813" declfile="EF_TMR32.h" declline="648" declcolumn="18"/>
+        <location file="EF_TMR32.h" line="706" column="18" bodyfile="EF_TMR32.c" bodystart="862" bodyend="908" declfile="EF_TMR32.h" declline="706" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8h_1a5142ccf9f3a4ecd336c6e9364712dffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1967,7 +2199,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.h" line="696" column="18" bodyfile="EF_TMR32.c" bodystart="816" bodyend="856" declfile="EF_TMR32.h" declline="696" declcolumn="18"/>
+        <location file="EF_TMR32.h" line="754" column="18" bodyfile="EF_TMR32.c" bodystart="911" bodyend="951" declfile="EF_TMR32.h" declline="754" declcolumn="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -2154,40 +2386,59 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 <codeline lineno="497"><highlight class="normal"></highlight></codeline>
 <codeline lineno="505"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a8f2de51a604e7beb66db426098b7be79" kindref="member">EF_TMR32_setICR</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>mask);</highlight></codeline>
 <codeline lineno="506"><highlight class="normal"></highlight></codeline>
-<codeline lineno="507"><highlight class="normal"></highlight></codeline>
 <codeline lineno="508"><highlight class="normal"></highlight></codeline>
-<codeline lineno="510"><highlight class="normal"></highlight></codeline>
-<codeline lineno="553"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a8d4d907e326c073a96a28e8317fc26bd" kindref="member">EF_TMR32_setPWM0EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>duty_cycle);</highlight></codeline>
-<codeline lineno="554"><highlight class="normal"></highlight></codeline>
-<codeline lineno="555"><highlight class="normal"></highlight></codeline>
-<codeline lineno="557"><highlight class="normal"></highlight></codeline>
-<codeline lineno="600"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a56341d8e521f6b5001cddf60b93fe6f1" kindref="member">EF_TMR32_setPWM1EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>duty_cycle);</highlight></codeline>
-<codeline lineno="601"><highlight class="normal"></highlight></codeline>
-<codeline lineno="602"><highlight class="normal"></highlight></codeline>
-<codeline lineno="603"><highlight class="normal"></highlight></codeline>
-<codeline lineno="604"><highlight class="normal"></highlight></codeline>
-<codeline lineno="605"><highlight class="normal"></highlight></codeline>
-<codeline lineno="607"><highlight class="normal"></highlight></codeline>
-<codeline lineno="648"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a0a42492b716fb008dd6980193e039a17" kindref="member">EF_TMR32_setPWM0CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpX_value);</highlight></codeline>
-<codeline lineno="649"><highlight class="normal"></highlight></codeline>
-<codeline lineno="650"><highlight class="normal"></highlight></codeline>
-<codeline lineno="651"><highlight class="normal"></highlight></codeline>
-<codeline lineno="652"><highlight class="normal"></highlight></codeline>
-<codeline lineno="653"><highlight class="normal"></highlight></codeline>
-<codeline lineno="655"><highlight class="normal"></highlight></codeline>
-<codeline lineno="696"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a5142ccf9f3a4ecd336c6e9364712dffd" kindref="member">EF_TMR32_setPWM1CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpY_value);</highlight></codeline>
-<codeline lineno="697"><highlight class="normal"></highlight></codeline>
-<codeline lineno="698"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
-<codeline lineno="699"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>
-<codeline lineno="700"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="701"><highlight class="normal"></highlight></codeline>
-<codeline lineno="702"><highlight class="normal"></highlight></codeline>
-<codeline lineno="703"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//EF_TMR32_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="704"><highlight class="normal"></highlight></codeline>
-<codeline lineno="705"><highlight class="normal"></highlight></codeline>
-<codeline lineno="706"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
-<codeline lineno="707"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
-<codeline lineno="708"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a82460d824d3cd16a7ab024676d5d2dd4" kindref="member">EF_TMR32_isTimout</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t*<sp/>timeout_status);</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"></highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1ab0aa33e92e5e3d1a1d5c2bd81b392126" kindref="member">EF_TMR32_isCMPXMatch</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t*<sp/>match_status);</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"></highlight></codeline>
+<codeline lineno="527"><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a7d0794cbbf8270e4301fa1b3de960f6e" kindref="member">EF_TMR32_isCMPYMatch</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t*<sp/>match_status);</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"></highlight></codeline>
+<codeline lineno="539"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a0e9f5f4e5f1a4b8d7805eb4dbdf70e93" kindref="member">EF_TMR32_clearTimoutFlag</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32);</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1ac5c775883fbdab72773ffd7f95d5082b" kindref="member">EF_TMR32_clearCMPXMatchFlag</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32);</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"></highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a56a7ddce686fe3bed66388193ce2f225" kindref="member">EF_TMR32_clearCMPYMatchFlag</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32);</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"></highlight></codeline>
+<codeline lineno="568"><highlight class="normal"></highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a8d4d907e326c073a96a28e8317fc26bd" kindref="member">EF_TMR32_setPWM0EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>duty_cycle);</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal"></highlight></codeline>
+<codeline lineno="615"><highlight class="normal"></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a56341d8e521f6b5001cddf60b93fe6f1" kindref="member">EF_TMR32_setPWM1EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>duty_cycle);</highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"></highlight></codeline>
+<codeline lineno="662"><highlight class="normal"></highlight></codeline>
+<codeline lineno="663"><highlight class="normal"></highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a0a42492b716fb008dd6980193e039a17" kindref="member">EF_TMR32_setPWM0CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpX_value);</highlight></codeline>
+<codeline lineno="707"><highlight class="normal"></highlight></codeline>
+<codeline lineno="708"><highlight class="normal"></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"></highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight></codeline>
+<codeline lineno="711"><highlight class="normal"></highlight></codeline>
+<codeline lineno="713"><highlight class="normal"></highlight></codeline>
+<codeline lineno="754"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8h_1a5142ccf9f3a4ecd336c6e9364712dffd" kindref="member">EF_TMR32_setPWM1CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpY_value);</highlight></codeline>
+<codeline lineno="755"><highlight class="normal"></highlight></codeline>
+<codeline lineno="756"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="757"><highlight class="comment">*<sp/>External<sp/>Variables</highlight></codeline>
+<codeline lineno="758"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="759"><highlight class="normal"></highlight></codeline>
+<codeline lineno="760"><highlight class="normal"></highlight></codeline>
+<codeline lineno="761"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//EF_TMR32_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="762"><highlight class="normal"></highlight></codeline>
+<codeline lineno="763"><highlight class="normal"></highlight></codeline>
+<codeline lineno="764"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="765"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
+<codeline lineno="766"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="EF_TMR32.h"/>
   </compounddef>

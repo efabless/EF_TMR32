@@ -68,6 +68,12 @@
     <member refid="_e_f___t_m_r32_8c_1a88702cef6eafdb625b8392d9aa58fa11" kind="function"><name>EF_TMR32_setIM</name></member>
     <member refid="_e_f___t_m_r32_8c_1a44163e96761725c077d3ea36ec17207d" kind="function"><name>EF_TMR32_getIM</name></member>
     <member refid="_e_f___t_m_r32_8c_1a8f2de51a604e7beb66db426098b7be79" kind="function"><name>EF_TMR32_setICR</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a82460d824d3cd16a7ab024676d5d2dd4" kind="function"><name>EF_TMR32_isTimout</name></member>
+    <member refid="_e_f___t_m_r32_8c_1ab0aa33e92e5e3d1a1d5c2bd81b392126" kind="function"><name>EF_TMR32_isCMPXMatch</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a7d0794cbbf8270e4301fa1b3de960f6e" kind="function"><name>EF_TMR32_isCMPYMatch</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a0e9f5f4e5f1a4b8d7805eb4dbdf70e93" kind="function"><name>EF_TMR32_clearTimoutFlag</name></member>
+    <member refid="_e_f___t_m_r32_8c_1ac5c775883fbdab72773ffd7f95d5082b" kind="function"><name>EF_TMR32_clearCMPXMatchFlag</name></member>
+    <member refid="_e_f___t_m_r32_8c_1a56a7ddce686fe3bed66388193ce2f225" kind="function"><name>EF_TMR32_clearCMPYMatchFlag</name></member>
     <member refid="_e_f___t_m_r32_8c_1a8d4d907e326c073a96a28e8317fc26bd" kind="function"><name>EF_TMR32_setPWM0EdgeAlignmentMode</name></member>
     <member refid="_e_f___t_m_r32_8c_1a56341d8e521f6b5001cddf60b93fe6f1" kind="function"><name>EF_TMR32_setPWM1EdgeAlignmentMode</name></member>
     <member refid="_e_f___t_m_r32_8c_1a0a42492b716fb008dd6980193e039a17" kind="function"><name>EF_TMR32_setPWM0CenterAlignedMode</name></member>
@@ -120,10 +126,27 @@
     <member refid="_e_f___t_m_r32_8h_1a88702cef6eafdb625b8392d9aa58fa11" kind="function"><name>EF_TMR32_setIM</name></member>
     <member refid="_e_f___t_m_r32_8h_1a44163e96761725c077d3ea36ec17207d" kind="function"><name>EF_TMR32_getIM</name></member>
     <member refid="_e_f___t_m_r32_8h_1a8f2de51a604e7beb66db426098b7be79" kind="function"><name>EF_TMR32_setICR</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a82460d824d3cd16a7ab024676d5d2dd4" kind="function"><name>EF_TMR32_isTimout</name></member>
+    <member refid="_e_f___t_m_r32_8h_1ab0aa33e92e5e3d1a1d5c2bd81b392126" kind="function"><name>EF_TMR32_isCMPXMatch</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a7d0794cbbf8270e4301fa1b3de960f6e" kind="function"><name>EF_TMR32_isCMPYMatch</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a0e9f5f4e5f1a4b8d7805eb4dbdf70e93" kind="function"><name>EF_TMR32_clearTimoutFlag</name></member>
+    <member refid="_e_f___t_m_r32_8h_1ac5c775883fbdab72773ffd7f95d5082b" kind="function"><name>EF_TMR32_clearCMPXMatchFlag</name></member>
+    <member refid="_e_f___t_m_r32_8h_1a56a7ddce686fe3bed66388193ce2f225" kind="function"><name>EF_TMR32_clearCMPYMatchFlag</name></member>
     <member refid="_e_f___t_m_r32_8h_1a8d4d907e326c073a96a28e8317fc26bd" kind="function"><name>EF_TMR32_setPWM0EdgeAlignmentMode</name></member>
     <member refid="_e_f___t_m_r32_8h_1a56341d8e521f6b5001cddf60b93fe6f1" kind="function"><name>EF_TMR32_setPWM1EdgeAlignmentMode</name></member>
     <member refid="_e_f___t_m_r32_8h_1a0a42492b716fb008dd6980193e039a17" kind="function"><name>EF_TMR32_setPWM0CenterAlignedMode</name></member>
     <member refid="_e_f___t_m_r32_8h_1a5142ccf9f3a4ecd336c6e9364712dffd" kind="function"><name>EF_TMR32_setPWM1CenterAlignedMode</name></member>
+  </compound>
+  <compound refid="_e_f___t_m_r32__example_8c" kind="file"><name>EF_TMR32_example.c</name>
+    <member refid="_e_f___t_m_r32__example_8c_1af889203a7f004ea913d0bb9bc29f3d24" kind="define"><name>EF_TMR32_EXAMPLE_C</name></member>
+    <member refid="_e_f___t_m_r32__example_8c_1a7f0ac2f2a7f846d4a8edb20c6d0c04a5" kind="define"><name>Example_TMR32_BASE_ADDRESS</name></member>
+    <member refid="_e_f___t_m_r32__example_8c_1a67e71266638e5924747ef448c00656b3" kind="define"><name>TMR320</name></member>
+    <member refid="_e_f___t_m_r32__example_8c_1a1eb6a05af29b879f3bbc2b6acdde3d7b" kind="function"><name>EF_TMR32_normalExample</name></member>
+    <member refid="_e_f___t_m_r32__example_8c_1ad8da2bd7958c523a00a2f04b58539b0d" kind="function"><name>EF_TMR32_PWM_Example</name></member>
+  </compound>
+  <compound refid="_e_f___t_m_r32__example_8h" kind="file"><name>EF_TMR32_example.h</name>
+    <member refid="_e_f___t_m_r32__example_8h_1a1eb6a05af29b879f3bbc2b6acdde3d7b" kind="function"><name>EF_TMR32_normalExample</name></member>
+    <member refid="_e_f___t_m_r32__example_8h_1ad8da2bd7958c523a00a2f04b58539b0d" kind="function"><name>EF_TMR32_PWM_Example</name></member>
   </compound>
   <compound refid="_e_f___t_m_r32__regs_8h" kind="file"><name>EF_TMR32_regs.h</name>
     <member refid="_e_f___t_m_r32__regs_8h_1a470cd5845bed94d8b8b358933e4a3442" kind="define"><name>IO_TYPES</name></member>

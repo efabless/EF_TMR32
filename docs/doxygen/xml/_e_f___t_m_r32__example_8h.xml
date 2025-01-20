@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_e_f___t_m_r32__example_8h" kind="file" language="C++">
+    <compoundname>EF_TMR32_example.h</compoundname>
+    <includes refid="_e_f___t_m_r32_8h" local="yes">EF_TMR32.h</includes>
+    <includedby refid="_e_f___t_m_r32__example_8c" local="yes">EF_TMR32_example.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>EF_Driver_Common.h</label>
+        <link refid="_e_f___driver___common_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EF_TMR32.h</label>
+        <link refid="_e_f___t_m_r32_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EF_TMR32_example.h</label>
+        <link refid="_e_f___t_m_r32__example_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EF_TMR32_regs.h</label>
+        <link refid="_e_f___t_m_r32__regs_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="7">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>EF_TMR32_example.c</label>
+        <link refid="_e_f___t_m_r32__example_8c"/>
+      </node>
+      <node id="1">
+        <label>EF_TMR32_example.h</label>
+        <link refid="_e_f___t_m_r32__example_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_e_f___t_m_r32__example_8h_1a1eb6a05af29b879f3bbc2b6acdde3d7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_normalExample</definition>
+        <argsstring>(void)</argsstring>
+        <name>EF_TMR32_normalExample</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Example of Normal Usage Example usage: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">#include<sp/>&quot;EF_TMR32.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#define<sp/>Example_TMR32_BASE_ADDRESS<sp/>0x40000000</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>TMR320<sp/>((EF_TMR32_TYPE_PTR)Example_TMR32_BASE_ADDRESS)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">EF_DRIVER_STATUS<sp/>EF_TMR32_normalExample(void){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Now<sp/>let&apos;s<sp/>configure<sp/>the<sp/>timer<sp/>to<sp/>operate<sp/>in<sp/>one-shot<sp/>mode</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_DRIVER_STATUS<sp/>status;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload_value<sp/>=<sp/>10000;<sp/>//<sp/>Timer<sp/>reload<sp/>value</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cmpY_value<sp/>=<sp/>500;<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Compare<sp/>value<sp/>for<sp/>PWM1</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>1:<sp/>Enable<sp/>GCLK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_setGclkEnable(TMR320,<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(status<sp/>!=<sp/>EF_DRIVER_OK)<sp/>{return<sp/>status;}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>2:<sp/>Enable<sp/>the<sp/>timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_enable(TMR320);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>3:<sp/>Set<sp/>mode<sp/>to<sp/>up-count</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_setUpCount(TMR320);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>4:<sp/>Set<sp/>mode<sp/>to<sp/>periodic</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_setPeriodic(TMR320);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>5:<sp/>Set<sp/>the<sp/>reload<sp/>value</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_setRELOAD(TMR320,<sp/>reload_value);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>6:<sp/>Set<sp/>the<sp/>compare<sp/>value</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_setCMPY(TMR320,<sp/>cmpY_value);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>7:<sp/>Set<sp/>the<sp/>timer<sp/>to<sp/>one-shot<sp/>mode<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_setOneShot(TMR320);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>8:<sp/>Restart<sp/>the<sp/>timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_restart(TMR320);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>9:<sp/>wait<sp/>for<sp/>the<sp/>timer<sp/>to<sp/>finish<sp/>counting</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>100000;<sp/>i++)<sp/>{}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>10:<sp/>Check<sp/>the<sp/>time<sp/>flag<sp/>to<sp/>ensure<sp/>the<sp/>timer<sp/>has<sp/>finished<sp/>counting</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>flag;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_isCMPYMatch(TMR320,<sp/>&amp;flag);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(flag<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>clear<sp/>the<sp/>flag</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_clearCMPYMatch(TMR320);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>11:<sp/>Restart<sp/>the<sp/>timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_restart(TMR320);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>12:<sp/>Read<sp/>the<sp/>timer<sp/>value</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>tmr_value;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_getTMR(TMR320,<sp/>&amp;tmr_value);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>13:<sp/>Disable<sp/>the<sp/>timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_disable(TMR320);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_example.h" line="128" column="18" bodyfile="EF_TMR32_example.c" bodystart="60" bodyend="116" declfile="EF_TMR32_example.h" declline="128" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32__example_8h_1ad8da2bd7958c523a00a2f04b58539b0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_PWM_Example</definition>
+        <argsstring>(void)</argsstring>
+        <name>EF_TMR32_PWM_Example</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Example of PWM Usage Example usage: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;EF_TMR32.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#define<sp/>Example_TMR32_BASE_ADDRESS<sp/>0x40000000</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#define<sp/>TMR320<sp/>((EF_TMR32_TYPE_PTR)Example_TMR32_BASE_ADDRESS)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_DRIVER_STATUS<sp/>EF_TMR32_PWM_Example(void)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EF_DRIVER_STATUS<sp/>status;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reload_value<sp/>=<sp/>10000;<sp/>//<sp/>Timer<sp/>reload<sp/>value</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>duty_cycle<sp/>=<sp/>70;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Duty<sp/>cycle<sp/>for<sp/>PWM0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cmpY_value<sp/>=<sp/>500;<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Compare<sp/>value<sp/>for<sp/>PWM1</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>1:<sp/>Enable<sp/>GCLK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_setGclkEnable(TMR320,<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(status<sp/>!=<sp/>EF_DRIVER_OK)<sp/>{return<sp/>status;}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>2:<sp/>Enable<sp/>the<sp/>timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_enable(TMR320);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>3:<sp/>Enable<sp/>PWM0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_PWM0Enable(TMR320);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(status<sp/>!=<sp/>EF_DRIVER_OK)<sp/>{return<sp/>status;}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>4:<sp/>Set<sp/>PWM0<sp/>to<sp/>Edge-Aligned<sp/>Mode</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Set<sp/>PWM0<sp/>to<sp/>edge-aligned<sp/>mode<sp/>with<sp/>70%<sp/>duty<sp/>cycle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_setPWM0EdgeAlignmentMode(TMR320,<sp/>reload_value,<sp/>duty_cycle);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(status<sp/>!=<sp/>EF_DRIVER_OK)<sp/>{return<sp/>status;}</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>5:<sp/>Enable<sp/>PWM1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_PWM1Enable(TMR320);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>6:<sp/>Set<sp/>PWM1<sp/>to<sp/>Center-Aligned<sp/>Mode</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Set<sp/>PWM1<sp/>to<sp/>center-aligned<sp/>mode<sp/>with<sp/>a<sp/>specific<sp/>CMPY<sp/>value</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_setPWM1CenterAlignedMode(TMR320,<sp/>reload_value,<sp/>cmpY_value);</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Step<sp/>7:<sp/>Disable<sp/>the<sp/>timer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>EF_TMR32_disable(TMR320);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>EF_DRIVER_OK;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32_example.h" line="178" column="18" bodyfile="EF_TMR32_example.c" bodystart="118" bodyend="155" declfile="EF_TMR32_example.h" declline="178" declcolumn="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>C header file containing an example of how to use the TMR32 APIs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/><sp/>Copyright<sp/>2025<sp/>Efabless<sp/>Corp.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EF_TMR32_EXAMPLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EF_TMR32_EXAMPLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>Includes</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_e_f___t_m_r32_8h" kindref="compound">EF_TMR32.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*<sp/>File-Specific<sp/>Macros<sp/>and<sp/>Constants</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">*<sp/>Static<sp/>Variables</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*<sp/>Static<sp/>Function<sp/>Prototypes</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">*<sp/>Function<sp/>Definitions</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">*<sp/>Example<sp/>Usage</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32__example_8h_1a1eb6a05af29b879f3bbc2b6acdde3d7b" kindref="member">EF_TMR32_normalExample</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32__example_8h_1ad8da2bd7958c523a00a2f04b58539b0d" kindref="member">EF_TMR32_PWM_Example</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="180"><highlight class="comment">*<sp/>Static<sp/>Function<sp/>Definitions</highlight></codeline>
+<codeline lineno="181"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EF_TMR32_EXAMPLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="188"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
+<codeline lineno="189"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="EF_TMR32_example.h"/>
+  </compounddef>
+</doxygen>

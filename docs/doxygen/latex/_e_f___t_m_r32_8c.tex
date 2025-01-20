@@ -88,6 +88,18 @@ C file for TMR32 APIs which contains the function implmentations.
 \begin{DoxyCompactList}\small\item\em Retrieves the interrupt clear register by reading the ICR register. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a8f2de51a604e7beb66db426098b7be79}{EF\+\_\+\+TMR32\+\_\+set\+ICR}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t mask)
 \begin{DoxyCompactList}\small\item\em Sets the interrupt clear register of the timer by writing to the ICR register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a82460d824d3cd16a7ab024676d5d2dd4}{EF\+\_\+\+TMR32\+\_\+is\+Timout}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t $\ast$timeout\+\_\+status)
+\begin{DoxyCompactList}\small\item\em Checks if the timer has reached the RELOAD value if up counting or zero if down counting by reading the RIS register and checking the RT flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_ab0aa33e92e5e3d1a1d5c2bd81b392126}{EF\+\_\+\+TMR32\+\_\+is\+CMPXMatch}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t $\ast$match\+\_\+status)
+\begin{DoxyCompactList}\small\item\em Checks if the timer has reached the CMPX value by reading the RIS register and checking the MX flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a7d0794cbbf8270e4301fa1b3de960f6e}{EF\+\_\+\+TMR32\+\_\+is\+CMPYMatch}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t $\ast$match\+\_\+status)
+\begin{DoxyCompactList}\small\item\em Checks if the timer has reached the CMPY value by reading the RIS register and checking the MY flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a0e9f5f4e5f1a4b8d7805eb4dbdf70e93}{EF\+\_\+\+TMR32\+\_\+clear\+Timout\+Flag}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Clears the timeout flag by writing to the ICR register and setting the TO bit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_ac5c775883fbdab72773ffd7f95d5082b}{EF\+\_\+\+TMR32\+\_\+clear\+CMPXMatch\+Flag}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Clears the CMPX match flag by writing to the ICR register and setting the MX bit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a56a7ddce686fe3bed66388193ce2f225}{EF\+\_\+\+TMR32\+\_\+clear\+CMPYMatch\+Flag}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32)
+\begin{DoxyCompactList}\small\item\em Clears the CMPY match flag by writing to the ICR register and setting the MY bit. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a8d4d907e326c073a96a28e8317fc26bd}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Edge\+Alignment\+Mode}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t duty\+\_\+cycle)
 \begin{DoxyCompactList}\small\item\em Sets the PWM0 edge alignment mode. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32_8c_a56341d8e521f6b5001cddf60b93fe6f1}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Edge\+Alignment\+Mode}} (\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}} tmr32, uint32\+\_\+t reload\+\_\+value, uint32\+\_\+t duty\+\_\+cycle)
@@ -113,6 +125,60 @@ C file for TMR32 APIs which contains the function implmentations.
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_ac5c775883fbdab72773ffd7f95d5082b}\label{_e_f___t_m_r32_8c_ac5c775883fbdab72773ffd7f95d5082b}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_clearCMPXMatchFlag@{EF\_TMR32\_clearCMPXMatchFlag}}
+\index{EF\_TMR32\_clearCMPXMatchFlag@{EF\_TMR32\_clearCMPXMatchFlag}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_clearCMPXMatchFlag()}{EF\_TMR32\_clearCMPXMatchFlag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+clear\+CMPXMatch\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Clears the CMPX match flag by writing to the ICR register and setting the MX bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a56a7ddce686fe3bed66388193ce2f225}\label{_e_f___t_m_r32_8c_a56a7ddce686fe3bed66388193ce2f225}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_clearCMPYMatchFlag@{EF\_TMR32\_clearCMPYMatchFlag}}
+\index{EF\_TMR32\_clearCMPYMatchFlag@{EF\_TMR32\_clearCMPYMatchFlag}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_clearCMPYMatchFlag()}{EF\_TMR32\_clearCMPYMatchFlag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+clear\+CMPYMatch\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Clears the CMPY match flag by writing to the ICR register and setting the MY bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a0e9f5f4e5f1a4b8d7805eb4dbdf70e93}\label{_e_f___t_m_r32_8c_a0e9f5f4e5f1a4b8d7805eb4dbdf70e93}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_clearTimoutFlag@{EF\_TMR32\_clearTimoutFlag}}
+\index{EF\_TMR32\_clearTimoutFlag@{EF\_TMR32\_clearTimoutFlag}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_clearTimoutFlag()}{EF\_TMR32\_clearTimoutFlag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+clear\+Timout\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32 }\end{DoxyParamCaption})}
+
+
+
+Clears the timeout flag by writing to the ICR register and setting the TO bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{_e_f___t_m_r32_8c_a55e09ad517a12af2d293982a1e0f2d0d}\label{_e_f___t_m_r32_8c_a55e09ad517a12af2d293982a1e0f2d0d}} 
 \index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_disable@{EF\_TMR32\_disable}}
 \index{EF\_TMR32\_disable@{EF\_TMR32\_disable}!EF\_TMR32.c@{EF\_TMR32.c}}
@@ -224,6 +290,66 @@ Retrieves the current timer value by reading the TMR register.
 \mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
 \hline
 \mbox{\texttt{ out}}  & {\em tmr\+\_\+value} & A pointer to a uint32\+\_\+t where the timer value will be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_ab0aa33e92e5e3d1a1d5c2bd81b392126}\label{_e_f___t_m_r32_8c_ab0aa33e92e5e3d1a1d5c2bd81b392126}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_isCMPXMatch@{EF\_TMR32\_isCMPXMatch}}
+\index{EF\_TMR32\_isCMPXMatch@{EF\_TMR32\_isCMPXMatch}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_isCMPXMatch()}{EF\_TMR32\_isCMPXMatch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+is\+CMPXMatch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t $\ast$}]{match\+\_\+status }\end{DoxyParamCaption})}
+
+
+
+Checks if the timer has reached the CMPX value by reading the RIS register and checking the MX flag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ out}}  & {\em match\+\_\+status} & A pointer to a uint32\+\_\+t where the match status will be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a7d0794cbbf8270e4301fa1b3de960f6e}\label{_e_f___t_m_r32_8c_a7d0794cbbf8270e4301fa1b3de960f6e}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_isCMPYMatch@{EF\_TMR32\_isCMPYMatch}}
+\index{EF\_TMR32\_isCMPYMatch@{EF\_TMR32\_isCMPYMatch}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_isCMPYMatch()}{EF\_TMR32\_isCMPYMatch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+is\+CMPYMatch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t $\ast$}]{match\+\_\+status }\end{DoxyParamCaption})}
+
+
+
+Checks if the timer has reached the CMPY value by reading the RIS register and checking the MY flag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ out}}  & {\em match\+\_\+status} & A pointer to a uint32\+\_\+t where the match status will be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A value of type EF\+\_\+\+DRIVER\+\_\+\+STATUS\+: returns a success or error code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_f___t_m_r32_8c_a82460d824d3cd16a7ab024676d5d2dd4}\label{_e_f___t_m_r32_8c_a82460d824d3cd16a7ab024676d5d2dd4}} 
+\index{EF\_TMR32.c@{EF\_TMR32.c}!EF\_TMR32\_isTimout@{EF\_TMR32\_isTimout}}
+\index{EF\_TMR32\_isTimout@{EF\_TMR32\_isTimout}!EF\_TMR32.c@{EF\_TMR32.c}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_isTimout()}{EF\_TMR32\_isTimout()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+is\+Timout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}}]{tmr32,  }\item[{uint32\+\_\+t $\ast$}]{timeout\+\_\+status }\end{DoxyParamCaption})}
+
+
+
+Checks if the timer has reached the RELOAD value if up counting or zero if down counting by reading the RIS register and checking the RT flag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tmr32} & An \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a42a4bf3583e288f8eb18ce061bfdf60b}{EF\+\_\+\+TMR32\+\_\+\+TYPE\+\_\+\+PTR}}, which points to the base memory address of TMR32 registers. \mbox{\hyperlink{_e_f___t_m_r32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\+\_\+\+TMR32\+\_\+\+TYPE}} is a structure that contains the TMR32 registers. \\
+\hline
+\mbox{\texttt{ out}}  & {\em timeout\+\_\+status} & A pointer to a uint32\+\_\+t where the timeout status will be stored.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

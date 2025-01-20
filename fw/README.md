@@ -4,6 +4,7 @@
 
 - [EF_Driver_Common.h](#file-ef_driver_commonh)
 - [EF_TMR32.h](#file-ef_tmr32h)
+- [EF_TMR32_example.h](#file-ef_tmr32_exampleh)
 - [EF_TMR32_regs.h](#file-ef_tmr32_regsh)
 
 ## File EF_Driver_Common.h
@@ -110,12 +111,18 @@ _C header file for TMR32 APIs which contains the function prototypes._
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_PWM1Enable**](#function-ef_tmr32_pwm1enable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Enables PWM1 by setting "P1E" bit in the CTRL register to 1._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_PWM1Invert**](#function-ef_tmr32_pwm1invert) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Inverts PWM1 output by setting "P1I" bit in the CTRL register to 1._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_PWMDeadtimeEnable**](#function-ef_tmr32_pwmdeadtimeenable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br> |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_clearCMPXMatchFlag**](#function-ef_tmr32_clearcmpxmatchflag) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Clears the CMPX match flag by writing to the ICR register and setting the MX bit._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_clearCMPYMatchFlag**](#function-ef_tmr32_clearcmpymatchflag) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Clears the CMPY match flag by writing to the ICR register and setting the MY bit._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_clearTimoutFlag**](#function-ef_tmr32_cleartimoutflag) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Clears the timeout flag by writing to the ICR register and setting the TO bit._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_disable**](#function-ef_tmr32_disable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Disables timer by setting "TE" bit in the CTRL register to 0._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_enable**](#function-ef_tmr32_enable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Enables timer by setting "TE" bit in the CTRL register to 1._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_getIM**](#function-ef_tmr32_getim) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*IM\_value) <br>_Retrieves the interrupt clear register by reading the ICR register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_getMIS**](#function-ef_tmr32_getmis) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*MIS\_value) <br>_Retrieves the masked interrupt status by reading the MIS register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_getRIS**](#function-ef_tmr32_getris) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*RIS\_value) <br>_Retrieves the raw interrupt status by reading the RIS register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_getTMR**](#function-ef_tmr32_gettmr) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*tmr\_value) <br>_Retrieves the current timer value by reading the TMR register._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_isCMPXMatch**](#function-ef_tmr32_iscmpxmatch) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*match\_status) <br>_Checks if the timer has reached the CMPX value by reading the RIS register and checking the MX flag._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_isCMPYMatch**](#function-ef_tmr32_iscmpymatch) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*match\_status) <br>_Checks if the timer has reached the CMPY value by reading the RIS register and checking the MY flag._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_isTimout**](#function-ef_tmr32_istimout) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t \*timeout\_status) <br>_Checks if the timer has reached the RELOAD value if up counting or zero if down counting by reading the RIS register and checking the RT flag._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_restart**](#function-ef_tmr32_restart) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Enables timer re-start; used in the one-shot mode to restart the timer by setting the "TS" bit in the CTRL register to 1 and then to 0._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setCMPX**](#function-ef_tmr32_setcmpx) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t value) <br>_Sets the compare value of a 32-bit timer by writing to the CMPX register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setCMPY**](#function-ef_tmr32_setcmpy) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t value) <br>_Sets the compare value Y of a 32-bit timer by writing to the CMPY register._ |
@@ -262,6 +269,63 @@ Enables PWM dead-time by setting the "DTE" (Dead-Time Enable) bit in the CTRL re
 **Returns:**
 
 status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : returns a success or error code
+### function `EF_TMR32_clearCMPXMatchFlag`
+
+_Clears the CMPX match flag by writing to the ICR register and setting the MX bit._
+```c
+EF_DRIVER_STATUS EF_TMR32_clearCMPXMatchFlag (
+    EF_TMR32_TYPE_PTR tmr32
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+### function `EF_TMR32_clearCMPYMatchFlag`
+
+_Clears the CMPY match flag by writing to the ICR register and setting the MY bit._
+```c
+EF_DRIVER_STATUS EF_TMR32_clearCMPYMatchFlag (
+    EF_TMR32_TYPE_PTR tmr32
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+### function `EF_TMR32_clearTimoutFlag`
+
+_Clears the timeout flag by writing to the ICR register and setting the TO bit._
+```c
+EF_DRIVER_STATUS EF_TMR32_clearTimoutFlag (
+    EF_TMR32_TYPE_PTR tmr32
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
 ### function `EF_TMR32_disable`
 
 _Disables timer by setting "TE" bit in the CTRL register to 0._
@@ -379,6 +443,69 @@ EF_DRIVER_STATUS EF_TMR32_getTMR (
 
 * `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
 * `tmr_value` A pointer to a uint32\_t where the timer value will be stored.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+### function `EF_TMR32_isCMPXMatch`
+
+_Checks if the timer has reached the CMPX value by reading the RIS register and checking the MX flag._
+```c
+EF_DRIVER_STATUS EF_TMR32_isCMPXMatch (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t *match_status
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `match_status` A pointer to a uint32\_t where the match status will be stored.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+### function `EF_TMR32_isCMPYMatch`
+
+_Checks if the timer has reached the CMPY value by reading the RIS register and checking the MY flag._
+```c
+EF_DRIVER_STATUS EF_TMR32_isCMPYMatch (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t *match_status
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `match_status` A pointer to a uint32\_t where the match status will be stored.
+
+
+**Returns:**
+
+status A value of type EF\_DRIVER\_STATUS: returns a success or error code.
+### function `EF_TMR32_isTimout`
+
+_Checks if the timer has reached the RELOAD value if up counting or zero if down counting by reading the RIS register and checking the RT flag._
+```c
+EF_DRIVER_STATUS EF_TMR32_isTimout (
+    EF_TMR32_TYPE_PTR tmr32,
+    uint32_t *timeout_status
+) 
+```
+
+
+**Parameters:**
+
+
+* `tmr32` An [**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr), which points to the base memory address of TMR32 registers.[**EF\_TMR32\_TYPE**](#typedef-ef_tmr32_type) is a structure that contains the TMR32 registers.
+* `timeout_status` A pointer to a uint32\_t where the timeout status will be stored.
 
 
 **Returns:**
@@ -1351,6 +1478,155 @@ _Maximum value for the deadtime register._
 ```c
 #define EF_TMR32_PWMDT_MAX_VALUE ((uint32_t)0x000000FF)
 ```
+
+
+## File EF_TMR32_example.h
+
+_C header file containing an example of how to use the TMR32 APIs._
+
+
+
+
+## Functions
+
+| Type | Name |
+| ---: | :--- |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_PWM\_Example**](#function-ef_tmr32_pwm_example) (void) <br>_Example of PWM Usage Example usage:_ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_normalExample**](#function-ef_tmr32_normalexample) (void) <br>_Example of Normal Usage Example usage:_ |
+
+
+
+## Functions Documentation
+
+### function `EF_TMR32_PWM_Example`
+
+_Example of PWM Usage Example usage:_
+```c
+EF_DRIVER_STATUS EF_TMR32_PWM_Example (
+    void
+) 
+```
+
+
+````cpp
+    #include "EF_TMR32.h"
+
+    #define Example_TMR32_BASE_ADDRESS 0x40000000
+    #define TMR320 ((EF_TMR32_TYPE_PTR)Example_TMR32_BASE_ADDRESS)
+
+    EF_DRIVER_STATUS EF_TMR32_PWM_Example(void) {
+    EF_DRIVER_STATUS status;
+
+    uint32_t reload_value = 10000; // Timer reload value
+    uint32_t duty_cycle = 70;       // Duty cycle for PWM0
+    uint32_t cmpY_value = 500;      // Compare value for PWM1
+
+
+    // Step 1: Enable GCLK
+    status = EF_TMR32_setGclkEnable(TMR320, 1);
+    if (status != EF_DRIVER_OK) {return status;}
+
+    // Step 2: Enable the timer
+    status = EF_TMR32_enable(TMR320);
+
+    // Step 3: Enable PWM0
+    status = EF_TMR32_PWM0Enable(TMR320);
+    if (status != EF_DRIVER_OK) {return status;}
+
+    // Step 4: Set PWM0 to Edge-Aligned Mode
+    // Set PWM0 to edge-aligned mode with 70% duty cycle
+    status = EF_TMR32_setPWM0EdgeAlignmentMode(TMR320, reload_value, duty_cycle);
+    if (status != EF_DRIVER_OK) {return status;}
+
+
+    // Step 5: Enable PWM1
+    status = EF_TMR32_PWM1Enable(TMR320);
+
+    // Step 6: Set PWM1 to Center-Aligned Mode
+    // Set PWM1 to center-aligned mode with a specific CMPY value
+    status = EF_TMR32_setPWM1CenterAlignedMode(TMR320, reload_value, cmpY_value);
+
+
+    // Step 7: Disable the timer
+    status = EF_TMR32_disable(TMR320);
+
+    return EF_DRIVER_OK;
+}
+````
+### function `EF_TMR32_normalExample`
+
+_Example of Normal Usage Example usage:_
+```c
+EF_DRIVER_STATUS EF_TMR32_normalExample (
+    void
+) 
+```
+
+
+````cpp
+#include "EF_TMR32.h"
+
+#define Example_TMR32_BASE_ADDRESS 0x40000000
+#define TMR320 ((EF_TMR32_TYPE_PTR)Example_TMR32_BASE_ADDRESS)
+
+EF_DRIVER_STATUS EF_TMR32_normalExample(void){
+    // Now let's configure the timer to operate in one-shot mode
+
+    EF_DRIVER_STATUS status;
+
+    uint32_t reload_value = 10000; // Timer reload value
+    uint32_t cmpY_value = 500;      // Compare value for PWM1
+
+
+    // Step 1: Enable GCLK
+    status = EF_TMR32_setGclkEnable(TMR320, 1);
+    if (status != EF_DRIVER_OK) {return status;}
+
+    // Step 2: Enable the timer
+    status = EF_TMR32_enable(TMR320);
+
+    // Step 3: Set mode to up-count
+    status = EF_TMR32_setUpCount(TMR320);
+
+    // Step 4: Set mode to periodic
+    status = EF_TMR32_setPeriodic(TMR320);
+
+    // Step 5: Set the reload value
+    status = EF_TMR32_setRELOAD(TMR320, reload_value);
+
+    // Step 6: Set the compare value
+    status = EF_TMR32_setCMPY(TMR320, cmpY_value);
+
+    // Step 7: Set the timer to one-shot mode  
+    status = EF_TMR32_setOneShot(TMR320);
+
+    // Step 8: Restart the timer
+    status = EF_TMR32_restart(TMR320);
+
+    // Step 9: wait for the timer to finish counting
+    for (int i = 0; i < 100000; i++) {}
+
+    // Step 10: Check the time flag to ensure the timer has finished counting
+    uint32_t flag;
+    status = EF_TMR32_isCMPYMatch(TMR320, &flag);
+
+    if (flag == 1) {
+        // clear the flag
+        status = EF_TMR32_clearCMPYMatch(TMR320);
+    }
+
+    // Step 11: Restart the timer
+    status = EF_TMR32_restart(TMR320);
+
+    // Step 12: Read the timer value
+    uint32_t tmr_value;
+    status = EF_TMR32_getTMR(TMR320, &tmr_value);
+
+    // Step 13: Disable the timer
+    status = EF_TMR32_disable(TMR320);
+
+}
+````
 
 
 ## File EF_TMR32_regs.h

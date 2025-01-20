@@ -213,6 +213,24 @@ Functions</h2></td></tr>
 <tr class="memitem:a8f2de51a604e7beb66db426098b7be79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#a8f2de51a604e7beb66db426098b7be79">EF_TMR32_setICR</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32, uint32_t mask)</td></tr>
 <tr class="memdesc:a8f2de51a604e7beb66db426098b7be79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the interrupt clear register of the timer by writing to the ICR register.  <br /></td></tr>
 <tr class="separator:a8f2de51a604e7beb66db426098b7be79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82460d824d3cd16a7ab024676d5d2dd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#a82460d824d3cd16a7ab024676d5d2dd4">EF_TMR32_isTimout</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32, uint32_t *timeout_status)</td></tr>
+<tr class="memdesc:a82460d824d3cd16a7ab024676d5d2dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the timer has reached the RELOAD value if up counting or zero if down counting by reading the RIS register and checking the RT flag.  <br /></td></tr>
+<tr class="separator:a82460d824d3cd16a7ab024676d5d2dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0aa33e92e5e3d1a1d5c2bd81b392126"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#ab0aa33e92e5e3d1a1d5c2bd81b392126">EF_TMR32_isCMPXMatch</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32, uint32_t *match_status)</td></tr>
+<tr class="memdesc:ab0aa33e92e5e3d1a1d5c2bd81b392126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the timer has reached the CMPX value by reading the RIS register and checking the MX flag.  <br /></td></tr>
+<tr class="separator:ab0aa33e92e5e3d1a1d5c2bd81b392126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d0794cbbf8270e4301fa1b3de960f6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#a7d0794cbbf8270e4301fa1b3de960f6e">EF_TMR32_isCMPYMatch</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32, uint32_t *match_status)</td></tr>
+<tr class="memdesc:a7d0794cbbf8270e4301fa1b3de960f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the timer has reached the CMPY value by reading the RIS register and checking the MY flag.  <br /></td></tr>
+<tr class="separator:a7d0794cbbf8270e4301fa1b3de960f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9f5f4e5f1a4b8d7805eb4dbdf70e93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#a0e9f5f4e5f1a4b8d7805eb4dbdf70e93">EF_TMR32_clearTimoutFlag</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32)</td></tr>
+<tr class="memdesc:a0e9f5f4e5f1a4b8d7805eb4dbdf70e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the timeout flag by writing to the ICR register and setting the TO bit.  <br /></td></tr>
+<tr class="separator:a0e9f5f4e5f1a4b8d7805eb4dbdf70e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c775883fbdab72773ffd7f95d5082b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#ac5c775883fbdab72773ffd7f95d5082b">EF_TMR32_clearCMPXMatchFlag</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32)</td></tr>
+<tr class="memdesc:ac5c775883fbdab72773ffd7f95d5082b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the CMPX match flag by writing to the ICR register and setting the MX bit.  <br /></td></tr>
+<tr class="separator:ac5c775883fbdab72773ffd7f95d5082b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a7ddce686fe3bed66388193ce2f225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#a56a7ddce686fe3bed66388193ce2f225">EF_TMR32_clearCMPYMatchFlag</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32)</td></tr>
+<tr class="memdesc:a56a7ddce686fe3bed66388193ce2f225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the CMPY match flag by writing to the ICR register and setting the MY bit.  <br /></td></tr>
+<tr class="separator:a56a7ddce686fe3bed66388193ce2f225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d4d907e326c073a96a28e8317fc26bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_f___t_m_r32_8h.html#a8d4d907e326c073a96a28e8317fc26bd">EF_TMR32_setPWM0EdgeAlignmentMode</a> (<a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a> tmr32, uint32_t reload_value, uint32_t duty_cycle)</td></tr>
 <tr class="memdesc:a8d4d907e326c073a96a28e8317fc26bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the PWM0 edge alignment mode.  <br /></td></tr>
 <tr class="separator:a8d4d907e326c073a96a28e8317fc26bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -374,6 +392,87 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ac5c775883fbdab72773ffd7f95d5082b" name="ac5c775883fbdab72773ffd7f95d5082b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c775883fbdab72773ffd7f95d5082b">&#9670;&#160;</a></span>EF_TMR32_clearCMPXMatchFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> EF_TMR32_clearCMPXMatchFlag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>&#160;</td>
+          <td class="paramname"><em>tmr32</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the CMPX match flag by writing to the ICR register and setting the MX bit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tmr32</td><td>An <a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>, which points to the base memory address of TMR32 registers. <a class="el" href="_e_f___t_m_r32__regs_8h.html#a5ab4e3f4232149b200ef8d43a25c9082">EF_TMR32_TYPE</a> is a structure that contains the TMR32 registers.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status A value of type EF_DRIVER_STATUS: returns a success or error code. </dd></dl>
+
+</div>
+</div>
+<a id="a56a7ddce686fe3bed66388193ce2f225" name="a56a7ddce686fe3bed66388193ce2f225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a7ddce686fe3bed66388193ce2f225">&#9670;&#160;</a></span>EF_TMR32_clearCMPYMatchFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> EF_TMR32_clearCMPYMatchFlag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>&#160;</td>
+          <td class="paramname"><em>tmr32</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the CMPY match flag by writing to the ICR register and setting the MY bit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tmr32</td><td>An <a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>, which points to the base memory address of TMR32 registers. <a class="el" href="_e_f___t_m_r32__regs_8h.html#a5ab4e3f4232149b200ef8d43a25c9082">EF_TMR32_TYPE</a> is a structure that contains the TMR32 registers.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status A value of type EF_DRIVER_STATUS: returns a success or error code. </dd></dl>
+
+</div>
+</div>
+<a id="a0e9f5f4e5f1a4b8d7805eb4dbdf70e93" name="a0e9f5f4e5f1a4b8d7805eb4dbdf70e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9f5f4e5f1a4b8d7805eb4dbdf70e93">&#9670;&#160;</a></span>EF_TMR32_clearTimoutFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> EF_TMR32_clearTimoutFlag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>&#160;</td>
+          <td class="paramname"><em>tmr32</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the timeout flag by writing to the ICR register and setting the TO bit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tmr32</td><td>An <a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>, which points to the base memory address of TMR32 registers. <a class="el" href="_e_f___t_m_r32__regs_8h.html#a5ab4e3f4232149b200ef8d43a25c9082">EF_TMR32_TYPE</a> is a structure that contains the TMR32 registers.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status A value of type EF_DRIVER_STATUS: returns a success or error code. </dd></dl>
+
+</div>
+</div>
 <a id="a55e09ad517a12af2d293982a1e0f2d0d" name="a55e09ad517a12af2d293982a1e0f2d0d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55e09ad517a12af2d293982a1e0f2d0d">&#9670;&#160;</a></span>EF_TMR32_disable()</h2>
 
@@ -573,6 +672,120 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">tmr32</td><td>An <a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>, which points to the base memory address of TMR32 registers. <a class="el" href="_e_f___t_m_r32__regs_8h.html#a5ab4e3f4232149b200ef8d43a25c9082">EF_TMR32_TYPE</a> is a structure that contains the TMR32 registers. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">tmr_value</td><td>A pointer to a uint32_t where the timer value will be stored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status A value of type EF_DRIVER_STATUS: returns a success or error code. </dd></dl>
+
+</div>
+</div>
+<a id="ab0aa33e92e5e3d1a1d5c2bd81b392126" name="ab0aa33e92e5e3d1a1d5c2bd81b392126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0aa33e92e5e3d1a1d5c2bd81b392126">&#9670;&#160;</a></span>EF_TMR32_isCMPXMatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> EF_TMR32_isCMPXMatch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>&#160;</td>
+          <td class="paramname"><em>tmr32</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>match_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the timer has reached the CMPX value by reading the RIS register and checking the MX flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tmr32</td><td>An <a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>, which points to the base memory address of TMR32 registers. <a class="el" href="_e_f___t_m_r32__regs_8h.html#a5ab4e3f4232149b200ef8d43a25c9082">EF_TMR32_TYPE</a> is a structure that contains the TMR32 registers. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">match_status</td><td>A pointer to a uint32_t where the match status will be stored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status A value of type EF_DRIVER_STATUS: returns a success or error code. </dd></dl>
+
+</div>
+</div>
+<a id="a7d0794cbbf8270e4301fa1b3de960f6e" name="a7d0794cbbf8270e4301fa1b3de960f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d0794cbbf8270e4301fa1b3de960f6e">&#9670;&#160;</a></span>EF_TMR32_isCMPYMatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> EF_TMR32_isCMPYMatch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>&#160;</td>
+          <td class="paramname"><em>tmr32</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>match_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the timer has reached the CMPY value by reading the RIS register and checking the MY flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tmr32</td><td>An <a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>, which points to the base memory address of TMR32 registers. <a class="el" href="_e_f___t_m_r32__regs_8h.html#a5ab4e3f4232149b200ef8d43a25c9082">EF_TMR32_TYPE</a> is a structure that contains the TMR32 registers. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">match_status</td><td>A pointer to a uint32_t where the match status will be stored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status A value of type EF_DRIVER_STATUS: returns a success or error code. </dd></dl>
+
+</div>
+</div>
+<a id="a82460d824d3cd16a7ab024676d5d2dd4" name="a82460d824d3cd16a7ab024676d5d2dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82460d824d3cd16a7ab024676d5d2dd4">&#9670;&#160;</a></span>EF_TMR32_isTimout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> EF_TMR32_isTimout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>&#160;</td>
+          <td class="paramname"><em>tmr32</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>timeout_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the timer has reached the RELOAD value if up counting or zero if down counting by reading the RIS register and checking the RT flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tmr32</td><td>An <a class="el" href="_e_f___t_m_r32__regs_8h.html#a42a4bf3583e288f8eb18ce061bfdf60b">EF_TMR32_TYPE_PTR</a>, which points to the base memory address of TMR32 registers. <a class="el" href="_e_f___t_m_r32__regs_8h.html#a5ab4e3f4232149b200ef8d43a25c9082">EF_TMR32_TYPE</a> is a structure that contains the TMR32 registers. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">timeout_status</td><td>A pointer to a uint32_t where the timeout status will be stored.</td></tr>
   </table>
   </dd>
 </dl>

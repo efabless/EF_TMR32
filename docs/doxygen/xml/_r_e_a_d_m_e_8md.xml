@@ -637,6 +637,12 @@
 <codeline><highlight class="normal">**Note:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">Ensure<sp/>the<sp/>timer<sp/>instance<sp/>(`tmr32`)<sp/>is<sp/>correctly<sp/>initialized<sp/>before<sp/>calling<sp/>this<sp/>function.<sp/>The<sp/>reload<sp/>value<sp/>and<sp/>compare<sp/>value<sp/>must<sp/>align<sp/>with<sp/>the<sp/>timer&apos;s<sp/>capabilities<sp/>and<sp/>clock<sp/>settings.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">for<sp/>more<sp/>information,<sp/>check<sp/>[https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/](https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/)</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setPWM0EdgeAlignmentMode`</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">_Sets<sp/>the<sp/>PWM0<sp/>edge<sp/>alignment<sp/>mode._</highlight></codeline>
@@ -700,6 +706,12 @@
 <codeline><highlight class="normal">**Note:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">Ensure<sp/>the<sp/>timer<sp/>instance<sp/>(`tmr32`)<sp/>is<sp/>correctly<sp/>initialized<sp/>before<sp/>calling<sp/>this<sp/>function.<sp/>The<sp/>reload<sp/>value<sp/>and<sp/>compare<sp/>value<sp/>must<sp/>align<sp/>with<sp/>the<sp/>timer&apos;s<sp/>capabilities<sp/>and<sp/>clock<sp/>settings.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">for<sp/>more<sp/>information,<sp/>check<sp/>[https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/](https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/)</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setPWM0MatchingCMPXDownCountAction`</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>
@@ -935,6 +947,12 @@
 <codeline><highlight class="normal">**Note:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">Ensure<sp/>the<sp/>timer<sp/>instance<sp/>(`tmr32`)<sp/>is<sp/>correctly<sp/>initialized<sp/>before<sp/>calling<sp/>this<sp/>function.<sp/>The<sp/>reload<sp/>value<sp/>and<sp/>compare<sp/>value<sp/>must<sp/>align<sp/>with<sp/>the<sp/>timer&apos;s<sp/>capabilities<sp/>and<sp/>clock<sp/>settings.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">for<sp/>more<sp/>information,<sp/>check<sp/>[https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/](https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/)</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setPWM1EdgeAlignmentMode`</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">_Sets<sp/>the<sp/>PWM1<sp/>edge<sp/>alignment<sp/>mode._</highlight></codeline>
@@ -998,6 +1016,12 @@
 <codeline><highlight class="normal">**Note:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">Ensure<sp/>the<sp/>timer<sp/>instance<sp/>(`tmr32`)<sp/>is<sp/>correctly<sp/>initialized<sp/>before<sp/>calling<sp/>this<sp/>function.<sp/>The<sp/>reload<sp/>value<sp/>and<sp/>compare<sp/>value<sp/>must<sp/>align<sp/>with<sp/>the<sp/>timer&apos;s<sp/>capabilities<sp/>and<sp/>clock<sp/>settings.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">for<sp/>more<sp/>information,<sp/>check<sp/>[https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/](https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/)</highlight></codeline>
 <codeline><highlight class="normal">###<sp/>function<sp/>`EF_TMR32_setPWM1MatchingCMPXDownCountAction`</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```c</highlight></codeline>

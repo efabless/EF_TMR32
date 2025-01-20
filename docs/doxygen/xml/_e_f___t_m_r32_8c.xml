@@ -1527,6 +1527,222 @@
         </inbodydescription>
         <location file="EF_TMR32.c" line="647" column="18" bodyfile="EF_TMR32.c" bodystart="647" bodyend="661"/>
       </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8c_1a82460d824d3cd16a7ab024676d5d2dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_isTimout</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32, uint32_t *timeout_status)</argsstring>
+        <name>EF_TMR32_isTimout</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>timeout_status</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the timer has reached the RELOAD value if up counting or zero if down counting by reading the RIS register and checking the RT flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">timeout_status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a uint32_t where the timeout status will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.c" line="663" column="18" bodyfile="EF_TMR32.c" bodystart="663" bodyend="680"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8c_1ab0aa33e92e5e3d1a1d5c2bd81b392126" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_isCMPXMatch</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32, uint32_t *match_status)</argsstring>
+        <name>EF_TMR32_isCMPXMatch</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>match_status</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the timer has reached the CMPX value by reading the RIS register and checking the MX flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">match_status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a uint32_t where the match status will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.c" line="682" column="18" bodyfile="EF_TMR32.c" bodystart="682" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8c_1a7d0794cbbf8270e4301fa1b3de960f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_isCMPYMatch</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32, uint32_t *match_status)</argsstring>
+        <name>EF_TMR32_isCMPYMatch</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>match_status</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the timer has reached the CMPY value by reading the RIS register and checking the MY flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">match_status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a uint32_t where the match status will be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.c" line="701" column="18" bodyfile="EF_TMR32.c" bodystart="701" bodyend="718"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8c_1a0e9f5f4e5f1a4b8d7805eb4dbdf70e93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_clearTimoutFlag</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32)</argsstring>
+        <name>EF_TMR32_clearTimoutFlag</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <briefdescription>
+<para>Clears the timeout flag by writing to the ICR register and setting the TO bit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.c" line="721" column="18" bodyfile="EF_TMR32.c" bodystart="721" bodyend="731"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8c_1ac5c775883fbdab72773ffd7f95d5082b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_clearCMPXMatchFlag</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32)</argsstring>
+        <name>EF_TMR32_clearCMPXMatchFlag</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <briefdescription>
+<para>Clears the CMPX match flag by writing to the ICR register and setting the MX bit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.c" line="733" column="18" bodyfile="EF_TMR32.c" bodystart="733" bodyend="743"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_f___t_m_r32_8c_1a56a7ddce686fe3bed66388193ce2f225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
+        <definition>EF_DRIVER_STATUS EF_TMR32_clearCMPYMatchFlag</definition>
+        <argsstring>(EF_TMR32_TYPE_PTR tmr32)</argsstring>
+        <name>EF_TMR32_clearCMPYMatchFlag</name>
+        <param>
+          <type><ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref></type>
+          <declname>tmr32</declname>
+        </param>
+        <briefdescription>
+<para>Clears the CMPY match flag by writing to the ICR register and setting the MY bit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tmr32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="_e_f___t_m_r32__regs_8h_1a42a4bf3583e288f8eb18ce061bfdf60b" kindref="member">EF_TMR32_TYPE_PTR</ref>, which points to the base memory address of TMR32 registers. <ref refid="_e_f___t_m_r32__regs_8h_1a5ab4e3f4232149b200ef8d43a25c9082" kindref="member">EF_TMR32_TYPE</ref> is a structure that contains the TMR32 registers.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status A value of type EF_DRIVER_STATUS: returns a success or error code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EF_TMR32.c" line="746" column="18" bodyfile="EF_TMR32.c" bodystart="746" bodyend="756"/>
+      </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8c_1a8d4d907e326c073a96a28e8317fc26bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
         <definition>EF_DRIVER_STATUS EF_TMR32_setPWM0EdgeAlignmentMode</definition>
@@ -1610,7 +1826,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.c" line="664" column="18" bodyfile="EF_TMR32.c" bodystart="664" bodyend="713"/>
+        <location file="EF_TMR32.c" line="759" column="18" bodyfile="EF_TMR32.c" bodystart="759" bodyend="808"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8c_1a56341d8e521f6b5001cddf60b93fe6f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1695,7 +1911,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.c" line="715" column="18" bodyfile="EF_TMR32.c" bodystart="715" bodyend="764"/>
+        <location file="EF_TMR32.c" line="810" column="18" bodyfile="EF_TMR32.c" bodystart="810" bodyend="859"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8c_1a0a42492b716fb008dd6980193e039a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1778,7 +1994,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.c" line="767" column="18" bodyfile="EF_TMR32.c" bodystart="767" bodyend="813"/>
+        <location file="EF_TMR32.c" line="862" column="18" bodyfile="EF_TMR32.c" bodystart="862" bodyend="908"/>
       </memberdef>
       <memberdef kind="function" id="_e_f___t_m_r32_8c_1a5142ccf9f3a4ecd336c6e9364712dffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref></type>
@@ -1861,7 +2077,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="EF_TMR32.c" line="816" column="18" bodyfile="EF_TMR32.c" bodystart="816" bodyend="856"/>
+        <location file="EF_TMR32.c" line="911" column="18" bodyfile="EF_TMR32.c" bodystart="911" bodyend="951"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1969,7 +2185,7 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct___e_f___t_m_r32___t_y_p_e___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>|=<sp/>((uint32_t)1<sp/>&lt;&lt;<sp/><ref refid="_e_f___t_m_r32__regs_8h_1ac4382558d6b66fa07908ff7c161587ba" kindref="member">EF_TMR32_CTRL_REG_TS_BIT</ref>);<sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>restart<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct___e_f___t_m_r32___t_y_p_e___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>&amp;=<sp/>~((uint32_t)1<sp/>&lt;&lt;<sp/><ref refid="_e_f___t_m_r32__regs_8h_1ac4382558d6b66fa07908ff7c161587ba" kindref="member">EF_TMR32_CTRL_REG_TS_BIT</ref>);<sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>restart<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="107"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
@@ -2527,213 +2743,308 @@ This function configures the specified 32-bit timer (<computeroutput>tmr32</comp
 <codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
 <codeline lineno="661"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="662"><highlight class="normal"></highlight></codeline>
-<codeline lineno="663"><highlight class="normal"></highlight></codeline>
-<codeline lineno="664"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a8d4d907e326c073a96a28e8317fc26bd" kindref="member">EF_TMR32_setPWM0EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>duty_cycle){</highlight></codeline>
-<codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
+<codeline lineno="663"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a82460d824d3cd16a7ab024676d5d2dd4" kindref="member">EF_TMR32_isTimout</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t*<sp/>timeout_status){</highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;<sp/></highlight></codeline>
 <codeline lineno="666"><highlight class="normal"></highlight></codeline>
 <codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
-<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_cycle<sp/>&gt;<sp/>100)<sp/>{</highlight></codeline>
-<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
-<codeline lineno="671"><highlight class="normal"></highlight></codeline>
-<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="673"><highlight class="normal"></highlight></codeline>
-<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>up-count<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>periodic<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>use<sp/>one<sp/>compare<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>low</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculate<sp/>the<sp/>X<sp/>compare<sp/>register<sp/>value<sp/>given<sp/>the<sp/>duty<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>reload<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="682"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>X<sp/>compare<sp/>register<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>top<sp/>action<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="684"><highlight class="normal"></highlight></codeline>
-<codeline lineno="685"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="686"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|<sp/><sp/><sp/><sp/><sp/><sp/>/|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|_____/__|____/<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>/<sp/>|<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|_/___|__|/___|__|____</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/><sp/><sp/>V</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/>___<sp/><sp/><sp/>___</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/>|__|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>duty<sp/><sp/><sp/><sp/>duty</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>cycle<sp/><sp/><sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="696"><highlight class="normal"></highlight></codeline>
-<codeline lineno="697"><highlight class="normal"></highlight></codeline>
-<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1aadb3f68daef94e6e3668a88eea378fd2" kindref="member">EF_TMR32_setUpCount</ref>(tmr32);</highlight></codeline>
-<codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ae1b99e7a248aa01794677de568a89c12" kindref="member">EF_TMR32_setPeriodic</ref>(tmr32);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a6f73741bff7231eb72696b642dd5344e" kindref="member">EF_TMR32_setPWM0MatchingZeroAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5329cef22cac7e6d808f69a3c5edc851" kindref="member">EF_TMR32_setPWM0MatchingCMPXUpCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1acb4dffaa5d4c81e7a4ecae477515e6e9" kindref="member">EF_TMR32_ACTION_LOW</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a02cca84ee8407a02efa49d1ad4357cdc" kindref="member">EF_TMR32_setPWM0MatchingCMPYUpCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ab80c062a5bd682ba94d93a563c58a08b" kindref="member">EF_TMR32_setPWM0MatchingRELOADAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5dd014cbe453c7e9ad161bb95c1a5478" kindref="member">EF_TMR32_setRELOAD</ref>(tmr32,<sp/>reload_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="705"><highlight class="normal"></highlight></codeline>
-<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){</highlight></codeline>
-<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>compare_value<sp/>=<sp/>(duty_cycle<sp/>*<sp/>reload_value)<sp/>/<sp/>100;</highlight></codeline>
-<codeline lineno="708"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a7ccde6a4fe0321b995105032abce58a6" kindref="member">EF_TMR32_setCMPX</ref>(tmr32,<sp/>compare_value);<sp/><sp/></highlight></codeline>
-<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="710"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
-<codeline lineno="713"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="714"><highlight class="normal"></highlight></codeline>
-<codeline lineno="715"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a56341d8e521f6b5001cddf60b93fe6f1" kindref="member">EF_TMR32_setPWM1EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,uint32_t<sp/>duty_cycle){</highlight></codeline>
-<codeline lineno="716"><highlight class="normal"></highlight></codeline>
-<codeline lineno="717"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
-<codeline lineno="718"><highlight class="normal"></highlight></codeline>
-<codeline lineno="719"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="720"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
-<codeline lineno="721"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_cycle<sp/>&gt;<sp/>100)<sp/>{</highlight></codeline>
-<codeline lineno="722"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>tmr32<sp/>is<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(timeout_status<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>timeout_status<sp/>is<sp/>NULL,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>there<sp/>is<sp/>no<sp/>memory<sp/>location<sp/>to<sp/>store<sp/>the<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>ris_value;</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a4376fe59b65a50ea12ebfcafd94009d5" kindref="member">EF_TMR32_getRIS</ref>(tmr32,<sp/>&amp;ris_value);</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*timeout_status<sp/>=<sp/>(ris_value<sp/>&amp;<sp/><ref refid="_e_f___t_m_r32__regs_8h_1a9c67d639a50fbec4689aaea448612a85" kindref="member">EF_TMR32_TO_FLAG</ref>);</highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="680"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="681"><highlight class="normal"></highlight></codeline>
+<codeline lineno="682"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ab0aa33e92e5e3d1a1d5c2bd81b392126" kindref="member">EF_TMR32_isCMPXMatch</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t*<sp/>match_status){</highlight></codeline>
+<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;<sp/></highlight></codeline>
+<codeline lineno="685"><highlight class="normal"></highlight></codeline>
+<codeline lineno="686"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>tmr32<sp/>is<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(match_status<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>match_status<sp/>is<sp/>NULL,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>there<sp/>is<sp/>no<sp/>memory<sp/>location<sp/>to<sp/>store<sp/>the<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>ris_value;</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a4376fe59b65a50ea12ebfcafd94009d5" kindref="member">EF_TMR32_getRIS</ref>(tmr32,<sp/>&amp;ris_value);</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*match_status<sp/>=<sp/>(ris_value<sp/>&amp;<sp/><ref refid="_e_f___t_m_r32__regs_8h_1ae4d846684c64c7b3a3a692af73067cf3" kindref="member">EF_TMR32_MX_FLAG</ref>);</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="699"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="700"><highlight class="normal"></highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a7d0794cbbf8270e4301fa1b3de960f6e" kindref="member">EF_TMR32_isCMPYMatch</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t*<sp/>match_status){</highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;<sp/></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>tmr32<sp/>is<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(match_status<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="708"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>EF_DRIVER_ERROR_PARAMETER<sp/>if<sp/>match_status<sp/>is<sp/>NULL,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>i.e.<sp/>there<sp/>is<sp/>no<sp/>memory<sp/>location<sp/>to<sp/>store<sp/>the<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="710"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>ris_value;</highlight></codeline>
+<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a4376fe59b65a50ea12ebfcafd94009d5" kindref="member">EF_TMR32_getRIS</ref>(tmr32,<sp/>&amp;ris_value);</highlight></codeline>
+<codeline lineno="713"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="714"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*match_status<sp/>=<sp/>(ris_value<sp/>&amp;<sp/><ref refid="_e_f___t_m_r32__regs_8h_1afc2875bb29bbbcc3b24fe8b9648ec7ae" kindref="member">EF_TMR32_MY_FLAG</ref>);</highlight></codeline>
+<codeline lineno="715"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="716"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="717"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="718"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="719"><highlight class="normal"></highlight></codeline>
+<codeline lineno="720"><highlight class="normal"></highlight></codeline>
+<codeline lineno="721"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a0e9f5f4e5f1a4b8d7805eb4dbdf70e93" kindref="member">EF_TMR32_clearTimoutFlag</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32){</highlight></codeline>
+<codeline lineno="722"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="723"><highlight class="normal"></highlight></codeline>
-<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="725"><highlight class="normal"></highlight></codeline>
-<codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>up-count<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>periodic<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>use<sp/>one<sp/>compare<sp/>register</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>low</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="732"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculate<sp/>the<sp/>Y<sp/>compare<sp/>register<sp/>value<sp/>given<sp/>the<sp/>duty<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="733"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>reload<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>Y<sp/>compare<sp/>register<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="735"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>top<sp/>action<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="736"><highlight class="normal"></highlight></codeline>
-<codeline lineno="737"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|<sp/><sp/><sp/><sp/><sp/><sp/>/|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|_____/__|____/<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>/<sp/>|<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="741"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|_/___|__|/___|__|____</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/><sp/><sp/>V</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/>___<sp/><sp/><sp/>___</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/>|__|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>duty<sp/><sp/><sp/><sp/>duty</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>cycle<sp/><sp/><sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="725"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct___e_f___t_m_r32___t_y_p_e___1abe014aa02ae9ac4f089400338ea67eef" kindref="member">IC</ref><sp/>|=<sp/><ref refid="_e_f___t_m_r32__regs_8h_1a9c67d639a50fbec4689aaea448612a85" kindref="member">EF_TMR32_TO_FLAG</ref>;</highlight></codeline>
+<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="729"><highlight class="normal"></highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="731"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="732"><highlight class="normal"></highlight></codeline>
+<codeline lineno="733"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1ac5c775883fbdab72773ffd7f95d5082b" kindref="member">EF_TMR32_clearCMPXMatchFlag</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32){</highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
+<codeline lineno="735"><highlight class="normal"></highlight></codeline>
+<codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="737"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct___e_f___t_m_r32___t_y_p_e___1abe014aa02ae9ac4f089400338ea67eef" kindref="member">IC</ref><sp/>|=<sp/><ref refid="_e_f___t_m_r32__regs_8h_1ae4d846684c64c7b3a3a692af73067cf3" kindref="member">EF_TMR32_MX_FLAG</ref>;</highlight></codeline>
+<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="741"><highlight class="normal"></highlight></codeline>
+<codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="743"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"></highlight></codeline>
+<codeline lineno="746"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a56a7ddce686fe3bed66388193ce2f225" kindref="member">EF_TMR32_clearCMPYMatchFlag</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32){</highlight></codeline>
+<codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
 <codeline lineno="748"><highlight class="normal"></highlight></codeline>
-<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1aadb3f68daef94e6e3668a88eea378fd2" kindref="member">EF_TMR32_setUpCount</ref>(tmr32);</highlight></codeline>
-<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ae1b99e7a248aa01794677de568a89c12" kindref="member">EF_TMR32_setPeriodic</ref>(tmr32);</highlight></codeline>
-<codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a2e80ed5c92214b2858766e0d8b233008" kindref="member">EF_TMR32_setPWM1MatchingZeroAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);</highlight></codeline>
-<codeline lineno="752"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1afc9656b5c30e601673caa747caeb51c1" kindref="member">EF_TMR32_setPWM1MatchingCMPYUpCountingAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1acb4dffaa5d4c81e7a4ecae477515e6e9" kindref="member">EF_TMR32_ACTION_LOW</ref>);</highlight></codeline>
-<codeline lineno="753"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a0e27b3011128b05f745f22f7f8381464" kindref="member">EF_TMR32_setPWM1MatchingCMPXUpCountingAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);</highlight></codeline>
-<codeline lineno="754"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a401ddd8eb0f58c2e154b0e4bed3bc4a2" kindref="member">EF_TMR32_setPWM1MatchingRELOADAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);</highlight></codeline>
-<codeline lineno="755"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5dd014cbe453c7e9ad161bb95c1a5478" kindref="member">EF_TMR32_setRELOAD</ref>(tmr32,<sp/>reload_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="756"><highlight class="normal"></highlight></codeline>
-<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){</highlight></codeline>
-<codeline lineno="758"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>compare_value<sp/>=<sp/>(duty_cycle<sp/>*<sp/>reload_value)<sp/>/<sp/>100;</highlight></codeline>
-<codeline lineno="759"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a025b4b548381e4d01e729cb69b5dff3b" kindref="member">EF_TMR32_setCMPY</ref>(tmr32,<sp/>compare_value);<sp/><sp/></highlight></codeline>
-<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="761"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="762"><highlight class="normal"></highlight></codeline>
-<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
-<codeline lineno="764"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="765"><highlight class="normal"></highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
+<codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="752"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct___e_f___t_m_r32___t_y_p_e___1abe014aa02ae9ac4f089400338ea67eef" kindref="member">IC</ref><sp/>|=<sp/><ref refid="_e_f___t_m_r32__regs_8h_1afc2875bb29bbbcc3b24fe8b9648ec7ae" kindref="member">EF_TMR32_MY_FLAG</ref>;</highlight></codeline>
+<codeline lineno="753"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="754"><highlight class="normal"></highlight></codeline>
+<codeline lineno="755"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="756"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"></highlight></codeline>
+<codeline lineno="758"><highlight class="normal"></highlight></codeline>
+<codeline lineno="759"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a8d4d907e326c073a96a28e8317fc26bd" kindref="member">EF_TMR32_setPWM0EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>duty_cycle){</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
+<codeline lineno="761"><highlight class="normal"></highlight></codeline>
+<codeline lineno="762"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
+<codeline lineno="764"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_cycle<sp/>&gt;<sp/>100)<sp/>{</highlight></codeline>
+<codeline lineno="765"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
 <codeline lineno="766"><highlight class="normal"></highlight></codeline>
-<codeline lineno="767"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a0a42492b716fb008dd6980193e039a17" kindref="member">EF_TMR32_setPWM0CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpX_value){</highlight></codeline>
+<codeline lineno="767"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="768"><highlight class="normal"></highlight></codeline>
-<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
-<codeline lineno="770"><highlight class="normal"></highlight></codeline>
-<codeline lineno="771"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
-<codeline lineno="773"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(reload_value<sp/>&lt;<sp/>cmpX_value){</highlight></codeline>
-<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
-<codeline lineno="775"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="776"><highlight class="normal"></highlight></codeline>
-<codeline lineno="777"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>up-down-count<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="778"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>periodic<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="779"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="780"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>low</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="781"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="782"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>down<sp/>count<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="783"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>down<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="784"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>top<sp/>action<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="785"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>reload<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="786"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>X<sp/>compare<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="787"><highlight class="normal"></highlight></codeline>
-<codeline lineno="788"><highlight class="normal"></highlight></codeline>
-<codeline lineno="789"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="790"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|\</highlight></codeline>
-<codeline lineno="791"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|_____/__|__\</highlight></codeline>
-<codeline lineno="792"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>|<sp/>\</highlight></codeline>
-<codeline lineno="793"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|_/___|__|__|___\__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="794"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/>V</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="796"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/><sp/><sp/><sp/>____<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="797"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|_____|<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="798"><highlight class="normal"></highlight></codeline>
-<codeline lineno="799"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a2fd6766483cd71135ff6ba22f0af2e81" kindref="member">EF_TMR32_setUpDownCount</ref>(tmr32);</highlight></codeline>
-<codeline lineno="800"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ae1b99e7a248aa01794677de568a89c12" kindref="member">EF_TMR32_setPeriodic</ref>(tmr32);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="801"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a6f73741bff7231eb72696b642dd5344e" kindref="member">EF_TMR32_setPWM0MatchingZeroAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="802"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5329cef22cac7e6d808f69a3c5edc851" kindref="member">EF_TMR32_setPWM0MatchingCMPXUpCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1acb4dffaa5d4c81e7a4ecae477515e6e9" kindref="member">EF_TMR32_ACTION_LOW</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="803"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a02cca84ee8407a02efa49d1ad4357cdc" kindref="member">EF_TMR32_setPWM0MatchingCMPYUpCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="804"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a9e7ceb938a22a090ae7907e013d026dd" kindref="member">EF_TMR32_setPWM0MatchingCMPXDownCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="805"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ad800e1b9441665d57d2c11f57232778c" kindref="member">EF_TMR32_setPWM0MatchingCMPYDownCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="806"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ab80c062a5bd682ba94d93a563c58a08b" kindref="member">EF_TMR32_setPWM0MatchingRELOADAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="807"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5dd014cbe453c7e9ad161bb95c1a5478" kindref="member">EF_TMR32_setRELOAD</ref>(tmr32,<sp/>reload_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="808"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a7ccde6a4fe0321b995105032abce58a6" kindref="member">EF_TMR32_setCMPX</ref>(tmr32,<sp/>cmpX_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="809"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="810"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>up-count<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>periodic<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="771"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>use<sp/>one<sp/>compare<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="773"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>low</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="775"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculate<sp/>the<sp/>X<sp/>compare<sp/>register<sp/>value<sp/>given<sp/>the<sp/>duty<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="776"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>reload<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="777"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>X<sp/>compare<sp/>register<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="778"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>top<sp/>action<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="779"><highlight class="normal"></highlight></codeline>
+<codeline lineno="780"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="781"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|<sp/><sp/><sp/><sp/><sp/><sp/>/|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|_____/__|____/<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="783"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>/<sp/>|<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|_/___|__|/___|__|____</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="785"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="786"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/><sp/><sp/>V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="787"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/>___<sp/><sp/><sp/>___</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="788"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/>|__|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="789"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>duty<sp/><sp/><sp/><sp/>duty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="790"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>cycle<sp/><sp/><sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="791"><highlight class="normal"></highlight></codeline>
+<codeline lineno="792"><highlight class="normal"></highlight></codeline>
+<codeline lineno="793"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1aadb3f68daef94e6e3668a88eea378fd2" kindref="member">EF_TMR32_setUpCount</ref>(tmr32);</highlight></codeline>
+<codeline lineno="794"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ae1b99e7a248aa01794677de568a89c12" kindref="member">EF_TMR32_setPeriodic</ref>(tmr32);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a6f73741bff7231eb72696b642dd5344e" kindref="member">EF_TMR32_setPWM0MatchingZeroAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="796"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5329cef22cac7e6d808f69a3c5edc851" kindref="member">EF_TMR32_setPWM0MatchingCMPXUpCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1acb4dffaa5d4c81e7a4ecae477515e6e9" kindref="member">EF_TMR32_ACTION_LOW</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="797"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a02cca84ee8407a02efa49d1ad4357cdc" kindref="member">EF_TMR32_setPWM0MatchingCMPYUpCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="798"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ab80c062a5bd682ba94d93a563c58a08b" kindref="member">EF_TMR32_setPWM0MatchingRELOADAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="799"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5dd014cbe453c7e9ad161bb95c1a5478" kindref="member">EF_TMR32_setRELOAD</ref>(tmr32,<sp/>reload_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="800"><highlight class="normal"></highlight></codeline>
+<codeline lineno="801"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){</highlight></codeline>
+<codeline lineno="802"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>compare_value<sp/>=<sp/>(duty_cycle<sp/>*<sp/>reload_value)<sp/>/<sp/>100;</highlight></codeline>
+<codeline lineno="803"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a7ccde6a4fe0321b995105032abce58a6" kindref="member">EF_TMR32_setCMPX</ref>(tmr32,<sp/>compare_value);<sp/><sp/></highlight></codeline>
+<codeline lineno="804"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="805"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="806"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="807"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="808"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="809"><highlight class="normal"></highlight></codeline>
+<codeline lineno="810"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a56341d8e521f6b5001cddf60b93fe6f1" kindref="member">EF_TMR32_setPWM1EdgeAlignmentMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,uint32_t<sp/>duty_cycle){</highlight></codeline>
 <codeline lineno="811"><highlight class="normal"></highlight></codeline>
-<codeline lineno="812"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
-<codeline lineno="813"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="814"><highlight class="normal"></highlight></codeline>
-<codeline lineno="815"><highlight class="normal"></highlight></codeline>
-<codeline lineno="816"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a5142ccf9f3a4ecd336c6e9364712dffd" kindref="member">EF_TMR32_setPWM1CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpY_value){</highlight></codeline>
-<codeline lineno="817"><highlight class="normal"></highlight></codeline>
-<codeline lineno="818"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
-<codeline lineno="819"><highlight class="normal"></highlight></codeline>
-<codeline lineno="820"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
-<codeline lineno="821"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
-<codeline lineno="822"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="823"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>up-down-count<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="824"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>periodic<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="825"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="826"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>low</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="827"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="828"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>down<sp/>count<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="829"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>down<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="812"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
+<codeline lineno="813"><highlight class="normal"></highlight></codeline>
+<codeline lineno="814"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="815"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
+<codeline lineno="816"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty_cycle<sp/>&gt;<sp/>100)<sp/>{</highlight></codeline>
+<codeline lineno="817"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
+<codeline lineno="818"><highlight class="normal"></highlight></codeline>
+<codeline lineno="819"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="820"><highlight class="normal"></highlight></codeline>
+<codeline lineno="821"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>up-count<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="822"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>periodic<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="823"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="824"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>use<sp/>one<sp/>compare<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="825"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>low</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="826"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="827"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculate<sp/>the<sp/>Y<sp/>compare<sp/>register<sp/>value<sp/>given<sp/>the<sp/>duty<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="828"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>reload<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="829"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>Y<sp/>compare<sp/>register<sp/>value</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="830"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>top<sp/>action<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="831"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>reload<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="832"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>Y<sp/>compare<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="833"><highlight class="normal"></highlight></codeline>
-<codeline lineno="834"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="835"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|\</highlight></codeline>
-<codeline lineno="836"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|_____/__|__\</highlight></codeline>
-<codeline lineno="837"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>|<sp/>\</highlight></codeline>
-<codeline lineno="838"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|_/___|__|__|___\__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="839"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="840"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/>V</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="841"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/><sp/><sp/><sp/>____<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="842"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|_____|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="831"><highlight class="normal"></highlight></codeline>
+<codeline lineno="832"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="833"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|<sp/><sp/><sp/><sp/><sp/><sp/>/|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="834"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|_____/__|____/<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="835"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>/<sp/>|<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="836"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|_/___|__|/___|__|____</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="837"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="838"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/><sp/><sp/>V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="839"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/>___<sp/><sp/><sp/>___</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="840"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/><sp/>|__|<sp/><sp/><sp/>|__|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="841"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>duty<sp/><sp/><sp/><sp/>duty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="842"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>cycle<sp/><sp/><sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="843"><highlight class="normal"></highlight></codeline>
-<codeline lineno="844"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a2fd6766483cd71135ff6ba22f0af2e81" kindref="member">EF_TMR32_setUpDownCount</ref>(tmr32);</highlight></codeline>
-<codeline lineno="845"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ae1b99e7a248aa01794677de568a89c12" kindref="member">EF_TMR32_setPeriodic</ref>(tmr32);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="846"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a2e80ed5c92214b2858766e0d8b233008" kindref="member">EF_TMR32_setPWM1MatchingZeroAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="847"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1afc9656b5c30e601673caa747caeb51c1" kindref="member">EF_TMR32_setPWM1MatchingCMPYUpCountingAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1acb4dffaa5d4c81e7a4ecae477515e6e9" kindref="member">EF_TMR32_ACTION_LOW</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="848"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a0e27b3011128b05f745f22f7f8381464" kindref="member">EF_TMR32_setPWM1MatchingCMPXUpCountingAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="849"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a3dd40d43dac4fee39dbe7717ee848ecd" kindref="member">EF_TMR32_setPWM1MatchingCMPYDownCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="850"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ad579dc1e3910c7b4a78cde1e6e14bf8d" kindref="member">EF_TMR32_setPWM1MatchingCMPXDownCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="851"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a401ddd8eb0f58c2e154b0e4bed3bc4a2" kindref="member">EF_TMR32_setPWM1MatchingRELOADAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="852"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5dd014cbe453c7e9ad161bb95c1a5478" kindref="member">EF_TMR32_setRELOAD</ref>(tmr32,<sp/>reload_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="853"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a7ccde6a4fe0321b995105032abce58a6" kindref="member">EF_TMR32_setCMPX</ref>(tmr32,<sp/>cmpY_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
-<codeline lineno="854"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
-<codeline lineno="856"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="844"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1aadb3f68daef94e6e3668a88eea378fd2" kindref="member">EF_TMR32_setUpCount</ref>(tmr32);</highlight></codeline>
+<codeline lineno="845"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ae1b99e7a248aa01794677de568a89c12" kindref="member">EF_TMR32_setPeriodic</ref>(tmr32);</highlight></codeline>
+<codeline lineno="846"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a2e80ed5c92214b2858766e0d8b233008" kindref="member">EF_TMR32_setPWM1MatchingZeroAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);</highlight></codeline>
+<codeline lineno="847"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1afc9656b5c30e601673caa747caeb51c1" kindref="member">EF_TMR32_setPWM1MatchingCMPYUpCountingAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1acb4dffaa5d4c81e7a4ecae477515e6e9" kindref="member">EF_TMR32_ACTION_LOW</ref>);</highlight></codeline>
+<codeline lineno="848"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a0e27b3011128b05f745f22f7f8381464" kindref="member">EF_TMR32_setPWM1MatchingCMPXUpCountingAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);</highlight></codeline>
+<codeline lineno="849"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a401ddd8eb0f58c2e154b0e4bed3bc4a2" kindref="member">EF_TMR32_setPWM1MatchingRELOADAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);</highlight></codeline>
+<codeline lineno="850"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5dd014cbe453c7e9ad161bb95c1a5478" kindref="member">EF_TMR32_setRELOAD</ref>(tmr32,<sp/>reload_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="851"><highlight class="normal"></highlight></codeline>
+<codeline lineno="852"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){</highlight></codeline>
+<codeline lineno="853"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>compare_value<sp/>=<sp/>(duty_cycle<sp/>*<sp/>reload_value)<sp/>/<sp/>100;</highlight></codeline>
+<codeline lineno="854"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a025b4b548381e4d01e729cb69b5dff3b" kindref="member">EF_TMR32_setCMPY</ref>(tmr32,<sp/>compare_value);<sp/><sp/></highlight></codeline>
+<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="856"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="857"><highlight class="normal"></highlight></codeline>
-<codeline lineno="858"><highlight class="normal"></highlight></codeline>
-<codeline lineno="859"><highlight class="normal"></highlight></codeline>
-<codeline lineno="860"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
-<codeline lineno="861"><highlight class="comment">*<sp/>Static<sp/>Function<sp/>Definitions</highlight></codeline>
-<codeline lineno="862"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="858"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="859"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="860"><highlight class="normal"></highlight></codeline>
+<codeline lineno="861"><highlight class="normal"></highlight></codeline>
+<codeline lineno="862"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a0a42492b716fb008dd6980193e039a17" kindref="member">EF_TMR32_setPWM0CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpX_value){</highlight></codeline>
 <codeline lineno="863"><highlight class="normal"></highlight></codeline>
-<codeline lineno="864"><highlight class="normal"></highlight></codeline>
-<codeline lineno="865"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EF_TMR32_C</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="866"><highlight class="normal"></highlight></codeline>
-<codeline lineno="867"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
-<codeline lineno="868"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
-<codeline lineno="869"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="864"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
+<codeline lineno="865"><highlight class="normal"></highlight></codeline>
+<codeline lineno="866"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="867"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
+<codeline lineno="868"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(reload_value<sp/>&lt;<sp/>cmpX_value){</highlight></codeline>
+<codeline lineno="869"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
+<codeline lineno="870"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="871"><highlight class="normal"></highlight></codeline>
+<codeline lineno="872"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>up-down-count<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="873"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>periodic<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="874"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="875"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>low</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="876"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="877"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>down<sp/>count<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="878"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>down<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="879"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>top<sp/>action<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="880"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>reload<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="881"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>X<sp/>compare<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="882"><highlight class="normal"></highlight></codeline>
+<codeline lineno="883"><highlight class="normal"></highlight></codeline>
+<codeline lineno="884"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="885"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|\</highlight></codeline>
+<codeline lineno="886"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|_____/__|__\</highlight></codeline>
+<codeline lineno="887"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="888"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|_/___|__|__|___\__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="889"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="890"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/>V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="891"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/><sp/><sp/><sp/>____<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="892"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|_____|<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="893"><highlight class="normal"></highlight></codeline>
+<codeline lineno="894"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a2fd6766483cd71135ff6ba22f0af2e81" kindref="member">EF_TMR32_setUpDownCount</ref>(tmr32);</highlight></codeline>
+<codeline lineno="895"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ae1b99e7a248aa01794677de568a89c12" kindref="member">EF_TMR32_setPeriodic</ref>(tmr32);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="896"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a6f73741bff7231eb72696b642dd5344e" kindref="member">EF_TMR32_setPWM0MatchingZeroAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="897"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5329cef22cac7e6d808f69a3c5edc851" kindref="member">EF_TMR32_setPWM0MatchingCMPXUpCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1acb4dffaa5d4c81e7a4ecae477515e6e9" kindref="member">EF_TMR32_ACTION_LOW</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="898"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a02cca84ee8407a02efa49d1ad4357cdc" kindref="member">EF_TMR32_setPWM0MatchingCMPYUpCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="899"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a9e7ceb938a22a090ae7907e013d026dd" kindref="member">EF_TMR32_setPWM0MatchingCMPXDownCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="900"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ad800e1b9441665d57d2c11f57232778c" kindref="member">EF_TMR32_setPWM0MatchingCMPYDownCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="901"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ab80c062a5bd682ba94d93a563c58a08b" kindref="member">EF_TMR32_setPWM0MatchingRELOADAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="902"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5dd014cbe453c7e9ad161bb95c1a5478" kindref="member">EF_TMR32_setRELOAD</ref>(tmr32,<sp/>reload_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="903"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>){<sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a7ccde6a4fe0321b995105032abce58a6" kindref="member">EF_TMR32_setCMPX</ref>(tmr32,<sp/>cmpX_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="904"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="905"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="906"><highlight class="normal"></highlight></codeline>
+<codeline lineno="907"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="908"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="909"><highlight class="normal"></highlight></codeline>
+<codeline lineno="910"><highlight class="normal"></highlight></codeline>
+<codeline lineno="911"><highlight class="normal"><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/><ref refid="_e_f___t_m_r32_8c_1a5142ccf9f3a4ecd336c6e9364712dffd" kindref="member">EF_TMR32_setPWM1CenterAlignedMode</ref>(<ref refid="struct___e_f___t_m_r32___t_y_p_e__" kindref="compound">EF_TMR32_TYPE_PTR</ref><sp/>tmr32,<sp/>uint32_t<sp/>reload_value,<sp/>uint32_t<sp/>cmpY_value){</highlight></codeline>
+<codeline lineno="912"><highlight class="normal"></highlight></codeline>
+<codeline lineno="913"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_e_f___driver___common_8h_1ad1c99136d1edfd0a7757f5b81600a351" kindref="member">EF_DRIVER_STATUS</ref><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>;</highlight></codeline>
+<codeline lineno="914"><highlight class="normal"></highlight></codeline>
+<codeline lineno="915"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmr32<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="916"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___driver___common_8h_1aed4f0552faa082d7941ed37ae1e430e4" kindref="member">EF_DRIVER_ERROR_PARAMETER</ref>;</highlight></codeline>
+<codeline lineno="917"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="918"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>up-down-count<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="919"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>timer<sp/>to<sp/>periodic<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="920"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>zero<sp/>action<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="921"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>low</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="922"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>up<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="923"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>Y<sp/>Compare<sp/>register<sp/>down<sp/>count<sp/>to<sp/>high</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="924"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>action<sp/>of<sp/>the<sp/>X<sp/>Compare<sp/>register<sp/>down<sp/>count<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="925"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>top<sp/>action<sp/>to<sp/>no<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="926"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>reload<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="927"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>Y<sp/>compare<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="928"><highlight class="normal"></highlight></codeline>
+<codeline lineno="929"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="930"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/>/|\</highlight></codeline>
+<codeline lineno="931"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|_____/__|__\</highlight></codeline>
+<codeline lineno="932"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|<sp/><sp/><sp/>/<sp/>|<sp/><sp/>|<sp/><sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="933"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>|_/___|__|__|___\__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="934"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="935"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/><sp/><sp/><sp/><sp/>V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="936"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/><sp/><sp/><sp/>____<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="937"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|_____|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="938"><highlight class="normal"></highlight></codeline>
+<codeline lineno="939"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a2fd6766483cd71135ff6ba22f0af2e81" kindref="member">EF_TMR32_setUpDownCount</ref>(tmr32);</highlight></codeline>
+<codeline lineno="940"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ae1b99e7a248aa01794677de568a89c12" kindref="member">EF_TMR32_setPeriodic</ref>(tmr32);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="941"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a2e80ed5c92214b2858766e0d8b233008" kindref="member">EF_TMR32_setPWM1MatchingZeroAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="942"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1afc9656b5c30e601673caa747caeb51c1" kindref="member">EF_TMR32_setPWM1MatchingCMPYUpCountingAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1acb4dffaa5d4c81e7a4ecae477515e6e9" kindref="member">EF_TMR32_ACTION_LOW</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="943"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a0e27b3011128b05f745f22f7f8381464" kindref="member">EF_TMR32_setPWM1MatchingCMPXUpCountingAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="944"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a3dd40d43dac4fee39dbe7717ee848ecd" kindref="member">EF_TMR32_setPWM1MatchingCMPYDownCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1af7ddd00225eb38cfb28c11b42c6842da" kindref="member">EF_TMR32_ACTION_HIGH</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="945"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1ad579dc1e3910c7b4a78cde1e6e14bf8d" kindref="member">EF_TMR32_setPWM1MatchingCMPXDownCountAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="946"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a401ddd8eb0f58c2e154b0e4bed3bc4a2" kindref="member">EF_TMR32_setPWM1MatchingRELOADAction</ref>(tmr32,<sp/><ref refid="_e_f___t_m_r32_8h_1a50ad781adeb21f9afdae64c87995dae4" kindref="member">EF_TMR32_ACTION_NONE</ref>);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="947"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a5dd014cbe453c7e9ad161bb95c1a5478" kindref="member">EF_TMR32_setRELOAD</ref>(tmr32,<sp/>reload_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="948"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>==<sp/><ref refid="_e_f___driver___common_8h_1ab56c746d5d1672835c101f00f7c90b7c" kindref="member">EF_DRIVER_OK</ref>)<sp/>{status<sp/>=<sp/><ref refid="_e_f___t_m_r32_8c_1a7ccde6a4fe0321b995105032abce58a6" kindref="member">EF_TMR32_setCMPX</ref>(tmr32,<sp/>cmpY_value);}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="949"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="950"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="951"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="952"><highlight class="normal"></highlight></codeline>
+<codeline lineno="953"><highlight class="normal"></highlight></codeline>
+<codeline lineno="954"><highlight class="normal"></highlight></codeline>
+<codeline lineno="955"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="956"><highlight class="comment">*<sp/>Static<sp/>Function<sp/>Definitions</highlight></codeline>
+<codeline lineno="957"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="958"><highlight class="normal"></highlight></codeline>
+<codeline lineno="959"><highlight class="normal"></highlight></codeline>
+<codeline lineno="960"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EF_TMR32_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="961"><highlight class="normal"></highlight></codeline>
+<codeline lineno="962"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="963"><highlight class="comment">*<sp/>End<sp/>of<sp/>File</highlight></codeline>
+<codeline lineno="964"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="EF_TMR32.c"/>
   </compounddef>

@@ -743,7 +743,9 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|_____|<sp/><sp/><sp/><sp/></highlight></codeline>
 </programlisting></para>
 <para><bold>Note:</bold></para>
-<para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
+<para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings.</para>
+<para><bold>Note:</bold></para>
+<para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md40">
 <title>function &lt;tt&gt;EF_TMR32_setPWM0EdgeAlignmentMode&lt;/tt&gt;</title>
@@ -792,7 +794,9 @@
 <codeline><highlight class="normal"><sp/><sp/>cycle<sp/><sp/><sp/>cycle</highlight></codeline>
 </programlisting></para>
 <para><bold>Note:</bold></para>
-<para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
+<para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings.</para>
+<para><bold>Note:</bold></para>
+<para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md41">
 <title>function &lt;tt&gt;EF_TMR32_setPWM0MatchingCMPXDownCountAction&lt;/tt&gt;</title>
@@ -977,7 +981,9 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>|_____|<sp/><sp/><sp/><sp/></highlight></codeline>
 </programlisting></para>
 <para><bold>Note:</bold></para>
-<para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
+<para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings.</para>
+<para><bold>Note:</bold></para>
+<para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md48">
 <title>function &lt;tt&gt;EF_TMR32_setPWM1EdgeAlignmentMode&lt;/tt&gt;</title>
@@ -1026,7 +1032,9 @@
 <codeline><highlight class="normal"><sp/><sp/>cycle<sp/><sp/><sp/>cycle</highlight></codeline>
 </programlisting></para>
 <para><bold>Note:</bold></para>
-<para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings. </para>
+<para>Ensure the timer instance (<computeroutput>tmr32</computeroutput>) is correctly initialized before calling this function. The reload value and compare value must align with the timer&apos;s capabilities and clock settings.</para>
+<para><bold>Note:</bold></para>
+<para>for more information, check <ulink url="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</ulink> </para>
 </sect2>
 <sect2 id="md__r_e_a_d_m_e_1autotoc_md49">
 <title>function &lt;tt&gt;EF_TMR32_setPWM1MatchingCMPXDownCountAction&lt;/tt&gt;</title>

@@ -583,7 +583,7 @@ function &lt;tt&gt;EF_TMR32_setPWM0CenterAlignedMode&lt;/tt&gt;</h2>
 <div class="line">    uint32_t reload_value,</div>
 <div class="line">    uint32_t cmpX_value</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___t_m_r32_8c_html_a0a42492b716fb008dd6980193e039a17"><div class="ttname"><a href="_e_f___t_m_r32_8c.html#a0a42492b716fb008dd6980193e039a17">EF_TMR32_setPWM0CenterAlignedMode</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpX_value)</div><div class="ttdoc">Sets the PWM0 center-aligned mode.</div><div class="ttdef"><b>Definition:</b> EF_TMR32.c:767</div></div>
+<div class="ttc" id="a_e_f___t_m_r32_8c_html_a0a42492b716fb008dd6980193e039a17"><div class="ttname"><a href="_e_f___t_m_r32_8c.html#a0a42492b716fb008dd6980193e039a17">EF_TMR32_setPWM0CenterAlignedMode</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_TMR32_setPWM0CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpX_value)</div><div class="ttdoc">Sets the PWM0 center-aligned mode.</div><div class="ttdef"><b>Definition:</b> EF_TMR32.c:862</div></div>
 </div><!-- fragment --><p><b>Parameters:</b></p>
 <ul>
 <li><code>tmr32</code> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</li>
@@ -617,7 +617,9 @@ function &lt;tt&gt;EF_TMR32_setPWM0CenterAlignedMode&lt;/tt&gt;</h2>
 <div class="line">  ____       ____</div>
 <div class="line">      |_____|    </div>
 </div><!-- fragment --><p><b>Note:</b></p>
-<p>Ensure the timer instance (<code>tmr32</code>) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings. </p>
+<p>Ensure the timer instance (<code>tmr32</code>) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.</p>
+<p><b>Note:</b></p>
+<p>for more information, check <a href="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</a> </p>
 <h2><a class="anchor" id="autotoc_md40"></a>
 function &lt;tt&gt;EF_TMR32_setPWM0EdgeAlignmentMode&lt;/tt&gt;</h2>
 <p><em>Sets the PWM0 edge alignment mode.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___t_m_r32_8c.html#a8d4d907e326c073a96a28e8317fc26bd">EF_TMR32_setPWM0EdgeAlignmentMode</a> (</div>
@@ -625,7 +627,7 @@ function &lt;tt&gt;EF_TMR32_setPWM0EdgeAlignmentMode&lt;/tt&gt;</h2>
 <div class="line">    uint32_t reload_value,</div>
 <div class="line">    uint32_t duty_cycle</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___t_m_r32_8c_html_a8d4d907e326c073a96a28e8317fc26bd"><div class="ttname"><a href="_e_f___t_m_r32_8c.html#a8d4d907e326c073a96a28e8317fc26bd">EF_TMR32_setPWM0EdgeAlignmentMode</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_TMR32_setPWM0EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t duty_cycle)</div><div class="ttdoc">Sets the PWM0 edge alignment mode.</div><div class="ttdef"><b>Definition:</b> EF_TMR32.c:664</div></div>
+<div class="ttc" id="a_e_f___t_m_r32_8c_html_a8d4d907e326c073a96a28e8317fc26bd"><div class="ttname"><a href="_e_f___t_m_r32_8c.html#a8d4d907e326c073a96a28e8317fc26bd">EF_TMR32_setPWM0EdgeAlignmentMode</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_TMR32_setPWM0EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t duty_cycle)</div><div class="ttdoc">Sets the PWM0 edge alignment mode.</div><div class="ttdef"><b>Definition:</b> EF_TMR32.c:759</div></div>
 </div><!-- fragment --><p><b>Parameters:</b></p>
 <ul>
 <li><code>tmr32</code> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</li>
@@ -661,7 +663,9 @@ function &lt;tt&gt;EF_TMR32_setPWM0EdgeAlignmentMode&lt;/tt&gt;</h2>
 <div class="line">  duty    duty</div>
 <div class="line">  cycle   cycle</div>
 </div><!-- fragment --><p><b>Note:</b></p>
-<p>Ensure the timer instance (<code>tmr32</code>) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings. </p>
+<p>Ensure the timer instance (<code>tmr32</code>) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.</p>
+<p><b>Note:</b></p>
+<p>for more information, check <a href="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</a> </p>
 <h2><a class="anchor" id="autotoc_md41"></a>
 function &lt;tt&gt;EF_TMR32_setPWM0MatchingCMPXDownCountAction&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___t_m_r32_8c.html#a9e7ceb938a22a090ae7907e013d026dd">EF_TMR32_setPWM0MatchingCMPXDownCountAction</a> (</div>
@@ -795,7 +799,7 @@ function &lt;tt&gt;EF_TMR32_setPWM1CenterAlignedMode&lt;/tt&gt;</h2>
 <div class="line">    uint32_t reload_value,</div>
 <div class="line">    uint32_t cmpY_value</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___t_m_r32_8c_html_a5142ccf9f3a4ecd336c6e9364712dffd"><div class="ttname"><a href="_e_f___t_m_r32_8c.html#a5142ccf9f3a4ecd336c6e9364712dffd">EF_TMR32_setPWM1CenterAlignedMode</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpY_value)</div><div class="ttdoc">Sets the PWM1 center-aligned mode.</div><div class="ttdef"><b>Definition:</b> EF_TMR32.c:816</div></div>
+<div class="ttc" id="a_e_f___t_m_r32_8c_html_a5142ccf9f3a4ecd336c6e9364712dffd"><div class="ttname"><a href="_e_f___t_m_r32_8c.html#a5142ccf9f3a4ecd336c6e9364712dffd">EF_TMR32_setPWM1CenterAlignedMode</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_TMR32_setPWM1CenterAlignedMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t cmpY_value)</div><div class="ttdoc">Sets the PWM1 center-aligned mode.</div><div class="ttdef"><b>Definition:</b> EF_TMR32.c:911</div></div>
 </div><!-- fragment --><p><b>Parameters:</b></p>
 <ul>
 <li><code>tmr32</code> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</li>
@@ -829,7 +833,9 @@ function &lt;tt&gt;EF_TMR32_setPWM1CenterAlignedMode&lt;/tt&gt;</h2>
 <div class="line">  ____       ____ </div>
 <div class="line">      |_____|    </div>
 </div><!-- fragment --><p><b>Note:</b></p>
-<p>Ensure the timer instance (<code>tmr32</code>) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings. </p>
+<p>Ensure the timer instance (<code>tmr32</code>) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.</p>
+<p><b>Note:</b></p>
+<p>for more information, check <a href="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</a> </p>
 <h2><a class="anchor" id="autotoc_md48"></a>
 function &lt;tt&gt;EF_TMR32_setPWM1EdgeAlignmentMode&lt;/tt&gt;</h2>
 <p><em>Sets the PWM1 edge alignment mode.</em> </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___t_m_r32_8c.html#a56341d8e521f6b5001cddf60b93fe6f1">EF_TMR32_setPWM1EdgeAlignmentMode</a> (</div>
@@ -837,7 +843,7 @@ function &lt;tt&gt;EF_TMR32_setPWM1EdgeAlignmentMode&lt;/tt&gt;</h2>
 <div class="line">    uint32_t reload_value,</div>
 <div class="line">    uint32_t duty_cycle</div>
 <div class="line">) </div>
-<div class="ttc" id="a_e_f___t_m_r32_8c_html_a56341d8e521f6b5001cddf60b93fe6f1"><div class="ttname"><a href="_e_f___t_m_r32_8c.html#a56341d8e521f6b5001cddf60b93fe6f1">EF_TMR32_setPWM1EdgeAlignmentMode</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_TMR32_setPWM1EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t duty_cycle)</div><div class="ttdoc">Sets the PWM1 edge alignment mode.</div><div class="ttdef"><b>Definition:</b> EF_TMR32.c:715</div></div>
+<div class="ttc" id="a_e_f___t_m_r32_8c_html_a56341d8e521f6b5001cddf60b93fe6f1"><div class="ttname"><a href="_e_f___t_m_r32_8c.html#a56341d8e521f6b5001cddf60b93fe6f1">EF_TMR32_setPWM1EdgeAlignmentMode</a></div><div class="ttdeci">EF_DRIVER_STATUS EF_TMR32_setPWM1EdgeAlignmentMode(EF_TMR32_TYPE_PTR tmr32, uint32_t reload_value, uint32_t duty_cycle)</div><div class="ttdoc">Sets the PWM1 edge alignment mode.</div><div class="ttdef"><b>Definition:</b> EF_TMR32.c:810</div></div>
 </div><!-- fragment --><p><b>Parameters:</b></p>
 <ul>
 <li><code>tmr32</code> An **EF\_TMR32\_TYPE\_PTR**, which points to the base memory address of TMR32 registers.**EF\_TMR32\_TYPE** is a structure that contains the TMR32 registers.</li>
@@ -873,7 +879,9 @@ function &lt;tt&gt;EF_TMR32_setPWM1EdgeAlignmentMode&lt;/tt&gt;</h2>
 <div class="line">  duty    duty</div>
 <div class="line">  cycle   cycle</div>
 </div><!-- fragment --><p><b>Note:</b></p>
-<p>Ensure the timer instance (<code>tmr32</code>) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings. </p>
+<p>Ensure the timer instance (<code>tmr32</code>) is correctly initialized before calling this function. The reload value and compare value must align with the timer's capabilities and clock settings.</p>
+<p><b>Note:</b></p>
+<p>for more information, check <a href="https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/">https://www.linkedin.com/pulse/center-aligned-pwm-vs-edge-aligned-neobionics-tn/</a> </p>
 <h2><a class="anchor" id="autotoc_md49"></a>
 function &lt;tt&gt;EF_TMR32_setPWM1MatchingCMPXDownCountAction&lt;/tt&gt;</h2>
 <div class="fragment"><div class="line"><a class="code hl_typedef" href="_e_f___driver___common_8h.html#ad1c99136d1edfd0a7757f5b81600a351">EF_DRIVER_STATUS</a> <a class="code hl_function" href="_e_f___t_m_r32_8c.html#ad579dc1e3910c7b4a78cde1e6e14bf8d">EF_TMR32_setPWM1MatchingCMPXDownCountAction</a> (</div>

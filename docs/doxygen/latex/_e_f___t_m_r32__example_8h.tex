@@ -1,0 +1,157 @@
+\hypertarget{_e_f___t_m_r32__example_8h}{}\doxysection{EF\+\_\+\+TMR32\+\_\+example.\+h File Reference}
+\label{_e_f___t_m_r32__example_8h}\index{EF\_TMR32\_example.h@{EF\_TMR32\_example.h}}
+
+
+C header file containing an example of how to use the TMR32 APIs.  
+
+
+{\ttfamily \#include \char`\"{}EF\+\_\+\+TMR32.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32__example_8h_a1eb6a05af29b879f3bbc2b6acdde3d7b}{EF\+\_\+\+TMR32\+\_\+normal\+Example}} (void)
+\begin{DoxyCompactList}\small\item\em Example of Normal Usage Example usage\+: \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} \mbox{\hyperlink{_e_f___t_m_r32__example_8h_ad8da2bd7958c523a00a2f04b58539b0d}{EF\+\_\+\+TMR32\+\_\+\+PWM\+\_\+\+Example}} (void)
+\begin{DoxyCompactList}\small\item\em Example of PWM Usage Example usage\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C header file containing an example of how to use the TMR32 APIs. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_e_f___t_m_r32__example_8h_a1eb6a05af29b879f3bbc2b6acdde3d7b}\label{_e_f___t_m_r32__example_8h_a1eb6a05af29b879f3bbc2b6acdde3d7b}} 
+\index{EF\_TMR32\_example.h@{EF\_TMR32\_example.h}!EF\_TMR32\_normalExample@{EF\_TMR32\_normalExample}}
+\index{EF\_TMR32\_normalExample@{EF\_TMR32\_normalExample}!EF\_TMR32\_example.h@{EF\_TMR32\_example.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_normalExample()}{EF\_TMR32\_normalExample()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+normal\+Example (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Example of Normal Usage Example usage\+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_e_f___t_m_r32_8h}{EF\_TMR32.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ Example\_TMR32\_BASE\_ADDRESS\ 0x40000000}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ TMR320\ ((EF\_TMR32\_TYPE\_PTR)Example\_TMR32\_BASE\_ADDRESS)}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32__example_8c_a1eb6a05af29b879f3bbc2b6acdde3d7b}{EF\_TMR32\_normalExample}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Now\ let's\ configure\ the\ timer\ to\ operate\ in\ one-\/shot\ mode}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ status;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ reload\_value\ =\ 10000;\ \textcolor{comment}{//\ Timer\ reload\ value}}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ cmpY\_value\ =\ 500;\ \ \ \ \ \ \textcolor{comment}{//\ Compare\ value\ for\ PWM1}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 1:\ Enable\ GCLK}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a48fee3ba105edc1dcee550925ac90f6d}{EF\_TMR32\_setGclkEnable}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}},\ 1);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (status\ !=\ \mbox{\hyperlink{_e_f___driver___common_8h_ab56c746d5d1672835c101f00f7c90b7c}{EF\_DRIVER\_OK}})\ \{\textcolor{keywordflow}{return}\ status;\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 2:\ Enable\ the\ timer}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a03bb5b7b456bda2803eb6e0bc907d2b4}{EF\_TMR32\_enable}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 3:\ Set\ mode\ to\ up-\/count}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_aadb3f68daef94e6e3668a88eea378fd2}{EF\_TMR32\_setUpCount}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 4:\ Set\ mode\ to\ periodic}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_ae1b99e7a248aa01794677de568a89c12}{EF\_TMR32\_setPeriodic}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 5:\ Set\ the\ reload\ value}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a5dd014cbe453c7e9ad161bb95c1a5478}{EF\_TMR32\_setRELOAD}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}},\ reload\_value);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 6:\ Set\ the\ compare\ value}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a025b4b548381e4d01e729cb69b5dff3b}{EF\_TMR32\_setCMPY}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}},\ cmpY\_value);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 7:\ Set\ the\ timer\ to\ one-\/shot\ mode\ \ }}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_ab013c8ef6cdc697401cadb1351d42379}{EF\_TMR32\_setOneShot}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 8:\ Restart\ the\ timer}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a5eefc74b17c0183939742ab664fe84db}{EF\_TMR32\_restart}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 9:\ wait\ for\ the\ timer\ to\ finish\ counting}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 100000;\ i++)\ \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 10:\ Check\ the\ time\ flag\ to\ ensure\ the\ timer\ has\ finished\ counting}}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ flag;}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a7d0794cbbf8270e4301fa1b3de960f6e}{EF\_TMR32\_isCMPYMatch}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}},\ \&flag);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (flag\ ==\ 1)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ clear\ the\ flag}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ status\ =\ EF\_TMR32\_clearCMPYMatch(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 11:\ Restart\ the\ timer}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a5eefc74b17c0183939742ab664fe84db}{EF\_TMR32\_restart}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 12:\ Read\ the\ timer\ value}}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ tmr\_value;}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a6c0942ecf91efd6f92a22f9881f9b67f}{EF\_TMR32\_getTMR}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}},\ \&tmr\_value);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 13:\ Disable\ the\ timer}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a55e09ad517a12af2d293982a1e0f2d0d}{EF\_TMR32\_disable}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{_e_f___t_m_r32__example_8h_ad8da2bd7958c523a00a2f04b58539b0d}\label{_e_f___t_m_r32__example_8h_ad8da2bd7958c523a00a2f04b58539b0d}} 
+\index{EF\_TMR32\_example.h@{EF\_TMR32\_example.h}!EF\_TMR32\_PWM\_Example@{EF\_TMR32\_PWM\_Example}}
+\index{EF\_TMR32\_PWM\_Example@{EF\_TMR32\_PWM\_Example}!EF\_TMR32\_example.h@{EF\_TMR32\_example.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_PWM\_Example()}{EF\_TMR32\_PWM\_Example()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\+\_\+\+DRIVER\+\_\+\+STATUS}} EF\+\_\+\+TMR32\+\_\+\+PWM\+\_\+\+Example (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Example of PWM Usage Example usage\+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \#include\ "{}\mbox{\hyperlink{_e_f___t_m_r32_8h}{EF\_TMR32.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \#define\ Example\_TMR32\_BASE\_ADDRESS\ 0x40000000}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \#define\ TMR320\ ((EF\_TMR32\_TYPE\_PTR)Example\_TMR32\_BASE\_ADDRESS)}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ \mbox{\hyperlink{_e_f___t_m_r32__example_8c_ad8da2bd7958c523a00a2f04b58539b0d}{EF\_TMR32\_PWM\_Example}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_e_f___driver___common_8h_ad1c99136d1edfd0a7757f5b81600a351}{EF\_DRIVER\_STATUS}}\ status;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ reload\_value\ =\ 10000;\ \textcolor{comment}{//\ Timer\ reload\ value}}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ duty\_cycle\ =\ 70;\ \ \ \ \ \ \ \textcolor{comment}{//\ Duty\ cycle\ for\ PWM0}}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ cmpY\_value\ =\ 500;\ \ \ \ \ \ \textcolor{comment}{//\ Compare\ value\ for\ PWM1}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 1:\ Enable\ GCLK}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a48fee3ba105edc1dcee550925ac90f6d}{EF\_TMR32\_setGclkEnable}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}},\ 1);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (status\ !=\ \mbox{\hyperlink{_e_f___driver___common_8h_ab56c746d5d1672835c101f00f7c90b7c}{EF\_DRIVER\_OK}})\ \{\textcolor{keywordflow}{return}\ status;\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 2:\ Enable\ the\ timer}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a03bb5b7b456bda2803eb6e0bc907d2b4}{EF\_TMR32\_enable}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 3:\ Enable\ PWM0}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a34eb34d261146ff2dbb5b1765309fb10}{EF\_TMR32\_PWM0Enable}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (status\ !=\ \mbox{\hyperlink{_e_f___driver___common_8h_ab56c746d5d1672835c101f00f7c90b7c}{EF\_DRIVER\_OK}})\ \{\textcolor{keywordflow}{return}\ status;\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 4:\ Set\ PWM0\ to\ Edge-\/Aligned\ Mode}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Set\ PWM0\ to\ edge-\/aligned\ mode\ with\ 70\%\ duty\ cycle}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a8d4d907e326c073a96a28e8317fc26bd}{EF\_TMR32\_setPWM0EdgeAlignmentMode}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}},\ reload\_value,\ duty\_cycle);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (status\ !=\ \mbox{\hyperlink{_e_f___driver___common_8h_ab56c746d5d1672835c101f00f7c90b7c}{EF\_DRIVER\_OK}})\ \{\textcolor{keywordflow}{return}\ status;\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 5:\ Enable\ PWM1}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_acbae8bfd22ccc3ada22d403e22274850}{EF\_TMR32\_PWM1Enable}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 6:\ Set\ PWM1\ to\ Center-\/Aligned\ Mode}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Set\ PWM1\ to\ center-\/aligned\ mode\ with\ a\ specific\ CMPY\ value}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a5142ccf9f3a4ecd336c6e9364712dffd}{EF\_TMR32\_setPWM1CenterAlignedMode}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}},\ reload\_value,\ cmpY\_value);}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Step\ 7:\ Disable\ the\ timer}}
+\DoxyCodeLine{\ \ \ \ status\ =\ \mbox{\hyperlink{_e_f___t_m_r32_8c_a55e09ad517a12af2d293982a1e0f2d0d}{EF\_TMR32\_disable}}(\mbox{\hyperlink{_e_f___t_m_r32__example_8c_a67e71266638e5924747ef448c00656b3}{TMR320}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_e_f___driver___common_8h_ab56c746d5d1672835c101f00f7c90b7c}{EF\_DRIVER\_OK}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

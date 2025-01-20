@@ -6,7 +6,7 @@ var indexSectionsWithContent =
   3: "e",
   4: "cgimprt",
   5: "e",
-  6: "_ei",
+  6: "_eit",
   7: "a"
 };
 
