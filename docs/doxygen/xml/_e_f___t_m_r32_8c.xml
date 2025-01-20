@@ -71,7 +71,7 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Sets the GCLK enable bit in the UART register to a certain value. </para>
+<para>Sets the GCLK enable bit in the GCLK register to a certain value. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>

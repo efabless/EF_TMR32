@@ -59,7 +59,7 @@
 * Function Prototypes
 ******************************************************************************/
 
-//! Sets the GCLK enable bit in the UART register to a certain value
+//! Sets the GCLK enable bit in the GCLK register to a certain value
     /*!
         \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR , which points to the base memory address of TMR32 registers. \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
         \param [in] value The value of the GCLK enable bit

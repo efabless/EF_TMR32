@@ -127,7 +127,7 @@ _C header file for TMR32 APIs which contains the function prototypes._
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setCMPX**](#function-ef_tmr32_setcmpx) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t value) <br>_Sets the compare value of a 32-bit timer by writing to the CMPX register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setCMPY**](#function-ef_tmr32_setcmpy) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t value) <br>_Sets the compare value Y of a 32-bit timer by writing to the CMPY register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setDownCount**](#function-ef_tmr32_setdowncount) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Sets the timer direction to be down counting by setting the "DIR" field in the CTRL register to 0b01._ |
-|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setGclkEnable**](#function-ef_tmr32_setgclkenable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t value) <br>_Sets the GCLK enable bit in the UART register to a certain value._ |
+|  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setGclkEnable**](#function-ef_tmr32_setgclkenable) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t value) <br>_Sets the GCLK enable bit in the GCLK register to a certain value._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setICR**](#function-ef_tmr32_seticr) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t mask) <br>_Sets the interrupt clear register of the timer by writing to the ICR register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setIM**](#function-ef_tmr32_setim) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32, uint32\_t mask) <br>_Sets the interrupt mask of the timer by writing to the IM register._ |
 |  [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) | [**EF\_TMR32\_setOneShot**](#function-ef_tmr32_setoneshot) ([**EF\_TMR32\_TYPE\_PTR**](#typedef-ef_tmr32_type_ptr) tmr32) <br>_Sets the timer to operate in one-shot mode by clearing the "P" bit in the CFG register to 0._ |
@@ -593,7 +593,7 @@ EF_DRIVER_STATUS EF_TMR32_setDownCount (
 status A value of type [**EF\_DRIVER\_STATUS**](#typedef-ef_driver_status) : returns a success or error code
 ### function `EF_TMR32_setGclkEnable`
 
-_Sets the GCLK enable bit in the UART register to a certain value._
+_Sets the GCLK enable bit in the GCLK register to a certain value._
 ```c
 EF_DRIVER_STATUS EF_TMR32_setGclkEnable (
     EF_TMR32_TYPE_PTR tmr32,
