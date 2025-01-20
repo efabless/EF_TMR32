@@ -102,7 +102,7 @@ EF_DRIVER_STATUS EF_TMR32_restart(EF_TMR32_TYPE_PTR tmr32) {
         tmr32->CTRL |= ((uint32_t)1 << EF_TMR32_CTRL_REG_TS_BIT);  // Set the restart bit
         tmr32->CTRL &= ~((uint32_t)1 << EF_TMR32_CTRL_REG_TS_BIT); // Clear the restart bit
     }
-    
+
     return status;
 }
 
@@ -657,6 +657,101 @@ EF_DRIVER_STATUS EF_TMR32_setICR(EF_TMR32_TYPE_PTR tmr32, uint32_t mask){
     }else{
         tmr32->IC = mask;
     }
+    return status;
+}
+
+EF_DRIVER_STATUS EF_TMR32_isTimout(EF_TMR32_TYPE_PTR tmr32, uint32_t* timeout_status){
+    
+    EF_DRIVER_STATUS status = EF_DRIVER_OK; 
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if tmr32 is NULL
+    } else if (timeout_status == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if timeout_status is NULL, 
+                                                        // i.e. there is no memory location to store the value
+    } else {
+        uint32_t ris_value;
+        status = EF_TMR32_getRIS(tmr32, &ris_value);
+        if (status == EF_DRIVER_OK) {
+            *timeout_status = (ris_value & EF_TMR32_TO_FLAG);
+        }else{}
+    }
+    return status;
+}
+
+EF_DRIVER_STATUS EF_TMR32_isCMPXMatch(EF_TMR32_TYPE_PTR tmr32, uint32_t* match_status){
+    
+    EF_DRIVER_STATUS status = EF_DRIVER_OK; 
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if tmr32 is NULL
+    } else if (match_status == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if match_status is NULL, 
+                                                        // i.e. there is no memory location to store the value
+    } else {
+        uint32_t ris_value;
+        status = EF_TMR32_getRIS(tmr32, &ris_value);
+        if (status == EF_DRIVER_OK) {
+            *match_status = (ris_value & EF_TMR32_MX_FLAG);
+        }else{}
+    }
+    return status;
+}
+
+EF_DRIVER_STATUS EF_TMR32_isCMPYMatch(EF_TMR32_TYPE_PTR tmr32, uint32_t* match_status){
+
+    EF_DRIVER_STATUS status = EF_DRIVER_OK; 
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if tmr32 is NULL
+    } else if (match_status == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;                // Return EF_DRIVER_ERROR_PARAMETER if match_status is NULL, 
+                                                        // i.e. there is no memory location to store the value
+    } else {
+        uint32_t ris_value;
+        status = EF_TMR32_getRIS(tmr32, &ris_value);
+        if (status == EF_DRIVER_OK) {
+            *match_status = (ris_value & EF_TMR32_MY_FLAG);
+        }else{}
+    }
+    return status;
+}
+
+
+EF_DRIVER_STATUS EF_TMR32_clearTimoutFlag(EF_TMR32_TYPE_PTR tmr32){
+    EF_DRIVER_STATUS status = EF_DRIVER_OK;
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;
+    } else {
+        tmr32->IC |= EF_TMR32_TO_FLAG;
+    }
+
+    return status;
+}
+
+EF_DRIVER_STATUS EF_TMR32_clearCMPXMatchFlag(EF_TMR32_TYPE_PTR tmr32){
+    EF_DRIVER_STATUS status = EF_DRIVER_OK;
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;
+    } else {
+        tmr32->IC |= EF_TMR32_MX_FLAG;
+    }
+
+    return status;
+}
+
+
+EF_DRIVER_STATUS EF_TMR32_clearCMPYMatchFlag(EF_TMR32_TYPE_PTR tmr32){
+    EF_DRIVER_STATUS status = EF_DRIVER_OK;
+
+    if (tmr32 == NULL) {
+        status = EF_DRIVER_ERROR_PARAMETER;
+    } else {
+        tmr32->IC |= EF_TMR32_MY_FLAG;
+    }
+
     return status;
 }
 

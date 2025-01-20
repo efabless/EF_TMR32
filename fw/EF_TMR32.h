@@ -504,6 +504,64 @@ EF_DRIVER_STATUS EF_TMR32_getIM(EF_TMR32_TYPE_PTR tmr32, uint32_t* IM_value);
 */
 EF_DRIVER_STATUS EF_TMR32_setICR(EF_TMR32_TYPE_PTR tmr32, uint32_t mask);
 
+//! Checks if the timer has reached the RELOAD value if up counting or zero if down counting by reading the RIS register and checking the RT flag.
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    \param [out] timeout_status A pointer to a uint32_t where the timeout status will be stored.
+    
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+*/
+EF_DRIVER_STATUS EF_TMR32_isTimout(EF_TMR32_TYPE_PTR tmr32, uint32_t* timeout_status);
+
+//! Checks if the timer has reached the CMPX value by reading the RIS register and checking the MX flag.
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    \param [out] match_status A pointer to a uint32_t where the match status will be stored.
+    
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+*/
+EF_DRIVER_STATUS EF_TMR32_isCMPXMatch(EF_TMR32_TYPE_PTR tmr32, uint32_t* match_status);
+
+
+//! Checks if the timer has reached the CMPY value by reading the RIS register and checking the MY flag.
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    \param [out] match_status A pointer to a uint32_t where the match status will be stored.
+    
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+*/
+EF_DRIVER_STATUS EF_TMR32_isCMPYMatch(EF_TMR32_TYPE_PTR tmr32, uint32_t* match_status);
+
+//! Clears the timeout flag by writing to the ICR register and setting the TO bit.
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+*/
+EF_DRIVER_STATUS EF_TMR32_clearTimoutFlag(EF_TMR32_TYPE_PTR tmr32);
+
+
+//! Clears the CMPX match flag by writing to the ICR register and setting the MX bit.
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+*/
+EF_DRIVER_STATUS EF_TMR32_clearCMPXMatchFlag(EF_TMR32_TYPE_PTR tmr32);
+
+//! Clears the CMPY match flag by writing to the ICR register and setting the MY bit.
+/*!
+    \param [in] tmr32 An \ref EF_TMR32_TYPE_PTR, which points to the base memory address of TMR32 registers. 
+                      \ref EF_TMR32_TYPE is a structure that contains the TMR32 registers.
+    
+    \return status A value of type \ref EF_DRIVER_STATUS: returns a success or error code.
+*/
+EF_DRIVER_STATUS EF_TMR32_clearCMPYMatchFlag(EF_TMR32_TYPE_PTR tmr32);
 
 
 //! Sets the PWM0 edge alignment mode 
